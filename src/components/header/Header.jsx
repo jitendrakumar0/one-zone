@@ -22,7 +22,7 @@ import style from './style.scss'
 const Header = () => {
   return (
     <div>
-<div className="realtive bg-[#F5F5F7] py-2 border-b sticky top0">
+<div className="realtive bg-[#F5F5F7] py-2 border-b z-[10000] sticky top0">
     <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
         <div className="lg:flex items-center lg:justify-between justify-center">
             <div className="sm:flex items-center max-lg:justify-center gap-4">
@@ -107,7 +107,7 @@ const Header = () => {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
         <div className="flex items-center justify-between">
             <div>
-                <div className="logo h-12 lg:hidden flex">
+                <div className="logo h-12  flex">
                     <Link >
                         <img src={Logo} alt="logo" className="size-full"/>
                     </Link>

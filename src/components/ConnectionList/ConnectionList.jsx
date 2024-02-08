@@ -13,7 +13,7 @@ export const ConnectionList = () => {
                 <div class="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
                     <div class="flex items-center mb-10">
                         <div class="flex-1">
-                            <div class="md:text-3xl text-2xl text-black font-bold">
+                            <div class="md:text-3xl text-2xl text-black font-bold mt-5">
                                 Collection list
                             </div>
                         </div>

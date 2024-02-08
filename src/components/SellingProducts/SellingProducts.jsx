@@ -55,7 +55,7 @@ const SellingProducts = () => {
                     >
                         <SwiperSlide>
                             <div
-                                class="group relative rounded-xl bg-white overflow-hidden">
+                                class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
                                 <div class="relative overflow-hidden">
                                     <img src={productImg} alt/>
                                     <div
@@ -135,7 +135,7 @@ const SellingProducts = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div
-                                class="group relative rounded-xl bg-white overflow-hidden">
+                                class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
                                 <div class="relative overflow-hidden">
                                     <img src={productImg} alt/>
                                     <div
@@ -166,7 +166,7 @@ const SellingProducts = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div
-                                class="group relative rounded-xl bg-white overflow-hidden">
+                                class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
                                 <div class="relative overflow-hidden">
                                     <img src={productImg} alt/>
                                     <div
