@@ -3,6 +3,13 @@ import React from 'react'
 import Logo from '../../asstes/img/logo.svg'
 import language from '../../asstes/img/india.svg'
 import Windows from '../../asstes/img/windows.svg'
+import apple from '../../asstes/img/apple.svg'
+import Chromebook from '../../asstes/img/Chromebook.svg'
+import mobile from '../../asstes/img/mobile&tablet.svg'
+import printer from '../../asstes/img/printer.svg'
+import Server from '../../asstes/img/Server.svg'
+
+
 
 
 import notification from '../../asstes/img/notification.svg'
@@ -15,7 +22,7 @@ import style from './style.scss'
 const Header = () => {
   return (
     <div>
-<div className="realtive bg-[#F5F5F7] py-2 border-b">
+<div className="realtive bg-[#F5F5F7] py-2 border-b sticky top0">
     <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
         <div className="lg:flex items-center lg:justify-between justify-center">
             <div className="sm:flex items-center max-lg:justify-center gap-4">
@@ -96,56 +103,88 @@ const Header = () => {
 </div>
 
 
-<div className="realtive bg-white py-3">
+<div className="realtive bg-white py-3 duration-300 transition-all sticky top-0">
     <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
         <div className="flex items-center justify-between">
             <div>
-                <div className="logo h-12 lg:flex hidden">
+                <div className="logo h-12 lg:hidden flex">
                     <Link >
                         <img src={Logo} alt="logo" className="size-full"/>
                     </Link>
                 </div>
-                <div className="flex lg:hidden">
+                {/* <div className="flex lg:hidden">
                     <label for="sideToggle" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
                       <span className="sr-only">Open menu</span>
                       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                       </svg>
                     </label>
-                  </div>
+                  </div> */}
             </div>
-            <div>
+            {/* <div>
                 <ul className="lg:flex hidden items-center justify-center ms-32 *:text-black *text-sm *:font-normal gap-8">
                     <li>
                         <Link  className="">
-                            <span className='flex'>
-                                 <img src={Windows} alt="Windows" className='size-full' />
+                            <span className='flex items-center justify-center mx-auto size-8'>
+                                 <img src={Windows} alt="Windows" className='size-full object-contain' />
 
                             </span>
-                            <div></div>
+                            <div>
+                            Windows
+                            </div>
                         </Link>
                     </li>
                     <li>
-                        <Link  className="relative">Shop
-                            <span className="absolute -top-4 -right-4 bg-[#FFED00] text-black text-xs rounded-full px-3 py-[1px]">New</span>
+                    <Link  className="">
+                            <span className='flex items-center justify-center mx-auto size-8'>
+                                 <img src={apple} alt="Windows" className='size-full object-contain' />
 
+                            </span>
+                            <div>
+                            Windows
+                            </div>
                         </Link>
                     </li>
                     <li>
-                        <Link  className="">Product
+                    <Link  className="">
+                            <span className='flex items-center justify-center mx-auto size-8'>
+                                 <img src={Chromebook} alt="Windows" className='size-full object-contain' />
+
+                            </span>
+                            <div>
+                            Windows
+                            </div>
                         </Link>
                     </li>
                     <li>
-                        <Link  className="">Sale</Link>
+                    <Link  className="">
+                            <span className='flex items-center justify-center mx-auto size-8'>
+                                 <img src={mobile} alt="Windows" className='size-full object-contain' />
+                            </span>
+                            <div>
+                            Windows
+                            </div>
+                        </Link>
                     </li>
                     <li>
-                        <Link  className="">Pages</Link>
+                    <Link  className="">
+                            <span className='flex items-center justify-center mx-auto size-8'>
+                                 <img src={printer} alt="Windows" className='size-full object-contain' />
+                            </span>
+                            <div>
+                            Windows
+                            </div>
+                        </Link>
                     </li>
                     <li>
-                        <Link  className="">Lookbooks</Link>
-                    </li>
-                    <li>
-                        <Link  className="">Blog</Link>
+                    <Link  className="">
+                            <span className='flex items-center justify-center mx-auto size-8'>
+                                 <img src={Server} alt="Windows" className='size-full object-contain' />
+                            </span>
+                            <div>
+                            Windows
+                            </div>
+                        </Link>
                     </li>
                 </ul>
                 <div className="logo md:h-12 h-10 lg:hidden flex md:ms-28 sm:ms-24 ms-16">
@@ -153,30 +192,76 @@ const Header = () => {
                         <img src={Logo} alt="logo" className="size-full"/>
                     </Link>
                 </div>
-            </div>
+            </div> */}
             <div>
                 <ul className="flex items-center justify-center gap-8 ">
-                    <li>
-                        <Link  className="text-black size-5 flex items-center">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M456.69 421.39 362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3zM97.92 222.72a124.8 124.8 0 1 1 124.8 124.8 124.95 124.95 0 0 1-124.8-124.8z"></path></svg>
-                        </Link>
-                    </li>
-                    <li className="md:flex hidden">
-                        <Link  className="text-black size-5 flex items-center">
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                        </Link>
-                    </li>
-                    <li className="md:flex hidden">
+                    <li className="md:flex ">
                         <Link  className="text-black size-5 flex items-center relative">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
-                            <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] rounded-full size-4 flex items-center justify-center">0</span>
+                            <span className="absolute -top-2 -right-2 bg-[#FFED00] text-black text-[10px] rounded-full size-4 flex items-center justify-center">0</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link  className="text-black size-5 flex items-center relative">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className="size-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"></path></svg>
-                            <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] rounded-full size-4 flex items-center justify-center">0</span>
+                    <li className="md:flex ">
+                    <Link  className="text-black size-5 flex items-center relative">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M255.9 456c31.1 0 48.1-22 48.1-53h-96.3c0 31 17 53 48.2 53zM412 352.2c-15.4-20.3-45.7-32.2-45.7-123.1 0-93.3-41.2-130.8-79.6-139.8-3.6-.9-6.2-2.1-6.2-5.9v-2.9c0-13.4-11-24.7-24.4-24.6-13.4-.2-24.4 11.2-24.4 24.6v2.9c0 3.7-2.6 5-6.2 5.9-38.5 9.1-79.6 46.5-79.6 139.8 0 90.9-30.3 102.7-45.7 123.1-9.9 13.1-.5 31.8 15.9 31.8h280.1c16.3 0 25.7-18.8 15.8-31.8z"></path></svg>
+                            <span className="absolute -top-2 -right-2 bg-[#FFED00] text-black text-[10px] rounded-full size-4 flex items-center justify-center">0</span>
+                        </Link>
+                    </li>
+                    <li className="md:flex ">
+                        <Link  className="text-black size-5 flex items-center">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M2.04932 13.0001H7.52725C7.70624 16.2689 8.7574 19.3054 10.452 21.881C5.98761 21.1872 2.5001 17.5403 2.04932 13.0001ZM2.04932 11.0001C2.5001 6.4598 5.98761 2.81288 10.452 2.11914C8.7574 4.69468 7.70624 7.73123 7.52725 11.0001H2.04932ZM21.9506 11.0001H16.4726C16.2936 7.73123 15.2425 4.69468 13.5479 2.11914C18.0123 2.81288 21.4998 6.4598 21.9506 11.0001ZM21.9506 13.0001C21.4998 17.5403 18.0123 21.1872 13.5479 21.881C15.2425 19.3054 16.2936 16.2689 16.4726 13.0001H21.9506ZM9.53068 13.0001H14.4692C14.2976 15.7829 13.4146 18.3733 11.9999 20.5916C10.5852 18.3733 9.70229 15.7829 9.53068 13.0001ZM9.53068 11.0001C9.70229 8.21722 10.5852 5.62684 11.9999 3.40853C13.4146 5.62684 14.2976 8.21722 14.4692 11.0001H9.53068Z"></path></svg>
+                        </Link>
+                    </li>
+                    <li className="md:flex ">
+                        <Link  className="text-black size-5 flex items-center">
+                        <div className="relative flex flex-col ">
+                    <input className="peer/mm hidden" type="checkbox" name="mmMenu" id="mmCompany2222"/>
+                    <label for="mmCompany2222" className="flex items-center text-black sm:text-base text-sm cursor-pointer">
+                        <span className="size-5 me-2 flex items-center text-black">
+                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </span>
+                    </label>
+                    <div className="w-fullshadow-md z-40 bg-white shadow p-2 shadow-black absolute top-8 w-full peer-checked/mm:block hidden">
+                        <ul className="flex flex-col gap-1">
+                            <li>
+                                <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
+                                    <span className="size-4 me-2 flex items-center">
+                                        <img src={language} alt="india" className="size-full"/>
+                                     </span>
+                                     INR
+                                </Link>
+                            </li>
+                            <li>
+                                <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
+                                    <span className="size-4 me-2 flex items-center">
+                                        <img src={language} alt="india" className="size-full"/>
+                                     </span>
+                                     INR
+                                </Link>
+                            </li>
+                            <li>
+                                <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
+                                    <span className="size-4 me-2 flex items-center">
+                                        <img src={language} alt="india" className="size-full"/>
+                                     </span>
+                                     INR
+                                </Link>
+                            </li>
+                            <li>
+                                <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
+                                    <span className="size-4 me-2 flex items-center">
+                                        <img src={language} alt="india" className="size-full"/>
+                                     </span>
+                                     INR
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+
+
+                           
                         </Link>
                     </li>
                 </ul>

@@ -1,154 +1,37 @@
 import React from 'react'
-import banner from '../../asstes/img/watch.png'
+import bannerHero from '../../asstes/img/herob.png'
+
+
 
 const HeroBanner = () => {
     return (
         <>
-        <div className='herosection'>
-        <div class="px-5 md:px-10 py-20 flex flex-col gap-y-5">
-            <div class="upper flex flex-wrap items-center gap-y-4">
-                <div class="swiperHome w-full lg:w-3/4">
-                    <div class="lg:px-2">
-                        <div class="swiper homeSwiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="lg:relative aspect-[4/1.75]">
-                                        <img src={banner} alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                                        <div class="lg:absolute bottom-0 text-center lg:text-start p-5 md:p-8 left-0 w-full lg:w-2/3 xl:w-1/2">
-                                            <a href="javascript">
-                                                <div class="lg:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl !leading-[130%]">
-                                                    Watch Wearable Device
-                                                </div>
-                                                <div class="text-sm sm:text-base md:text-lg lg:text-white/80 py-2 md:py-3">
-                                                    Which can vary depending on the brand and model electronic device.
-                                                </div>
-                                                <div class="py-2 md:py-3">
-                                                    <a href="javascript:;" class="py-2.5 md:py-3 px-4 md:px-5 inline-flex items-center gap-2 rounded-lg text-black bg-slate-200 hover:bg-slate-200/80 transition-all duration-500">
-                                                        <span class="text-base font-semibold flex items-center gap-2">Shop Now <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span>
-                                                    </a>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="lg:relative aspect-[4/1.75]">
-                                        <img src={banner} alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                                        <div class="lg:absolute bottom-0 text-center lg:text-start p-5 md:p-8 left-0 w-full lg:w-2/3 xl:w-1/2">
-                                            <a href="javascript">
-                                                <div class="lg:text-white font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl !leading-[130%]">
-                                                    Modern Mobile Phones
-                                                </div>
-                                                <div class="text-sm sm:text-base md:text-lg lg:text-white/80 py-2 md:py-3">
-                                                    Mobile phone technology has advanced rapidly over the years, with various
-                                                </div>
-                                                <div class="py-2 md:py-3">
-                                                    <a href="javascript:;" class="py-2.5 md:py-3 px-4 md:px-5 inline-flex items-center gap-2 rounded-lg text-black bg-slate-200 hover:bg-slate-200/80 transition-all duration-500">
-                                                        <span class="text-base font-semibold flex items-center gap-2">Shop Now <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span>
-                                                    </a>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
+        <div className='herosection lg:h-[450px] md:h-[430px] h-[400px] lg:pt-10 pt-8 relative '>
+            <div className='relative mx-auto max-w-7xl px-6 lg:px-8 z-[1] h-full md:py-20 py-2 '>
+             <div className="flex rounded-3xl overflow-hidden items-center  flex-col justify-center bg-[url(../../src/assets/img/banner.jpg')] bg-no-repeat bg-center h-full w-full">
+                    <div className='absolute inset-0 lg:h-[450px] md:h-[430px] h-[400px] rounded-3xl overflow-hidden'>
+                        <img src={bannerHero} alt="banner"  className="w-full h-full object-cover"/>
                     </div>
-                </div>
-                <div class="twocards w-full lg:w-1/4">
-                    <div class="lg:px-3 flex flex-col gap-y-5">
-                        <div class="relative">
-                            <img src="./img/vedio-game.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                            <div class="absolute top-0 p-5 left-0">
-                                <a href="javascript:;">
-                                    <div class="text-white font-semibold text-xl !leading-[150%]">
-                                        Special Discount<br/> 
-                                        UP TO 50% OFF
-                                    </div>
-                                </a>
-                                <div class="pt-3">
-                                    <a href="javascript:;" class="text-white underline hover:text-white/80">
-                                        Shop Now
-                                    </a>
-                                </div>
+                    <div className='text-white md:text-5xl sm:text-4xl text-3xl font-semibold relative z-20 text-center'>Watch Wearable Device</div>
+                    <div className='text-white/90 text-base text-white relative z-20 mt-3 text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elitmet, consectetur adipisicing elit . <br className='md:block hidden' /> Ratione impedit repellendus illo, dolorum corrupti autem!</div>
+                    <div className='mt-10'>
+                        <div class="relative mt-2 rounded-md shadow-0 md:w-[500px] w-full bg-transparent ">
+                            <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center sm:pl-5 pl-3 bg-transparent">
+                            <span class="text-white sm:text-sm rounded-full bg-transparent">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='size-7' xmlns="http://www.w3.org/2000/svg"><path d="M456.69 421.39 362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3zM97.92 222.72a124.8 124.8 0 1 1 124.8 124.8 124.95 124.95 0 0 1-124.8-124.8z"></path></svg>
+                            </span>
                             </div>
-                        </div>
-                        <div class="relative">
-                            <img src="./img/haedphone.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                            <div class="absolute top-0 p-5 left-0">
-                                <a href="javascript:;">
-                                    <div class="text-white font-semibold text-xl !leading-[150%]">
-                                        Hot Deals<br/> 
-                                        UP TO 30% OFF
-                                    </div>
-                                </a>
-                                <div class="pt-3">
-                                    <a href="javascript:;" class="text-white underline hover:text-white/80">
-                                        Shop Now
-                                    </a>
-                                </div>
+                            <input type="text" name="price" id="price" class="block w-full rounded-full bg-transparent sm:h-14 h-10 border-0 py-1.5 sm:pl-14 pl-10 pr-20 text-white ring-1 ring-inset ring-gray-300 placeholder:text-white focus:ring-1 focus:ring-inset focus:ring-[#FFED00] sm:text-base sm:placeholder:text-base placeholder:text-sm sm:leading-6" placeholder="0.00"/>
+                            <div class="absolute inset-y-0 sm:right-2 right-1 flex items-center rounded-full bg-transparent my">
+                                <span>
+                                    <button className='border-0 rounded-full bg-[#FFED00] px-4 sm:py-2 py-1 text-black text-base font-semibold'>Search</button>
+                                </span>
                             </div>
                         </div>
                     </div>
-                </div>
+
+             </div>
             </div>
-            <div class="lower">
-                <div class="flex items-center flex-wrap gap-y-4">
-                    <div class="w-full lg:w-1/3">
-                        <div class="relative lg:px-2">
-                            <img src="./img/camera.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                            <div class="absolute top-1/2 -translate-y-2/4 p-5  left-0 w-2/3">
-                                <a href="javascript:;">
-                                    <div class="text-white font-bold text-xl !leading-[140%]">
-                                        Hero Camera
-                                    </div>
-                                </a>
-                                <div class="pt-2">
-                                    <a href="javascript:;" class="text-white underline text-base hover:text-white/80 uppercase">
-                                        Shop Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/3">
-                        <div class="relative lg:px-2">
-                            <img src="./img/ipad.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                            <div class="absolute top-1/2 -translate-y-2/4 p-5  left-0 w-2/3">
-                                <a href="javascript:;">
-                                    <div class="text-white font-bold text-xl !leading-[140%]">
-                                        Apple iPad
-                                    </div>
-                                </a>
-                                <div class="pt-2">
-                                    <a href="javascript:;" class="text-white underline text-base hover:text-white/80 uppercase">
-                                        Shop Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-1/3">
-                        <div class="relative lg:px-2">
-                            <img src="./img/home05.png" alt="" class="h-full w-full object-cover overflow-hidden rounded-lg"/>
-                            <div class="absolute top-1/2 -translate-y-2/4 p-5  left-0 w-2/3">
-                                <a href="javascript:;">
-                                    <div class="text-white font-bold text-xl !leading-[140%]">
-                                        Smart Watch
-                                    </div>
-                                </a>
-                                <div class="pt-2">
-                                    <a href="javascript:;" class="text-white underline text-base hover:text-white/80 uppercase">
-                                        Shop Now
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
         </>
     )
