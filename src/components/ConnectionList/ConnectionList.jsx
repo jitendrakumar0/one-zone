@@ -3,7 +3,13 @@ import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import collectionImg from '../../asstes/img/Frame_2_360x.webp'
+import Windows from '../../asstes/img/windows.svg'
+import apple from '../../asstes/img/apple.svg'
 import collectionImgg from '../../asstes/img/Server.svg'
+import cromebook from '../../asstes/img/Chromebook.svg'
+import tab from '../../asstes/img/mobile&tablet.svg'
+import printers from '../../asstes/img/printer.svg'
+import server from '../../asstes/img/Server.svg'
 
 export const ConnectionList = () => {
     return (
@@ -14,7 +20,7 @@ export const ConnectionList = () => {
                     <div class="flex items-center mb-10">
                         <div class="flex-1">
                             <div class="md:text-3xl text-2xl text-black font-bold mt-5">
-                                Collection list
+                                Categories
                             </div>
                         </div>
                         <div class="flex-none relative">
@@ -52,26 +58,8 @@ export const ConnectionList = () => {
             >
                 <SwiperSlide>
                     <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
-                        </div>
-                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Servers</div>
-                        <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
-                        </div>
-                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mac</div>
-                        <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
+                        <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src={Windows} alt="frame" class="w-24 h-24 object-contain"/>
                         </div>
                         <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Windows</div>
                         <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
@@ -79,8 +67,17 @@ export const ConnectionList = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
+                        <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src={apple} alt="frame" class="w-24 h-24 object-contain"/>
+                        </div>
+                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Apple</div>
+                        <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div class="collectioncard">
+                        <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src={cromebook} alt="frame" class="w-24 h-24 object-contain"/>
                         </div>
                         <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">ChromeBook</div>
                         <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
@@ -88,28 +85,28 @@ export const ConnectionList = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
+                        <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src={tab} alt="frame" class="w-24 h-24 object-contain"/>
                         </div>
-                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center"> Phones & Tablets</div>
+                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mob & Tab</div>
                         <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
+                        <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src={printers} alt="frame" class="w-24 h-24 object-contain"/>
                         </div>
-                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Photocopy Machines</div>
+                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center"> Printers</div>
                         <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="collectioncard">
-                        <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
-                            <img src={collectionImgg} alt="frame" class="w-32 h-32 object-contain"/>
+                        <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
+                            <img src={server} alt="frame" class="w-24 h-24 object-contain"/>
                         </div>
-                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Photocopy Machines</div>
+                        <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Server</div>
                         <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
                     </div>
                 </SwiperSlide>
@@ -118,7 +115,7 @@ export const ConnectionList = () => {
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-black mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-black mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_2_360x.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -128,7 +125,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_5.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -138,7 +135,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_6_360x.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -148,7 +145,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_1_360x.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -158,7 +155,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_5.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -168,7 +165,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_6_360x.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -178,7 +175,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_2_360x.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
@@ -188,7 +185,7 @@ export const ConnectionList = () => {
                             </div>
                             <div class="swiper-slide">
                                 <div class="collectioncard">
-                                    <div class="bg-white mx-auto lg:size-44 md:size-36 size-24 rounded-full overflow-hidden">
+                                    <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden">
                                         <img src="img/Frame_1_360x.webp" alt="frame" class="size-full object-contain"/>
                                     </div>
                                     <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Mobile Phone</div>
