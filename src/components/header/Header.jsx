@@ -2,7 +2,9 @@ import React from 'react'
 
 import Logo from '../../asstes/img/logo.svg'
 import language from '../../asstes/img/india.svg'
-import lan from '../../asstes/img/globe.svg'
+import Windows from '../../asstes/img/windows.svg'
+
+
 import notification from '../../asstes/img/notification.svg'
 import Menu from '../../asstes/img/Menu.svg'
 
@@ -115,7 +117,13 @@ const Header = () => {
             <div>
                 <ul className="lg:flex hidden items-center justify-center ms-32 *:text-black *text-sm *:font-normal gap-8">
                     <li>
-                        <Link  className="">Demo</Link>
+                        <Link  className="">
+                            <span className='flex'>
+                                 <img src={Windows} alt="Windows" className='size-full' />
+
+                            </span>
+                            <div></div>
+                        </Link>
                     </li>
                     <li>
                         <Link  className="relative">Shop
