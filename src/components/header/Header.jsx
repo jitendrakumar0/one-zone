@@ -22,7 +22,7 @@ import style from './style.scss'
 const Header = () => {
   return (
     <div>
-<div className="realtive bg-[#F5F5F7] py-2 border-b sticky top0">
+<div className="realtive bg-[#F5F5F7] py-2 border-b sticky top0 z-50">
     <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
         <div className="lg:flex items-center lg:justify-between justify-center">
             <div className="sm:flex items-center max-lg:justify-center gap-4">
@@ -48,7 +48,7 @@ const Header = () => {
                 <div className="text-black sm:text-base text-sm lg:-ms-32 flex items-center max-lg:justify-center">Welcome to our store</div>
             </div>
             <div className="flex items-center max-lg:justify-center">
-                <div className="relative flex flex-col ">
+                <div className="relative z-40 flex flex-col ">
                     <input className="peer/mm hidden" type="checkbox" name="mmMenu" id="mmCompany1"/>
     
                     <label for="mmCompany1" className="flex items-center text-black sm:text-base text-sm">
@@ -60,7 +60,7 @@ const Header = () => {
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path></svg>
                         </span>
                     </label>
-                    <div className="w-fullshadow-md z-40 bg-white shadow p-2 shadow-black absolute top-8 w-full peer-checked/mm:block hidden">
+                    <div className="w-fullshadow-md z-[100] bg-white shadow p-2 shadow-black absolute top-8 w-full peer-checked/mm:block hidden">
                         <ul className="flex flex-col gap-1">
                             <li>
                                 <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
@@ -107,7 +107,7 @@ const Header = () => {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
         <div className="flex items-center justify-between">
             <div>
-                <div className="logo h-12 lg:hidden flex">
+                <div className="logo h-12 flex">
                     <Link >
                         <img src={Logo} alt="logo" className="size-full"/>
                     </Link>
@@ -214,11 +214,13 @@ const Header = () => {
                     </li>
                     <li className="md:flex ">
                         <Link  className="text-black size-5 flex items-center">
+             
                         <div className="relative flex flex-col ">
-                    <input className="peer/mm hidden" type="checkbox" name="mmMenu" id="mmCompany2222"/>
-                    <label for="mmCompany2222" className="flex items-center text-black sm:text-base text-sm cursor-pointer">
-                        <span className="size-5 me-2 flex items-center text-black">
-                        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    <input className="peer/mm hidden" type="checkbox" name="mmMenu" id="mmCompany15"/>
+    
+                    <label for="mmCompany15" className="flex items-center text-black sm:text-base text-sm">
+                        <span className="sm:size-5 size-4 me-2 flex items-center">
+                           <img src={user} alt="india" className="size-full"/>
                         </span>
                     </label>
                     <div className="w-fullshadow-md z-40 bg-white shadow p-2 shadow-black absolute top-8 w-full peer-checked/mm:block hidden">
@@ -228,7 +230,7 @@ const Header = () => {
                                     <span className="size-4 me-2 flex items-center">
                                         <img src={language} alt="india" className="size-full"/>
                                      </span>
-                                     INR
+                                     Edit Profile
                                 </Link>
                             </li>
                             <li>
@@ -236,7 +238,7 @@ const Header = () => {
                                     <span className="size-4 me-2 flex items-center">
                                         <img src={language} alt="india" className="size-full"/>
                                      </span>
-                                     INR
+                                     Change Password
                                 </Link>
                             </li>
                             <li>
@@ -244,7 +246,7 @@ const Header = () => {
                                     <span className="size-4 me-2 flex items-center">
                                         <img src={language} alt="india" className="size-full"/>
                                      </span>
-                                     INR
+                                     My Favorite
                                 </Link>
                             </li>
                             <li>
@@ -252,13 +254,28 @@ const Header = () => {
                                     <span className="size-4 me-2 flex items-center">
                                         <img src={language} alt="india" className="size-full"/>
                                      </span>
-                                     INR
+                                     Chat History
+                                </Link>
+                            </li>
+                            <li>
+                                <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
+                                    <span className="size-4 me-2 flex items-center">
+                                        <img src={language} alt="india" className="size-full"/>
+                                     </span>
+                                     Delete Account
+                                </Link>
+                            </li>
+                            <li>
+                                <Link  className="flex items-center text-black text-sm duration-300 hover:text-[#09757A]">
+                                    <span className="size-4 me-2 flex items-center">
+                                        <img src={language} alt="india" className="size-full"/>
+                                     </span>
+                                     Log out
                                 </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
-
 
 
                            

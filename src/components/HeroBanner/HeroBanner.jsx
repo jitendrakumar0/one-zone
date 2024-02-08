@@ -1,5 +1,5 @@
 import React from 'react'
-import bannerHero from '../../asstes/img/herob.png'
+import bannerHero from '../../asstes/img/watch.png'
 
 
 
