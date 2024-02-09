@@ -37,8 +37,8 @@ const Header = () => {
   const [selectedPerson, setSelectedPerson] = useState(people[0])
   const [selectedLanguage, setSelectedLanguage] = useState(languageArr[0])
   return (
-    <div className='z-50 sticky top-0'>
-      <div className="realtive bg-[#F5F5F7] py-2 border-b z-20 sticky top0">
+    <div className='z-[100] sticky top-0'>
+      <div className="realtive bg-[#F5F5F7] py-2 border-b z-[100] sticky top0 hidden lg:block">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
               <div className="lg:flex items-center lg:justify-between justify-center">
                   <div className="sm:flex items-center max-lg:justify-center gap-4">
@@ -132,7 +132,7 @@ const Header = () => {
       </div>
 
 
-      <div className="realtive bg-white py-3 duration-300 transition-all z-10 sticky top-0">
+      <div className="realtive bg-white py-3 duration-300 transition-all z-[100] sticky top-0">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
               <div className="flex items-center justify-between">
                   <div>

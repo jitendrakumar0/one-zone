@@ -7,46 +7,47 @@ import 'swiper/css';
 const Blog = () => {
     return (
         <>
-            <div class="px-5 md:px-10 py-10">
+            <div class="px-5 md:px-10 py-5 sm:py-8 lg:py-10">
                 <div class="heading text-3xl font-bold text-center mb-5">
                     Latest Blog
                 </div>
                 
-            <div class="flex-none relative">
-                <div class="swiper-button-next blogNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
+                <div className="relative">
+                <div class="flex-none hidden lg:block">
+                <div class="swiper-button-next blogNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1 absolute top-[50%] translate-y-[-50%] z-50">
                     <div class="">
                         <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                     </div>
                 </div>
-                <div class="swiper-button-prev blogPrev absolute after:content-[*] md:size-10 size-8 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
+                <div class="swiper-button-prev blogPrev absolute after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full  left-[-10px] md:p-2 p-1 top-[50%] translate-y-[-50%] z-50">
                     <div class="rotate-180">
                         <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                     </div>
                 </div>
             </div>
-
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-                pagination={{
-                clickable: true,
-                }}   
                 navigation={{
                     prevEl: '.blogPrev',
                     nextEl: '.blogNext',
                 }}
                 breakpoints={{
-                640: {
+                    
+                0: {
+                    slidesPerView: 1.3,
+                },
+                500: {
                     slidesPerView: 2,
                 },
                 768: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                 },
                 1024: {
                     slidesPerView: 4,
                 },
                 }}
-                modules={[Pagination,Navigation]}
+                modules={[Navigation]}
                 className="mySwiper *:py-5"
             >
                 <SwiperSlide>
@@ -219,6 +220,8 @@ const Blog = () => {
                     </a>
                 </SwiperSlide>
             </Swiper>
+                </div>
+
     </div>
         </>
     )

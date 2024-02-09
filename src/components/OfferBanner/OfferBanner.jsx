@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 const OfferBanner = () => {
     return (
         <>
-            <div class="px-5 md:px-10 py-10 flex flex-wrap items-center gap-y-4">
+            <div class="px-5 md:px-10 py-5 sm:py-8 lg:py-10 flex flex-wrap items-center gap-y-4">
                 <div class="w-full md:w-1/2 overflow-hidden">
-                    <div class="mainCard cursor-pointer h-full group relative px-3">
+                    <div class="mainCard cursor-pointer h-full group relative md:pe-3 pe-0">
                         <div class="aspect-[2/1] relative h-full after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-black/30 after:rounded-lg overflow-hidden rounded-lg">
                             <img src={speaker} alt="speaker" class="h-full w-full object-cover overflow-hidden rounded-lg duration-200 md:group-hover:scale-105 md:group-hover:rounded-lg"/>
                             <div class="absolute top-1/2 -translate-y-1/2 p-8 left-0 z-10">
@@ -30,7 +30,7 @@ const OfferBanner = () => {
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 overflow-hidden">
-                    <div class="mainCard cursor-pointer h-full group relative px-3">
+                    <div class="mainCard cursor-pointer h-full group relative md:ps-3 ps-0">
                         <div class="aspect-[2/1] relative h-full after:absolute after:top-0 after:left-0 after:h-full after:w-full after:bg-black/30 after:rounded-lg overflow-hidden rounded-lg">
                             <img src={tab} alt="" class="h-full w-full object-cover overflow-hidden rounded-lg duration-200 md:group-hover:scale-105 md:group-hover:rounded-lg"/>
                             <div class="absolute top-1/2 -translate-y-1/2 p-8 left-0 z-10">

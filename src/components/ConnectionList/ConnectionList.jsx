@@ -16,9 +16,9 @@ export const ConnectionList = () => {
     return (  
         <>
                 
-            <div class="realtive lg:py-10 bg-[#F5F5F7]">
+            <div class="realtive py-5 sm:py-8 lg:py-10 bg-[#F5F5F7]">
                 <div class="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
-                    <div class="flex items-center mb-10 mt-5">
+                    <div class="flex items-center pb-8">
                         <div class="flex-1">
                             <div class="md:text-3xl text-2xl text-black font-bold">
                                 Categories
@@ -48,13 +48,22 @@ export const ConnectionList = () => {
                             nextEl: '.navigationNext',
                         }}
                         breakpoints={{
-                        540: {
-                            slidesPerView: 3,
+                        360: {
+                            slidesPerView: 2.5,
                         },
-                        768: {
+                        576: {
                             slidesPerView: 4,
                         },
-                        1024: {
+                        768: {
+                            slidesPerView: 4.5,
+                        },
+                        992: {
+                            slidesPerView: 6,
+                        },
+                        1200: {
+                            slidesPerView: 6,
+                        },
+                        1400: {
                             slidesPerView: 6,
                         },
                         }}
