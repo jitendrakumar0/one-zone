@@ -44,7 +44,7 @@ const Header = () => {
                   <div className="sm:flex items-center max-lg:justify-center gap-4">
                       <div>
                           <Link  className="max-sm:justify-center flex items-center text-black sm:text-base text-sm group duration-300 hover:text-[#09757A]">
-                              <span className="text-black/90 sm:size-5 size-4 me-2 duration-300 group-hover:text-[#09757A]">
+                              <span className="text-black/90 sm:size-5 size-4 me-2 duration-300 md:group-hover:text-[#09757A]">
                                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"></path></svg>
                               </span>
                               +01 23456789 
@@ -52,7 +52,7 @@ const Header = () => {
                       </div>
                       <div>
                           <Link  className="max-sm:justify-center flex items-center text-black sm:text-base text-sm group duration-300 hover:text-[#09757A]">
-                              <span className="text-black/90 sm:size-5 size-4 me-2 duration-300 group-hover:text-[#09757A]">
+                              <span className="text-black/90 sm:size-5 size-4 me-2 duration-300 md:group-hover:text-[#09757A]">
 
                                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M460.6 147.3L353 256.9c-.8.8-.8 2 0 2.8l75.3 80.2c5.1 5.1 5.1 13.3 0 18.4-2.5 2.5-5.9 3.8-9.2 3.8s-6.7-1.3-9.2-3.8l-75-79.9c-.8-.8-2.1-.8-2.9 0L313.7 297c-15.3 15.5-35.6 24.1-57.4 24.2-22.1.1-43.1-9.2-58.6-24.9l-17.6-17.9c-.8-.8-2.1-.8-2.9 0l-75 79.9c-2.5 2.5-5.9 3.8-9.2 3.8s-6.7-1.3-9.2-3.8c-5.1-5.1-5.1-13.3 0-18.4l75.3-80.2c.7-.8.7-2 0-2.8L51.4 147.3c-1.3-1.3-3.4-.4-3.4 1.4V368c0 17.6 14.4 32 32 32h352c17.6 0 32-14.4 32-32V148.7c0-1.8-2.2-2.6-3.4-1.4z"></path><path d="M256 295.1c14.8 0 28.7-5.8 39.1-16.4L452 119c-5.5-4.4-12.3-7-19.8-7H79.9c-7.5 0-14.4 2.6-19.8 7L217 278.7c10.3 10.5 24.2 16.4 39 16.4z"></path></svg>
                               </span>
@@ -69,18 +69,18 @@ const Header = () => {
                               <div className="sm:size-5 size-4 me-2 flex items-center">
                                 <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                   <Listbox.Button className='flex items-center'>
-                                    <img src={selectedPerson.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/>
+                                    <img src={selectedPerson.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/>
                                     {selectedPerson.name}
                                   </Listbox.Button>
-                                    <Listbox.Options className='absolute top-8'>
+                                    <Listbox.Options className='absolute top-8 -left-40 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1'>
                                       {people.map((item) => (
                                         <Listbox.Option
                                           key={item.id}
                                           value={item}
                                           disabled={item.unavailable}
-                                          className= 'flex items-center cursor-pointer'
+                                          className= 'flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'
                                         >
-                                          <img src={item?.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/>
+                                          <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/>
                                           {item.name}
                                         </Listbox.Option>
                                       ))}
@@ -188,11 +188,7 @@ const Header = () => {
                               </Link>
                           </li>
                       </ul>
-                      <div className="logo md:h-12 h-10 lg:hidden flex md:ms-28 sm:ms-24 ms-16">
-                          <Link >
-                              <img src={Logo} alt="logo" className="size-full"/>
-                          </Link>
-                      </div>
+               
                   </div>
                   <div>
                       <ul className="flex items-center justify-center gap-8 ">
@@ -211,12 +207,12 @@ const Header = () => {
                                 </div>
                               </Popover.Button>
 
-                              <Popover.Panel className="absolute z-10">
-                                <div className="grid grid-cols-2">
-                                  <a href="/analytics">Analytics</a>
-                                  <a href="/engagement">Engagement</a>
-                                  <a href="/security">Security</a>
-                                  <a href="/integrations">Integrations</a>
+                              <Popover.Panel className="absolute z-10 -left-40 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1">
+                                <div className="flex flex-col">
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Analytics</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Engagement</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Security</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Integrations</Link>
                                 </div>
 
                                 <img src="/solutions.jpg" alt="" />
@@ -226,21 +222,21 @@ const Header = () => {
                           <li className="md:flex ">
                             <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
                                   <Listbox.Button className='flex items-center'>
-                                    {/* <img src={selectedPerson.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/> */}
+                                    {/* <img src={selectedPerson.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
                                     <div  className="text-black size-5 flex items-center">
                                       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M2.04932 13.0001H7.52725C7.70624 16.2689 8.7574 19.3054 10.452 21.881C5.98761 21.1872 2.5001 17.5403 2.04932 13.0001ZM2.04932 11.0001C2.5001 6.4598 5.98761 2.81288 10.452 2.11914C8.7574 4.69468 7.70624 7.73123 7.52725 11.0001H2.04932ZM21.9506 11.0001H16.4726C16.2936 7.73123 15.2425 4.69468 13.5479 2.11914C18.0123 2.81288 21.4998 6.4598 21.9506 11.0001ZM21.9506 13.0001C21.4998 17.5403 18.0123 21.1872 13.5479 21.881C15.2425 19.3054 16.2936 16.2689 16.4726 13.0001H21.9506ZM9.53068 13.0001H14.4692C14.2976 15.7829 13.4146 18.3733 11.9999 20.5916C10.5852 18.3733 9.70229 15.7829 9.53068 13.0001ZM9.53068 11.0001C9.70229 8.21722 10.5852 5.62684 11.9999 3.40853C13.4146 5.62684 14.2976 8.21722 14.4692 11.0001H9.53068Z"></path></svg>
                                       </div>
                                     {/* {selectedPerson.name} */}
                                   </Listbox.Button>
-                                    <Listbox.Options className='absolute top-12'>
+                                    <Listbox.Options className='absolute top-12 right-40 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1'>
                                       {languageArr.map((item) => (
                                         <Listbox.Option
                                           key={item.id}
                                           value={item}
                                           disabled={item.unavailable}
-                                          className= 'flex items-center cursor-pointer'
+                                          className= 'flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'
                                         >
-                                          {/* <img src={item?.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/> */}
+                                          {/* <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
                                           {item.name}
                                         </Listbox.Option>
                                       ))}
@@ -268,19 +264,19 @@ const Header = () => {
                                     leaveFrom="transform opacity-100 scale-100"
                                     leaveTo="transform opacity-0 scale-95"
                                   >
-                                    <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+                                    <Menu.Items className="absolute right-0 mt-2 w-56 orig-leftp40right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
                                       <div className="px-1 py-1 ">
                                         <Menu.Item>
                                           {({ active }) => (
                                             <button
                                               className={`${
-                                                active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                                                active ? 'bg-gray-200 text-black' : 'text-black'
                                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                             >
                                               {active ? (
-                                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className='mr-3 h-5 w-5 text-violet-100' xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
                                               ) : (
-                                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className='mr-3 h-5 w-5 text-violet-500' xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
                                               )}
                                               Edit Profile
                                             </button>
@@ -290,13 +286,13 @@ const Header = () => {
                                           {({ active }) => (
                                             <button
                                               className={`${
-                                                active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                                                active ? 'bg-gray-200 text-black' : 'text-gray-900'
                                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                             >
                                               {active ? (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-violet-100' xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 208v-95a80 80 0 0 0-160 0v95"></path><rect width="320" height="272" x="96" y="208" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="48" ry="48"></rect></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 208v-95a80 80 0 0 0-160 0v95"></path><rect width="320" height="272" x="96" y="208" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="48" ry="48"></rect></svg>
                                               ) : (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-violet-500' xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 208v-95a80 80 0 0 0-160 0v95"></path><rect width="320" height="272" x="96" y="208" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="48" ry="48"></rect></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M336 208v-95a80 80 0 0 0-160 0v95"></path><rect width="320" height="272" x="96" y="208" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" rx="48" ry="48"></rect></svg>
                                               )}
                                               Change Password
                                             </button>
@@ -308,13 +304,13 @@ const Header = () => {
                                           {({ active }) => (
                                             <button
                                               className={`${
-                                                active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                                                active ? 'bg-gray-200 text-black' : 'text-gray-900'
                                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                             >
                                               {active ? (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-violet-100' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>
                                               ) : (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-violet-500' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg>
                                               )}
                                               My Favorite
                                             </button>
@@ -324,13 +320,13 @@ const Header = () => {
                                           {({ active }) => (
                                             <button
                                               className={`${
-                                                active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                                                active ? 'bg-gray-200 text-black' : 'text-gray-900'
                                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                             >
                                               {active ? (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-violet-100' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg>
                                               ) : (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-violet-500' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg>
                                               )}
                                               Chat History
                                             </button>
@@ -342,13 +338,13 @@ const Header = () => {
                                           {({ active }) => (
                                             <button
                                               className={`${
-                                                active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                                                active ? 'bg-gray-200 text-black' : 'text-gray-900'
                                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                             >
                                               {active ? (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-violet-100' xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM12.707 12l2.646-2.646c.194-.194.194-.512 0-.707-.195-.194-.513-.194-.707 0l-2.646 2.646-2.646-2.647c-.195-.194-.513-.194-.707 0-.195.195-.195.513 0 .707l2.646 2.647-2.646 2.646c-.195.195-.195.513 0 .707.097.098.225.147.353.147s.256-.049.354-.146l2.646-2.647 2.646 2.646c.098.098.226.147.354.147s.256-.049.354-.146c.194-.194.194-.512 0-.707l-2.647-2.647z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM12.707 12l2.646-2.646c.194-.194.194-.512 0-.707-.195-.194-.513-.194-.707 0l-2.646 2.646-2.646-2.647c-.195-.194-.513-.194-.707 0-.195.195-.195.513 0 .707l2.646 2.647-2.646 2.646c-.195.195-.195.513 0 .707.097.098.225.147.353.147s.256-.049.354-.146l2.646-2.647 2.646 2.646c.098.098.226.147.354.147s.256-.049.354-.146c.194-.194.194-.512 0-.707l-2.647-2.647z"></path></svg>
                                               ) : (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-violet-500' xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM12.707 12l2.646-2.646c.194-.194.194-.512 0-.707-.195-.194-.513-.194-.707 0l-2.646 2.646-2.646-2.647c-.195-.194-.513-.194-.707 0-.195.195-.195.513 0 .707l2.646 2.647-2.646 2.646c-.195.195-.195.513 0 .707.097.098.225.147.353.147s.256-.049.354-.146l2.646-2.647 2.646 2.646c.098.098.226.147.354.147s.256-.049.354-.146c.194-.194.194-.512 0-.707l-2.647-2.647z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.963 0-9 4.038-9 9s4.037 9 9 9 9-4.038 9-9-4.037-9-9-9zm0 16c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM12.707 12l2.646-2.646c.194-.194.194-.512 0-.707-.195-.194-.513-.194-.707 0l-2.646 2.646-2.646-2.647c-.195-.194-.513-.194-.707 0-.195.195-.195.513 0 .707l2.646 2.647-2.646 2.646c-.195.195-.195.513 0 .707.097.098.225.147.353.147s.256-.049.354-.146l2.646-2.647 2.646 2.646c.098.098.226.147.354.147s.256-.049.354-.146c.194-.194.194-.512 0-.707l-2.647-2.647z"></path></svg>
                                               )}
                                               Delete Account
                                             </button>
@@ -360,13 +356,13 @@ const Header = () => {
                                           {({ active }) => (
                                             <button
                                               className={`${
-                                                active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                                                active ? 'bg-gray-200 text-black' : 'text-gray-900'
                                               } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                             >
                                               {active ? (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-violet-100' xmlns="http://www.w3.org/2000/svg"><path d="M192 277.4h189.7l-43.6 44.7L368 352l96-96-96-96-31 29.9 44.7 44.7H192v42.8z"></path><path d="M255.7 421.3c-44.1 0-85.5-17.2-116.7-48.4-31.2-31.2-48.3-72.7-48.3-116.9 0-44.1 17.2-85.7 48.3-116.9 31.2-31.2 72.6-48.4 116.7-48.4 44 0 85.3 17.1 116.5 48.2l30.3-30.3c-8.5-8.4-17.8-16.2-27.7-23.2C339.7 61 298.6 48 255.7 48 141.2 48 48 141.3 48 256s93.2 208 207.7 208c42.9 0 84-13 119-37.5 10-7 19.2-14.7 27.7-23.2l-30.2-30.2c-31.1 31.1-72.5 48.2-116.5 48.2zM448.004 256.847l-.849-.848.849-.849.848.849z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path d="M192 277.4h189.7l-43.6 44.7L368 352l96-96-96-96-31 29.9 44.7 44.7H192v42.8z"></path><path d="M255.7 421.3c-44.1 0-85.5-17.2-116.7-48.4-31.2-31.2-48.3-72.7-48.3-116.9 0-44.1 17.2-85.7 48.3-116.9 31.2-31.2 72.6-48.4 116.7-48.4 44 0 85.3 17.1 116.5 48.2l30.3-30.3c-8.5-8.4-17.8-16.2-27.7-23.2C339.7 61 298.6 48 255.7 48 141.2 48 48 141.3 48 256s93.2 208 207.7 208c42.9 0 84-13 119-37.5 10-7 19.2-14.7 27.7-23.2l-30.2-30.2c-31.1 31.1-72.5 48.2-116.5 48.2zM448.004 256.847l-.849-.848.849-.849.848.849z"></path></svg>
                                               ) : (
-                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-violet-500' xmlns="http://www.w3.org/2000/svg"><path d="M192 277.4h189.7l-43.6 44.7L368 352l96-96-96-96-31 29.9 44.7 44.7H192v42.8z"></path><path d="M255.7 421.3c-44.1 0-85.5-17.2-116.7-48.4-31.2-31.2-48.3-72.7-48.3-116.9 0-44.1 17.2-85.7 48.3-116.9 31.2-31.2 72.6-48.4 116.7-48.4 44 0 85.3 17.1 116.5 48.2l30.3-30.3c-8.5-8.4-17.8-16.2-27.7-23.2C339.7 61 298.6 48 255.7 48 141.2 48 48 141.3 48 256s93.2 208 207.7 208c42.9 0 84-13 119-37.5 10-7 19.2-14.7 27.7-23.2l-30.2-30.2c-31.1 31.1-72.5 48.2-116.5 48.2zM448.004 256.847l-.849-.848.849-.849.848.849z"></path></svg>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className='mr-3 h-5 w-5 text-black ' xmlns="http://www.w3.org/2000/svg"><path d="M192 277.4h189.7l-43.6 44.7L368 352l96-96-96-96-31 29.9 44.7 44.7H192v42.8z"></path><path d="M255.7 421.3c-44.1 0-85.5-17.2-116.7-48.4-31.2-31.2-48.3-72.7-48.3-116.9 0-44.1 17.2-85.7 48.3-116.9 31.2-31.2 72.6-48.4 116.7-48.4 44 0 85.3 17.1 116.5 48.2l30.3-30.3c-8.5-8.4-17.8-16.2-27.7-23.2C339.7 61 298.6 48 255.7 48 141.2 48 48 141.3 48 256s93.2 208 207.7 208c42.9 0 84-13 119-37.5 10-7 19.2-14.7 27.7-23.2l-30.2-30.2c-31.1 31.1-72.5 48.2-116.5 48.2zM448.004 256.847l-.849-.848.849-.849.848.849z"></path></svg>
                                               )}
                                               Log out
                                             </button>
