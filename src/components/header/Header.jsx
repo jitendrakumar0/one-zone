@@ -8,7 +8,7 @@ import Chromebook from '../../asstes/img/Chromebook.svg'
 import mobile from '../../asstes/img/mobile&tablet.svg'
 import printer from '../../asstes/img/printer.svg'
 import Server from '../../asstes/img/Server.svg'
-import { Menu, Transition } from '@headlessui/react'
+import { Listbox, Menu, Popover, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
@@ -20,8 +20,22 @@ import notification from '../../asstes/img/notification.svg'
 import { Link } from 'react-router-dom';
 import user from '../../asstes/img/User.svg'
 import style from './style.scss'
-
+const people = [
+  { id: 1, name: 'In', img: language },
+  { id: 2, name: 'hhh', img: language },
+  { id: 3, name: 'In', img: language },
+  { id: 4, name: 'In', img: language },
+  { id: 5, name: 'In', img: language },
+  { id: 6, name: 'In', img: language },
+]
+const languageArr = [
+  { id: 1, name: 'Hindi' },
+  { id: 2, name: 'English' },
+  { id: 3, name: 'French' },
+]
 const Header = () => {
+  const [selectedPerson, setSelectedPerson] = useState(people[0])
+  const [selectedLanguage, setSelectedLanguage] = useState(languageArr[0])
   return (
     <div className='z-50 sticky top-0'>
       <div className="realtive bg-[#F5F5F7] py-2 border-b z-20 sticky top0">
@@ -51,18 +65,30 @@ const Header = () => {
                   </div>
                   <div className="flex items-center max-lg:justify-center">
                       <div className="relative z-40 flex flex-col">
-                        
-                          <input className="peer/mm hidden" type="checkbox" name="mmMenu" id="mmCompany1"/>
-          
-                          <label for="mmCompany1" className="flex items-center text-black sm:text-base text-sm">
-                              <span className="sm:size-5 size-4 me-2 flex items-center">
-                                <img src={language} alt="india" className="size-full rounded-full object-cover"/>
-                              </span>
-                              IN
-                              <span className="size-4 me-2 flex items-center text-black/70">
-                                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"  xmlns="http://www.w3.org/2000/svg"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path></svg>
-                              </span>
-                          </label>
+                          <div className="flex items-center text-black sm:text-base text-sm">
+                              <div className="sm:size-5 size-4 me-2 flex items-center">
+                                <Listbox value={selectedPerson} onChange={setSelectedPerson}>
+                                  <Listbox.Button className='flex items-center'>
+                                    <img src={selectedPerson.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/>
+                                    {selectedPerson.name}
+                                  </Listbox.Button>
+                                    <Listbox.Options className='absolute top-8'>
+                                      {people.map((item) => (
+                                        <Listbox.Option
+                                          key={item.id}
+                                          value={item}
+                                          disabled={item.unavailable}
+                                          className= 'flex items-center cursor-pointer'
+                                        >
+                                          <img src={item?.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/>
+                                          {item.name}
+                                        </Listbox.Option>
+                                      ))}
+                                    </Listbox.Options>
+                                  </Listbox>
+                              </div>
+                              {/* IN */}
+                          </div>
                           <div className="w-fullshadow-md z-[100] bg-white shadow p-2 shadow-black absolute top-8 w-full peer-checked/mm:block hidden">
                               <ul className="flex flex-col gap-1">
                                   <li>
@@ -177,15 +203,50 @@ const Header = () => {
                               </Link>
                           </li>
                           <li className="md:flex ">
-                          <Link  className="text-black size-5 flex items-center relative">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M255.9 456c31.1 0 48.1-22 48.1-53h-96.3c0 31 17 53 48.2 53zM412 352.2c-15.4-20.3-45.7-32.2-45.7-123.1 0-93.3-41.2-130.8-79.6-139.8-3.6-.9-6.2-2.1-6.2-5.9v-2.9c0-13.4-11-24.7-24.4-24.6-13.4-.2-24.4 11.2-24.4 24.6v2.9c0 3.7-2.6 5-6.2 5.9-38.5 9.1-79.6 46.5-79.6 139.8 0 90.9-30.3 102.7-45.7 123.1-9.9 13.1-.5 31.8 15.9 31.8h280.1c16.3 0 25.7-18.8 15.8-31.8z"></path></svg>
-                                  <span className="absolute -top-2 -right-2 bg-[#FFED00] text-black text-[10px] rounded-full size-4 flex items-center justify-center">0</span>
-                              </Link>
+                          <Popover className="relative">
+                              <Popover.Button>
+                                <div className="text-black size-5 flex items-center relative">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M255.9 456c31.1 0 48.1-22 48.1-53h-96.3c0 31 17 53 48.2 53zM412 352.2c-15.4-20.3-45.7-32.2-45.7-123.1 0-93.3-41.2-130.8-79.6-139.8-3.6-.9-6.2-2.1-6.2-5.9v-2.9c0-13.4-11-24.7-24.4-24.6-13.4-.2-24.4 11.2-24.4 24.6v2.9c0 3.7-2.6 5-6.2 5.9-38.5 9.1-79.6 46.5-79.6 139.8 0 90.9-30.3 102.7-45.7 123.1-9.9 13.1-.5 31.8 15.9 31.8h280.1c16.3 0 25.7-18.8 15.8-31.8z"></path></svg>
+                                    <span className="absolute -top-2 -right-2 bg-[#FFED00] text-black text-[10px] rounded-full size-4 flex items-center justify-center">0</span>
+                                </div>
+                              </Popover.Button>
+
+                              <Popover.Panel className="absolute z-10">
+                                <div className="grid grid-cols-2">
+                                  <a href="/analytics">Analytics</a>
+                                  <a href="/engagement">Engagement</a>
+                                  <a href="/security">Security</a>
+                                  <a href="/integrations">Integrations</a>
+                                </div>
+
+                                <img src="/solutions.jpg" alt="" />
+                              </Popover.Panel>
+                            </Popover>
                           </li>
                           <li className="md:flex ">
-                              <Link  className="text-black size-5 flex items-center">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M2.04932 13.0001H7.52725C7.70624 16.2689 8.7574 19.3054 10.452 21.881C5.98761 21.1872 2.5001 17.5403 2.04932 13.0001ZM2.04932 11.0001C2.5001 6.4598 5.98761 2.81288 10.452 2.11914C8.7574 4.69468 7.70624 7.73123 7.52725 11.0001H2.04932ZM21.9506 11.0001H16.4726C16.2936 7.73123 15.2425 4.69468 13.5479 2.11914C18.0123 2.81288 21.4998 6.4598 21.9506 11.0001ZM21.9506 13.0001C21.4998 17.5403 18.0123 21.1872 13.5479 21.881C15.2425 19.3054 16.2936 16.2689 16.4726 13.0001H21.9506ZM9.53068 13.0001H14.4692C14.2976 15.7829 13.4146 18.3733 11.9999 20.5916C10.5852 18.3733 9.70229 15.7829 9.53068 13.0001ZM9.53068 11.0001C9.70229 8.21722 10.5852 5.62684 11.9999 3.40853C13.4146 5.62684 14.2976 8.21722 14.4692 11.0001H9.53068Z"></path></svg>
-                              </Link>
+                            <Listbox value={selectedLanguage} onChange={setSelectedLanguage}>
+                                  <Listbox.Button className='flex items-center'>
+                                    {/* <img src={selectedPerson.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/> */}
+                                    <div  className="text-black size-5 flex items-center">
+                                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path d="M2.04932 13.0001H7.52725C7.70624 16.2689 8.7574 19.3054 10.452 21.881C5.98761 21.1872 2.5001 17.5403 2.04932 13.0001ZM2.04932 11.0001C2.5001 6.4598 5.98761 2.81288 10.452 2.11914C8.7574 4.69468 7.70624 7.73123 7.52725 11.0001H2.04932ZM21.9506 11.0001H16.4726C16.2936 7.73123 15.2425 4.69468 13.5479 2.11914C18.0123 2.81288 21.4998 6.4598 21.9506 11.0001ZM21.9506 13.0001C21.4998 17.5403 18.0123 21.1872 13.5479 21.881C15.2425 19.3054 16.2936 16.2689 16.4726 13.0001H21.9506ZM9.53068 13.0001H14.4692C14.2976 15.7829 13.4146 18.3733 11.9999 20.5916C10.5852 18.3733 9.70229 15.7829 9.53068 13.0001ZM9.53068 11.0001C9.70229 8.21722 10.5852 5.62684 11.9999 3.40853C13.4146 5.62684 14.2976 8.21722 14.4692 11.0001H9.53068Z"></path></svg>
+                                      </div>
+                                    {/* {selectedPerson.name} */}
+                                  </Listbox.Button>
+                                    <Listbox.Options className='absolute top-12'>
+                                      {languageArr.map((item) => (
+                                        <Listbox.Option
+                                          key={item.id}
+                                          value={item}
+                                          disabled={item.unavailable}
+                                          className= 'flex items-center cursor-pointer'
+                                        >
+                                          {/* <img src={item?.img} alt="india" className="w-4 h-4 mr-1 rounded-full object-cover"/> */}
+                                          {item.name}
+                                        </Listbox.Option>
+                                      ))}
+                                    </Listbox.Options>
+                                  </Listbox>
+                              
                           </li>
                           
                           <li className="md:flex">
