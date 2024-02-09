@@ -10,6 +10,7 @@ import cromebook from '../../asstes/img/Chromebook.svg'
 import tab from '../../asstes/img/mobile&tablet.svg'
 import printers from '../../asstes/img/printer.svg'
 import server from '../../asstes/img/Server.svg'
+import { Link } from 'react-router-dom';
 
 export const ConnectionList = () => {
     return (
@@ -57,13 +58,13 @@ export const ConnectionList = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div class="collectioncard">
+                    <Link to="/windows-products" class="collectioncard">
                         <div class="bg-white mx-auto lg:size-40 md:size-36 size-24 rounded-full overflow-hidden flex items-center justify-center">
                             <img src={Windows} alt="frame" class="w-24 h-24 object-contain"/>
                         </div>
                         <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-4 text-center">Windows</div>
                         <div class="text-gray-700 text-sm text-center sm:mt-2 mt-1">8 Items</div>
-                    </div>
+                    </Link>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="collectioncard">

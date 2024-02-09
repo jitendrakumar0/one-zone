@@ -30,7 +30,7 @@ const Blog = () => {
                 },
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper *:py-5"
             >
                 <SwiperSlide>
                     <a href="javascript:;">
@@ -44,14 +44,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -72,14 +72,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -100,14 +100,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -128,14 +128,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -167,14 +167,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -195,14 +195,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -223,14 +223,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -251,14 +251,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -279,14 +279,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>
@@ -307,14 +307,14 @@ const Blog = () => {
                                         Sep 14, 2023
                                     </div>
                                 </div>
-                                <div class="cardMainHeading text-2xl !leading-[120%] overflow-hidden text-ellipsis line-clamp-3">
+                                <div class="cardMainHeading text-lg overflow-hidden text-ellipsis line-clamp-3">
                                     <a href="javascript:;" class="text-black font-semibold group-hover:underline transition-all duration-300">
                                         Laptop computer with blue pink and a blank screen.
                                     </a>
                                 </div>
                                 <div class="flex items-center pt-10 gap-3">
                                     <a href="javascript:;">
-                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-3 px-5">
+                                        <div class="hover:bg-black hover:text-white transition-all duration-300 text-base border-2 rounded-md py-2 px-5">
                                             Load More
                                         </div>
                                     </a>

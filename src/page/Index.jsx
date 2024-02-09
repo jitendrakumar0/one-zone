@@ -7,8 +7,6 @@ import OfferBanner from '../components/OfferBanner/OfferBanner'
 import Blog from '../components/Blog/Blog'
 import Cta from '../components/Cta/Cta'
 import Footer from '../components/Footer/Footer'
-import Signup from '../components/Signup/Signup'
-import Signin from '../components/Signin/Signin'
 
 
 
@@ -23,8 +21,6 @@ const Index = () => {
             <SellingProducts/>
             <Cta/>
             <Footer/>
-           <Signup/>
-           <Signin/>
         </>
     )
 }
