@@ -44,7 +44,7 @@ const Header = () => {
                   <div className="sm:flex items-center max-lg:justify-center gap-4">
                       <div>
                           <Link  className="max-sm:justify-center flex items-center text-black sm:text-base text-sm group duration-300 hover:text-[#09757A]">
-                              <span className="text-black/90 sm:size-5 size-4 me-2 duration-300 md:group-hover:text-[#09757A]">
+                              <span className="text-black/90 size-5 me-2 duration-300 md:group-hover:text-[#09757A]">
                                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"></path></svg>
                               </span>
                               +01 23456789 
@@ -52,7 +52,7 @@ const Header = () => {
                       </div>
                       <div>
                           <Link  className="max-sm:justify-center flex items-center text-black sm:text-base text-sm group duration-300 hover:text-[#09757A]">
-                              <span className="text-black/90 sm:size-5 size-4 me-2 duration-300 md:group-hover:text-[#09757A]">
+                              <span className="text-black/90 size-5 me-2 duration-300 md:group-hover:text-[#09757A]">
 
                                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M460.6 147.3L353 256.9c-.8.8-.8 2 0 2.8l75.3 80.2c5.1 5.1 5.1 13.3 0 18.4-2.5 2.5-5.9 3.8-9.2 3.8s-6.7-1.3-9.2-3.8l-75-79.9c-.8-.8-2.1-.8-2.9 0L313.7 297c-15.3 15.5-35.6 24.1-57.4 24.2-22.1.1-43.1-9.2-58.6-24.9l-17.6-17.9c-.8-.8-2.1-.8-2.9 0l-75 79.9c-2.5 2.5-5.9 3.8-9.2 3.8s-6.7-1.3-9.2-3.8c-5.1-5.1-5.1-13.3 0-18.4l75.3-80.2c.7-.8.7-2 0-2.8L51.4 147.3c-1.3-1.3-3.4-.4-3.4 1.4V368c0 17.6 14.4 32 32 32h352c17.6 0 32-14.4 32-32V148.7c0-1.8-2.2-2.6-3.4-1.4z"></path><path d="M256 295.1c14.8 0 28.7-5.8 39.1-16.4L452 119c-5.5-4.4-12.3-7-19.8-7H79.9c-7.5 0-14.4 2.6-19.8 7L217 278.7c10.3 10.5 24.2 16.4 39 16.4z"></path></svg>
                               </span>
@@ -66,7 +66,7 @@ const Header = () => {
                   <div className="flex items-center max-lg:justify-center">
                       <div className="relative z-40 flex flex-col">
                           <div className="flex items-center text-black sm:text-base text-sm">
-                              <div className="sm:size-5 size-4 me-2 flex items-center">
+                              <div className="size-5 me-2 flex items-center">
                                 <Listbox value={selectedPerson} onChange={setSelectedPerson}>
                                   <Listbox.Button className='flex items-center'>
                                     <img src={selectedPerson.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/>
@@ -78,7 +78,7 @@ const Header = () => {
                                           key={item.id}
                                           value={item}
                                           disabled={item.unavailable}
-                                          className= 'flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'
+                                          className= 'flex items-center cursor-pointer text-black text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md'
                                         >
                                           <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/>
                                           {item.name}
@@ -136,7 +136,7 @@ const Header = () => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
               <div className="flex items-center justify-between">
                   <div>
-                      <div className="logo h-12  flex">
+                      <div className="logo sm:h-12 h-10  flex">
                           <Link >
                               <img src={Logo} alt="logo" className="size-full"/>
                           </Link>
@@ -151,7 +151,7 @@ const Header = () => {
                         </div> */}
                   </div>
                   <div>
-                      <ul className="lg:flex hidden items-center justify-center *:text-black *text-sm *:font-normal gap-8">
+                      <ul className="lg:flex hidden items-center justify-center *:text-black *text-sm *:font-normal xl:gap-8 gap-6">
                           <li>
                               <Link to="/windows-products">
                                   Windows
@@ -191,7 +191,7 @@ const Header = () => {
                
                   </div>
                   <div>
-                      <ul className="flex items-center justify-center gap-8 ">
+                      <ul className="flex items-center justify-center md:gap-8 gap-5 ">
                           <li className="md:flex ">
                               <Link  className="text-black size-5 flex items-center relative">
                                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path></svg>
@@ -199,7 +199,7 @@ const Header = () => {
                               </Link>
                           </li>
                           <li className="md:flex ">
-                          <Popover className="relative">
+                          <Popover className="relative flex items-center">
                               <Popover.Button>
                                 <div className="text-black size-5 flex items-center relative">
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" className="size-full" xmlns="http://www.w3.org/2000/svg"><path d="M255.9 456c31.1 0 48.1-22 48.1-53h-96.3c0 31 17 53 48.2 53zM412 352.2c-15.4-20.3-45.7-32.2-45.7-123.1 0-93.3-41.2-130.8-79.6-139.8-3.6-.9-6.2-2.1-6.2-5.9v-2.9c0-13.4-11-24.7-24.4-24.6-13.4-.2-24.4 11.2-24.4 24.6v2.9c0 3.7-2.6 5-6.2 5.9-38.5 9.1-79.6 46.5-79.6 139.8 0 90.9-30.3 102.7-45.7 123.1-9.9 13.1-.5 31.8 15.9 31.8h280.1c16.3 0 25.7-18.8 15.8-31.8z"></path></svg>
@@ -209,10 +209,10 @@ const Header = () => {
 
                               <Popover.Panel className="absolute z-10 -left-40 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1">
                                 <div className="flex flex-col">
-                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Analytics</Link>
-                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Engagement</Link>
-                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Security</Link>
-                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'>Integrations</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md'>Analytics</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md'>Engagement</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md'>Security</Link>
+                                  <Link className='text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md'>Integrations</Link>
                                 </div>
 
                                 <img src="/solutions.jpg" alt="" />
@@ -234,7 +234,7 @@ const Header = () => {
                                           key={item.id}
                                           value={item}
                                           disabled={item.unavailable}
-                                          className= 'flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-1 rounded-md'
+                                          className= 'flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md'
                                         >
                                           {/* <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
                                           {item.name}
@@ -250,7 +250,7 @@ const Header = () => {
                                 <Menu as="div" className="relative inline-block text-left">
                                   <div className='grid'>
                                     <Menu.Button className="">
-                                      <span className="sm:size-5 size-4 me-2 flex items-center">
+                                      <span className="size-5 me-2 flex items-center">
                                         <img src={user} alt="india" className="size-full"/>
                                       </span>
                                     </Menu.Button>
