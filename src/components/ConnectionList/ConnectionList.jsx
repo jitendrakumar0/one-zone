@@ -25,12 +25,12 @@ export const ConnectionList = () => {
                             </div>
                         </div>
                         <div class="flex-none relative">
-                            <div class="swiper-button-next navigationNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
+                            <div class="swiper-button-next cursor-pointer navigationNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
                                 <div class="">
                                     <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                                 </div>
                             </div>
-                            <div class="swiper-button-prev navigationPrev absolute after:content-[*] md:size-10 size-8 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
+                            <div class="swiper-button-prev cursor-pointer navigationPrev absolute after:content-[*] md:size-10 size-8 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
                                 <div class="rotate-180">
                                     <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                                 </div>
@@ -62,7 +62,7 @@ export const ConnectionList = () => {
                         className="collectionSwiper"
                     >
                         <SwiperSlide>
-                            <Link to="/windows-products" class="collectioncard duration-300 group ">
+                            <Link to="/windows-products" class="collectioncard duration-300 group cursor-pointer ">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={Windows} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -71,7 +71,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={apple} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -80,7 +80,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={cromebook} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -89,7 +89,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={tab} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -98,7 +98,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -107,7 +107,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={server} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -116,7 +116,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={server} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -125,7 +125,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windows-products" class="collectioncard duration-300 group">
+                            <Link to="/windows-products" class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={Windows} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -134,7 +134,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={apple} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -143,7 +143,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={cromebook} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -152,7 +152,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={tab} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -161,7 +161,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -170,7 +170,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
@@ -179,7 +179,7 @@ export const ConnectionList = () => {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group">
+                            <div class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
