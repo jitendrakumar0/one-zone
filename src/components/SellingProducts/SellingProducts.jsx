@@ -1,7 +1,7 @@
 import React from 'react';
 import productImg from '../../asstes/img/product-1.png';
 import banner from '../../asstes/img/banner.png'
-import { Pagination } from 'swiper/modules';
+import { Pagination,Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -40,6 +40,18 @@ const SellingProducts = () => {
                             <a href="#" class="text-white">Shop Now</a>
                         </div>
                     </div>
+                    <div class="flex-none relative">
+                        <div class="swiper-button-next sellingNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
+                            <div class="">
+                                <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev sellingPrev absolute after:content-[*] md:size-10 size-8 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
+                            <div class="rotate-180">
+                                <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
             
                 </div>
                 <div class="md:w-1/2 lg:w-2/3 w-full">
@@ -49,8 +61,12 @@ const SellingProducts = () => {
                         spaceBetween={30}
                         pagination={{
                         clickable: true,
+                        }}  
+                        navigation={{
+                            prevEl: '.sellingPrev',
+                            nextEl: '.sellingNext',
                         }}
-                        modules={[Pagination]}
+                        modules={[Pagination,Navigation]}
                         className="mySwiper1"
                     >
                         <SwiperSlide>
@@ -148,6 +164,68 @@ const SellingProducts = () => {
                                     </div>
                                 </div>
                                
+                                <div class="bg-white p-3">
+                                    <div class="text-lg font-medium mb-2">Apple
+                                        14 pro</div>
+                                        <div className=''>
+                                            <span className='bg-[#09757A] rounded text-white px-3 py-1 mr-2'>SSD:2GB</span>
+                                            <span className='bg-[#09757A] rounded text-white px-3 py-1 mr-2'>SDT:2GB</span>
+                                            <span className='bg-[#09757A] rounded text-white px-3 py-1'>Intel</span>
+                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
+                                        </div>
+                                </div>
+                                <div
+                                    class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
+                                    10% off
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div
+                                class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
+                                <div class="relative overflow-hidden">
+                                    <img src={productImg} alt/>
+                                    <div
+                                        class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
+                                        <div>
+                                            <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path></svg>
+                                        </div>
+                                        <div
+                                            class="text-md px-3 text-white">Let's Chat</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-white p-3">
+                                    <div class="text-lg font-medium mb-2">Apple
+                                        14 pro</div>
+                                        <div className=''>
+                                            <span className='bg-[#09757A] rounded text-white px-3 py-1 mr-2'>SSD:2GB</span>
+                                            <span className='bg-[#09757A] rounded text-white px-3 py-1 mr-2'>SDT:2GB</span>
+                                            <span className='bg-[#09757A] rounded text-white px-3 py-1'>Intel</span>
+                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
+                                        </div>
+                                </div>
+                                <div
+                                    class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
+                                    10% off
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div
+                                class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
+                                <div class="relative overflow-hidden">
+                                    <img src={productImg} alt/>
+                                    <div
+                                        class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
+                                        <div>
+                                            <svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path></svg>
+                                        </div>
+                                        <div
+                                            class="text-md px-3 text-white">Let's Chat</div>
+                                    </div>
+                                </div>
+                                
                                 <div class="bg-white p-3">
                                     <div class="text-lg font-medium mb-2">Apple
                                         14 pro</div>
