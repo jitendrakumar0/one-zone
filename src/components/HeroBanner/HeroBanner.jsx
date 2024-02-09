@@ -24,14 +24,14 @@ const HeroBanner = () => {
                                 <input type="text" name="price" id="price" class="block bg-white w-full rounded-full  sm:h-14 h-10 border-0 py-1.5 sm:pl-14 pl-10 pr-20 text-black ring-1 ring-inset ring-gray-300 placeholder:text-black focus:ring-1 focus:ring-inset focus:ring-[#FFED00] sm:text-base sm:placeholder:text-base placeholder:text-sm sm:leading-6" placeholder="Search Tablet, Laptop & Desktop"/>
                                 <div class="absolute inset-y-0 sm:right-2 right-1 flex items-center rounded-full bg-transparent my">
                                     <span>
-                                        <button className='border-0 rounded-full bg-[#FFED00] px-4 sm:py-3 py-1 text-black text-base font-semibold'>Search</button>
+                                        <button className='border-0 rounded-full bg-[#FFED00] px-4 sm:py-3 py-1 text-black text-xs font-bold uppercase'>Search</button>
                                     </span>
                                 </div>
                             </div>
                         </div>
 
                 </div>
-                <div className='bg-black/70 size-full absolute inset-0'></div>
+                <div className='bg-gradient-to-tr from-sky-900 via-blue-800 to-teal-800 mix-blend-multiply size-full absolute inset-0'></div>
             </div>
         </div>
         </>
