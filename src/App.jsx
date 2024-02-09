@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <BrowserRouter 
-      //  basename={'/onezone'}
+        // basename={'/onezone'}
       >
         <Routes>
           <Route path="/" element={<Index/>}></Route>

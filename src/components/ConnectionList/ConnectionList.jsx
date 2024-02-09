@@ -80,31 +80,31 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
+                            <Link to={'/login'} class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={apple} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
                                 <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Apple</div>
                                 <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
+                            <Link to={'/signup'} class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={cromebook} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
                                 <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">ChromeBook</div>
                                 <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
+                            <Link to={'forgot-password'} class="collectioncard duration-300 group cursor-pointer">
                                 <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
                                     <img src={tab} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
                                 </div>
                                 <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Mob & Tab</div>
                                 <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div class="collectioncard duration-300 group cursor-pointer">
