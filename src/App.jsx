@@ -8,7 +8,9 @@ import ProductList from "./page/productList/ProductList";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter 
+        // basename={'/onezone'}
+      >
         <Routes>
           <Route path="/" element={<Index/>}></Route>
           <Route path="/login" element={<Login/>}></Route>

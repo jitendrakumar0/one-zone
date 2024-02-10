@@ -14,7 +14,7 @@ const HeroBanner = () => {
                         </div>
                         <div className='text-white md:text-3xl sm:text-2xl text-xl md:w-4/6 pb-4 mx-auto capitalize font-semibold relative z-20 text-center sm:px-5 px-4'>We Offer Used Computers For Sale And Their Complementary Parts </div>
                         {/* <div className='text-white/90 text-base text-white relative z-20 mt-3 text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elitmet, consectetur adipisicing elit . <br className='md:block hidden' /> Ratione impedit repellendus illo, dolorum corrupti autem!</div> */}
-                        <div className=''>
+                        <div className='w-[90%] flex justify-center'>
                             <div class="relative mt-4 rounded-md shadow-0 md:w-[500px] w-full bg-transparent z-20  ">
                                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center sm:pl-5 pl-3 bg-transparent">
                                 <span class="text-black sm:text-sm rounded-full bg-transparent">

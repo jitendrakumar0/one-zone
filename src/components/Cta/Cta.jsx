@@ -3,14 +3,14 @@ import lines from '../../asstes/img/lines.png'
 
 const Cta = () => {
     return (
-        <section class="py-10 mx-auto px-5 md:px-10">
+        <section class="py-5 sm:py-8 lg:py-10 mx-auto px-5 md:px-10">
     <div class="container mx-auto">
         <div class="rounded-lg shadow bg-cover bg-gradient-to-l *:relative *:z-10 from-orange-500/5 to-orange-500/5 via-orange-500from-orange-500/0">
             <div class="py-20 px-6 bg-no-repeat bg-cover">
                 <img src={lines} className='object-cover object-center !absolute !inset-0 size-full !z-0' alt="kuch nahi" />
                 <div class="max-w-2xl mx-auto text-center">
-                    <h2 class="md:text-4xl text-3xl font-medium text-black  mt-5">Obtain Your Customizable Financial Survival Plan.</h2>
-                    <p class="text-base font-medium text-black mt-6">Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.</p>
+                    <h2 class="md:text-4xl text-2xl font-medium text-black">Obtain Your Customizable Financial Survival Plan.</h2>
+                    <p class="text-sm font-medium text-black mt-6">Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.</p>
                     <form class="max-w-2xl mx-auto space-y-2 mt-6">
                         <div class="relative">
                             <input type="email" id="subcribe" class="py-4 ps-4 pe-14 w-full h-12 rounded-md bg-default-50 text-black  border border-black/20 " placeholder="Type Your Email" name="email"/>
