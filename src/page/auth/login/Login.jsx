@@ -1,60 +1,131 @@
-import React from 'react'
+import React, { useState } from 'react'
 import frame from '../../../asstes/img/Frame.png'
 import Header from '../../../components/header/Header'
 import Footer from '../../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import { LiaSignInAltSolid } from 'react-icons/lia'
+import { MdOutlineMailOutline } from "react-icons/md";
+import { IoLockClosedOutline } from "react-icons/io5";
+import { Tab } from '@headlessui/react'
 
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+  
 const Login = () => {
+    const [auth, setAuth] = useState(false);
   return (
     <>
-    <Header/>
-<div class="max-w-5xl px-5 lg:px-10 flex items-center h-screen flex-wrap mx-auto py-5">
-        <div class="flex flex-wrap items-center justify-center">
-            <div id="profile" class="order-2 lg:order-1 w-full h-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none rounded-tl-none lg:rounded-tl-lg rounded-tr-none lg:rounded-tr-lg shadow-2xl bg-white opacity-75">
-                <div class="p-4 md:p-10">
-                    <div class="text-2xl font-bold text-center pb-4">Welcome Back !</div>
-                    <div class="text-base font-semibold text-center pb-5">Sign in to continue to lorem.com</div>
-                    <form>
-                        <div class="flex flex-wrap items-center gap-y-3">
-                            <div class="w-full">
-                                <div class="px-2">
-                                    <label for="email" class="text-base font-medium inline-block mb-2 text-black">Email</label>
-                                    <input type="email" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Email" name="name"/>
-                                </div>
-                            </div>
-                            <div class="w-full">
-                                <div class="px-2">
-                                    <label for="password" class="text-base font-medium inline-block mb-2 text-black">password</label>
-                                    <input type="password" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Password" name="name"/>
-                                </div>
-                                
-                                <Link to="" className='px-2 block pt-2'>
-                                    <div class="text-base font-semibold text-black hover:text-black/70">
-                                        Forgot Password?
+    <Header auth={auth} setAuth={setAuth} />
+    <div className='w-full flex justify-center'>
+        <div className="max-w-2xl w-full px-5 lg:px-10 flex items-center min-h-[calc(100dvh-130px)] flex-wrap mx-auto py-5">
+            <div className="flex flex-col rounded-2xl overflow-hidden shadow-2xl items-center justify-center w-full">
+                <div className="flex flex-col w-full flex-wrap *:w-full">
+                    <Tab.Group>
+                        <Tab.List className="flex w-full mb-1">
+                            <Tab
+                                className={({ selected }) =>
+                                    classNames(
+                                    'w-full py-2.5 md:text-lg text-base font-semibold uppercase leading-5',
+                                    'ring-white/60 ring-offset-2 ring-offset-blue-400',
+                                    selected
+                                        ? 'bg-black text-white shadow'
+                                        : 'bg-black/60 text-white hover:text-white'
+                                    )
+                                }>Buyer</Tab>
+                            <Tab
+                                className={({ selected }) =>
+                                    classNames(
+                                    'w-full py-2.5 md:text-lg text-base font-semibold uppercase leading-5 border-l border-white/20',
+                                    'ring-white/60 ring-offset-2 ring-offset-blue-400',
+                                    selected
+                                        ? 'bg-black text-white shadow'
+                                        : 'bg-black/60 text-white hover:text-white'
+                                    )
+                                }>Seller</Tab>
+                        </Tab.List>
+                        <Tab.Panels>
+                            <Tab.Panel>
+                                    <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
+                                        <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
+                                        <div className="text-2xl font-bold text-center pb-2">Welcome Back !</div>
+                                        <div className="text-base font-semibold text-center">Sign in as buyer to continue to Onezone</div>
                                     </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="pt-5 px-2 flex items-center justify-between flex-wrap">
-                        <div class="">
-                            <button class="px-5 py-1.5 text-lg rounded text-white bg-black hover:bg-black/70">Login</button>
-                        </div>
-                        <Link to="/signup">
-                            <div class="text-base font-semibold text-black hover:text-black/70">
-                                Don't have any account? <span className='font-bold'>Register</span>
-                            </div>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-            <div class="w-full lg:w-2/5 h-full order-1 lg:order-2">
-                <div class="aspect-[3/1.5] lg:aspect-[4/5.2]">
-                    <img src={frame} class="rounded-lg rounded-bl-none lg:rounded-bl-lg rounded-br-none lg:rounded-br-lg shadow-2xl w-full h-full object-cover "/>
+                                    <div id="profile" className="w-full bg-white opacity-75">
+                                        <div className="p-4 md:p-10">
+                                            <form>
+                                                <div className="flex flex-wrap items-center gap-y-3">
+                                                    <div className="relative z-0 w-full mb-5 group">
+                                                        <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                        <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><MdOutlineMailOutline className='size-5' /> Email address</label>
+                                                    </div>
+                                                    <div className="relative z-0 w-full mb-5 group">
+                                                        <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                        <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLockClosedOutline className='size-5' /> Password</label>
+                                                        <Link to="/forgot-password" className="text-sm font-semibold text-black hover:text-black/70 pt-2 block">
+                                                            Forgot Password?
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div className="pt-5 flex items-center justify-between flex-wrap">
+                                                <div className="">
+                                                    
+                                                    <Link to="/" className="text-white bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Login <LiaSignInAltSolid className='size-5' /></Link>
+                                                </div>
+                                                <Link to="/signup">
+                                                    <div className="text-base font-semibold text-black hover:text-black/70">
+                                                        Don't have any account? <span className='font-bold'>Register</span>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </Tab.Panel>
+                            <Tab.Panel>
+                                    <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
+                                        <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
+                                        <div className="text-2xl font-bold text-center pb-2">Welcome Back !</div>
+                                        <div className="text-base font-semibold text-center">Sign in as seller to continue to Onezone</div>
+                                    </div>
+                                    <div id="profile" className="w-full bg-white opacity-75">
+                                        <div className="p-4 md:p-10">
+                                            <form>
+                                                <div className="flex flex-wrap items-center gap-y-3">
+                                                    <div className="relative z-0 w-full mb-5 group">
+                                                        <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                        <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><MdOutlineMailOutline className='size-5' /> Email address</label>
+                                                    </div>
+                                                    <div className="relative z-0 w-full mb-5 group">
+                                                        <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                        <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLockClosedOutline className='size-5' /> Password</label>
+                                                        <Link to="/forgot-password" className="text-sm font-semibold text-black hover:text-black/70 pt-2 block">
+                                                            Forgot Password?
+                                                        </Link>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div className="pt-5 flex items-center justify-between flex-wrap">
+                                                <div className="">
+                                                    
+                                                    <Link to="/" className="text-white bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Login <LiaSignInAltSolid className='size-5' /></Link>
+                                                </div>
+                                                <Link to="/signup">
+                                                    <div className="text-base font-semibold text-black hover:text-black/70">
+                                                        Don't have any account? <span className='font-bold'>Register</span>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </Tab.Panel>
+                        </Tab.Panels>
+                    </Tab.Group>
                 </div>
             </div>
         </div>
-	</div>
+    </div>
     <Footer/>
     </>
   )

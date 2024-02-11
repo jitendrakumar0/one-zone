@@ -16,23 +16,23 @@ export const ConnectionList = () => {
     return (  
         <>
                 
-            <div class="realtive py-5 sm:py-8 lg:py-10 bg-[#F5F5F7]">
-                <div class="mx-auto max-w-7xl px-6 lg:px-8 z-[1]">
-                    <div class="flex items-center pb-8">
-                        <div class="flex-1">
-                            <div class="md:text-3xl text-2xl text-black font-bold">
+            <div className="realtive py-5 sm:py-8 lg:py-10 bg-[#F5F5F7]">
+                <div className="max-w-screen-xl mx-auto p-4 z-[1]">
+                    <div className="flex items-center pb-8">
+                        <div className="flex-1">
+                            <div className="md:text-2xl text-xl text-black font-bold">
                                 Categories
                             </div>
                         </div>
-                        <div class="flex-none relative">
-                            <div class="swiper-button-next cursor-pointer navigationNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
-                                <div class="">
-                                    <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                        <div className="flex-none relative">
+                            <div className="swiper-button-next cursor-pointer navigationNext after:content-[*] md:size-8 size-6 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
+                                <div className="">
+                                    <svg stroke="currentColor" fill="black" strokeWidth="0" viewBox="0 0 24 24" className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                                 </div>
                             </div>
-                            <div class="swiper-button-prev cursor-pointer navigationPrev absolute after:content-[*] md:size-10 size-8 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
-                                <div class="rotate-180">
-                                    <svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 24 24" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                            <div className="swiper-button-prev cursor-pointer navigationPrev absolute after:content-[*] md:size-8 size-6 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
+                                <div className="rotate-180">
+                                    <svg stroke="currentColor" fill="black" strokeWidth="0" viewBox="0 0 24 24" className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                                 </div>
                             </div>
                         </div>
@@ -59,145 +59,74 @@ export const ConnectionList = () => {
                         },
                         992: {
                             slidesPerView: 6,
+                            spaceBetween:20
                         },
                         1200: {
                             slidesPerView: 6,
+                            spaceBetween:20
                         },
                         1400: {
                             slidesPerView: 6,
+                            spaceBetween:20
                         },
                         }}
                         modules={[Pagination,Navigation]}
                         className="collectionSwiper"
                     >
                         <SwiperSlide>
-                            <Link to="/windows-products" class="collectioncard duration-300 group cursor-pointer ">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={Windows} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white ">
+                                <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
+                                    <img src={Windows} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
                                 </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Windows</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
+                                <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Windows</div>
+                                <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to={'/login'} class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={apple} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                                <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
+                                    <img src={apple} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
                                 </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Apple</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
+                                <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Apple</div>
+                                <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to={'/signup'} class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={cromebook} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                                <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
+                                    <img src={cromebook} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
                                 </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">ChromeBook</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
+                                <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">ChromeBook</div>
+                                <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to={'forgot-password'} class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={tab} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                                <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
+                                    <img src={tab} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
                                 </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Mob & Tab</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
+                                <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Mob & Tab</div>
+                                <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                                <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
+                                    <img src={printers} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
                                 </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center"> Printers</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={server} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Server</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={server} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Server</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Link to="/windows-products" class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={Windows} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Windows</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
+                                <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center"> Printers</div>
+                                <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={apple} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                                <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
+                                    <img src={server} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
                                 </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Apple</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
+                                <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Server</div>
+                                <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
+                            </Link>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={cromebook} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">ChromeBook</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={tab} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center">Mob & Tab</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center"> Printers</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center"> Printers</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div class="collectioncard duration-300 group cursor-pointer">
-                                <div class="bg-white mx-auto md:size-36 sm:size-24 size-20 rounded-full overflow-hidden flex items-center justify-center">
-                                    <img src={printers} alt="frame" class="md:size-16 size-12 object-contain duration-300 md:group-hover:scale-105"/>
-                                </div>
-                                <div class="text-black sm:text-xl text-lg font-semibold sm:mt-5 mt-3 text-center"> Printers</div>
-                                <div class="text-gray-700 text-sm text-center sm:mt-1">8 Items</div>
-                            </div>
-                        </SwiperSlide>
-                        {/* <div className='w-4 h-4 bg-red-300' ref={navigationPrevRef} />
-                        <div className='w-4 h-4 bg-red-300' ref={navigationNextRef} /> */}
                     </Swiper>
                     
                 </div>

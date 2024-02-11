@@ -1,2004 +1,448 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useState } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
-import productImg from "../../asstes/img/product-1.png";
-import banner from "../../asstes/img/banner.png";
-import laptop1 from "../../asstes/img/laptop1.jpeg";
-import laptop2 from "../../asstes/img/laptop2.jpeg";
-import laptop3 from "../../asstes/img/laptop4.svg";
-import pc1 from "../../asstes/img/pc1.svg";
-import pc2 from "../../asstes/img/pc2.svg";
-import pc3 from "../../asstes/img/pc3.svg";
-import s1 from "../../asstes/img/s1.svg";
-import s2 from "../../asstes/img/s2.svg";
-import s3 from "../../asstes/img/s3.svg";
-import { Disclosure, Listbox, Tab } from "@headlessui/react";
-import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from "react-router-dom";import { RiChat1Line } from "react-icons/ri";
+import { FaRegHeart } from "react-icons/fa";
+import { MdClear } from "react-icons/md";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
+    
+    const sortOptions = [
+        { name: 'Default', href: '#', current: true },
+        { name: 'Newest to Oldest', href: '#', current: false },
+        { name: 'Oldest to Newest', href: '#', current: false },
+        { name: 'Price: Low to High', href: '#', current: false },
+        { name: 'Price: High to Low', href: '#', current: false },
+    ]
+    const filters = [
+        {
+        id: 'category',
+        name: 'Category',
+        options: [
+            { value: 'windows', label: 'Windows', checked: false },
+            { value: 'mac', label: 'Mac', checked: false },
+            { value: 'chromebook', label: 'Chromebook', checked: true },
+            { value: 'mobile', label: 'Mobile', checked: false },
+            { value: 'tablets', label: 'Tablets', checked: false },
+            { value: 'photocopy-machine', label: 'Photocopy Machine', checked: false },
+            { value: 'servers', label: 'Servers', checked: false },
+        ],
+        },
+        {
+        id: 'sub-category',
+        name: 'Sub Category',
+        options: [
+            { value: 'Laptop', label: 'Laptop', checked: false },
+            { value: 'PC', label: 'PC', checked: false },
+            { value: 'Sper Parts', label: 'Sper Parts', checked: true },
+            { value: 'MacBook', label: 'MacBook', checked: false },
+            { value: 'IMac', label: 'IMac', checked: false },
+            { value: 'Android', label: 'Android', checked: false },
+            { value: 'iPhone', label: 'iPhone', checked: false },
+            { value: 'Windows', label: 'Windows', checked: false },
+            { value: 'iPad', label: 'iPad', checked: false },
+        ],
+        },
+        {
+        id: 'Brand',
+        name: 'Brand',
+        options: [
+            { value: 'MSI', label: 'MSI', checked: false },
+            { value: 'Apple', label: 'Apple', checked: false },
+            { value: 'Microsoft', label: 'Microsoft', checked: true },
+            { value: 'Samsung', label: 'Samsung', checked: false },
+            { value: 'Razer', label: 'Razer', checked: false },
+            { value: 'LG', label: 'LG', checked: false },
+            { value: 'Fujitsu', label: 'Fujitsu', checked: false },
+            { value: 'Xiaomi', label: 'Xiaomi', checked: false },
+            { value: 'Huawei', label: 'Huawei', checked: false },
+            { value: 'Toshiba', label: 'Toshiba', checked: false },
+            { value: 'Inspiron', label: 'Inspiron', checked: false },
+            { value: 'GIGABYTE', label: 'GIGABYTE', checked: false },
+            { value: 'ASUS', label: 'ASUS', checked: false },
+            { value: 'Chromebook', label: 'Chromebook', checked: false },
+            { value: 'Sony', label: 'Sony', checked: false },
+        ],
+        },
+        {
+        id: 'subBrand',
+        name: 'Sub Brand',
+        options: [
+            { value: 'Razer', label: 'Razer', checked: false },
+            { value: 'LG', label: 'LG', checked: false },
+            { value: 'Fujitsu', label: 'Fujitsu', checked: false },
+            { value: 'Xiaomi', label: 'Xiaomi', checked: false },
+            { value: 'Huawei', label: 'Huawei', checked: false },
+            { value: 'Toshiba', label: 'Toshiba', checked: false },
+            { value: 'Inspiron', label: 'Inspiron', checked: false },
+        ],
+        },
+        {
+        id: 'Condition',
+        name: 'Condition',
+        options: [
+            { value: 'New', label: 'New', checked: false },
+            { value: 'Pre-owned', label: 'Pre-owned', checked: false },
+            { value: 'Refurbished', label: 'Refurbished', checked: false },
+        ],
+        },
+        {
+        id: 'Warranty',
+        name: 'Warranty',
+        options: [
+            { value: 'Yes', label: 'Yes', checked: false },
+            { value: 'No', label: 'No', checked: false },
+            { value: 'Does not apply', label: 'Does not apply', checked: false },
+        ],
+        },
+        {
+        id: 'Condition',
+        name: 'Condition',
+        options: [
+            { value: 'New', label: 'New', checked: false },
+            { value: 'Pre-owned', label: 'Pre-owned', checked: false },
+            { value: 'Refurbished', label: 'Refurbished', checked: false },
+        ],
+        },
+        {
+        id: 'Warranty',
+        name: 'Warranty',
+        options: [
+            { value: 'Yes', label: 'Yes', checked: false },
+            { value: 'No', label: 'No', checked: false },
+            { value: 'Does not apply', label: 'Does not apply', checked: false },
+        ],
+        },
+    ]
+  
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(' ')
     }
 
-    const sortArr = [
-    { id: 1, name: "Low to High" },
-    { id: 2, name: "High to Low" },
-    ];
-
-    const ProductList = () => {
-    const [selectedSort, setSelectedSort] = useState(sortArr[0]);
-    const [activeTab, setActiveTab] = useState('tab1');
-    const [filterOpen, setFilterOpen] = useState(false)
-
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
-    };
-    const handleSidebar = ()=> {
-        if(document.body.classList.contains('filterBarOpen')) {
-            document.body.classList.remove('filterBarOpen')
-            setFilterOpen(false)
-        }else {
-            document.body.classList.add('filterBarOpen')
-            setFilterOpen(true)
-        }
-    }
+const ProductList = () => {
+    const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+    const [priceRange, setPriceRange] = useState(1000);
     return (
         <>
         <Header />
 
-        <div className="flex">
-            <div className=" w-[300px] lg:w-1/4 bg-white py-5 md:py-10 px-5 absolute lg:static h-screen z-50 -translate-x-full lg:-translate-x-0 sideBar transition">
-            <div className="md:px-6 flex flex-col gap-2 sticky top-[155px] h-full">
-                <div className="flex items-center gap-x-4 mb-2">
-                    <div className="filterIcon size-10 flex items-center justify-center p-2.5 bg-yellow-100 rounded-full">
-                        <svg
-                        stroke="currentColor"
-                        fill="none"
-                        strokeWidth={2}
-                        viewBox="0 0 24 24"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-full w-full"
-                        xmlns="http://www.w3.org/2000/svg"
-                        >
-                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
-                        </svg>
+        <div className="bg-white">
+                <div>
+                    {/* Mobile filter dialog */}
+                    <Transition.Root show={mobileFiltersOpen} as={Fragment}>
+                        <Dialog as="div" className="relative z-[100] lg:hidden" onClose={setMobileFiltersOpen}>
+                            <Transition.Child
+                            as={Fragment}
+                            enter="transition-opacity ease-linear duration-300"
+                            enterFrom="opacity-0"
+                            enterTo="opacity-100"
+                            leave="transition-opacity ease-linear duration-300"
+                            leaveFrom="opacity-100"
+                            leaveTo="opacity-0"
+                            >
+                            <div className="fixed inset-0 bg-black bg-opacity-25" />
+                            </Transition.Child>
+
+                            <div className="fixed inset-0 z-40 flex">
+                                <Transition.Child
+                                    as={Fragment}
+                                    enter="transition ease-in-out duration-300 transform"
+                                    enterFrom="translate-x-full"
+                                    enterTo="translate-x-0"
+                                    leave="transition ease-in-out duration-300 transform"
+                                    leaveFrom="translate-x-0"
+                                    leaveTo="translate-x-full"
+                                >
+                                    <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl">
+                                    <div className="flex items-center justify-between px-4">
+                                        <h2 className="text-lg font-medium text-gray-900">Filters</h2>
+                                        <button
+                                        type="button"
+                                        className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
+                                        onClick={() => setMobileFiltersOpen(false)}
+                                        >
+                                        <span className="sr-only">Close menu</span>
+                                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                        </button>
+                                    </div>
+
+                                    {/* Filters */}
+                                    <form className="mt-4 border-t border-gray-200">
+                                        <h3 className="sr-only">Categories</h3>
+
+                                        {filters.map((section) => (
+                                        <Disclosure as="div" key={section.id} className="border-t border-gray-200 px-4 py-6">
+                                            {({ open }) => (
+                                            <>
+                                                <h3 className="-mx-2 -my-3 flow-root">
+                                                <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                                                    <span className="font-medium text-gray-900">{section.name}</span>
+                                                    <span className="ml-6 flex items-center">
+                                                    {open ? (
+                                                        <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                                                    ) : (
+                                                        <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                                                    )}
+                                                    </span>
+                                                </Disclosure.Button>
+                                                </h3>
+                                                <Disclosure.Panel className="pt-6">
+                                                <div className="space-y-6">
+                                                    {section.options.map((option, optionIdx) => (
+                                                    <div key={option.value} className="flex items-center">
+                                                        <input
+                                                        id={`filter-mobile-${section.id}-${optionIdx}`}
+                                                        name={`${section.id}[]`}
+                                                        defaultValue={option.value}
+                                                        type="checkbox"
+                                                        defaultChecked={option.checked}
+                                                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                        />
+                                                        <label
+                                                        htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
+                                                        className="ml-3 min-w-0 flex-1 text-gray-500"
+                                                        >
+                                                        {option.label}
+                                                        </label>
+                                                    </div>
+                                                    ))}
+                                                </div>
+                                                </Disclosure.Panel>
+                                            </>
+                                            )}
+                                        </Disclosure>
+                                        ))}
+                                    </form>
+                                    </Dialog.Panel>
+                                </Transition.Child>
+                            </div>
+                        </Dialog>
+                    </Transition.Root>
+
+                    <main className="max-w-screen-xl justify-between mx-auto p-4">
+                    <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
+                        <h1 className="text-2xl font-bold tracking-tight text-gray-900">All Products</h1>
+
+                        <div className="flex items-center">
+                            <Menu as="div" className="relative inline-block text-left">
+                                <div>
+                                    <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+                                        Sort
+                                        <ChevronDownIcon
+                                        className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                                        aria-hidden="true"
+                                        />
+                                    </Menu.Button>
+                                </div>
+
+                                <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-100"
+                                enterFrom="transform opacity-0 scale-95"
+                                enterTo="transform opacity-100 scale-100"
+                                leave="transition ease-in duration-75"
+                                leaveFrom="transform opacity-100 scale-100"
+                                leaveTo="transform opacity-0 scale-95"
+                                >
+                                    <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <div className="py-1">
+                                        {sortOptions.map((option) => (
+                                            <Menu.Item key={option.name}>
+                                            {({ active }) => (
+                                                <Link
+                                                className={classNames(
+                                                    option.current ? 'font-medium text-gray-900' : 'text-gray-500',
+                                                    active ? 'bg-gray-100' : '',
+                                                    'block px-4 py-2 text-sm'
+                                                )}
+                                                >
+                                                {option.name}
+                                                </Link>
+                                            )}
+                                            </Menu.Item>
+                                        ))}
+                                        </div>
+                                    </Menu.Items>
+                                </Transition>
+                            </Menu>
+
+                            <button
+                                type="button"
+                                className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
+                                onClick={() => setMobileFiltersOpen(true)}
+                            >
+                                <span className="sr-only">Filters</span>
+                                <FunnelIcon className="h-5 w-5" aria-hidden="true" />
+                            </button>
+                        </div>
                     </div>
-                    <div className="text-xl font-semibold">Filter</div>
-                </div>
-                <div className="overflow-y-auto h-full">
-                    <div className>
-                    <Disclosure>
-                    {({ open }) => (
-                        /* Use the `open` state to conditionally change the direction of an icon. */
-                        <>
-                            <Disclosure.Button className="py-2 mb-2 flex justify-between items-center w-full bg-[#F5F5F7] px-4 rounded-lg">
-                            <div className="heading text-lg font-semibold">Brand</div>
-                            <ChevronRightIcon className={open ? 'rotate-90 transform w-6 h-6' : 'w-6 h-6'} />
-                            </Disclosure.Button>
-                            <Disclosure.Panel className="text-gray-500">
-                            <div className="checckBox flex flex-col px-5 pb-4">
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand01"
-                                />
-                                <label
-                                    htmlFor="brand01"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Acer
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand02"
-                                />
-                                <label
-                                    htmlFor="brand02"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Advent
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand03"
-                                />
-                                <label
-                                    htmlFor="brand03"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Aftershock
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand04"
-                                />
-                                <label
-                                    htmlFor="brand04"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Asus
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand05"
-                                />
-                                <label
-                                    htmlFor="brand05"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Arous
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand06"
-                                />
-                                <label
-                                    htmlFor="brand06"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    HCL
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand07"
-                                />
-                                <label
-                                    htmlFor="brand07"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    LG
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand07"
-                                />
-                                <label
-                                    htmlFor="brand07"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Lenovo
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand08"
-                                />
-                                <label
-                                    htmlFor="brand08"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Iball
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand09"
-                                />
-                                <label
-                                    htmlFor="brand09"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Panasonic
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand010"
-                                />
-                                <label
-                                    htmlFor="brand010"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Sony
-                                </label>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                <input
-                                    type="checkbox"
-                                    className="accent-[#374151]"
-                                    name="examplecheckboxs"
-                                    id="brand011"
-                                />
-                                <label
-                                    htmlFor="brand011"
-                                    className="font-semibold text-base cursor-pointer"
-                                >
-                                    Toshiba
-                                </label>
-                                </div>
+
+                    <section aria-labelledby="products-heading" className="pb-24 pt-6">
+                        <h2 id="products-heading" className="sr-only">
+                        Products
+                        </h2>
+
+                        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+                            
+                        {/* Filters */}
+                        <form className="hidden lg:block">
+                            <div className="w-full relative mb-4">
+                                <label htmlFor="small-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price Range</label>
+                                <input id="small-range" onChange={(e)=>{setPriceRange(e.target.value)}} type="range" value={priceRange} min="100" max="8000" className="w-full h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm" />
+                                <span className="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-2">₹100</span>
+                                <span className="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-2">₹8000</span>
                             </div>
-                            </Disclosure.Panel>
-                        </>
-                    )}
-                    </Disclosure>
-                    </div>
-                    <div className="">
-                    <Disclosure>
-                    {({ open }) => (
-                        <>
-                        <Disclosure.Button className="py-2 mb-2 flex justify-between items-center w-full bg-[#F5F5F7] px-4 rounded-lg">
-                        <div className="heading text-lg font-semibold">Price</div>
-                        <ChevronRightIcon className={open ? 'rotate-90 transform w-6 h-6' : 'w-6 h-6'} />
-                        </Disclosure.Button>
-                        <Disclosure.Panel className="text-gray-500">
-                        <div className="checckBox  flex flex-col px-5 pb-4">
-                            <div className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-[#374151]"
-                                name="examplecheckboxs"
-                                id="brand11"
-                            />
-                            <label
-                                htmlFor="brand11"
-                                className="font-semibold text-base cursor-pointer"
-                            >
-                                100-500
-                            </label>
+
+                            {filters.map((section) => (
+                            <Disclosure as="div" key={section.id} className="border-b border-gray-200 py-6">
+                                {({ open }) => (
+                                <>
+                                    <h3 className="-my-3 flow-root">
+                                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                                        <span className="font-medium text-gray-900">{section.name}</span>
+                                        <span className="ml-6 flex items-center">
+                                        {open ? (
+                                            <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                                        ) : (
+                                            <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                                        )}
+                                        </span>
+                                    </Disclosure.Button>
+                                    </h3>
+                                    <Disclosure.Panel className="pt-6">
+                                    <div className="space-y-4">
+                                        {section.options.map((option, optionIdx) => (
+                                        <div key={option.value} className="flex items-center">
+                                            <input
+                                            id={`filter-${section.id}-${optionIdx}`}
+                                            name={`${section.id}[]`}
+                                            defaultValue={option.value}
+                                            type="checkbox"
+                                            defaultChecked={option.checked}
+                                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                            />
+                                            <label
+                                            htmlFor={`filter-${section.id}-${optionIdx}`}
+                                            className="ml-3 text-sm text-gray-600"
+                                            >
+                                            {option.label}
+                                            </label>
+                                        </div>
+                                        ))}
+                                    </div>
+                                    </Disclosure.Panel>
+                                </>
+                                )}
+                            </Disclosure>
+                            ))}
+
+                            <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
+                                <button className="border-2 grow border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent text-theme1 border-theme1 shadow-md shadow-black/40">Clear <MdClear className='size-5' /></button>
+                                <button className="text-white bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:bg-black  shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
-                            <div className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-[#374151]"
-                                name="examplecheckboxs"
-                                id="brand22"
-                            />
-                            <label
-                                htmlFor="brand22"
-                                className="font-semibold text-base cursor-pointer"
-                            >
-                                500-1000
-                            </label>
-                            </div>
-                            <div className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-[#374151]"
-                                name="examplecheckboxs"
-                                id="brand33"
-                            />
-                            <label
-                                htmlFor="brand33"
-                                className="font-semibold text-base cursor-pointer"
-                            >
-                                1000-1500
-                            </label>
-                            </div>
-                            <div className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-[#374151]"
-                                name="examplecheckboxs"
-                                id="brand44"
-                            />
-                            <label
-                                htmlFor="brand44"
-                                className="font-semibold text-base cursor-pointer"
-                            >
-                                15000-2000
-                            </label>
-                            </div>
-                            <div className="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                className="accent-[#374151]"
-                                name="examplecheckboxs"
-                                id="brand55"
-                            />
-                            <label
-                                htmlFor="brand55"
-                                className="font-semibold text-base cursor-pointer"
-                            >
-                                4000-5000
-                            </label>
+                        </form>
+
+                        {/* Product grid */}
+                        <div className="lg:col-span-3">
+                            <div className="flex flex-wrap lg:gap-y-8 lg:pl-4 lg:pt-4 -m-4">
+                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <FaRegHeart className="size-full" />
+                                            </button>
+                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                        </div>
+                                        <div className="lg:grow max-lg:w-full">
+                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                <li>8 GB DDR4 RAM</li>
+                                                <li>64 bit Windows 11 Operating System</li>
+                                                <li>512 GB SSD</li>
+                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                <li>1 Year Onsite Warranty</li>
+                                            </ul>
+                                        </div>
+                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                            <div className="w-full grow">
+                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-theme1">₹31,990</div>
+                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                            </div>
+                                            <div className="w-full">
+                                                <Link className="text-white max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <FaRegHeart className="size-full" />
+                                            </button>
+                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/z/o/z/all-in-one-27-cb1345in-hp-original-imagntpzpvkvktgg.jpeg?q=70" alt="jk" />
+                                        </div>
+                                        <div className="lg:grow max-lg:w-full">
+                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                <li>Windows 11 Home</li>
+                                                <li>Intel Core i3</li>
+                                                <li>RAM 8 GB DDR4</li>
+                                                <li>27 inch Display</li>
+                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                <li>1 Year Onsite Warranty</li>
+                                            </ul>
+                                        </div>
+                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                            <div className="w-full grow">
+                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-theme1">₹54,490</div>
+                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
+                                            </div>
+                                            <div className="w-full">
+                                                <Link className="text-white max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <FaRegHeart className="size-full" />
+                                            </button>
+                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/kvzkosw0/laptop-battery/laptop-battery/d/i/m/genuine-battery-for-hpi-elitebook-folio-9470m-9480m-bt04xl-original-imag8rqz8mgzmsbd.jpeg?q=70" alt="jk" />
+                                        </div>
+                                        <div className="lg:grow max-lg:w-full">
+                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                <li>Battery Type: Lithium-ion</li>
+                                                <li>Capacity: 4000 mAh</li>
+                                                <li>4 Cells</li>
+                                            </ul>
+                                        </div>
+                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                            <div className="w-full grow">
+                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-theme1">₹2,349</div>
+                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
+                                            </div>
+                                            <div className="w-full">
+                                                <Link className="text-white max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        </Disclosure.Panel>
-                        </>
-                    )}
-                    </Disclosure>
-                    </div>
+                        </div>
+                    </section>
+                    </main>
                 </div>
             </div>
-            </div>
-            <div className="w-full z-80 lg:w-4/5 py-5 md:py-10 overflow-y-auto text-center">
-                <div className="list-none inline-flex gap-4 rounded-full bg-white p-3">
-                    <button className={`w-24 h-10 lg:w-40 lg:h-12 lg:px-8 lg:py-3  rounded-full text-center font-semibold  ${activeTab === 'tab1' ? 'bg-gray-700 text-gray-100' : 'bg-gray-100 text-gray-500'}`}
-                        onClick={() => handleTabClick('tab1')}>
-                        Laptop
-                    </button>
-                    <button className={`w-24 h-10 lg:w-40 lg:h-12 lg:px-8 lg:py-3 rounded-full text-center font-semibold  ${activeTab === 'tab2' ? 'bg-gray-700 text-gray-100' : 'bg-gray-100 text-gray-500'}`}
-                        onClick={() => handleTabClick('tab2')}>
-                        PC
-                    </button>
-                    <button className={`w-24 h-10 lg:w-40 lg:h-12 lg:px-8 lg:py-3  rounded-full text-center font-semibold  ${activeTab === 'tab3' ? 'bg-gray-700 text-gray-100' : 'bg-gray-100 text-gray-500'}`}
-                        onClick={() => handleTabClick('tab3')}>
-                        Sper Parts
-                    </button>
-                </div>
-                <div className="tab-content">
-                    {activeTab === 'tab1' &&
-                        <>
-                            <div className="px-5">
-                                <div className="flex items-center justify-between sm:px-5">
-                                <div className="text-base sm:text-lg font-semibold">
-                                    Product List{" "}
-                                    <span className="number text-black/50 font-bold">(56)</span>
-                                </div>
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                        <button onClick={handleSidebar} className="h-4 w-4"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-full w-full" xmlns="http://www.w3.org/2000/svg"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></button>
-                                    <div className="text-sm sm:text-base">Sort by :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <Listbox value={selectedSort} onChange={setSelectedSort}>
-                                            <Listbox.Button className="flex items-center">
-                                            {/* <img src={selectedPerson.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
-                                            <div className="flex items-center gap-1 text-black sm:text-base text-sm ">
-                                                {/* Low to High
-                                                <span className="size-4 me-2 flex items-center text-black/70">
-                                                <svg
-                                                    stroke="currentColor"
-                                                    fill="currentColor"
-                                                    strokeWidth={0}
-                                                    viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                                </svg>
-                                                </span> */}
-                                            </div>
-                                            {selectedSort.name}
-                                            </Listbox.Button>
-                                            <Listbox.Options className="absolute top-9 -right-3 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1 z-30">
-                                            {sortArr.map((item) => (
-                                                <Listbox.Option
-                                                key={item.id}
-                                                value={item}
-                                                disabled={item.unavailable}
-                                                className="flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md"
-                                                >
-                                                {/* <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
-                                                {item.name}
-                                                {/* {item.img} */}
-                                                </Listbox.Option>
-                                            ))}
-                                            </Listbox.Options>
-                                        </Listbox>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div className="flex flex-wrap sm:hidden gap-y-2 items-center justify-between sm:px-5 pt-5">
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Filter :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <input
-                                            className="peer/mm hidden"
-                                            type="checkbox"
-                                            name=""
-                                            id="filter"
-                                        />
-                                        <label
-                                            htmlFor="filter"
-                                            className="flex items-center gap-1 text-black sm:text-base text-sm"
-                                        >
-                                            Low to High
-                                            <span className="size-4 me-2 flex items-center text-black/70">
-                                                <svg
-                                                    stroke="currentColor"
-                                                    fill="currentColor"
-                                                    strokeWidth={0}
-                                                    viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                                </svg>
-                                            </span>
-                                        </label>
-                                        <div className="w-fullshadow-md bg-white shadow p-2 shadow-black absolute z-20 top-8 w-full peer-checked/mm:block hidden">
-                                            <ul className="flex flex-col gap-1">
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Price :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <input
-                                            className="peer/mm hidden"
-                                            type="checkbox"
-                                            name=""
-                                            id="priceRange"
-                                        />
-                                        <label
-                                            htmlFor="priceRange"
-                                            className="flex items-center gap-1 text-black sm:text-base text-sm"
-                                        >
-                                            Low to High
-                                            <span className="size-4 me-2 flex items-center text-black/70">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                strokeWidth={0}
-                                                viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                            </svg>
-                                            </span>
-                                        </label>
-                                        <div className="w-fullshadow-md bg-white shadow p-2 shadow-black absolute z-20 top-8 w-full peer-checked/mm:block hidden">
-                                            <ul className="flex flex-col gap-1">
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-
-                                <div className="pt-5 flex flex-wrap items-center gap-y-5">
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={laptop1} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={laptop2} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={laptop3} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={laptop3} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={laptop3} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={laptop3} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-                    }
-                    {activeTab === 'tab2' && 
-                        <>
-                            <div className="px-5">
-                                <div className="flex items-center justify-between sm:px-5">
-                                <div className="text-base sm:text-lg font-semibold">
-                                    Product List{" "}
-                                    <span className="number text-black/50 font-bold">(56)</span>
-                                </div>
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Sort by :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <Listbox value={selectedSort} onChange={setSelectedSort}>
-                                            <Listbox.Button className="flex items-center">
-                                            {/* <img src={selectedPerson.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
-                                            <div className="flex items-center gap-1 text-black sm:text-base text-sm ">
-                                                {/* Low to High
-                                                <span className="size-4 me-2 flex items-center text-black/70">
-                                                <svg
-                                                    stroke="currentColor"
-                                                    fill="currentColor"
-                                                    strokeWidth={0}
-                                                    viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                                </svg>
-                                                </span> */}
-                                            </div>
-                                            {selectedSort.name}
-                                            </Listbox.Button>
-                                            <Listbox.Options className="absolute top-9 -right-3 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1 z-30">
-                                            {sortArr.map((item) => (
-                                                <Listbox.Option
-                                                key={item.id}
-                                                value={item}
-                                                disabled={item.unavailable}
-                                                className="flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md"
-                                                >
-                                                {/* <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
-                                                {item.name}
-                                                {/* {item.img} */}
-                                                </Listbox.Option>
-                                            ))}
-                                            </Listbox.Options>
-                                        </Listbox>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div className="flex flex-wrap sm:hidden gap-y-2 items-center justify-between sm:px-5 pt-5">
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Filter :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <input
-                                            className="peer/mm hidden"
-                                            type="checkbox"
-                                            name=""
-                                            id="filter"
-                                        />
-                                        <label
-                                            htmlFor="filter"
-                                            className="flex items-center gap-1 text-black sm:text-base text-sm"
-                                        >
-                                            Low to High
-                                            <span className="size-4 me-2 flex items-center text-black/70">
-                                                <svg
-                                                    stroke="currentColor"
-                                                    fill="currentColor"
-                                                    strokeWidth={0}
-                                                    viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                                </svg>
-                                            </span>
-                                        </label>
-                                        <div className="w-fullshadow-md bg-white shadow p-2 shadow-black absolute z-20 top-8 w-full peer-checked/mm:block hidden">
-                                            <ul className="flex flex-col gap-1">
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Price :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <input
-                                            className="peer/mm hidden"
-                                            type="checkbox"
-                                            name=""
-                                            id="priceRange"
-                                        />
-                                        <label
-                                            htmlFor="priceRange"
-                                            className="flex items-center gap-1 text-black sm:text-base text-sm"
-                                        >
-                                            Low to High
-                                            <span className="size-4 me-2 flex items-center text-black/70">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                strokeWidth={0}
-                                                viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                            </svg>
-                                            </span>
-                                        </label>
-                                        <div className="w-fullshadow-md bg-white shadow p-2 shadow-black absolute z-20 top-8 w-full peer-checked/mm:block hidden">
-                                            <ul className="flex flex-col gap-1">
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-
-                                <div className="pt-5 flex flex-wrap items-center gap-y-5">
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={pc1} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={pc2} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={pc3} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-                    }
-                    {activeTab === 'tab3' && 
-                        <>
-                            <div className="px-5">
-                                <div className="flex items-center justify-between sm:px-5">
-                                <div className="text-base sm:text-lg font-semibold">
-                                    Product List{" "}
-                                    <span className="number text-black/50 font-bold">(56)</span>
-                                </div>
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Sort by :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <Listbox value={selectedSort} onChange={setSelectedSort}>
-                                            <Listbox.Button className="flex items-center">
-                                            {/* <img src={selectedPerson.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
-                                            <div className="flex items-center gap-1 text-black sm:text-base text-sm ">
-                                                {/* Low to High
-                                                <span className="size-4 me-2 flex items-center text-black/70">
-                                                <svg
-                                                    stroke="currentColor"
-                                                    fill="currentColor"
-                                                    strokeWidth={0}
-                                                    viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                                </svg>
-                                                </span> */}
-                                            </div>
-                                            {selectedSort.name}
-                                            </Listbox.Button>
-                                            <Listbox.Options className="absolute top-9 -right-3 w-56 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none p-1 z-30">
-                                            {sortArr.map((item) => (
-                                                <Listbox.Option
-                                                key={item.id}
-                                                value={item}
-                                                disabled={item.unavailable}
-                                                className="flex items-center cursor-pointer text-black md:text-base text-sm duration-300 md:hover:bg-gray-200 p-2 rounded-md"
-                                                >
-                                                {/* <img src={item?.img} alt="india" className="w-5 h-5 mr-3 rounded-full object-cover"/> */}
-                                                {item.name}
-                                                {/* {item.img} */}
-                                                </Listbox.Option>
-                                            ))}
-                                            </Listbox.Options>
-                                        </Listbox>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div className="flex flex-wrap sm:hidden gap-y-2 items-center justify-between sm:px-5 pt-5">
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Filter :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <input
-                                            className="peer/mm hidden"
-                                            type="checkbox"
-                                            name=""
-                                            id="filter"
-                                        />
-                                        <label
-                                            htmlFor="filter"
-                                            className="flex items-center gap-1 text-black sm:text-base text-sm"
-                                        >
-                                            Low to High
-                                            <span className="size-4 me-2 flex items-center text-black/70">
-                                                <svg
-                                                    stroke="currentColor"
-                                                    fill="currentColor"
-                                                    strokeWidth={0}
-                                                    viewBox="0 0 512 512"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                                </svg>
-                                            </span>
-                                        </label>
-                                        <div className="w-fullshadow-md bg-white shadow p-2 shadow-black absolute z-20 top-8 w-full peer-checked/mm:block hidden">
-                                            <ul className="flex flex-col gap-1">
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div className>
-                                    <div className="flex items-center gap-2 sm:gap-4">
-                                    <div className="text-sm sm:text-base">Price :</div>
-                                    <div className="flex items-center max-lg:justify-center border-2 px-2 sm:px-3 py-1 rounded-sm">
-                                        <div className="relative flex flex-col">
-                                        <input
-                                            className="peer/mm hidden"
-                                            type="checkbox"
-                                            name=""
-                                            id="priceRange"
-                                        />
-                                        <label
-                                            htmlFor="priceRange"
-                                            className="flex items-center gap-1 text-black sm:text-base text-sm"
-                                        >
-                                            Low to High
-                                            <span className="size-4 me-2 flex items-center text-black/70">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                strokeWidth={0}
-                                                viewBox="0 0 512 512"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z" />
-                                            </svg>
-                                            </span>
-                                        </label>
-                                        <div className="w-fullshadow-md bg-white shadow p-2 shadow-black absolute z-20 top-8 w-full peer-checked/mm:block hidden">
-                                            <ul className="flex flex-col gap-1">
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                href="javascript:;"
-                                                className="flex items-center text-black text-sm duration-300 hover:text-yellow-400"
-                                                >
-                                                High to Low
-                                                </a>
-                                            </li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-
-                                <div className="pt-5 flex flex-wrap items-center gap-y-5">
-                                    
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={s1} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={s2} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                                        <div class="group relative rounded-xl bg-white overflow-hidden cursor-pointer">
-                                        <div class="relative overflow-hidden">
-                                        <div className="m-auto aspect-[1/1] p-3 lg:p-5">
-                                            <img className="w-full h-full m-auto object-contain" src={s3} alt />
-                                        </div>
-                                            <div class="flex justify-center items-center absolute py-3 bg-[#09757A] bottom-0 w-full translate-y-48 duration-300 hover:bg-black group-hover:translate-y-0">
-                                            <div>
-                                                <svg
-                                                stroke="white"
-                                                fill="white"
-                                                stroke-width="0"
-                                                viewBox="0 0 576 512"
-                                                height="1em"
-                                                width="1em"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                <path d="M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"></path>
-                                                </svg>
-                                            </div>
-                                            <div class="text-md px-3 text-white">Let's Chat</div>
-                                            </div>
-                                        </div>
-                                        <div class="bg-white p-3 flex justify-start flex-col items-start">
-                                            <div class="text-lg font-medium mb-2 text-start">Newest Flagship HP 14 HD Thin & Light Laptop Computer PC- 14" Micro-Edge  Display 10th</div>
-                                            <div className="">
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                SSD:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1 mr-2">
-                                                ROM:2GB
-                                            </span>
-                                            <span className="bg-[#09757A] rounded text-white text-xs font-bold px-3 py-1">
-                                                Intel
-                                            </span>
-                                            {/* <span className='bg-[#09757A] rounded-tl-lg rounded-br-lg text-white px-3 py-1'>Intel</span> */}
-                                            </div>
-                                        </div>
-                                        <div class="size-max px-2 py-1 bg-[#09757A] text-white absolute inset-2 text-sm rounded-none rounded-br-xl rounded-tl-xl">
-                                            10% off
-                                        </div>
-                                        <div class="absolute top-14 right-2 translate-x-28 group-hover:translate-x-0 duration-300">
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke=" currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <g id="Heart">
-                                                <path d="M12,20.043a.977.977,0,0,1-.7-.288L4.63,13.08A5.343,5.343,0,0,1,6.053,4.513,5.266,5.266,0,0,1,12,5.371a5.272,5.272,0,0,1,5.947-.858A5.343,5.343,0,0,1,19.37,13.08l-6.676,6.675A.977.977,0,0,1,12,20.043ZM8.355,4.963A4.015,4.015,0,0,0,6.511,5.4,4.4,4.4,0,0,0,4.122,8.643a4.345,4.345,0,0,0,1.215,3.73l6.675,6.675,6.651-6.675a4.345,4.345,0,0,0,1.215-3.73A4.4,4.4,0,0,0,17.489,5.4a4.338,4.338,0,0,0-4.968.852h0a.744.744,0,0,1-1.042,0A4.474,4.474,0,0,0,8.355,4.963Z"></path>
-                                                </g>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="currentColor"
-                                                stroke-width="0"
-                                                viewBox="0 0 24 24"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                                <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3H22V8h-7.01V5L11 9l3.99 4z"></path>
-                                            </svg>
-                                            </div>
-                                            <div class="size-10 rounded-md hover:bg-black hover:text-white my-2 duration-300 flex justify-center items-center">
-                                            <svg
-                                                stroke="currentColor"
-                                                fill="none"
-                                                stroke-width="2"
-                                                viewBox="0 0 24 24"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="size-6"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                                                <circle cx="12" cy="12" r="3"></circle>
-                                            </svg>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-                    }
-                </div>
-            </div>
-        </div>
-        {
-            filterOpen && 
-            <div onClick={handleSidebar} className='h-full w-full bg-black bg-opacity-20 fixed top-0 left-0 '></div>
-        }
-            
         <Footer />
         </>
     );

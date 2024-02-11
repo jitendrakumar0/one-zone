@@ -1,77 +1,169 @@
-import React from 'react'
+import React, { useState } from 'react'
 import frame from '../../../asstes/img/Frame.png'
 import Header from '../../../components/header/Header'
 import Footer from '../../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import { MdOutlineMailOutline } from 'react-icons/md'
+import { IoCallOutline, IoLocationOutline, IoLockClosedOutline } from 'react-icons/io5'
+import { LiaSignInAltSolid } from 'react-icons/lia'
+import { FaRegUserCircle } from 'react-icons/fa'
+import { CiShop, CiShoppingTag } from "react-icons/ci";
+import { Tab } from '@headlessui/react'
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
 
 const Signup = () => {
+    const [auth, setAuth] = useState(false);
   return (
     <>
-    <Header/>
-<div class="max-w-5xl px-5 lg:px-10 flex items-center h-screen flex-wrap mx-auto py-5">
-        <div class="flex flex-wrap items-center justify-center">
-            <div id="profile" class="order-2 lg:order-1 w-full h-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none rounded-tl-none lg:rounded-tl-lg rounded-tr-none lg:rounded-tr-lg shadow-2xl bg-white opacity-75">
-                <div class="p-4 md:p-10">
-                    <div class="text-2xl font-bold text-center pb-4">Sign Up</div>
-                    <form>
-                        <div class="flex flex-wrap items-center gap-y-3">
-                            <div class="w-full sm:w-1/2">
-                                <div class="px-2">
-                                    <label for="name" class="text-base font-medium inline-block mb-2 text-black">First Name</label>
-                                    <input type="text" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Your First Name" name="name"/>
+    <Header auth={auth} setAuth={setAuth} />
+    <div className='w-full flex justify-center'>
+        <div className="max-w-2xl w-full px-5 lg:px-10 flex items-center min-h-[calc(100dvh-130px)] flex-wrap mx-auto py-5">
+            <div className="flex flex-col w-full flex-wrap items-center justify-center rounded-2xl overflow-hidden shadow-2xl">
+                <div className="flex flex-col w-full flex-wrap *:w-full">
+                    <Tab.Group>
+                        <Tab.List className="flex w-full mb-1">
+                            <Tab
+                                className={({ selected }) =>
+                                    classNames(
+                                    'w-full py-2.5 md:text-lg text-base font-semibold uppercase leading-5',
+                                    'ring-white/60 ring-offset-2 ring-offset-blue-400',
+                                    selected
+                                        ? 'bg-black text-white shadow'
+                                        : 'bg-black/60 text-white hover:text-white'
+                                    )
+                                }>Buyer</Tab>
+                            <Tab
+                                className={({ selected }) =>
+                                    classNames(
+                                    'w-full py-2.5 md:text-lg text-base font-semibold uppercase leading-5 border-l border-white/20',
+                                    'ring-white/60 ring-offset-2 ring-offset-blue-400',
+                                    selected
+                                        ? 'bg-black text-white shadow'
+                                        : 'bg-black/60 text-white hover:text-white'
+                                    )
+                                }>Seller</Tab>
+                        </Tab.List>
+                        <Tab.Panels>
+                            <Tab.Panel>
+                                <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
+                                    <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
+                                    <div className="text-2xl font-bold text-center pb-2">Register as Buyer</div>
                                 </div>
-                            </div>
-                            <div class="w-full sm:w-1/2">
-                                <div class="px-2">
-                                    <label for="name" class="text-base font-medium inline-block mb-2 text-black">Last Name</label>
-                                    <input type="text" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Your Last Name" name="name"/>
+                                <div id="profile" className="w-full bg-white opacity-75">
+                                    <div className="p-4 md:p-10">
+                                        <form>
+                                            <div className="flex flex-wrap items-center gap-y-3">
+                                                <div className="relative z-0 w-full mb-5 group">
+                                                    <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_first_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><FaRegUserCircle className='size-5' />Full name</label>
+                                                </div>
+                                            </div>
+                                            <div className="relative z-0 w-full mb-5 group">
+                                                <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><MdOutlineMailOutline className='size-5' /> Email address</label>
+                                            </div>
+                                            <div className="relative z-0 w-full mb-5 group">
+                                                <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLockClosedOutline className='size-5' /> Password</label>
+                                            </div>
+                                            <div className="relative z-0 w-full mb-5 group">
+                                                <input type="password" name="floating_password2" id="floating_password2" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                <label htmlFor="floating_password2" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLockClosedOutline className='size-5' /> Confirm Password</label>
+                                            </div>
+                                            <div className="flex items-start mb-5">
+                                                <div className="flex items-center h-5">
+                                                <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                                                </div>
+                                                <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Accept <Link className="text-blue-600 hover:underline dark:text-blue-500">Terms & Conditions</Link></label>
+                                            </div>
+                                            <div className="pt-5 flex items-center justify-between flex-wrap">
+                                                <div className="">
+                                                    
+                                                    <Link to="/" className="text-white bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                </div>
+                                                <Link to="/login">
+                                                    <div className="text-base font-semibold text-black hover:text-black/70">
+                                                        Already have an account? <span className='font-bold'> Login</span>
+                                                    </div>
+                                                </Link>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full sm:w-1/2">
-                                <div class="px-2">
-                                    <label for="email" class="text-base font-medium inline-block mb-2 text-black">Email</label>
-                                    <input type="email" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Email" name="name"/>
+                        
+                            </Tab.Panel>
+                            <Tab.Panel>
+                                <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
+                                    <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
+                                    <div className="text-2xl font-bold text-center pb-2">Register as Seller</div>
                                 </div>
-                            </div>
-                            <div class="w-full sm:w-1/2">
-                                <div class="px-2">
-                                    <label for="tel" class="text-base font-medium inline-block mb-2 text-black">Phone Number</label>
-                                    <input type="tel" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Contact Number" name="name"/>
+                                <div id="profile" className="w-full bg-white opacity-75">
+                                    <div className="p-4 md:p-10">
+                                        <form>
+                                            <div className="flex flex-wrap items-center gap-y-3">
+                                                <div className="relative z-0 w-full mb-5 group">
+                                                    <input type="text" name="floating_shop_name" id="floating_shop_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_shop_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><CiShop className='size-5' />Shop name</label>
+                                                </div>
+                                                <div className="relative z-0 w-full mb-5 group">
+                                                    <input type="text" name="floating_seller_name" id="floating_seller_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_seller_name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><FaRegUserCircle className='size-5' />Seller name</label>
+                                                </div>
+                                                <div className="relative z-0 w-full mb-5 group">
+                                                    <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_email" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><MdOutlineMailOutline className='size-5' /> Email address</label>
+                                                </div>
+                                                <div className="relative z-0 w-full mb-5 group">
+                                                    <input type="phone" name="floating_phone_number" id="floating_phone_number" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_phone_number" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoCallOutline className='size-5' /> Phone Number (optional)</label>
+                                                </div>
+                                                <div className="relative z-0 sm:w-1/2 w-full mb-5 group sm:pr-5">
+                                                    <input type="text" name="floating_shop_number" id="floating_shop_number" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_shop_number" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><CiShoppingTag className='size-5' /> Shop Number (optional)</label>
+                                                </div>
+                                                <div className="relative z-0 sm:w-1/2 w-full mb-5 group">
+                                                    <input type="text" name="floating_location" id="floating_location" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_location" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLocationOutline className='size-5' /> Location (optional)</label>
+                                                </div>
+                                                <div className="relative z-0 sm:w-1/2 w-full mb-5 group sm:pr-5">
+                                                    <input type="password" name="floating_password" id="floating_password" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_password" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLockClosedOutline className='size-5' /> Password</label>
+                                                </div>
+                                                <div className="relative z-0 sm:w-1/2 w-full mb-5 group">
+                                                    <input type="password" name="floating_password2" id="floating_password2" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                                                    <label htmlFor="floating_password2" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 inline-flex items-center gap-2"><IoLockClosedOutline className='size-5' /> Confirm Password</label>
+                                                </div>
+                                                <div className="flex items-start mb-5">
+                                                    <div className="flex items-center h-5">
+                                                    <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                                                    </div>
+                                                    <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Accept <Link className="text-blue-600 hover:underline dark:text-blue-500">Terms & Conditions</Link></label>
+                                                </div>
+                                                <div className="pt-5 flex items-center w-full justify-between flex-wrap">
+                                                    <div className="">
+                                                        
+                                                        <Link to="/" className="text-white bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                    </div>
+                                                    <Link to="/login">
+                                                        <div className="text-base font-semibold text-black hover:text-black/70">
+                                                            Already have an account? <span className='font-bold'> Login</span>
+                                                        </div>
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-full sm:w-1/2">
-                                <div class="px-2">
-                                    <label for="password" class="text-base font-medium inline-block mb-2 text-black">password</label>
-                                    <input type="password" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Password" name="name"/>
-                                </div>
-                            </div>
-                            <div class="w-full sm:w-1/2">
-                                <div class="px-2">
-                                    <label for="password" class="text-base font-medium inline-block mb-2 text-black">Confirm Password</label>
-                                    <input type="password" id="name" class="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Confirm Password" name="name"/>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="pt-5 px-2 flex items-center justify-between flex-wrap">
-                        <div class="">
-                            <button class="px-5 py-1.5 text-lg rounded text-white bg-black hover:bg-black/70">Register</button>
-                        </div>
-                        <Link to="/login">
-                            <div class="text-base font-semibold text-black hover:text-black/70">
-                                Already have an account? <span className='font-bold'>Signin</span>
-                            </div>
-                        </Link>
+                            </Tab.Panel>
+                            </Tab.Panels>
+                        </Tab.Group>
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-2/5 h-full order-1 lg:order-2">
-                <div class="aspect-[3/1.5] lg:aspect-[4/5.2]">
-                    <img src={frame} class="rounded-lg rounded-bl-none lg:rounded-bl-lg rounded-br-none lg:rounded-br-lg shadow-2xl w-full h-full object-cover "/>
-                </div>
-            </div>
         </div>
-	</div>
     <Footer/>
     </>
   )
