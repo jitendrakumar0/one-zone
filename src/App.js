@@ -11,7 +11,7 @@ import ProductDetail from "./page/productDetail/ProductDetail";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={'/onezone'}>
         <Routes>
           <Route path="/" element={<Index/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
