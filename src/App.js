@@ -11,6 +11,8 @@ import UserProfile from "./page/userProfile/UserProfile";
 import { useEffect } from "react";
 import Wishlist from "./page/wishlist/Wishlist";
 import WindowsProducts from "./page/windowsProducts/WindowsProducts";
+import Notification from "./page/notification/Notification";
+import ResetPassword from "./page/resetPassword/ResetPassword";
 
 function App() {
 
@@ -35,6 +37,8 @@ function App() {
           <Route path="/product-detail" element={<ProductDetail/>}></Route>
           <Route path="/profile" element={<UserProfile/>}></Route>
           <Route path="/wishlist" element={<Wishlist/>}></Route>
+          <Route path="/notification" element={<Notification/>}></Route>
+          <Route path="/reset-password" element={<ResetPassword/>}></Route>
         </Routes>
     </>
   );

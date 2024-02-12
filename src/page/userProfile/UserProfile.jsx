@@ -5,6 +5,7 @@ import Profileimg from '../../asstes/img/edit-profileimg.jpg'
 import { LuBellDot } from 'react-icons/lu';
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { MdClear } from "react-icons/md";
+import { TiUserDeleteOutline } from "react-icons/ti";
 import { NavLink } from 'react-router-dom';
 
 const UserProfile = () => {
@@ -173,7 +174,7 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/notifications">
+                <NavLink className="group/link" to="/notification">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden'>
                             <LuBellDot className='fill-current' />
@@ -204,6 +205,16 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
+                <NavLink className="group/link" to="/delete-account">
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden'>
+                            <TiUserDeleteOutline className='fill-current' />
+                        </span>
+                        <span className="font-semibold text-base">Delete Account</span>
+                    </div>
+                </NavLink>
+            </div>
+            <div className="item group">
                 <NavLink className="group/link" to="/login">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden'>
@@ -219,7 +230,7 @@ export const AllSideMenu = () => {
                                 <path d="M13.4942 6.75005C13.4942 6.02423 13.5009 5.33425 13.492 4.64651C13.4875 4.27463 13.5927 3.96997 13.9532 3.81539C14.3136 3.66082 14.6046 3.79523 14.8688 4.06181C15.8002 5.0027 16.7405 5.93462 17.674 6.87326C18.1061 7.30786 18.1129 7.69094 17.6897 8.11882C16.7494 9.06642 15.8024 10.0073 14.8599 10.9549C14.6091 11.2058 14.327 11.3402 13.9755 11.1946C13.6129 11.0445 13.492 10.7533 13.4964 10.3769C13.5032 9.68695 13.4987 8.99473 13.4987 8.24875C13.3576 8.24875 13.2345 8.24875 13.1114 8.24875C12.2808 8.24875 11.4479 8.25099 10.6173 8.24651C10.0711 8.24427 9.75315 7.962 9.75987 7.4938C9.76435 7.03456 10.0912 6.75453 10.6352 6.75229C11.5666 6.75005 12.5024 6.75005 13.4942 6.75005Z" />
                             </svg>
                         </span>
-                        <span className="font-semibold text-base">Logoout</span>
+                        <span className="font-semibold text-base">Logout</span>
                     </div>
                 </NavLink>
             </div>

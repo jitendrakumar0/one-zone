@@ -1,13 +1,9 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
-import Profileimg from '../../asstes/img/edit-profileimg.jpg'
-import { LuBellDot } from 'react-icons/lu';
-import { FaRegCircleCheck } from "react-icons/fa6";
-import { MdClear } from "react-icons/md";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { AllSideMenu } from '../userProfile/UserProfile';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import { RiChat1Line } from 'react-icons/ri';
 
 const Wishlist = () => {
@@ -19,7 +15,7 @@ const Wishlist = () => {
                     <div className="w-full bg-white rounded-xl shadow-xl md:px-10 md:py-6 p-5">
                         <div className="title-area w-full flex justify-between items-center border-b border-gray-200">
                             <h1 className="md:text-2xl sm:text-xl text-lg text-black font-bold text-center pb-5">
-                                Update Profile
+                                Wishlist
                             </h1>
                         </div>
                         <div className="profile-wrapper w-full md:mt-8 mt-0 flex md:space-x-10">
