@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Index from "./page/Index";
 import Login from "./page/auth/login/Login";
 import Signup from "./page/auth/signup/Signup";
@@ -8,13 +8,20 @@ import ProductList from "./page/productList/ProductList";
 import ChangePassword from "./page/auth/changePassword/ChangePassword";
 import ProductDetail from "./page/productDetail/ProductDetail";
 import UserProfile from "./page/userProfile/UserProfile";
+import { useEffect } from "react";
 
 function App() {
+
+  const location = useLocation();
+  useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+}, [location.pathname])
+
   return (
     <>
-      <BrowserRouter
-        // basename={'/onezone'}
-        >
         <Routes>
           <Route path="/home" element={<Index/>}></Route>
           <Route path="/" element={<Login/>}></Route>
@@ -25,7 +32,6 @@ function App() {
           <Route path="/product-detail" element={<ProductDetail/>}></Route>
           <Route path="/profile" element={<UserProfile/>}></Route>
         </Routes>
-      </BrowserRouter>
     </>
   );
 }

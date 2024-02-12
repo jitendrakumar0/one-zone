@@ -51,7 +51,7 @@ const allLanguages = [
 
 
 
-const Header = ({auth, setAuth}) => {
+const Header2 = ({auth, setAuth}) => {
   
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
@@ -429,7 +429,7 @@ const Header = ({auth, setAuth}) => {
                   noValidate
                   role="search"
                 >
-                  <label
+                  {/* <label
                     htmlFor="top-bar-search"
                     className="flex flex-1 items-center py-0.5"
                   >
@@ -441,8 +441,8 @@ const Header = ({auth, setAuth}) => {
                       autoComplete="off"
                       name="search"
                     />
-                  </label>
-                  <span className="absolute top-0 flex items-center justify-center h-full w-14 md:w-16 right-0 shrink-0 focus:outline-none">
+                  </label> */}
+                  {/* <span className="absolute top-0 flex items-center justify-center h-full w-14 md:w-16 right-0 shrink-0 focus:outline-none">
                     <svg
                       width={20}
                       height={20}
@@ -455,9 +455,9 @@ const Header = ({auth, setAuth}) => {
                         fill="currentColor"
                       />
                     </svg>
-                  </span>
+                  </span> */}
                 </form>
-                <div className="flex w-full justify-center pt-3">
+                <div className="flex w-full justify-center">
                   <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white text-sm">
                     <li>
                       <NavLink to="/home" className="relative after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-black bg-theme1 border-theme1 md:bg-transparent md:text-black md:p-0 border-b-[3px] rounded-0">Home</NavLink>
@@ -479,7 +479,7 @@ const Header = ({auth, setAuth}) => {
   );
 }
 
-export default Header
+export default Header2
 
 
 

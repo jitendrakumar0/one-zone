@@ -9,6 +9,7 @@ import { LiaSignInAltSolid } from 'react-icons/lia'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { CiShop, CiShoppingTag } from "react-icons/ci";
 import { Tab } from '@headlessui/react'
+import Header2 from '../../../components/Header2/Header2'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -18,7 +19,8 @@ const Signup = () => {
     const [auth, setAuth] = useState(false);
   return (
     <>
-    <Header auth={auth} setAuth={setAuth} />
+    <Header2/>
+    {/* <Header auth={auth} setAuth={setAuth} /> */}
     <div className='w-full flex justify-center'>
         <div className="max-w-2xl w-full px-5 lg:px-10 flex items-center min-h-[calc(100dvh-130px)] flex-wrap mx-auto py-5">
             <div className="flex flex-col w-full flex-wrap items-center justify-center rounded-2xl overflow-hidden shadow-2xl">
@@ -82,7 +84,7 @@ const Signup = () => {
                                             <div className="pt-5 flex items-center justify-between flex-wrap">
                                                 <div className="">
                                                     
-                                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                 </div>
                                                 <Link to="/">
                                                     <div className="text-base font-semibold text-black hover:text-black/70">
@@ -145,7 +147,7 @@ const Signup = () => {
                                                 <div className="pt-5 flex items-center w-full justify-between flex-wrap">
                                                     <div className="">
                                                         
-                                                        <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                        <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                     </div>
                                                     <Link to="/">
                                                         <div className="text-base font-semibold text-black hover:text-black/70">

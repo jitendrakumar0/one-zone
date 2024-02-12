@@ -293,9 +293,9 @@ const ProductList = () => {
                         <form className="hidden lg:block">
                             <div className="w-full relative mb-4">
                                 <label htmlFor="small-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price Range</label>
-                                <input id="small-range" onChange={(e)=>{setPriceRange(e.target.value)}} type="range" value={priceRange} min="100" max="8000" className="w-full h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm" />
-                                <span className="text-sm text-gray-500 dark:text-gray-400 absolute start-0 -bottom-2">₹100</span>
-                                <span className="text-sm text-gray-500 dark:text-gray-400 absolute end-0 -bottom-2">₹8000</span>
+                                <input id="small-range" onChange={(e)=>{setPriceRange(e.target.value)}} type="range" value={priceRange} min="100" max="8000" className="w-full accent-black h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm" />
+                                <span className="text-sm text-gray-500 dark:text-gray-400 font-bold absolute start-0 -bottom-2">₹100</span>
+                                <span className="text-sm text-gray-500 dark:text-gray-400 font-bold absolute end-0 -bottom-2">₹8000</span>
                             </div>
 
                             {filters.map((section) => (

@@ -15,7 +15,7 @@ const SellingProducts = () => {
                 <div className="md:text-black md:text-3xl font-bold text-2xl">Best
                     Selling Products</div>
                 <div className="text-md text-nowrap cursor-pointer flex items-center text-[black]">
-                    <div className="text">
+                    <Link to='/windows-products' className="text">
                         View All
                         <span className="size-5 inline-block justify-center pt-1 hover:text-[#FCEB19]">
                             <svg stroke="white" fill="currentColor"
@@ -26,7 +26,7 @@ const SellingProducts = () => {
                                     d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
                             </svg>
                         </span>
-                    </div>
+                    </Link>
                         <div className="prev md:flex hidden border hover:bg-black transition hover:text-white  hover:border flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[140px] border-black"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
                         <div className="next md:flex hidden border hover:bg-black transition hover:text-white hover:border  flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[100px] border-black">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
@@ -81,15 +81,19 @@ const SellingProducts = () => {
                                 spaceBetween: 15,
                             },
                             500: {
-                                slidesPerView: 1,
+                                slidesPerView: 1.6,
                                 spaceBetween: 15,
                             },
                             768: {
-                                slidesPerView: 1,
+                                slidesPerView: 1.8,
                                 spaceBetween: 15,
                             },
                             992: {
-                                slidesPerView: 1.6,
+                                slidesPerView: 2.5,
+                                spaceBetween: 15,
+                            }, 
+                            1200: {
+                                slidesPerView: 2.5,
                                 spaceBetween: 15,
                             },
                             1400: {
@@ -99,14 +103,14 @@ const SellingProducts = () => {
                         }}
                         className="mySwiper1"
                     >
-                        <SwiperSlide>
-                                <div className="flex flex-wrap w-full">
+                        <SwiperSlide className='swiperSlider'>
+                                <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
-                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="w-full">
                                             <div className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</div>
@@ -131,14 +135,14 @@ const SellingProducts = () => {
                                     </div>
                                 </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                                <div className="flex flex-wrap w-full">
+                        <SwiperSlide className='swiperSlider'>
+                                <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
-                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="w-full">
                                             <div className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</div>
@@ -163,14 +167,14 @@ const SellingProducts = () => {
                                     </div>
                                 </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                                <div className="flex flex-wrap w-full">
+                        <SwiperSlide className='swiperSlider'>
+                                <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
-                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="w-full">
                                             <div className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</div>
@@ -195,14 +199,14 @@ const SellingProducts = () => {
                                     </div>
                                 </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                                <div className="flex flex-wrap w-full">
+                        <SwiperSlide className='swiperSlider'>
+                                <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
-                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/l5fnhjk0/computer/4/d/z/inspiron-7420-thin-and-light-laptop-dell-original-imagg45kbtghzthr.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="w-full">
                                             <div className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</div>
