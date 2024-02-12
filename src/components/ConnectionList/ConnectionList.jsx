@@ -23,23 +23,17 @@ export const ConnectionList = () => {
         <>
                 
             <div className="realtive py-5 sm:py-8 lg:py-10 bg-[#F5F5F7]">
-                <div className="max-w-screen-xl mx-auto p-4 z-[1]">
+                <div className="max-w-screen-xl mx-auto p-4 z-[1] relative">
                     <div className="flex items-center pb-8">
                         <div className="flex-1">
                             <div className="md:text-2xl text-xl text-black font-bold">
                                 Categories
                             </div>
                         </div>
-                        <div className="flex-none relative">
-                            <div className="swiper-button-next cursor-pointer navigationNext after:content-[*] md:size-8 size-6 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-10px] md:p-2 p-1">
-                                <div className="">
-                                    <svg stroke="currentColor" fill="black" strokeWidth="0" viewBox="0 0 24 24" className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
-                                </div>
-                            </div>
-                            <div className="swiper-button-prev cursor-pointer navigationPrev absolute after:content-[*] md:size-8 size-6 transition-all top-0 duration-300 bg-white border border-black text-white rounded-full sm:-left-11 -left-10 md:p-2 p-1">
-                                <div className="rotate-180">
-                                    <svg stroke="currentColor" fill="black" strokeWidth="0" viewBox="0 0 24 24" className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
-                                </div>
+                        <div className="grow">
+                            <div className="connectionprev md:flex  border hover:bg-black transition hover:text-white  hover:border flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[140px] border-black"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
+                            <div className="connectionnext md:flex  border hover:bg-black transition hover:text-white hover:border  flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[100px] border-black">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
                             </div>
                         </div>
                     </div>
@@ -50,8 +44,8 @@ export const ConnectionList = () => {
                         clickable: true,
                         }}    
                         navigation={{
-                            prevEl: '.navigationPrev',
-                            nextEl: '.navigationNext',
+                        prevEl: '.connectionprev',
+                        nextEl: '.connectionnext',
                         }}
                         breakpoints={{
                         360: {

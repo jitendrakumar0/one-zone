@@ -1,12 +1,13 @@
 import React from 'react'
 import frame from '../../asstes/img/Frame.png'
 import { Link } from 'react-router-dom'
+import Header2 from '../header2/Header2'
 
 const Signup = () => {
   return (
     <div>
-
-<div className="max-w-5xl px-5 lg:px-10 flex items-center h-screen flex-wrap mx-auto py-5">
+    {/* <Header2/> */}
+    <div className="max-w-5xl px-5 lg:px-10 flex items-center h-screen flex-wrap mx-auto py-5">
         <div className="flex flex-wrap items-center justify-center">
             <div id="profile" className="order-2 lg:order-1 w-full h-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none rounded-tl-none lg:rounded-tl-lg rounded-tr-none lg:rounded-tr-lg shadow-2xl bg-white opacity-75">
                 <div className="p-4 md:p-10">

@@ -5,12 +5,13 @@ const Cta = () => {
     return (
         <section className="py-5 sm:py-8 lg:py-10 max-w-screen-xl mx-auto p-4">
     <div className="container mx-auto">
-        <div className="rounded-lg shadow bg-cover bg-gradient-to-l *:relative *:z-10 from-yellow-900/5 to-yellow-900/5 via-yellow-900from-yellow-900/0">
+        <div className="rounded-lg shadow bg-cover bg-gradient-to-l *:relative *:z-10 bg-white border-theme1/2 border">
             <div className="py-20 px-6 bg-no-repeat bg-cover">
                 <img src={lines} className='object-cover object-center !absolute !inset-0 size-full !z-0' alt="kuch nahi" />
                 <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="md:text-4xl text-2xl font-medium text-black">Obtain Your Customizable Financial Survival Plan.</h2>
+                    <h2 className="md:text-4xl text-2xl font-bold text-black text-balance">Obtain Your Customizable Financial Survival Plan.</h2>
                     <p className="text-sm font-medium text-black mt-6">Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.</p>
+                    <button className='text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40 w-auto'>Let's Chat</button>
                     {/* <form className="max-w-2xl mx-auto space-y-2 mt-6">
                         <div className="relative">
                             <input type="email" id="subcribe" className="py-4 ps-4 pe-14 w-full h-12 rounded-md bg-default-50 text-black  border border-black/20 " placeholder="Type Your Email" name="email"/>

@@ -17,7 +17,7 @@ const OfferBanner = () => {
                                         UP TO 75% OFF!
                                     </div>
                                     <div className="text-white font-semibold text-xl sm:text-2xl lg:text-3xl !leading-[120%] py-2">
-                                        One Plus
+                                        Amazon Echo Dot 3rd Gen Smart speaker
                                     </div>
                                 </Link>
                                 <div className="pt-1 sm:pt-2">
@@ -39,7 +39,7 @@ const OfferBanner = () => {
                                         UP TO 50% OFF!
                                     </div>
                                     <div className="text-white font-semibold text-xl sm:text-2xl lg:text-3xl !leading-[120%] py-2">
-                                        Microsoft
+                                        Acer Aspire 5 Gaming Laptop Intel Core i5 13th Gen
                                     </div>
                                 </Link>
                                 <div className="pt-1 sm:pt-2">
