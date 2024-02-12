@@ -105,7 +105,7 @@ const Header = ({auth, setAuth}) => {
                         className={({ active }) =>
                           `relative cursor-default select-none py-2 group pl-10 pr-4 ${
                             active
-                              ? "bg-black text-theme1 hover:text-theme1 cursor-pointer"
+                              ? "bg-black text-theme1 hover:text-theme1 cursor-pointer group/drop"
                               : "text-gray-900"
                           }`
                         }
@@ -115,10 +115,10 @@ const Header = ({auth, setAuth}) => {
                           <>
                             <span
                               className={`block truncate ${
-                                selected ? "font-medium" : "font-normal"
+                                selected ? "font-medium  " : "font-normal"
                               }`}
                             >
-                              <span className="font-semibold text-xs text-black group-hover:text-black bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2">
+                              <span className="font-semibold text-xs text-black group-hover:text-black group-[]/drop:bg-theme1 bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2">
                                 {person.sortName}
                               </span>
                               {person.name}
@@ -216,22 +216,14 @@ const Header = ({auth, setAuth}) => {
         </div>
       </div>
       <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
-        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
-          <Link to="/home" className="flex items-center space-x-3">
+        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-start justify-between">
+          <Link to="/home" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4 md:mt-[8px] mt-0">
             <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
               <LuBellDot className="size-4" />
             </Link>
-            {!auth ? (
-              <Link
-                to="/signup"
-                className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
-              >
-                Sign Up <LiaSignInAltSolid className="size-5" />
-              </Link>
-            ) : (
               <Menu as="div" className="relative inline-block text-left">
                 <Menu.Button className="inline-flex items-center gap-1 relative pr-5">
                   <img
@@ -371,13 +363,10 @@ const Header = ({auth, setAuth}) => {
                     <div className="px-1 py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <Link to="/"
                             className={`${
                               active ? "bg-red-500 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                            onClick={() => {
-                              setAuth(false);
-                            }}
                           >
                             {active ? (
                               <AiOutlineLogout
@@ -391,14 +380,13 @@ const Header = ({auth, setAuth}) => {
                               />
                             )}
                             Log out
-                          </button>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
                   </Menu.Items>
                 </Transition>
               </Menu>
-            )}
             <button
               onClick={() => setSidebarIsOpen(true)}
               data-collapse-toggle="navbar-sticky"

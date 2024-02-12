@@ -47,6 +47,17 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         //     { value: 'iPad', label: 'iPad', checked: false },
         // ],
         // },
+        
+        {
+            id: 'sort',
+            name: 'sort',
+            options: [
+                { value: 'MSI', label: 'newest to oldest' },
+                { value: 'MSI', label: 'oldest to newest' },
+                { value: 'MSI', label: 'low to High' },
+                { value: 'MSI', label: 'High to low' },
+            ],
+            },
         {
         id: 'Brand',
         name: 'Brand',
@@ -108,6 +119,10 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 const WindowsProducts = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [priceRange, setPriceRange] = useState(1000);
+    const [activeTab, setActiveTab] = useState('tab1');
+    const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    };
     return (
         <>
         <Header />
@@ -206,10 +221,32 @@ const WindowsProducts = () => {
                     </Transition.Root>
 
                     <main className="max-w-screen-xl justify-between mx-auto p-4">
-                    <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
-                        <h1 className="text-2xl font-bold tracking-tight text-gray-900">Windows Products</h1>
+                    <div className="flex flex-wrap items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
+                        <h1 className="w-full sm:w-auto mb-2 sm:mb-0 text-2xl font-bold tracking-tight text-gray-900">Windows Products</h1>
 
-                        <div className="flex items-center">
+                        <div>
+                            <div className="flex items-center">
+                                <button
+                                    className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab1' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
+                                    onClick={() => handleTabClick('tab1')}
+                                >
+                                Laptop
+                                </button>
+                                <button
+                                    className={`w-24 text-center border mx-2  shadow-lg text-white py-1 ${activeTab === 'tab2' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
+                                    onClick={() => handleTabClick('tab2')}
+                                    >
+                                    PC
+                                </button>
+                                <button
+                                    className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab3' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
+                                    onClick={() => handleTabClick('tab3')}
+                                    >
+                                    Sper Parts
+                                </button>
+                            </div>
+                        </div> 
+                        {/* <div className="flex items-center">
                             <Menu as="div" className="relative inline-block text-left">
                                 <div>
                                     <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
@@ -261,7 +298,7 @@ const WindowsProducts = () => {
                                 <span className="sr-only">Filters</span>
                                 <FunnelIcon className="h-5 w-5" aria-hidden="true" />
                             </button>
-                        </div>
+                        </div> */}
                     </div>
 
                     <section aria-labelledby="products-heading" className="pb-24 pt-6">
@@ -330,7 +367,293 @@ const WindowsProducts = () => {
                         </form>
 
                         {/* Product grid */}
-                        <div className="lg:col-span-3">
+                        
+                        
+                                <div className="lg:col-span-3">
+                                    <div className="flex flex-wrap lg:gap-y-8 lg:pl-4 lg:pt-4 -m-4">
+                                        {activeTab === 'tab1' && 
+                                            <>
+                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button>
+                                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="lg:grow max-lg:w-full">
+                                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                            <div className="w-full grow">
+                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="w-full">
+                                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button>
+                                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/e/y/j/-original-imagwzwcxf5ffarf.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="lg:grow max-lg:w-full">
+                                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Windows 11 Home</li>
+                                                                <li>Intel Core i3</li>
+                                                                <li>RAM 8 GB DDR4</li>
+                                                                <li>27 inch Display</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                            <div className="w-full grow">
+                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹54,490</div>
+                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
+                                                            </div>
+                                                            <div className="w-full">
+                                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button>
+                                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/l48s9zk0/computer/6/z/k/hp-laptop-255-g8-notebook-notebook-hp-original-imagf6hthg9zbxug.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="lg:grow max-lg:w-full">
+                                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Battery Type: Lithium-ion</li>
+                                                                <li>Capacity: 4000 mAh</li>
+                                                                <li>4 Cells</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                            <div className="w-full grow">
+                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹2,349</div>
+                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
+                                                            </div>
+                                                            <div className="w-full">
+                                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        }
+                                        {activeTab === 'tab2' &&    
+                                        <>
+                                            <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                    <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                        <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                            <FaRegHeart className="size-full" />
+                                                        </button>
+                                                        <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/6/c/z/gaming-pc-with-2-gb-graphics-nvidia-geforce-gt-630-graphics-card-original-imagw7yykauzf2uz.jpeg?q=70" alt="jk" />
+                                                    </div>
+                                                    <div className="lg:grow max-lg:w-full">
+                                                        <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <li>Intel Core i3 Processor (11th Gen)</li>
+                                                            <li>8 GB DDR4 RAM</li>
+                                                            <li>64 bit Windows 11 Operating System</li>
+                                                            <li>512 GB SSD</li>
+                                                            <li>39.62 cm (15.6 Inch) Display</li>
+                                                            <li>1 Year Onsite Warranty</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                        <div className="w-full grow">
+                                                            <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                            <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                    <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                        <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                            <FaRegHeart className="size-full" />
+                                                        </button>
+                                                        <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/l2qhjm80/allinone-desktop/i/j/f/enti5-650-8gb-1tb-120-22led-entwino-original-imageyjg2gezegph.jpeg?q=70" alt="jk" />
+                                                    </div>
+                                                    <div className="lg:grow max-lg:w-full">
+                                                        <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <li>Intel Core i3 Processor (11th Gen)</li>
+                                                            <li>8 GB DDR4 RAM</li>
+                                                            <li>64 bit Windows 11 Operating System</li>
+                                                            <li>512 GB SSD</li>
+                                                            <li>39.62 cm (15.6 Inch) Display</li>
+                                                            <li>1 Year Onsite Warranty</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                        <div className="w-full grow">
+                                                            <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                            <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                    <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                        <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                            <FaRegHeart className="size-full" />
+                                                        </button>
+                                                        <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/g/b/2/i5-8-gb-ddr3-500-gb-120-gb-ssd-windows-10-home-512-mb-18-5-inch-original-imagtmerxbsja3c3.jpeg?q=70" alt="jk" />
+                                                    </div>
+                                                    <div className="lg:grow max-lg:w-full">
+                                                        <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <li>Intel Core i3 Processor (11th Gen)</li>
+                                                            <li>8 GB DDR4 RAM</li>
+                                                            <li>64 bit Windows 11 Operating System</li>
+                                                            <li>512 GB SSD</li>
+                                                            <li>39.62 cm (15.6 Inch) Display</li>
+                                                            <li>1 Year Onsite Warranty</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                        <div className="w-full grow">
+                                                            <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                            <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                        }
+                                        {activeTab === 'tab3' && 
+                                            <>
+                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button>
+                                                            <img className="w-full aspect-square" src="https://rukminim2.flixcart.com/image/612/612/xif0q/laptop-battery/laptop-battery/1/p/m/laptop-battery-compatible-for-bt04xl-bt04-battery-for-hp-original-imagzdpczw678kf6.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="lg:grow max-lg:w-full">
+                                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                            <div className="w-full grow">
+                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="w-full">
+                                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button>
+                                                            <img className="w-full aspect-square" src="https://rukminim2.flixcart.com/image/612/612/l2ghgnk0/worldwide-adaptor/c/7/f/smps-adapter-power-supply-for-ro8-rosmps-15-allprowater-tech-original-imagdsjvzczexyym.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="lg:grow max-lg:w-full">
+                                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                            <div className="w-full grow">
+                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="w-full">
+                                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
+                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
+                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
+                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button>
+                                                            <img className="w-full aspect-square" src="https://rukminim2.flixcart.com/image/612/612/xif0q/laptop-adapter/6/e/d/ro-power-adapter-24v-2-5a-universal-type-smps-power-supply-ro-original-imagxtkt7bkug6sq.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="lg:grow max-lg:w-full">
+                                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
+                                                            <div className="w-full grow">
+                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="w-full">
+                                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        
+                                        }
+                                    </div>
+                                </div>
+                        {/* <div className="lg:col-span-3">
                             <div className="flex flex-wrap lg:gap-y-8 lg:pl-4 lg:pt-4 -m-4">
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
@@ -420,7 +743,7 @@ const WindowsProducts = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         </div>
                     </section>
                     </main>

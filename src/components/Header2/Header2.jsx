@@ -218,19 +218,27 @@ const Header2 = ({auth, setAuth}) => {
           <Link to="/home" className="flex items-center space-x-3">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4">
-            <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center md:gap-3 gap-1">
+            {/* <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
               <LuBellDot className="size-4" />
-            </Link>
-            {!auth ? (
+            </Link> */}
+            {/* {!auth ? ( */}
               <Link
                 to="/signup"
                 className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
                 Sign Up <LiaSignInAltSolid className="size-5" />
               </Link>
-            ) : (
-              <Menu as="div" className="relative inline-block text-left">
+              <Link
+                to="/signup"
+                className="text-black bg-theme1 border-2 border-theme1 md:h-[40px] h-[32px] border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
+              >
+                Become A Seller
+                {/* <LiaSignInAltSolid className="size-5" /> */}
+              </Link>
+              
+            {/* ) : ( */}
+              {/* <Menu as="div" className="relative inline-block text-left">
                 <Menu.Button className="inline-flex items-center gap-1 relative pr-5">
                   <img
                     className="bg-theme1/10 inline-flex items-center justify-center md:size-9 size-7 rounded-full border-2 border-theme1/40 text-theme1"
@@ -395,8 +403,8 @@ const Header2 = ({auth, setAuth}) => {
                     </div>
                   </Menu.Items>
                 </Transition>
-              </Menu>
-            )}
+              </Menu> */}
+            {/* )} */}
             <button
               data-collapse-toggle="navbar-sticky"
               type="button"
@@ -408,7 +416,7 @@ const Header2 = ({auth, setAuth}) => {
             </button>
           </div>
           <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:grow md:px-10 md:order-1"
+            className="items-center justify-between hidden w-full md:flex md:w-auto md:grow md:px-8 md:order-1"
             id="navbar-sticky"
           >
             {/* <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white text-sm">
@@ -466,7 +474,7 @@ const Header2 = ({auth, setAuth}) => {
                       <Link className="relative w-fit  after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">About Us</Link>
                     </li>
                     <li>
-                      <Link className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
+                      <Link to='/windowsProducts' className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
                     </li>
                   </ul>
                 </div>
