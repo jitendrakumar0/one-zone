@@ -56,7 +56,7 @@ const Header = ({auth, setAuth}) => {
   
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
-  let [sidebarIsOpen, setSidebarIsOpen] = useState(true)
+  let [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
   return (
     <>
@@ -388,6 +388,7 @@ const Header = ({auth, setAuth}) => {
                 </Transition>
               </Menu>
             <button
+              onClick={() => setSidebarIsOpen(true)}
               data-collapse-toggle="navbar-sticky"
               type="button"
               className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
@@ -449,15 +450,7 @@ const Header = ({auth, setAuth}) => {
                 </form>
                 <div className="flex w-full justify-center pt-3">
                   <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white text-sm">
-                    <li>
-                      <NavLink to="/home" className="relative after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-black bg-theme1 border-theme1 md:bg-transparent md:text-black md:p-0 border-b-[3px] rounded-0">Home</NavLink>
-                    </li>
-                    <li>
-                      <Link className="relative w-fit  after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">About Us</Link>
-                    </li>
-                    <li>
-                      <Link to='/windowsProducts' className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
-                    </li>
+                    <HeaderMenu/>
                   </ul>
                 </div>
               </div>
@@ -467,7 +460,7 @@ const Header = ({auth, setAuth}) => {
       </nav>
 
       <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
-          <Dialog.Panel className="relative w-full ml-20 max-w-80 bg-white h-full">
+          <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full">
               <Dialog.Title className="py-3 px-6 md:text-xl text-lg font-bold border-b border-gray-200 bg-black text-theme1 flex items-center justify-between">
                   <div className="grow">
                       <img src={Logo} className="md:h-12 h-8 mix-blend-luminosity invert" alt="Flowbite Logo" />
@@ -475,6 +468,7 @@ const Header = ({auth, setAuth}) => {
                   <button onClick={() => setSidebarIsOpen(false)}><IoClose className='size-6' /></button>
               </Dialog.Title>
               <div className="flex p-5 flex-col">
+                  <HeaderMenu/>
                   <AllSideMenu />
               </div>
           </Dialog.Panel>
@@ -484,6 +478,26 @@ const Header = ({auth, setAuth}) => {
 }
 
 export default Header
+
+
+export const HeaderMenu = () => {
+  return (
+    <>
+    <li className='list-none'>
+      <NavLink to="/home" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Home</NavLink>
+    </li>
+    <li className='list-none'>
+      <NavLink to="/about" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">About Us</NavLink>
+    </li>
+    <li className='list-none'>
+      <NavLink to="/categories" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">All Categories</NavLink>
+    </li>
+    </>
+  )
+}
 
 
 

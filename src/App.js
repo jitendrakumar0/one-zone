@@ -9,6 +9,7 @@ import ChangePassword from "./page/auth/changePassword/ChangePassword";
 import ProductDetail from "./page/productDetail/ProductDetail";
 import UserProfile from "./page/userProfile/UserProfile";
 import { useEffect } from "react";
+import Wishlist from "./page/wishlist/Wishlist";
 import WindowsProducts from "./page/windowsProducts/WindowsProducts";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/windowsProducts" element={<WindowsProducts/>}></Route>
           <Route path="/product-detail" element={<ProductDetail/>}></Route>
           <Route path="/profile" element={<UserProfile/>}></Route>
+          <Route path="/wishlist" element={<Wishlist/>}></Route>
         </Routes>
     </>
   );
