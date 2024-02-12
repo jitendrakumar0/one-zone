@@ -1,5 +1,4 @@
 import React from 'react';
-import productImg from '../../asstes/img/product-1.png';
 import banner from '../../asstes/img/banner.png'
 import { Pagination,Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';

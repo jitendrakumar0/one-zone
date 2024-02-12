@@ -1,5 +1,4 @@
 import React from 'react'
-import bannerHero from '../../asstes/img/herobanner1.jpg'
 import { Link } from 'react-router-dom'
 
 

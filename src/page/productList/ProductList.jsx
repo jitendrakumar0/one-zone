@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom";import { RiChat1Line } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
