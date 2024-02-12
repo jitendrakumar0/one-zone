@@ -11,10 +11,12 @@ import ProductDetail from "./page/productDetail/ProductDetail";
 function App() {
   return (
     <>
-      <BrowserRouter basename={'/onezone'}>
+      <BrowserRouter
+        // basename={'/onezone'}
+        >
         <Routes>
-          <Route path="/" element={<Index/>}></Route>
-          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/home" element={<Index/>}></Route>
+          <Route path="/" element={<Login/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
           <Route path="/change-password" element={<ChangePassword/>}></Route>

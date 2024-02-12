@@ -1,119 +1,88 @@
+import { Link } from "react-router-dom";
+import Brand1 from '../../asstes/img/brand-1.png';
+import Brand2 from '../../asstes/img/brand-2.png';
+import Brand3 from '../../asstes/img/brand-3.png';
+import Brand4 from '../../asstes/img/brand-4.png';
+import Brand5 from '../../asstes/img/brand-5.png';
+import Brand6 from '../../asstes/img/brand-6.png';
+import Brand7 from '../../asstes/img/brand-7.png';
+import Brand8 from '../../asstes/img/brand-8.png';
+import Brand9 from '../../asstes/img/brand-9.png';
+import Brand10 from '../../asstes/img/brand-10.png';
+import Brand11 from '../../asstes/img/brand-11.png';
+import Brand12 from '../../asstes/img/brand-12.png';
+
 export default function Clouds() {
     return (
       <div className="bg-white py-5 sm:py-8 lg:py-10">
         <div className="max-w-screen-xl mx-auto p-4">
-        <div className="md:text-2xl text-xl text-black font-bold text-center">
+          <div className="md:text-2xl text-xl text-black font-bold text-center pb-5">
             Visit in your favorite brand
-        </div>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
-              alt="Transistor"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
-              alt="Reform"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
-              alt="Tuple"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
-              alt="SavvyCal"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 col-start-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-              alt="Statamic"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
-              alt="Reform"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
-              alt="Tuple"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
-              alt="SavvyCal"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 col-start-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-              alt="Statamic"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
-              alt="Reform"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
-              alt="Tuple"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-2 lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
-              alt="SavvyCal"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 col-start-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-              alt="Statamic"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 col-start-2 max-h-20 w-full border border-gray-200 py-5 object-contain sm:col-start-auto lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
-              alt="Statamic"
-              width={158}
-              height={48}
-            />
-            <img
-              className="col-span-2 max-h-20 w-full border border-gray-200 py-5 object-contain lg:col-span-1"
-              src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
-              alt="Reform"
-              width={158}
-              height={48}
-            />
+          </div>
+          <div className="grid lg:grid-cols-6 sm:grid-cols-4 grid-cols-2">
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand1} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand2} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand3} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand4} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand5} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand6} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand7} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand8} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand9} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand10} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand11} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
+            <div className="item group">
+              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+                <img src={Brand12} alt="logo" className="group-hover:scale-105 duration-300" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
   

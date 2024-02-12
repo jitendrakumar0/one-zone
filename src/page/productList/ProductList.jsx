@@ -342,7 +342,7 @@ const ProductList = () => {
 
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
                                 <button className="border-2 grow border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent text-theme1 border-theme1 shadow-md shadow-black/40">Clear <MdClear className='size-5' /></button>
-                                <button className="text-white bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:bg-black  shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:bg-black  shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
                         </form>
 

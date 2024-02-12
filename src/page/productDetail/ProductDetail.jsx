@@ -113,7 +113,7 @@ const ProductDetail = () => {
                     </div>
 
                     <div className="mt-4 space-x-1">
-                        <button className="text-white bg-theme1 border-2 grow border-theme1 font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:border-black md:hover:bg-black md:hover:text-white shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></button>
+                        <button className="text-black bg-theme1 border-2 grow border-theme1 font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:border-black md:hover:bg-black md:hover:text-white shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></button>
                         <button type='button' className="border-2 grow font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 text-theme1 border-theme1 shadow-md shadow-black/40 md:hover:bg-theme1 md:hover:text-white"
                         onClick={()=>{setWished(!wished)}}>Wishlist 
                         {

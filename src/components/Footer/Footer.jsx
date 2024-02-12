@@ -86,13 +86,13 @@ const Footer = () => {
                             leaveFrom="transform scale-100 opacity-100"
                             leaveTo="transform scale-95 opacity-0"
                             >
-                            <Listbox.Options className="absolute mt-1 max-h-60 w-auto right-0 bottom-0 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 sm:text-sm">
+                            <Listbox.Options className="absolute mt-1 max-h-60 w-auto left-0 bottom-0 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 sm:text-sm">
                                 {allLanguages.map((person, personIdx) => (
                                 <Listbox.Option
                                     key={personIdx}
                                     className={({ active }) =>
                                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                        active ? 'bg-cyan-100 text-cyan-900' : 'text-gray-900'
+                                        active ? 'bg-theme1/20 text-theme1' : 'text-gray-900'
                                     }`
                                     }
                                     value={person}
@@ -145,7 +145,7 @@ const Footer = () => {
                                     key={personIdx}
                                     className={({ active }) =>
                                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                        active ? 'bg-cyan-100 text-cyan-900' : 'text-gray-900'
+                                        active ? 'bg-theme1/20 text-theme1' : 'text-gray-900'
                                     }`
                                     }
                                     value={person}
@@ -178,27 +178,27 @@ const Footer = () => {
                         <div className="font-bold md:text-sm text-xs uppercase">Social Links</div>
                         <div className="w-full">
                             <div className="inline-grid grid-cols-3 mt-4 sm:mt-0 gap-3 max-md:justify-center">
-                                <Link className="text-theme1 duration-300 md:hover:text-white md:hover:bg-theme1 bg-theme1/20 p-2 rounded-xl">
+                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
                                     <FaFacebook className="size-4" />
                                     <span className="sr-only">Facebook</span>
                                 </Link>
-                                <Link className="text-theme1 duration-300 md:hover:text-white md:hover:bg-theme1 bg-theme1/20 p-2 rounded-xl">
+                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
                                     <FaInstagram className="size-4" />
                                     <span className="sr-only">Instagram</span>
                                 </Link>
-                                <Link className="text-theme1 duration-300 md:hover:text-white md:hover:bg-theme1 bg-theme1/20 p-2 rounded-xl">
+                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
                                     <FaYoutube className="size-4" />
                                     <span className="sr-only">Youtube</span>
                                 </Link>
-                                <Link className="text-theme1 duration-300 md:hover:text-white md:hover:bg-theme1 bg-theme1/20 p-2 rounded-xl">
+                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
                                     <FaXTwitter className="size-4" />
                                     <span className="sr-only">Twitter</span>
                                 </Link>
-                                <Link className="text-theme1 duration-300 md:hover:text-white md:hover:bg-theme1 bg-theme1/20 p-2 rounded-xl">
+                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
                                     <IoLogoTiktok className="size-4" />
                                     <span className="sr-only">TikTok</span>
                                 </Link>
-                                <Link className="text-theme1 duration-300 md:hover:text-white md:hover:bg-theme1 bg-theme1/20 p-2 rounded-xl">
+                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
                                     <FaSnapchat className="size-4" />
                                     <span className="sr-only">Snapchat</span>
                                 </Link>

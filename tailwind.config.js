@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'theme1': '#d19a0a',
+        'theme1': '#fceb19',
         'theme2': '#DBEDEE',
         'theme3': '#F5F5F7',
         'theme4': '#FFED00',
