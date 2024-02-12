@@ -221,8 +221,8 @@ const WindowsProducts = () => {
                     </Transition.Root>
 
                     <main className="max-w-screen-xl justify-between mx-auto p-4">
-                    <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
-                        <h1 className="text-2xl font-bold tracking-tight text-gray-900">Windows Products</h1>
+                    <div className="flex flex-wrap items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
+                        <h1 className="w-full sm:w-auto mb-2 sm:mb-0 text-2xl font-bold tracking-tight text-gray-900">Windows Products</h1>
 
                         <div>
                             <div className="flex items-center">

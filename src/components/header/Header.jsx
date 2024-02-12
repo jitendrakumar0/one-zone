@@ -115,10 +115,10 @@ const Header = ({auth, setAuth}) => {
                           <>
                             <span
                               className={`block truncate ${
-                                selected ? "font-medium group-hover/drop:bg-theme1 " : "font-normal"
+                                selected ? "font-medium  " : "font-normal"
                               }`}
                             >
-                              <span className="font-semibold text-xs text-black group-hover:text-black bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2">
+                              <span className="font-semibold text-xs text-black group-hover:text-black group-[]/drop:bg-theme1 bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2">
                                 {person.sortName}
                               </span>
                               {person.name}
