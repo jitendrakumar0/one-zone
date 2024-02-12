@@ -9,6 +9,7 @@ import ChangePassword from "./page/auth/changePassword/ChangePassword";
 import ProductDetail from "./page/productDetail/ProductDetail";
 import UserProfile from "./page/userProfile/UserProfile";
 import { useEffect } from "react";
+import WindowsProducts from "./page/windowsProducts/WindowsProducts";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
           <Route path="/change-password" element={<ChangePassword/>}></Route>
           <Route path="/windows-products" element={<ProductList/>}></Route>
+          <Route path="/windowsProducts" element={<WindowsProducts/>}></Route>
           <Route path="/product-detail" element={<ProductDetail/>}></Route>
           <Route path="/profile" element={<UserProfile/>}></Route>
         </Routes>
