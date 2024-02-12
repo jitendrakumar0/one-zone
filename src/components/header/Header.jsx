@@ -4,7 +4,6 @@ import { BiSupport } from "react-icons/bi";
 import { Listbox, Transition, Menu, Dialog } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import { FaGlobeAmericas } from "react-icons/fa";
-import { LiaSignInAltSolid } from "react-icons/lia";
 import { LuBellDot, LuUnlock } from "react-icons/lu";
 import { MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
@@ -52,7 +51,7 @@ const allLanguages = [
 
 
 
-const Header = ({auth, setAuth}) => {
+const Header = () => {
   
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
@@ -251,7 +250,7 @@ const Header = ({auth, setAuth}) => {
                     <div className="px-1 py-1 ">
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <Link to="/profile"
                             className={`${
                               active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -268,12 +267,12 @@ const Header = ({auth, setAuth}) => {
                               />
                             )}
                             Edit Profile
-                          </button>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <Link to="/reset-password"
                             className={`${
                               active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -290,12 +289,12 @@ const Header = ({auth, setAuth}) => {
                               />
                             )}
                             Change Password
-                          </button>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <Link to="/wishlist"
                             className={`${
                               active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -312,12 +311,12 @@ const Header = ({auth, setAuth}) => {
                               />
                             )}
                             My Favorite
-                          </button>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <Link to="/chat-history"
                             className={`${
                               active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -334,12 +333,12 @@ const Header = ({auth, setAuth}) => {
                               />
                             )}
                             Chat History
-                          </button>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button
+                          <Link to="/delete-account"
                             className={`${
                               active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -356,7 +355,7 @@ const Header = ({auth, setAuth}) => {
                               />
                             )}
                             Delete Account
-                          </button>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>
@@ -460,14 +459,14 @@ const Header = ({auth, setAuth}) => {
       </nav>
 
       <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
-          <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full">
+          <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full flex flex-col overflow-hidden">
               <Dialog.Title className="py-3 px-6 md:text-xl text-lg font-bold border-b border-gray-200 bg-black text-theme1 flex items-center justify-between">
                   <div className="grow">
                       <img src={Logo} className="md:h-12 h-8 mix-blend-luminosity invert" alt="Flowbite Logo" />
                   </div>
                   <button onClick={() => setSidebarIsOpen(false)}><IoClose className='size-6' /></button>
               </Dialog.Title>
-              <div className="flex p-5 flex-col">
+              <div className="flex p-5 flex-col overflow-y-auto">
                   <HeaderMenu/>
                   <AllSideMenu />
               </div>

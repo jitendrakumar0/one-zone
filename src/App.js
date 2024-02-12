@@ -13,6 +13,7 @@ import Wishlist from "./page/wishlist/Wishlist";
 import WindowsProducts from "./page/windowsProducts/WindowsProducts";
 import Notification from "./page/notification/Notification";
 import ResetPassword from "./page/resetPassword/ResetPassword";
+import DeleteAccount from "./page/deleteAccount/DeleteAccount";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/wishlist" element={<Wishlist/>}></Route>
           <Route path="/notification" element={<Notification/>}></Route>
           <Route path="/reset-password" element={<ResetPassword/>}></Route>
+          <Route path="/delete-account" element={<DeleteAccount/>}></Route>
         </Routes>
     </>
   );

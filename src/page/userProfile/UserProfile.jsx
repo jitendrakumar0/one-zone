@@ -215,7 +215,7 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/login">
+                <NavLink className="group/link" to="/">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden'>
                             <svg
