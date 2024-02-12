@@ -47,6 +47,17 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         //     { value: 'iPad', label: 'iPad', checked: false },
         // ],
         // },
+        
+        {
+            id: 'sort',
+            name: 'sort',
+            options: [
+                { value: 'MSI', label: 'newest to oldest' },
+                { value: 'MSI', label: 'oldest to newest' },
+                { value: 'MSI', label: 'low to High' },
+                { value: 'MSI', label: 'High to low' },
+            ],
+            },
         {
         id: 'Brand',
         name: 'Brand',
@@ -68,13 +79,6 @@ import { FaRegCircleCheck } from "react-icons/fa6";
             { value: 'Sony', label: 'Sony', checked: false },
         ],
         },
-        {
-            id: 'sort',
-            name: 'price',
-            options: [
-                { value: 'MSI', label: 'newest to oldest', checked: false },
-            ],
-            },
         {
         id: 'subBrand',
         name: 'Sub Brand',
@@ -223,19 +227,19 @@ const WindowsProducts = () => {
                         <div>
                             <div className="flex items-center">
                                 <button
-                                    className={`w-24 text-center border rounded-lg text-white py-1 ${activeTab === 'tab1' ? 'bg-black text-white' : 'bg-[#9f9fa1]'}`}
+                                    className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab1' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
                                     onClick={() => handleTabClick('tab1')}
                                 >
                                 Laptop
                                 </button>
                                 <button
-                                    className={`w-24 text-center border mx-2 rounded-lg text-white py-1 ${activeTab === 'tab2' ? 'bg-black text-white' : 'bg-[#9f9fa1]'}`}
+                                    className={`w-24 text-center border mx-2  shadow-lg text-white py-1 ${activeTab === 'tab2' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
                                     onClick={() => handleTabClick('tab2')}
                                     >
                                     PC
                                 </button>
                                 <button
-                                    className={`w-24 text-center border rounded-lg text-white py-1 ${activeTab === 'tab3' ? 'bg-black text-white' : 'bg-[#9f9fa1]'}`}
+                                    className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab3' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
                                     onClick={() => handleTabClick('tab3')}
                                     >
                                     Sper Parts
