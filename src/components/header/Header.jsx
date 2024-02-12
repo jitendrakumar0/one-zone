@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Link, NavLink } from "react-router-dom"
 import { BiSupport } from "react-icons/bi";
-import { Listbox, Transition, Menu } from '@headlessui/react'
+import { Listbox, Transition, Menu, Dialog } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import { FaGlobeAmericas } from "react-icons/fa";
 import { LiaSignInAltSolid } from "react-icons/lia";
@@ -9,9 +9,10 @@ import { LuBellDot, LuUnlock } from "react-icons/lu";
 import { MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import { FiEdit2, FiHeart } from "react-icons/fi";
-import { IoChatboxOutline, IoCloseCircleOutline } from "react-icons/io5";
+import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../asstes/img/logo.svg'
+import { AllSideMenu } from '../../page/userProfile/UserProfile';
 
 const allcountries = [
   { name: 'India', sortName: 'IN' },
@@ -55,6 +56,7 @@ const Header = ({auth, setAuth}) => {
   
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
+  let [sidebarIsOpen, setSidebarIsOpen] = useState(true)
 
   return (
     <>
@@ -475,6 +477,20 @@ const Header = ({auth, setAuth}) => {
           </div>
         </div>
       </nav>
+
+      <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
+          <Dialog.Panel className="relative w-full ml-20 max-w-80 bg-white h-full">
+              <Dialog.Title className="py-3 px-6 md:text-xl text-lg font-bold border-b border-gray-200 bg-black text-theme1 flex items-center justify-between">
+                  <div className="grow">
+                      <img src={Logo} className="md:h-12 h-8 mix-blend-luminosity invert" alt="Flowbite Logo" />
+                  </div>
+                  <button onClick={() => setSidebarIsOpen(false)}><IoClose className='size-6' /></button>
+              </Dialog.Title>
+              <div className="flex p-5 flex-col">
+                  <AllSideMenu />
+              </div>
+          </Dialog.Panel>
+      </Dialog>
     </>
   );
 }
