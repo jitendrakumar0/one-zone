@@ -10,25 +10,31 @@ import { RiChat1Line } from 'react-icons/ri';
 const SellingProducts = () => {
     return (
         <>
-        <div className="max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10 bg-[#F5F5F7]">
+        <div className="max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10 bg-[#F5F5F7] relative">
             <div className="flex justify-between items-center w-full mb-5">
                 <div className="md:text-black md:text-3xl font-bold text-2xl">Best
                     Selling Products</div>
-                <div className="text-md text-nowrap cursor-pointer text-[#09757A]">
-                    View All
-                    <span className="size-5 inline-block justify-center pt-1">
-                        <svg stroke="white" fill="white"
-                            strokeWidth="0" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill="none" d="M0 0h24v24H0V0z"></path>
-                            <path
-                                d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
-                        </svg>
-                    </span>
+                <div className="text-md text-nowrap cursor-pointer flex items-center text-[black]">
+                    <div className="text">
+                        View All
+                        <span className="size-5 inline-block justify-center pt-1 hover:text-[#FCEB19]">
+                            <svg stroke="white" fill="currentColor"
+                                strokeWidth="0" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                <path
+                                    d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                            </svg>
+                        </span>
+                    </div>
+                        <div className="prev md:flex hidden border hover:bg-black transition hover:text-white  hover:border flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[140px] border-black"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
+                        <div className="next md:flex hidden border hover:bg-black transition hover:text-white hover:border  flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[100px] border-black">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+                        </div>
                 </div>
             </div>
             <div className="flex flex-wrap md:flex-nowrap items-stretch gap-5">
-                <div className="md:grow w-full md:pr-3">
+                {/* <div className="md:grow w-full md:pr-3">
                     <div
                         className={`overflow-hidden h-full rounded-xl relative z-0 pb-24 *:relative *:z-10  p-4 before:absolute before:size-full before:inset-0 before:bg-black/20 before:z-10`}>
                         <img src={banner} className='object-cover object-center !absolute !inset-0 size-full !z-0' alt="kuch nahi" />
@@ -43,10 +49,10 @@ const SellingProducts = () => {
                         </div>
                     </div>
             
-                </div>
-                <div className="md:w-1/2 lg:w-2/3 w-full shrink-0 relative">
+                </div> */}
+                <div className=" w-full shrink-0 relative">
                     
-                    <div className="flex-none hidden lg:flex">
+                    {/* <div className="flex-none hidden lg:flex">
                         <div className="swiper-button-next absolute top-[50%] translate-y-[-50%] z-50 cursor-pointer sellingNext after:content-[*] md:size-10 size-8 transition-all duration-300 bg-white border border-black text-white rounded-full right-[-20px] md:p-2 p-1">
                             <div className="">
                                 <svg stroke="currentColor" fill="black" strokeWidth="0" viewBox="0 0 24 24" className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
@@ -57,7 +63,7 @@ const SellingProducts = () => {
                                 <svg stroke="currentColor" fill="black" strokeWidth="0" viewBox="0 0 24 24" className="h-full w-full" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="w-full">
                     <Swiper
                         spaceBetween={30}
@@ -65,8 +71,8 @@ const SellingProducts = () => {
                         clickable: true,
                         }}  
                         navigation={{
-                            prevEl: '.sellingPrev',
-                            nextEl: '.sellingNext',
+                        prevEl: '.prev',
+                        nextEl: '.next',
                         }}
                         modules={[Pagination,Navigation]}
                         breakpoints={{
@@ -87,7 +93,7 @@ const SellingProducts = () => {
                                 spaceBetween: 15,
                             },
                             1400: {
-                                slidesPerView: 1.7,
+                                slidesPerView: 3,
                                 spaceBetween: 15,
                             },
                         }}
@@ -115,11 +121,11 @@ const SellingProducts = () => {
                                         </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="w-full grow">
-                                                <div className="w-full md:text-lg font-bold text-theme1">₹31,990</div>
+                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -147,11 +153,11 @@ const SellingProducts = () => {
                                         </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="w-full grow">
-                                                <div className="w-full md:text-lg font-bold text-theme1">₹31,990</div>
+                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -179,11 +185,11 @@ const SellingProducts = () => {
                                         </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="w-full grow">
-                                                <div className="w-full md:text-lg font-bold text-theme1">₹31,990</div>
+                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -211,11 +217,11 @@ const SellingProducts = () => {
                                         </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="w-full grow">
-                                                <div className="w-full md:text-lg font-bold text-theme1">₹31,990</div>
+                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>

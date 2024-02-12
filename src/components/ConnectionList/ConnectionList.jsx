@@ -11,6 +11,12 @@ import tab from '../../asstes/img/mobile&tablet.svg'
 import printers from '../../asstes/img/printer.svg'
 import server from '../../asstes/img/Server.svg'
 import { Link } from 'react-router-dom';
+import { GrWindows } from "react-icons/gr";
+import { BsApple } from "react-icons/bs";
+import { BsBrowserChrome } from "react-icons/bs";
+import { FaMobile } from "react-icons/fa6";
+import { BsFillPrinterFill } from "react-icons/bs";
+import { FaServer } from "react-icons/fa";
 
 export const ConnectionList = () => {
     return (  
@@ -74,9 +80,10 @@ export const ConnectionList = () => {
                         className="collectionSwiper"
                     >
                         <SwiperSlide>
-                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white ">
+                            <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group  cursor-pointer block rounded-xl shadow-sm py-6 bg-white ">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
-                                    <img src={Windows} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
+                                <GrWindows className='size-full object-contain duration-300 md:group-hover:scale-105 '/>
+                                    {/* <img src={Windows} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
                                 </div>
                                 <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Windows</div>
                                 <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
@@ -85,7 +92,8 @@ export const ConnectionList = () => {
                         <SwiperSlide>
                             <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
-                                    <img src={apple} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
+                                <BsApple className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
+                                    {/* <img src={apple} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
                                 </div>
                                 <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Apple</div>
                                 <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
@@ -94,7 +102,8 @@ export const ConnectionList = () => {
                         <SwiperSlide>
                             <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
-                                    <img src={cromebook} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
+                                <BsBrowserChrome className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale' />
+                                    {/* <img src={cromebook} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
                                 </div>
                                 <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">ChromeBook</div>
                                 <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
@@ -103,7 +112,8 @@ export const ConnectionList = () => {
                         <SwiperSlide>
                             <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
-                                    <img src={tab} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
+                                <FaMobile className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
+                                    {/* <img src={tab} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
                                 </div>
                                 <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Mob & Tab</div>
                                 <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
@@ -112,7 +122,8 @@ export const ConnectionList = () => {
                         <SwiperSlide>
                             <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
-                                    <img src={printers} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
+                                <BsFillPrinterFill className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale' />
+                                    {/* <img src={printers} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
                                 </div>
                                 <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center"> Printers</div>
                                 <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>
@@ -121,7 +132,8 @@ export const ConnectionList = () => {
                         <SwiperSlide>
                             <Link to="/windows-products" className="collectioncard duration-300 md:hover:scale-95 border-2 border-transparent md:hover:border-theme1/40 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
-                                    <img src={server} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/>
+                                <FaServer className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
+                                    {/* <img src={server} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
                                 </div>
                                 <div className="text-black sm:text-lg text-base font-semibold sm:mt-5 mt-3 text-center">Server</div>
                                 <div className="text-gray-500 font-semibold text-sm text-center sm:mt-1">8 Items</div>

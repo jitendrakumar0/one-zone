@@ -178,27 +178,27 @@ const Footer = () => {
                         <div className="font-bold md:text-sm text-xs uppercase">Social Links</div>
                         <div className="w-full">
                             <div className="inline-grid grid-cols-3 mt-4 sm:mt-0 gap-3 max-md:justify-center">
-                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
+                                <Link className="text-white duration-300 md:hover:text-theme1 md:hover:bg-black bg-black p-2 rounded-xl">
                                     <FaFacebook className="size-4" />
                                     <span className="sr-only">Facebook</span>
                                 </Link>
-                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
+                                <Link className="text-white duration-300 md:hover:text-theme1 md:hover:bg-black bg-black p-2 rounded-xl">
                                     <FaInstagram className="size-4" />
                                     <span className="sr-only">Instagram</span>
                                 </Link>
-                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
+                                <Link className="text-white duration-300 md:hover:text-theme1 md:hover:bg-black bg-black p-2 rounded-xl">
                                     <FaYoutube className="size-4" />
                                     <span className="sr-only">Youtube</span>
                                 </Link>
-                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
+                                <Link className="text-white duration-300 md:hover:text-theme1 md:hover:bg-black bg-black p-2 rounded-xl">
                                     <FaXTwitter className="size-4" />
                                     <span className="sr-only">Twitter</span>
                                 </Link>
-                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
+                                <Link className="text-white duration-300 md:hover:text-theme1 md:hover:bg-black bg-black p-2 rounded-xl">
                                     <IoLogoTiktok className="size-4" />
                                     <span className="sr-only">TikTok</span>
                                 </Link>
-                                <Link className="text-black duration-300 md:hover:text-white md:hover:bg-black bg-theme1 p-2 rounded-xl">
+                                <Link className="text-white duration-300 md:hover:text-theme1 md:hover:bg-black bg-black p-2 rounded-xl">
                                     <FaSnapchat className="size-4" />
                                     <span className="sr-only">Snapchat</span>
                                 </Link>

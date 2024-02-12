@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import { Navigation,Autoplay } from 'swiper/modules';
+import 'swiper/css/navigation';
 
 
 
@@ -36,13 +40,52 @@ const HeroBanner = () => {
         </div> */}
         
       <div className="bg-white">
-        <div className="w-full">
-          <div className="grid grid-cols-1">
-            <div className="item">
-              <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
-                <img src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo" className="" />
-              </Link>
-            </div>
+        <div className="w-full overflow-hidden">
+          <div className="grid grid-cols-1 relative">
+                  {/* <div className="item">
+                    <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
+                      <img className='w-full h-auto' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    </Link>
+                  </div> */}
+              <Swiper 
+                  navigation={{
+                  prevEl: '.prev',
+                  nextEl: '.next',
+                }}  
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                modules={[Navigation, Autoplay]} 
+                className="mySwiper w-full">
+                <SwiperSlide className='w-full'>
+                  <div className="item w-full">
+                    <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
+                      <img className='w-full' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="item">
+                    <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
+                      <img className='w-full ' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="item">
+                    <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
+                      <img className='w-full ' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+              <div className="prev border flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute top-[50%] -translate-y-1/2 z-10 left-[20px] border-black">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg>
+              </div>
+              <div className="next border flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute top-[50%] -translate-y-1/2 z-10 end-[20px] border-black">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+              </div>
           </div>
         </div>
       </div>

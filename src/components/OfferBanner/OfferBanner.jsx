@@ -17,12 +17,12 @@ const OfferBanner = () => {
                                         UP TO 75% OFF!
                                     </div>
                                     <div className="text-white font-semibold text-xl sm:text-2xl lg:text-3xl !leading-[120%] py-2">
-                                        Unbeatable Discounts
+                                        One Plus
                                     </div>
                                 </Link>
                                 <div className="pt-1 sm:pt-2">
                                     <Link className="sm:text-lg text-base font-semibold text-white duration-300 md:group-hover:text-yellow-400">
-                                        Shop Now
+                                        Let's Chat
                                     </Link>
                                 </div>
                             </div>
@@ -36,15 +36,15 @@ const OfferBanner = () => {
                             <div className="absolute top-1/2 -translate-y-1/2 p-8 left-0 z-10">
                                 <Link>
                                     <div className="text-white/80 font-semibold text-xl !leading-[150%]">
-                                        UP TO 75% OFF!
+                                        UP TO 50% OFF!
                                     </div>
                                     <div className="text-white font-semibold text-xl sm:text-2xl lg:text-3xl !leading-[120%] py-2">
-                                        Unbeatable Discounts
+                                        Microsoft
                                     </div>
                                 </Link>
                                 <div className="pt-1 sm:pt-2">
                                     <Link className="sm:text-lg text-base font-semibold text-white duration-300 md:group-hover:text-yellow-400">
-                                        Shop Now
+                                        Let's Chat
                                     </Link>
                                 </div>
                             </div>

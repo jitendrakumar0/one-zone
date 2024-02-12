@@ -101,9 +101,9 @@ const Header = ({auth, setAuth}) => {
                       <Listbox.Option
                         key={personIdx}
                         className={({ active }) =>
-                          `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                          `relative cursor-default select-none py-2 group pl-10 pr-4 ${
                             active
-                              ? "bg-theme1/20 text-theme1"
+                              ? "bg-black text-theme1 hover:text-theme1 cursor-pointer"
                               : "text-gray-900"
                           }`
                         }
@@ -116,7 +116,7 @@ const Header = ({auth, setAuth}) => {
                                 selected ? "font-medium" : "font-normal"
                               }`}
                             >
-                              <span className="font-semibold text-xs text-theme1 bg-theme1/10 rounded-sm inline-flex items-center justify-center size-6 mr-2">
+                              <span className="font-semibold text-xs text-black group-hover:text-black bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2">
                                 {person.sortName}
                               </span>
                               {person.name}
@@ -167,7 +167,7 @@ const Header = ({auth, setAuth}) => {
                         className={({ active }) =>
                           `relative cursor-default select-none py-2 pl-10 pr-4 ${
                             active
-                              ? "bg-theme1/20 text-theme1"
+                              ? "bg-black text-theme1 cursor-pointer"
                               : "text-gray-900"
                           }`
                         }
@@ -219,13 +219,13 @@ const Header = ({auth, setAuth}) => {
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4">
-            <Link className="bg-theme1/10 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-theme1 md:hover:bg-theme1 md:hover:text-white duration-300">
+            <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
               <LuBellDot className="size-4" />
             </Link>
             {!auth ? (
               <Link
                 to="/signup"
-                className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
+                className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
                 Sign Up <LiaSignInAltSolid className="size-5" />
               </Link>
@@ -460,13 +460,13 @@ const Header = ({auth, setAuth}) => {
                 <div className="flex w-full justify-center pt-3">
                   <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white text-sm">
                     <li>
-                      <NavLink to="/home" className="block py-2 px-3 text-black bg-theme1 rounded md:bg-transparent md:text-theme1 md:p-0">Home</NavLink>
+                      <NavLink to="/home" className="relative after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-black bg-theme1 border-theme1 md:bg-transparent md:text-theme1 md:p-0 border-b-[3px] rounded-0">Home</NavLink>
                     </li>
                     <li>
-                      <Link className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-theme1 md:p-0">About Us</Link>
+                      <Link className="relative w-fit  after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-theme1 md:p-0">About Us</Link>
                     </li>
                     <li>
-                      <Link className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-theme1 md:p-0">All Categories</Link>
+                      <Link className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-theme1 md:p-0">All Categories</Link>
                     </li>
                   </ul>
                 </div>
