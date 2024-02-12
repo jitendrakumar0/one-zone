@@ -216,11 +216,11 @@ const Header = ({auth, setAuth}) => {
         </div>
       </div>
       <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
-        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
-          <Link to="/home" className="flex items-center space-x-3">
+        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-start justify-between">
+          <Link to="/home" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4">
+          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4 md:mt-[8px] mt-0">
             <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
               <LuBellDot className="size-4" />
             </Link>
@@ -468,7 +468,7 @@ const Header = ({auth, setAuth}) => {
                       <Link className="relative w-fit  after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">About Us</Link>
                     </li>
                     <li>
-                      <Link className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
+                      <Link to='/windowsProducts' className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
                     </li>
                   </ul>
                 </div>

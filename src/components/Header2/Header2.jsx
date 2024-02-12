@@ -229,6 +229,7 @@ const Header2 = ({auth, setAuth}) => {
               >
                 Sign Up <LiaSignInAltSolid className="size-5" />
               </Link>
+              
             ) : (
               <Menu as="div" className="relative inline-block text-left">
                 <Menu.Button className="inline-flex items-center gap-1 relative pr-5">
@@ -466,7 +467,7 @@ const Header2 = ({auth, setAuth}) => {
                       <Link className="relative w-fit  after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">About Us</Link>
                     </li>
                     <li>
-                      <Link className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
+                      <Link to='/windowsProducts' className="relative w-fit after:block after:content-[''] after:absolute after:h-[3px] after:bg-theme1 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-black md:p-0">All Categories</Link>
                     </li>
                   </ul>
                 </div>
