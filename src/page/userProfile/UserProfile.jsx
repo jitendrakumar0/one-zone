@@ -130,11 +130,11 @@ export default UserProfile
 
 export const AllSideMenu = () => {
     return (
-        <div className="flex flex-col pr-3">
+        <div className="flex flex-col pr-3 md:gap-y-3">
             <div className="item group">
                 <NavLink className="group/link" to="/profile">
-                    <div className="flex space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span>
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden'>
                             <svg
                                 width={14}
                                 height={19}
@@ -155,8 +155,8 @@ export const AllSideMenu = () => {
             </div>
             <div className="item group">
                 <NavLink className="group/link" to="/wishlist">
-                    <div className="flex space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span>
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden'>
                             <svg
                                 width={16}
                                 height={14}
@@ -174,8 +174,8 @@ export const AllSideMenu = () => {
             </div>
             <div className="item group">
                 <NavLink className="group/link" to="/notifications">
-                    <div className="flex space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span>
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden'>
                             <LuBellDot className='fill-current' />
                         </span>
                         <span className="font-semibold text-base">Notification</span>
@@ -184,8 +184,8 @@ export const AllSideMenu = () => {
             </div>
             <div className="item group">
                 <NavLink className="group/link" to="/reset-password">
-                    <div className="flex space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span>
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden'>
                             <svg
                                 width={16}
                                 height={19}
@@ -205,8 +205,8 @@ export const AllSideMenu = () => {
             </div>
             <div className="item group">
                 <NavLink className="group/link" to="/login">
-                    <div className="flex space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 group-[.active]/link:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span>
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden'>
                             <svg
                                 width={18}
                                 height={18}
