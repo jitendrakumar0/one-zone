@@ -252,11 +252,12 @@ const ProductList = () => {
                                         <div className="py-1">
                                         {sortOptions.map((option) => (
                                             <Menu.Item key={option.name}>
-                                            {({ active }) => (
+                                            {({ active }) =>
+                                             (
                                                 <Link
                                                 className={classNames(
                                                     option.current ? 'font-medium text-gray-900' : 'text-gray-500',
-                                                    active ? 'bg-gray-100' : '',
+                                                    active ? 'bg-black text-theme1' : '',
                                                     'block px-4 py-2 text-sm'
                                                 )}
                                                 >
@@ -323,7 +324,7 @@ const ProductList = () => {
                                             defaultValue={option.value}
                                             type="checkbox"
                                             defaultChecked={option.checked}
-                                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                            className="h-4 w-4 accent-[#FCEB19] rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                             />
                                             <label
                                             htmlFor={`filter-${section.id}-${optionIdx}`}
@@ -341,8 +342,8 @@ const ProductList = () => {
                             ))}
 
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
-                                <button className="border-2 grow border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent text-theme1 border-theme1 shadow-md shadow-black/40">Clear <MdClear className='size-5' /></button>
-                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:bg-black  shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                                <button className="border-2 grow border-b-black  font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
+                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
                         </form>
 
@@ -370,11 +371,11 @@ const ProductList = () => {
                                         </div>
                                         <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
                                             <div className="w-full grow">
-                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-theme1">₹31,990</div>
+                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -400,11 +401,11 @@ const ProductList = () => {
                                         </div>
                                         <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
                                             <div className="w-full grow">
-                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-theme1">₹54,490</div>
+                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹54,490</div>
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -427,11 +428,11 @@ const ProductList = () => {
                                         </div>
                                         <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
                                             <div className="w-full grow">
-                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-theme1">₹2,349</div>
+                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹2,349</div>
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                             </div>
                                             <div className="w-full">
-                                                <Link className="text-white max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
+                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
