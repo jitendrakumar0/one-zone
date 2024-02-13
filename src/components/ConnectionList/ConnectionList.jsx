@@ -49,7 +49,7 @@ export const ConnectionList = () => {
                         }}
                         breakpoints={{
                         360: {
-                            slidesPerView: 2.5,
+                            slidesPerView: 3,
                         },
                         576: {
                             slidesPerView: 4,

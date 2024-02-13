@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import { Navigation,Autoplay } from 'swiper/modules';
 import 'swiper/css/navigation';
+import bannerMob from '../../asstes/img/bannerSecond.png'
 
 
 
@@ -52,30 +53,33 @@ const HeroBanner = () => {
                   prevEl: '.prev',
                   nextEl: '.next',
                 }}  
-                // autoplay={{
-                //   delay: 2500,
-                //   disableOnInteraction: false,
-                // }}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
                 modules={[Navigation, Autoplay]} 
                 className="mySwiper w-full">
                 <SwiperSlide className='w-full'>
                   <div className="item w-full">
                     <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
-                      <img className='w-full' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    <img className='w-full h-auto object-cover  md:hidden' src='https://rukminim2.flixcart.com/fk-p-flap/480/210/image/b8b6182613d198e4.jpeg?q=20' alt="" />
+                      <img className='w-full hidden md:block' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
                     </Link>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="item">
                     <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
-                      <img className='w-full ' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    <img className='w-full h-auto object-cover  md:hidden' src='https://rukminim2.flixcart.com/fk-p-flap/480/210/image/b8b6182613d198e4.jpeg?q=20' alt="" />
+                      <img className='w-full hidden md:block' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
                     </Link>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="item">
                     <Link className="w-full bg-white border border-gray-100 flex justify-center items-center before:absolute before:inset-0 before:z-10 before:bg-gradient-to-tr before:from-yellow-600 before:via-amber-500 before:to-yellow-900 before:mix-blend-hue">
-                      <img className='w-full ' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
+                    <img className='w-full h-auto object-cover  md:hidden' src='https://rukminim2.flixcart.com/fk-p-flap/480/210/image/b8b6182613d198e4.jpeg?q=20' alt="" />
+                      <img className='w-full hidden md:block' src="https://pickbazar-react-rest.vercel.app/_next/image?url=https%3A%2F%2Fpickbazarlaravel.s3.ap-southeast-1.amazonaws.com%2F2146%2FGadget-banners.png&w=1920&q=75" alt="logo"/>
                     </Link>
                   </div>
                 </SwiperSlide>

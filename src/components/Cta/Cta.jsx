@@ -5,7 +5,7 @@ const Cta = () => {
     return (
         <section className="py-5 sm:py-8 lg:py-10 max-w-screen-xl mx-auto p-4">
     <div className="container mx-auto">
-        <div className="rounded-lg shadow bg-cover bg-gradient-to-l  *:z-10 bg-white border-theme1/2 border">
+        <div className="rounded-lg shadow bg-cover bg-gradient-to-l relative *:z-10 bg-white border-theme1/2 border">
             <div className="py-20 px-6 bg-no-repeat bg-cover">
                 <img src={lines} className='object-cover object-center !absolute !inset-0 size-full !z-0' alt="kuch nahi" />
                 <div className="max-w-2xl mx-auto text-center">
