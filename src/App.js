@@ -14,6 +14,7 @@ import WindowsProducts from "./page/windowsProducts/WindowsProducts";
 import Notification from "./page/notification/Notification";
 import ResetPassword from "./page/resetPassword/ResetPassword";
 import DeleteAccount from "./page/deleteAccount/DeleteAccount";
+import Chat from "./page/chat/Chat";
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/notification" element={<Notification/>}></Route>
           <Route path="/reset-password" element={<ResetPassword/>}></Route>
           <Route path="/delete-account" element={<DeleteAccount/>}></Route>
+          <Route path="/chat" element={<Chat/>}></Route>
         </Routes>
     </>
   );

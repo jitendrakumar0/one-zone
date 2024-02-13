@@ -52,10 +52,10 @@ const HeroBanner = () => {
                   prevEl: '.prev',
                   nextEl: '.next',
                 }}  
-                // autoplay={{
-                //   delay: 2500,
-                //   disableOnInteraction: false,
-                // }}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
                 modules={[Navigation, Autoplay]} 
                 className="mySwiper w-full">
                 <SwiperSlide className='w-full'>

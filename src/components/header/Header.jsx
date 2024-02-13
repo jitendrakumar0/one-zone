@@ -56,6 +56,8 @@ const Header = () => {
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
   let [sidebarIsOpen, setSidebarIsOpen] = useState(false)
+  let [logout, setLogout] = useState(false)
+  let [deleteAccount, setDeleteAccount] = useState(false)
 
   return (
     <>
@@ -219,18 +221,18 @@ const Header = () => {
           <Link to="/home" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center gap-4 md:mt-[8px] mt-0">
+          <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 md:mt-[8px] mt-0">
             <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
               <LuBellDot className="size-4" />
             </Link>
-              <Menu as="div" className="relative inline-block text-left">
-                <Menu.Button className="inline-flex items-center gap-1 relative pr-5">
+              <Menu as="div" className="relative inline-block text-left pt-2">
+                <Menu.Button className="inline-flex items-center gap-1 relative md:pr-5">
                   <img
                     className="bg-theme1/10 inline-flex items-center justify-center md:size-9 size-7 rounded-full border-2 border-theme1/40 text-theme1"
                     src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
                     alt="profile"
                   />
-                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+                  <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center max-md:hidden">
                     <ChevronDownIcon
                       className="h-5 w-5 text-gray-600"
                       aria-hidden="true"
@@ -362,7 +364,7 @@ const Header = () => {
                     <div className="px-1 py-1">
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to="/"
+                          <button onClick={()=>{setLogout(true)}}
                             className={`${
                               active ? "bg-red-500 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -378,8 +380,8 @@ const Header = () => {
                                 aria-hidden="true"
                               />
                             )}
-                            Log out
-                          </Link>
+                            Logout
+                          </button>
                         )}
                       </Menu.Item>
                     </div>
@@ -457,6 +459,110 @@ const Header = () => {
           </div>
         </div>
       </nav>
+      
+      <Transition appear show={logout} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  
+                  <div class="relative bg-white rounded-lg shadow">
+                      <button type="button" onClick={()=>{setLogout(false)}} class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
+                          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                      </button>
+                      <div class="p-4 md:p-5 text-center">
+                          <svg class="mx-auto mb-4 text-gray-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                          </svg>
+                          <h3 class="mb-5 text-lg font-normal text-gray-500">Are you sure you want to logout?</h3>
+                          <Link to="/login" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                              Yes, logout
+                          </Link>
+                          <button onClick={()=>{setLogout(false)}} type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">No, cancel</button>
+                      </div>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+      
+      <Transition appear show={deleteAccount} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={()=>{setDeleteAccount(false)}}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black/25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  
+                  <div class="relative bg-white rounded-lg shadow">
+                      <button type="button" onClick={()=>{setDeleteAccount(false)}} class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
+                          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                      </button>
+                      <div class="p-4 md:p-5 text-center">
+                          <svg class="mx-auto mb-4 text-gray-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                          </svg>
+                          <h3 class="mb-5 text-lg font-normal text-gray-500">Are you sure you want to logout?</h3>
+                          <Link to="/login" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                              Yes, logout
+                          </Link>
+                          <button onClick={()=>{setDeleteAccount(false)}} type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">No, cancel</button>
+                      </div>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
 
       <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
           <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full flex flex-col overflow-hidden">
@@ -491,7 +597,7 @@ max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">About Us</NavLink>
     </li>
     <li className='list-none'>
-      <NavLink to="/categories" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+      <NavLink to="/windows-products" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">All Categories</NavLink>
     </li>
     </>

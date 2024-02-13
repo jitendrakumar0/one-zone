@@ -29,7 +29,7 @@ const DeleteAccount = () => {
                                             <div class="relative bg-white rounded-lg shadow">
                                                 <div class="p-4 md:p-5 text-center">
                                                     <TiDeleteOutline className='mx-auto mb-4 text-gray-400 w-12 h-12' />
-                                                    <h3 class="mb-5 text-lg font-normal text-gray-500">Are you sure you want to delete this product?</h3>
+                                                    <h3 class="mb-5 text-lg font-normal text-gray-500">Are you sure you want to delete your account?</h3>
                                                     <div className="action-area flex space-x-4 items-center pb-4 justify-center">
                                                         <div class="inline-flex gap-4">
                                                             <Link to="/signup" className="text-white bg-red-600 border-2 grow border-red-600 border-b-red-800 font-bold text-sm md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-red-900 md:hover:bg-red-800 shadow-md shadow-red-800/40">Yes, I'm sure</Link>

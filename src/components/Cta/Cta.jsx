@@ -1,31 +1,158 @@
 import React from 'react'
-import lines from '../../asstes/img/lines.png'
+import { Link } from 'react-router-dom';
+import AppScreen from '../../asstes/img/app-screen.png'
+import AppleStore from '../../asstes/img/apple-store.png'
+import PlayStore from '../../asstes/img/play-store.png'
+import CampaignCoverCountdown from '../../asstes/img/campaign-cover-countdown.jpg'
 
 const Cta = () => {
     return (
-        <section className="py-5 sm:py-8 lg:py-10 max-w-screen-xl mx-auto p-4">
-    <div className="container mx-auto">
-        <div className="rounded-lg shadow bg-cover bg-gradient-to-l  *:z-10 bg-white border-theme1/2 border">
-            <div className="py-20 px-6 bg-no-repeat bg-cover">
-                <img src={lines} className='object-cover object-center !absolute !inset-0 size-full !z-0' alt="kuch nahi" />
-                <div className="max-w-2xl mx-auto text-center">
-                    <h2 className="md:text-4xl text-2xl font-bold text-black text-balance">Obtain Your Customizable Financial Survival Plan.</h2>
-                    <p className="text-sm font-medium text-black mt-6">Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede.</p>
-                    <button className='text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40 w-auto mt-4'>Let's Chat<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="size-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10 3H14C18.4183 3 22 6.58172 22 11C22 15.4183 18.4183 19 14 19V22.5C9 20.5 2 17.5 2 11C2 6.58172 5.58172 3 10 3ZM12 17H14C17.3137 17 20 14.3137 20 11C20 7.68629 17.3137 5 14 5H10C6.68629 5 4 7.68629 4 11C4 14.61 6.46208 16.9656 12 19.4798V17Z"></path></svg></button>
-                    {/* <form className="max-w-2xl mx-auto space-y-2 mt-6">
-                        <div className="relative">
-                            <input type="email" id="subcribe" className="py-4 ps-4 pe-14 w-full h-12 rounded-md bg-default-50 text-black  border border-black/20 " placeholder="Type Your Email" name="email"/>
-                            <button type="submit" className="inline-flex items-center justify-center gap-2 px-3 absolute top-[6px] end-[6px] h-9">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" data-lucide="search" className="lucide lucide-search h-6 w-6 text-black 0"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-                            </button>
+      <section className="py-5 sm:py-8 lg:py-10 max-w-screen-xl mx-auto p-4">
+            <div className="container-x mx-auto h-full">
+                <div className="lg:flex xl:space-x-[30px] lg:space-x-5 items-center h-full">
+                    <div
+                        data-aos="fade-right"
+                        className="campaign-countdown lg:w-1/2 h-full w-full mb-5 lg:mb-0 aos-init aos-animate"
+                        style={{
+                            background:
+                                `url(${CampaignCoverCountdown}) 0% 0% / cover no-repeat`,
+                        }}
+                    >
+                        <Link>
+                            <div className="w-full xl:p-12 p-5">
+                                <div className="countdown-wrapper w-full flex lg:justify-between justify-evenly mb-10">
+                                    <div className="countdown-item">
+                                        <div className="countdown-number sm:size-24 size-12 rounded-full bg-white flex justify-center items-center">
+                                            <span className="font-700 sm:text-3xl text-sm text-red-500">
+                                                0
+                                            </span>
+                                        </div>
+                                        <p className="sm:text-lg text-xs font-500 text-center font-semibold leading-8">
+                                            Days
+                                        </p>
+                                    </div>
+                                    <div className="countdown-item">
+                                        <div className="countdown-number sm:size-24 size-12 rounded-full bg-white flex justify-center items-center">
+                                            <span className="font-700 sm:text-3xl text-sm text-blue-500">
+                                                0
+                                            </span>
+                                        </div>
+                                        <p className="sm:text-lg text-xs font-500 text-center font-semibold leading-8">
+                                            Hours
+                                        </p>
+                                    </div>
+                                    <div className="countdown-item">
+                                        <div className="countdown-number sm:size-24 size-12 rounded-full bg-white flex justify-center items-center">
+                                            <span className="font-700 sm:text-3xl text-sm text-green-500">
+                                                0
+                                            </span>
+                                        </div>
+                                        <p className="sm:text-lg text-xs font-500 text-center font-semibold leading-8">
+                                            Minutes
+                                        </p>
+                                    </div>
+                                    <div className="countdown-item">
+                                        <div className="countdown-number sm:size-24 size-12 rounded-full bg-white flex justify-center items-center">
+                                            <span className="font-700 sm:text-3xl text-sm text-purple-500">
+                                                0
+                                            </span>
+                                        </div>
+                                        <p className="sm:text-lg text-xs font-500 text-center font-semibold leading-8">
+                                            Seconds
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="countdown-title mb-4">
+                                    <h1 className="text-4xl text-black font-bold font-600">
+                                        WOO! Flash Sale
+                                    </h1>
+                                </div>
+                                <div className="inline-flex space-x-2 items-center border-b border-qyellow">
+                                    <span className="text-sm font-600 tracking-wide leading-7">
+                                        View More
+                                    </span>
+                                    <span>
+                                        <svg
+                                            width={7}
+                                            height={11}
+                                            viewBox="0 0 7 11"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                x="2.08984"
+                                                y="0.636719"
+                                                width="6.94219"
+                                                height="1.54271"
+                                                transform="rotate(45 2.08984 0.636719)"
+                                                fill="#1D1D1D"
+                                            />
+                                            <rect
+                                                x={7}
+                                                y="5.54492"
+                                                width="6.94219"
+                                                height="1.54271"
+                                                transform="rotate(135 7 5.54492)"
+                                                fill="#1D1D1D"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div
+                        data-aos="fade-left"
+                        className="download-app flex-1 lg:h-full h-[430px] xl:p-12 p-5 aos-init aos-animate"
+                        style={{
+                            background:
+                                'url("https://shopo.quomodothemes.website/assets/images/download-app-cover.png") 0% 0% / cover no-repeat',
+                        }}
+                    >
+                        <div className="flex flex-col h-full justify-between">
+                            <div className="get-app">
+                                <p className="text-sm font-600 text-black mb-3">
+                                    MOBILE APP VERSION
+                                </p>
+                                <h1 className="text-3xl font-600 text-black leading-10 mb-8">
+                                    Get Our
+                                    <span className="text-qred border-b-2 border-qred mx-2">
+                                        Mobile App
+                                    </span>
+                                    <br /> It’s Make easy for you life !
+                                </h1>
+                                <div className="flex space-x-5 items-center">
+                                    <div>
+                                        <Link>
+                                            <img
+                                                width={170}
+                                                height={69}
+                                                src={PlayStore}
+                                                alt=""
+                                            />
+                                        </Link>
+                                    </div>
+                                    <div>
+                                        <Link>
+                                            <img
+                                                width={170}
+                                                height={69}
+                                                src={AppleStore}
+                                                alt=""
+                                            />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="app-screen">
+                                <img src={AppScreen} alt="" />
+                            </div>
                         </div>
-                    </form> */}
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-    )
+      </section>
+    );
 }
 
 export default Cta

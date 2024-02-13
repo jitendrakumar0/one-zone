@@ -21,62 +21,62 @@ export default function Clouds() {
           </div>
           <div className="grid lg:grid-cols-6 sm:grid-cols-4 grid-cols-2">
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand1} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand2} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand3} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand4} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand5} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand6} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand7} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand8} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand9} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand10} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand11} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
             <div className="item group">
-              <Link to="/product-detail" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
+              <Link to="/windows-products" className="w-full h-[130px] bg-white border border-gray-100 flex justify-center items-center">
                 <img src={Brand12} alt="logo" className="group-hover:scale-105 duration-300" />
               </Link>
             </div>
