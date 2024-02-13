@@ -3,6 +3,7 @@ import React from 'react'
 const Chat = () => {
     
     return (
+        <>
         <div>
             <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
                 <div className="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
@@ -348,6 +349,7 @@ const Chat = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 }
 

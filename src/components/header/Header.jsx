@@ -12,6 +12,7 @@ import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5
 import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../asstes/img/logo.svg'
 import { AllSideMenu } from '../../page/userProfile/UserProfile';
+import NotificationPopup from '../notificationPopup/NotificationPopup';
 
 const allcountries = [
   { name: 'India', sortName: 'IN' },
@@ -222,9 +223,7 @@ const Header = () => {
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 md:mt-[8px] mt-0">
-            <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
-              <LuBellDot className="size-4" />
-            </Link>
+              <NotificationPopup/>
               <Menu as="div" className="relative inline-block text-left pt-2">
                 <Menu.Button className="inline-flex items-center gap-1 relative md:pr-5">
                   <img
@@ -460,7 +459,7 @@ const Header = () => {
         </div>
       </nav>
       
-      <Transition appear show={logout} as={Fragment}>
+      <Transition show={logout} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
           <Transition.Child
             as={Fragment}

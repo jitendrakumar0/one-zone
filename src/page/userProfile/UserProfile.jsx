@@ -1,21 +1,19 @@
-import React, { Fragment,useState } from 'react'
+import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
 import Profileimg from '../../asstes/img/edit-profileimg.jpg'
 import { LuBellDot, LuUnlock } from 'react-icons/lu';
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { MdClear } from "react-icons/md";
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { IoChatboxOutline, IoCloseCircleOutline } from 'react-icons/io5';
 import { AiOutlineLogout } from 'react-icons/ai';
-import { Dialog, Transition } from '@headlessui/react';
 import LogoutDialogue from '../../components/LogoutDialogue/LogoutDialogue';
 
 const UserProfile = () => {
-    const [logout, setLogout] = useState(true)
-    console.log('logout', logout)
+    const [logout, setLogout] = useState(false)
     return (
         <>
             <Header />
