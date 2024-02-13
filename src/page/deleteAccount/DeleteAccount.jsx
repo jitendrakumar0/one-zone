@@ -43,7 +43,7 @@ const DeleteAccount = () => {
                                         <label htmlFor="check">If you are certain about deleting your account, please confirm by clicking the button below.</label>
                                     </li>
                                     <li className='mt-5'>
-                                        <button onClick={()=> {setDeleteAccount(true)}} className='border bg-red-600 text-sm  px-5 py-2 rounded-lg font-bold text-white'>DELETE</button>
+                                        <button onClick={()=> {setDeleteAccount(true)}} className='text-white bg-red-500 border-2 border-red-500 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>DELETE</button>
                                     </li>
                                 </ul>
                                     {/* <div class="justify-center items-center w-full flex">

@@ -35,7 +35,7 @@ const ChangePassword = () => {
                             <div className="pt-5 flex items-center justify-between flex-wrap">
                                 <div className="">
                                     
-                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-transparent md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Reset Password <LiaSignInAltSolid className='size-5' /></Link>
+                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Reset Password <LiaSignInAltSolid className='size-5' /></Link>
                                 </div>
                                 <Link to="/home">
                                     <div className="text-base font-semibold text-black hover:text-black/70">

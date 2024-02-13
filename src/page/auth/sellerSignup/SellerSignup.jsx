@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import frame from '../../../asstes/img/Frame.png'
-import Header from '../../../components/header/Header'
 import Footer from '../../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import { MdOutlineMailOutline } from 'react-icons/md'
@@ -15,8 +14,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const Signup = () => {
-    const [auth, setAuth] = useState(false);
+const SellerSignup = () => {
   return (
     <>
     <Header2/>
@@ -49,7 +47,7 @@ const Signup = () => {
                                 }>Seller</Tab>
                         </Tab.List>
                         <Tab.Panels>
-                            <Tab.Panel> */}
+                            <Tab.Panel>
                                 <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
                                     <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
                                     <div className="text-2xl font-bold text-center pb-2">Register as Buyer</div>
@@ -84,7 +82,7 @@ const Signup = () => {
                                             <div className="pt-5 flex items-center justify-between flex-wrap">
                                                 <div className="">
                                                     
-                                                    <Link to="/verify-account" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                 </div>
                                                 <Link to="/">
                                                     <div className="text-base font-semibold text-black hover:text-black/70">
@@ -96,8 +94,8 @@ const Signup = () => {
                                     </div>
                                 </div>
                         
-                            {/* </Tab.Panel>
-                            <Tab.Panel>
+                            </Tab.Panel>
+                            <Tab.Panel> */}
                                 <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
                                     <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
                                     <div className="text-2xl font-bold text-center pb-2">Register as Seller</div>
@@ -147,9 +145,9 @@ const Signup = () => {
                                                 <div className="pt-5 flex items-center w-full justify-between flex-wrap">
                                                     <div className="">
                                                         
-                                                        <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                        <Link to="/verify-account" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                     </div>
-                                                    <Link to="/">
+                                                    <Link to="/seller-login">
                                                         <div className="text-base font-semibold text-black hover:text-black/70">
                                                             Already have an account? <span className='font-bold'> Login</span>
                                                         </div>
@@ -159,7 +157,7 @@ const Signup = () => {
                                         </form>
                                     </div>
                                 </div>
-                            </Tab.Panel>
+                            {/* </Tab.Panel>
                             </Tab.Panels>
                         </Tab.Group> */}
                     </div>
@@ -171,4 +169,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default SellerSignup

@@ -224,13 +224,13 @@ const Header2 = () => {
             </Link> */}
             {/* {!auth ? ( */}
               <Link
-                to="/signup"
+                to="/"
                 className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
-                Sign Up <LiaSignInAltSolid className="size-5 md:block hidden" />
+                Login <LiaSignInAltSolid className="size-5 md:block hidden" />
               </Link>
               <Link
-                to="/signup"
+                to="/seller-signup"
                 className="text-black bg-theme1 border-2 border-theme1 md:h-[40px] h-[32px] border-b-black font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
                 Become A Seller

@@ -15,6 +15,9 @@ import Notification from "./page/notification/Notification";
 import ResetPassword from "./page/resetPassword/ResetPassword";
 import DeleteAccount from "./page/deleteAccount/DeleteAccount";
 import Chat from "./page/chat/Chat";
+import SellerLogin from "./page/auth/sellerLogin/SellerLogin";
+import SellerSignup from "./page/auth/sellerSignup/SellerSignup";
+import EmailConfirmation from "./page/auth/emailConfirmation/EmailConfirmation";
 
 function App() {
 
@@ -31,7 +34,10 @@ function App() {
         <Routes>
           <Route path="/home" element={<Index/>}></Route>
           <Route path="/" element={<Login/>}></Route>
+          <Route path="/seller-login" element={<SellerLogin/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
+          <Route path="/seller-signup" element={<SellerSignup/>}></Route>
+          <Route path="/verify-account" element={<EmailConfirmation/>}></Route>
           <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
           <Route path="/change-password" element={<ChangePassword/>}></Route>
           <Route path="/windows-products" element={<ProductList/>}></Route>
