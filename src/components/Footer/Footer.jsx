@@ -92,7 +92,7 @@ const Footer = () => {
                                     key={personIdx}
                                     className={({ active }) =>
                                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                        active ? 'bg-theme1/20 text-theme1' : 'text-gray-900'
+                                        active ? 'bg-black text-theme1 cursor-pointer' : 'text-gray-900'
                                     }`
                                     }
                                     value={person}
@@ -145,7 +145,7 @@ const Footer = () => {
                                     key={personIdx}
                                     className={({ active }) =>
                                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                        active ? 'bg-theme1/20 text-theme1' : 'text-gray-900'
+                                        active ? 'bg-black text-theme1 hover:text-theme1 cursor-pointer group/drop' : 'text-gray-900'
                                     }`
                                     }
                                     value={person}
@@ -157,7 +157,7 @@ const Footer = () => {
                                             selected ? 'font-medium' : 'font-normal'
                                         }`}
                                         >
-                                        <span className='font-semibold text-xs text-theme1 bg-theme1/10 rounded-sm inline-flex items-center justify-center size-6 mr-2'>{person.sortName}</span>
+                                        <span className='font-semibold text-xs text-black group-hover:text-black group-[]/drop:bg-theme1 bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2'>{person.sortName}</span>
                                         {person.name}
                                         </span>
                                         {selected ? (

@@ -13,7 +13,6 @@ import { AiOutlineLogout } from 'react-icons/ai';
 import LogoutDialogue from '../../components/LogoutDialogue/LogoutDialogue';
 
 const UserProfile = () => {
-    const [logout, setLogout] = useState(false)
     return (
         <>
             <Header />
@@ -27,7 +26,7 @@ const UserProfile = () => {
                         </div>
                         <div className="profile-wrapper w-full md:mt-8 mt-0 flex md:space-x-10">
                             <div className="w-[236px] min-h-[600px] border-r border-[rgba(0, 0, 0, 0.1)] max-md:hidden">
-                                <AllSideMenu  setLogout={setLogout}/>
+                                <AllSideMenu />
                             </div>
                             <div className="flex-1">
                                 <div className="item-body dashboard-wrapper w-full">
@@ -35,7 +34,7 @@ const UserProfile = () => {
                                         <div className="w-full">
 
                                             <div className="w-full flex max-md:flex-col md:gap-10 gap-5 items-center relative">
-                                                <div className="update-logo w-auto absolute md:right-0 right-1/2 bottom-0 md:-translate-x-3 translate-x-1/2 translate-y-1/2 z-10">
+                                                <div className="update-logo w-auto ">
                                                     <div className="flex justify-center">
                                                         <div className="relative">
                                                             <div className="lg:size-32 size-20 rounded-full overflow-hidden relative">
@@ -66,9 +65,9 @@ const UserProfile = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="grow relative">
-                                                    <img className='rounded-lg shadow-lg aspect-[10/2] object-cover' src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTY2MTgxMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="" />
-                                                    <div className="size-8 absolute top-0 right-0 -translate-x-3 translate-y-3 bg-black rounded-full cursor-pointer border-2 border-white">
+                                                <div className="grow">
+                                                    {/* <img className='rounded-lg shadow-lg aspect-[10/2] object-cover' src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MTY2MTgxMg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="" /> */}
+                                                    {/* <div className="size-8 relative top-0 left-0 right-auto -translate-x-3 translate-y-3 bg-black rounded-full cursor-pointer border-2 border-white">
                                                         <svg
                                                             className='size-full'
                                                             viewBox="0 0 32 32"
@@ -84,11 +83,11 @@ const UserProfile = () => {
                                                                 fill="white"
                                                             />
                                                         </svg>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                             </div>
 
-                                            <div class="grid lg:grid-cols-2 md:gap-6 pt-16">
+                                            <div class="grid lg:grid-cols-2 md:gap-6 pt-10">
                                                 <div class="relative z-0 w-full mb-5 group">
                                                     <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                                                     <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full name</label>
@@ -125,7 +124,6 @@ const UserProfile = () => {
                 </div>
             </div>
             <Footer />
-            <LogoutDialogue logout={logout} setLogout={setLogout}/>
             {/* <Transition appear show={logout} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
                 <Transition.Child
@@ -186,8 +184,11 @@ export default UserProfile
 
 
 
-export const AllSideMenu = ({setLogout}) => {
+export const AllSideMenu = () => {
+    
+    const [logout, setLogout] = useState(false)
     return (
+        <>
         <div className="flex flex-col pr-3 md:gap-y-3">
             <div className="item group">
                 <NavLink className="group/link" to="/profile">
@@ -265,5 +266,8 @@ export const AllSideMenu = ({setLogout}) => {
                 </div>
             </div>
         </div>
+        
+        <LogoutDialogue logout={logout} setLogout={setLogout}/>
+        </>
     )
 }

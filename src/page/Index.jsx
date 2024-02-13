@@ -6,6 +6,7 @@ import { ConnectionList } from '../components/ConnectionList/ConnectionList'
 import OfferBanner from '../components/OfferBanner/OfferBanner'
 import Footer from '../components/Footer/Footer'
 import Clouds from '../components/clouds/Clouds'
+import Featured from '../components/Featured/Featured'
 
 
 
@@ -17,7 +18,8 @@ const Index = () => {
         
             <HeroBanner/>
             <ConnectionList/>
-            <OfferBanner/>
+            <Featured/>
+            {/* <OfferBanner/> */}
             <Clouds/>
             {/* <Blog/> */}
             <SellingProducts/>
