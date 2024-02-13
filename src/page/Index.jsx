@@ -4,8 +4,6 @@ import HeroBanner from '../components/HeroBanner/HeroBanner'
 import SellingProducts from '../components/SellingProducts/SellingProducts'
 import { ConnectionList } from '../components/ConnectionList/ConnectionList'
 import OfferBanner from '../components/OfferBanner/OfferBanner'
-import Blog from '../components/Blog/Blog'
-import Cta from '../components/Cta/Cta'
 import Footer from '../components/Footer/Footer'
 import Clouds from '../components/clouds/Clouds'
 
@@ -16,6 +14,7 @@ const Index = () => {
     return (
         <>
         <Header auth={auth} setAuth={setAuth} />
+        
             <HeroBanner/>
             <ConnectionList/>
             <OfferBanner/>
