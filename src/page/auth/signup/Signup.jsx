@@ -1,22 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import frame from '../../../asstes/img/Frame.png'
-import Header from '../../../components/header/Header'
 import Footer from '../../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import { MdOutlineMailOutline } from 'react-icons/md'
-import { IoCallOutline, IoLocationOutline, IoLockClosedOutline } from 'react-icons/io5'
+import { IoLockClosedOutline } from 'react-icons/io5'
 import { LiaSignInAltSolid } from 'react-icons/lia'
 import { FaRegUserCircle } from 'react-icons/fa'
-import { CiShop, CiShoppingTag } from "react-icons/ci";
-import { Tab } from '@headlessui/react'
 import Header2 from '../../../components/Header2/Header2'
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
 const Signup = () => {
-    const [auth, setAuth] = useState(false);
   return (
     <>
     <Header2/>

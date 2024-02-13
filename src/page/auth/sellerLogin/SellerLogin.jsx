@@ -5,14 +5,9 @@ import { Link } from 'react-router-dom'
 import { LiaSignInAltSolid } from 'react-icons/lia'
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLockClosedOutline } from "react-icons/io5";
-import { Tab } from '@headlessui/react'
 import Header2 from '../../../components/Header2/Header2'
 
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-  
 const SellerLogin = () => {
   return (
     <>

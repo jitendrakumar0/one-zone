@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
-import { Link } from 'react-router-dom';
 import { AllSideMenu } from '../userProfile/UserProfile';
-import { TiDeleteOutline } from 'react-icons/ti';
 import DeleteDialogue from '../../components/DeleteDialogue/DeleteDialogue';
 
 const DeleteAccount = () => {

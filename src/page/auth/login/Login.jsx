@@ -7,10 +7,6 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLockClosedOutline } from "react-icons/io5";
 import Header2 from '../../../components/Header2/Header2'
 
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
   
 const Login = () => {
   return (

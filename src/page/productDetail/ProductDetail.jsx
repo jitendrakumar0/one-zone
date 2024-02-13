@@ -1,4 +1,4 @@
-import React, {useRef, useState } from 'react'
+import React, {useState } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
@@ -33,28 +33,28 @@ const ProductDetail = () => {
                                 className="mySwiper2"
                                 >
                                 <SwiperSlide>
-                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/i6zlcap44kafmcywlh54d9rd1wieh1215035.png" />
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/i6zlcap44kafmcywlh54d9rd1wieh1215035.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p4-ofp.static.pub/fes/cms/2022/09/26/aqsawpz6yp1f6t3mmqnhgm09f38p12753707.png" />
+                                <img src="https://p4-ofp.static.pub/fes/cms/2022/09/26/aqsawpz6yp1f6t3mmqnhgm09f38p12753707.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p4-ofp.static.pub/fes/cms/2022/09/26/py9fh3uad4dulrce7n9gv2cjirqey5247426.png" />
+                                <img src="https://p4-ofp.static.pub/fes/cms/2022/09/26/py9fh3uad4dulrce7n9gv2cjirqey5247426.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/jm5etkyp9go9ze43g1a2l3xy4qwmyn450032.png" />
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/jm5etkyp9go9ze43g1a2l3xy4qwmyn450032.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/6vqcmbpcfs5fddq9vxtf7mlo3064tj549746.png" />
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/6vqcmbpcfs5fddq9vxtf7mlo3064tj549746.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/ukkpvjzdiiwwj0l4p0zs6s3938sxsm336408.png" />
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/ukkpvjzdiiwwj0l4p0zs6s3938sxsm336408.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p1-ofp.static.pub/fes/cms/2022/09/26/kcylxfkz0zeigek6ravcjns4a5cqg3409627.png" />
+                                <img src="https://p1-ofp.static.pub/fes/cms/2022/09/26/kcylxfkz0zeigek6ravcjns4a5cqg3409627.png" alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                <img src="https://p3-ofp.static.pub/fes/cms/2022/09/26/hif2cnxhohr2dh3dwgg1trg70pip4y581012.png" />
+                                <img src="https://p3-ofp.static.pub/fes/cms/2022/09/26/hif2cnxhohr2dh3dwgg1trg70pip4y581012.png" alt="" />
                                 </SwiperSlide>
                             </Swiper>
                             <Swiper
@@ -218,13 +218,13 @@ const ProductDetail = () => {
                 <div className="sticky top-20">
                     <ul className="flex-col p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md gap-4 flex" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li role="presentation">
-                            <button className={`w-full text-center border  shadow-lg text-white py-2 bg-[#9f9fa1] ${detailTabs === 'description' ? ' text-white bg-black border-b-2  border-b-theme1':''}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
+                            <button className={`w-full py-2 text-center border shadow-lg ${detailTabs === 'description' ? ' text-white bg-black border-b-2 border-b-theme1':'text-white bg-gray-500'}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
                         </li>
                         <li role="presentation">
-                            <button className={`w-full text-center border  shadow-lg text-white py-2 bg-[#9f9fa1]  ${detailTabs === 'additional' ? ' text-white bg-black border-b-2  border-b-theme1':''}`} onClick={()=>{setDetailTabs('additional')}}>Specifications</button>
+                            <button className={`w-full py-2 text-center border shadow-lg  ${detailTabs === 'additional' ? ' text-white bg-black border-b-2 border-b-theme1':'text-white bg-gray-500'}`} onClick={()=>{setDetailTabs('additional')}}>Specifications</button>
                         </li>
                         <li role="presentation">
-                            <button className={`w-full text-center border  shadow-lg text-white py-2 bg-[#9f9fa1] ${detailTabs === 'review' ? ' text-white bg-black border-b-2  border-b-theme1':''}`} onClick={()=>{setDetailTabs('review')}}>Review</button>
+                            <button className={`w-full py-2 text-center border shadow-lg ${detailTabs === 'review' ? ' text-white bg-black border-b-2 border-b-theme1':'text-white bg-gray-500'}`} onClick={()=>{setDetailTabs('review')}}>Review</button>
                         </li>
                     </ul>
                 </div>
@@ -288,7 +288,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -315,7 +315,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -342,7 +342,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -369,7 +369,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">

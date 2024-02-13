@@ -4,7 +4,7 @@ import { BiSupport } from "react-icons/bi";
 import { Listbox, Transition, Menu, Dialog } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import { FaGlobeAmericas } from "react-icons/fa";
-import { LuBellDot, LuUnlock } from "react-icons/lu";
+import { LuUnlock } from "react-icons/lu";
 import { MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import { FiEdit2, FiHeart } from "react-icons/fi";
@@ -253,7 +253,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/profile"
                             className={`${
-                              active ? "bg-black text-theme1" : "text-gray-900"
+                              active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -275,7 +275,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/reset-password"
                             className={`${
-                              active ? "bg-black text-theme1" : "text-gray-900"
+                              active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -297,7 +297,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/wishlist"
                             className={`${
-                              active ? "bg-black text-theme1" : "text-gray-900"
+                              active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -319,7 +319,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/chat-history"
                             className={`${
-                              active ? "bg-black text-theme1" : "text-gray-900"
+                              active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -341,7 +341,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/delete-account"
                             className={`${
-                              active ? "bg-black text-theme1" : "text-gray-900"
+                              active ? "bg-theme1 text-white" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -459,7 +459,7 @@ const Header = () => {
         </div>
       </nav>
       
-      <Transition show={logout} as={Fragment}>
+      <Transition appear show={logout} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
           <Transition.Child
             as={Fragment}

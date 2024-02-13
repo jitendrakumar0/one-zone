@@ -1,5 +1,4 @@
 import React from 'react';
-import banner from '../../asstes/img/banner.png'
 import { Pagination,Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -40,8 +39,8 @@ const SellingProducts = () => {
                             </svg>
                         </span>
                     </Link> */}
-                        <div className="prev md:flex hidden border hover:bg-black transition hover:text-white  hover:border flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[62px] border-black"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
-                        <div className="next md:flex hidden border hover:bg-black transition hover:text-white hover:border  flex items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[20px] border-black">
+                        <div className="prev md:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[62px] border-black"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
+                        <div className="next md:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[20px] border-black">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
                         </div>
                 </div>

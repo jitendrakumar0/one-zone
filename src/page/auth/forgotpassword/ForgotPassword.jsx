@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import frame from '../../../asstes/img/Frame.png'
-import Header from '../../../components/header/Header'
 import Footer from '../../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import { MdOutlineMailOutline } from 'react-icons/md'
@@ -8,10 +7,8 @@ import { LiaSignInAltSolid } from 'react-icons/lia'
 import Header2 from '../../../components/Header2/Header2'
 
 const ForgotPassword = () => {
-    const [auth, setAuth] = useState(false);
   return (
     <>
-    {/* <Header auth={auth} setAuth={setAuth} /> */}
     <Header2/>
     <div className='w-full flex justify-center'>
         <div className="max-w-2xl w-full px-5 lg:px-10 flex items-center min-h-[calc(100dvh-130px)] flex-wrap mx-auto py-5">

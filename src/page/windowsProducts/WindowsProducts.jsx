@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
+import { Dialog, Disclosure, Transition } from "@headlessui/react";
+import { MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from "react-router-dom";import { RiChat1Line } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
@@ -10,43 +10,7 @@ import { MdClear } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
 
-    
-    const sortOptions = [
-        { name: 'Default', href: '#', current: true },
-        { name: 'Newest to Oldest', href: '#', current: false },
-        { name: 'Oldest to Newest', href: '#', current: false },
-        { name: 'Price: Low to High', href: '#', current: false },
-        { name: 'Price: High to Low', href: '#', current: false },
-    ]
     const filters = [
-        // {
-        // id: 'category',
-        // name: 'Category',
-        // options: [
-        //     { value: 'windows', label: 'Windows', checked: false },
-        //     { value: 'mac', label: 'Mac', checked: false },
-        //     { value: 'chromebook', label: 'Chromebook', checked: true },
-        //     { value: 'mobile', label: 'Mobile', checked: false },
-        //     { value: 'tablets', label: 'Tablets', checked: false },
-        //     { value: 'photocopy-machine', label: 'Photocopy Machine', checked: false },
-        //     { value: 'servers', label: 'Servers', checked: false },
-        // ],
-        // },
-        // {
-        // id: 'sub-category',
-        // name: 'Sub Category',
-        // options: [
-        //     { value: 'Laptop', label: 'Laptop', checked: false },
-        //     { value: 'PC', label: 'PC', checked: false },
-        //     { value: 'Sper Parts', label: 'Sper Parts', checked: true },
-        //     { value: 'MacBook', label: 'MacBook', checked: false },
-        //     { value: 'IMac', label: 'IMac', checked: false },
-        //     { value: 'Android', label: 'Android', checked: false },
-        //     { value: 'iPhone', label: 'iPhone', checked: false },
-        //     { value: 'Windows', label: 'Windows', checked: false },
-        //     { value: 'iPad', label: 'iPad', checked: false },
-        // ],
-        // },
         
         {
             id: 'sort',

@@ -3,8 +3,6 @@ import frame from '../../../asstes/img/Frame.png'
 import Header from '../../../components/header/Header'
 import Footer from '../../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
-import { LiaSignInAltSolid } from 'react-icons/lia'
-import { IoLockClosedOutline } from 'react-icons/io5'
 
 const EmailConfirmation = () => {
     const [auth, setAuth] = useState(false);

@@ -1,9 +1,7 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
-import Profileimg from '../../asstes/img/edit-profileimg.jpg'
 import { FaRegCircleCheck } from "react-icons/fa6";
-import { MdClear } from "react-icons/md";
 import { AllSideMenu } from '../userProfile/UserProfile';
 
 const ResetPassword = () => {

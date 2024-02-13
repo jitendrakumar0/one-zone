@@ -7,12 +7,8 @@ import { IoCallOutline, IoLocationOutline, IoLockClosedOutline } from 'react-ico
 import { LiaSignInAltSolid } from 'react-icons/lia'
 import { FaRegUserCircle } from 'react-icons/fa'
 import { CiShop, CiShoppingTag } from "react-icons/ci";
-import { Tab } from '@headlessui/react'
 import Header2 from '../../../components/Header2/Header2'
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
 const SellerSignup = () => {
   return (

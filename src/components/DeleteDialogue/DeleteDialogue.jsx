@@ -1,5 +1,5 @@
 import { Transition, Dialog } from '@headlessui/react'
-import React, { useState, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 const DeleteDialogue = ({DeleteAccount,setDeleteAccount}) => {
