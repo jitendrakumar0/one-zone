@@ -254,7 +254,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/profile"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-black text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -276,7 +276,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/reset-password"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-black text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -298,7 +298,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/wishlist"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-black text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -320,7 +320,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/chat-history"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-black text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -342,7 +342,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/delete-account"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-black text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (

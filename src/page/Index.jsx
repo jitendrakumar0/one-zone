@@ -8,6 +8,7 @@ import Blog from '../components/Blog/Blog'
 import Cta from '../components/Cta/Cta'
 import Footer from '../components/Footer/Footer'
 import Clouds from '../components/clouds/Clouds'
+import Featured from '../components/Featured/Featured'
 
 
 
@@ -18,7 +19,8 @@ const Index = () => {
         <Header auth={auth} setAuth={setAuth} />
             <HeroBanner/>
             <ConnectionList/>
-            <OfferBanner/>
+            <Featured/>
+            {/* <OfferBanner/> */}
             <Clouds/>
             {/* <Blog/> */}
             <SellingProducts/>

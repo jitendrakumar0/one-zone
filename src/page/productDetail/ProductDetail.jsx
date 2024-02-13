@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {useRef, useState } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
@@ -6,42 +6,126 @@ import { IoStar } from 'react-icons/io5'
 import { CiCircleCheck } from 'react-icons/ci'
 import { RiChat1Line } from 'react-icons/ri'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 const ProductDetail = () => {
     const [wished, setWished] = useState(false);
     const [detailTabs, setDetailTabs] = useState('description');
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
     <Header />
     <div className="container relative max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10">
-        <div className="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-1 gap-6">
             <div className="lg:col-span-5">
                 <div className="grid md:grid-cols-12 gap-3">
-                    <div className="md:col-span-12">
-                        <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
+                    <div className="md:col-span-12 relative ">
+                            <Swiper
+                                navigation={{
+                                prevEl: '.prevBtn',
+                                nextEl: '.nextBtn',
+                                }}
+                                spaceBetween={10}
+                                // thumbs={{ swiper: thumbsSwiper }}
+                                thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
+                                modules={[FreeMode, Navigation, Thumbs]}
+                                className="mySwiper2"
+                                >
+                                <SwiperSlide>
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/i6zlcap44kafmcywlh54d9rd1wieh1215035.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p4-ofp.static.pub/fes/cms/2022/09/26/aqsawpz6yp1f6t3mmqnhgm09f38p12753707.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p4-ofp.static.pub/fes/cms/2022/09/26/py9fh3uad4dulrce7n9gv2cjirqey5247426.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/jm5etkyp9go9ze43g1a2l3xy4qwmyn450032.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/6vqcmbpcfs5fddq9vxtf7mlo3064tj549746.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/ukkpvjzdiiwwj0l4p0zs6s3938sxsm336408.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p1-ofp.static.pub/fes/cms/2022/09/26/kcylxfkz0zeigek6ravcjns4a5cqg3409627.png" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                <img src="https://p3-ofp.static.pub/fes/cms/2022/09/26/hif2cnxhohr2dh3dwgg1trg70pip4y581012.png" />
+                                </SwiperSlide>
+                            </Swiper>
+                            <div className="prevBtn border md:flex hidden flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute top-[50%] -translate-y-1/2 z-10 left-[20px] border-black">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg>
+                            </div>
+                            <div className="nextBtn border md:flex hidden flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute top-[50%] -translate-y-1/2 z-10 end-[20px] border-black">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+                            </div>
+                            <Swiper
+                                onSwiper={setThumbsSwiper}
+                                spaceBetween={8}
+                                slidesPerView={4}
+                                freeMode={true}
+                                watchSlidesProgress={true}
+                                modules={[FreeMode, Navigation, Thumbs]}
+                                className="mySwiper"
+                            >
+                                
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p2-ofp.static.pub/fes/cms/2022/09/26/i6zlcap44kafmcywlh54d9rd1wieh1215035.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p4-ofp.static.pub/fes/cms/2022/09/26/aqsawpz6yp1f6t3mmqnhgm09f38p12753707.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p4-ofp.static.pub/fes/cms/2022/09/26/py9fh3uad4dulrce7n9gv2cjirqey5247426.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p2-ofp.static.pub/fes/cms/2022/09/26/jm5etkyp9go9ze43g1a2l3xy4qwmyn450032.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p2-ofp.static.pub/fes/cms/2022/09/26/6vqcmbpcfs5fddq9vxtf7mlo3064tj549746.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p2-ofp.static.pub/fes/cms/2022/09/26/ukkpvjzdiiwwj0l4p0zs6s3938sxsm336408.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p1-ofp.static.pub/fes/cms/2022/09/26/kcylxfkz0zeigek6ravcjns4a5cqg3409627.png" />
+                                </SwiperSlide>
+                                <SwiperSlide className='p-1 swiperSlider'>
+                                <img className='border object-contain size-full' alt='' src="https://p3-ofp.static.pub/fes/cms/2022/09/26/hif2cnxhohr2dh3dwgg1trg70pip4y581012.png" />
+                                </SwiperSlide>
+                            </Swiper>
+                        {/* <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
                             <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
-                            {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
-                        </Link>
+                            <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div>
+                        </Link> */}
                     </div>
-                    <div className="md:col-span-6">
+                    <div className="md:col-span-6 hidden">
                         <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
                             <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/i/x/o/-original-imagdx9qedcveu2m.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
                             {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
                         </Link>
                     </div>
-                    <div className="md:col-span-6">
+                    <div className="md:col-span-6 hidden">
                         <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
                             <img src="https://rukminim2.flixcart.com/image/416/416/l2m78280/computer/d/p/e/-original-imagdx9rywnvynyd.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
                             {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
                         </Link>
                     </div>
-                    <div className="md:col-span-12">
+                    <div className="md:col-span-12 hidden">
                         <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
                             <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/h/v/o/-original-imagdx9qzpmh4hvf.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
                             {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
                         </Link>
                     </div>
-                    <div className="md:col-span-12">
+                    <div className="md:col-span-12 hidden">
                         <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
                             <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/r/e/a/-original-imagdx9qenr28djr.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
                             {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
@@ -54,12 +138,12 @@ const ProductDetail = () => {
                 <div className="lg:ms-6 sticky top-24">
                     <h5 className="text-2xl font-semibold">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS Thin and Light Laptop  (15.6 Inch, Transparent Silver, 1.80 kg, With MS Office)</h5>
                     <div className="flex py-3">
-                        <span className='text-theme1 bg-theme1/20 rounded-md shadow-md px-3 py-1 font-bold inline-block'>6 Months Used</span>
+                        <span className='text-theme1 bg-black rounded-md shadow-md px-3 py-1 font-bold inline-block'>6 Months Used</span>
                     </div>
                     <div className="mt-2 flex flex-col">
                         <span className="text-black font-bold me-1 md:text-2xl text-xl">₹31,990 <del className="text-red-600 font-semibold md:text-lg text-base">₹49,990</del> <span className='text-lime-700 md:text-lg text-base'>36% off</span></span>
 
-                        <ul className="list-none inline-flex items-center text-theme1 mt-2">
+                        <ul className="list-none inline-flex items-center text-black mt-2">
                             <li className="inline"><IoStar className='size-5' /></li>
                             <li className="inline"><IoStar className='size-5' /></li>
                             <li className="inline"><IoStar className='size-5' /></li>
@@ -85,19 +169,19 @@ const ProductDetail = () => {
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Size:</h5>
                             <div className="space-x-1">
-                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white">S</Link>
-                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white">M</Link>
-                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white">L</Link>
-                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white">XL</Link>
+                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">S</Link>
+                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">M</Link>
+                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">L</Link>
+                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">XL</Link>
                             </div>
                         </div>
 
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Quantity:</h5>
                             <div className="qty-icons ms-3 space-x-0.5">
-                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white minus">-</button>
-                                <input min="0" name="quantity" value="0" type="number" className="h-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white pointer-events-none w-16 ps-4 quantity" />
-                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-theme1/5 hover:bg-theme1 text-theme1 hover:text-white plus">+</button>
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white minus">-</button>
+                                <input min="0" name="quantity" value="0" type="number" className="h-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white pointer-events-none w-16 ps-4 quantity" />
+                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white plus">+</button>
                             </div>
                         </div>
 
@@ -113,8 +197,8 @@ const ProductDetail = () => {
                     </div>
 
                     <div className="mt-4 space-x-1">
-                        <button className="text-black bg-theme1 border-2 grow border-theme1 font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:border-black md:hover:bg-black md:hover:text-white shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></button>
-                        <button type='button' className="border-2 grow font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 text-theme1 border-theme1 shadow-md shadow-black/40 md:hover:bg-theme1 md:hover:text-white"
+                        <button className="text-black w-auto bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Let's Chat <RiChat1Line className='size-5' /></button>
+                        <button type='button' className="text-black w-auto bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
                         onClick={()=>{setWished(!wished)}}>Wishlist 
                         {
                             !wished ?
@@ -128,23 +212,23 @@ const ProductDetail = () => {
         </div>
 
         <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
-            <div className="lg:col-span-3 md:col-span-5">
+            <div className="lg:col-span-3 md:col-span-12">
                 <div className="sticky top-20">
                     <ul className="flex-col p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md gap-4 flex" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li role="presentation">
-                            <button className={`px-4 py-2 text-start text-base font-semibold rounded-md w-full duration-500 ${detailTabs === 'description' ? ' text-white bg-theme1':' hover:text-theme1 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800'}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
+                            <button className={`w-full text-center border  shadow-lg text-white py-2 bg-[#9f9fa1] ${detailTabs === 'description' ? ' text-white bg-black border-b-2  border-b-theme1':''}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
                         </li>
                         <li role="presentation">
-                            <button className={`px-4 py-2 text-start text-base font-semibold rounded-md w-full duration-500 ${detailTabs === 'additional' ? ' text-white bg-theme1':' hover:text-theme1 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800'}`} onClick={()=>{setDetailTabs('additional')}}>Specifications</button>
+                            <button className={`w-full text-center border  shadow-lg text-white py-2 bg-[#9f9fa1]  ${detailTabs === 'additional' ? ' text-white bg-black border-b-2  border-b-theme1':''}`} onClick={()=>{setDetailTabs('additional')}}>Specifications</button>
                         </li>
                         <li role="presentation">
-                            <button className={`px-4 py-2 text-start text-base font-semibold rounded-md w-full duration-500 ${detailTabs === 'review' ? ' text-white bg-theme1':' hover:text-theme1 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-slate-800'}`} onClick={()=>{setDetailTabs('review')}}>Review</button>
+                            <button className={`w-full text-center border  shadow-lg text-white py-2 bg-[#9f9fa1] ${detailTabs === 'review' ? ' text-white bg-black border-b-2  border-b-theme1':''}`} onClick={()=>{setDetailTabs('review')}}>Review</button>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div className="lg:col-span-9 md:col-span-7">
+            <div className="lg:col-span-9 md:col-span-12">
                 <div id="myTabContent" className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
                     {
                         detailTabs === 'description' ? 
@@ -202,7 +286,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-slate-400 hover:text-theme1 duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -211,10 +295,10 @@ const ProductDetail = () => {
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
-                                    <li className="inline text-slate-400 font-semibold">5.0</li>
+                                    <li className="inline text-slate-600 font-semibold">5.0</li>
                                 </ul>
 
-                                <p className="text-slate-400 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
+                                <p className="text-slate-600 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
                             </div>
                         </div>
 
@@ -229,7 +313,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-slate-400 hover:text-theme1 duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -238,10 +322,10 @@ const ProductDetail = () => {
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
-                                    <li className="inline text-slate-400 font-semibold">5.0</li>
+                                    <li className="inline text-slate-600 font-semibold">5.0</li>
                                 </ul>
 
-                                <p className="text-slate-400 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
+                                <p className="text-slate-600 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
                             </div>
                         </div>
 
@@ -256,7 +340,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-slate-400 hover:text-theme1 duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -265,10 +349,10 @@ const ProductDetail = () => {
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
-                                    <li className="inline text-slate-400 font-semibold">5.0</li>
+                                    <li className="inline text-slate-600 font-semibold">5.0</li>
                                 </ul>
 
-                                <p className="text-slate-400 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
+                                <p className="text-slate-600 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
                             </div>
                         </div>
 
@@ -283,7 +367,7 @@ const ProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <Link className="text-slate-400 hover:text-theme1 duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
+                                <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link>
                             </div>
                             <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
                                 <ul className="list-none inline-block text-theme1">
@@ -292,10 +376,10 @@ const ProductDetail = () => {
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
-                                    <li className="inline text-slate-400 font-semibold">5.0</li>
+                                    <li className="inline text-slate-600 font-semibold">5.0</li>
                                 </ul>
 
-                                <p className="text-slate-400 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
+                                <p className="text-slate-600 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
                             </div>
                         </div>
 
@@ -336,7 +420,7 @@ const ProductDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" id="submit" name="send" className="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-theme1 text-white rounded-md w-full">Send Message</button>
+                                <button type="submit" id="submit" name="send" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Message</button>
                             </form>
                         </div>
                     </div>
