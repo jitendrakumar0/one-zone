@@ -218,20 +218,20 @@ const Header2 = () => {
           <Link to="/home" className="flex items-center space-x-3">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
-          <div className="flex md:order-2 space-x-3 md:space-x-0 items-center md:gap-3 gap-1">
+          <div className="flex md:order-2  md:space-x-0 items-center md:gap-3 gap-1">
             {/* <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
               <LuBellDot className="size-4" />
             </Link> */}
             {/* {!auth ? ( */}
               <Link
                 to="/signup"
-                className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
+                className="text-black text-[0.65rem] md:h-[40px] h-[32px] bg-theme1 border-2 border-theme1 border-b-black font-bold md:text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
-                Sign Up <LiaSignInAltSolid className="size-5" />
+                Sign Up <LiaSignInAltSolid className="size-5 md:block hidden" />
               </Link>
               <Link
                 to="/signup"
-                className="text-black bg-theme1 border-2 border-theme1 md:h-[40px] h-[32px] border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
+                className="text-black text-[0.65rem] bg-theme1 border-2 border-theme1 md:h-[40px] h-[32px] border-b-black font-bold md:text-xs uppercase md:px-6 px-3 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
                 Become A Seller
                 {/* <LiaSignInAltSolid className="size-5" /> */}
