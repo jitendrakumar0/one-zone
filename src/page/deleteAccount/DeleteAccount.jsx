@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
 import { Link } from 'react-router-dom';
 import { AllSideMenu } from '../userProfile/UserProfile';
 import { TiDeleteOutline } from 'react-icons/ti';
+import DeleteDialogue from '../../components/DeleteDialogue/DeleteDialogue';
 
 const DeleteAccount = () => {
+    const [DeleteAccount, setDeleteAccount] = useState(false)
     return (
         <>
             <Header />
@@ -23,8 +25,28 @@ const DeleteAccount = () => {
                             </div>
                             <div className="flex-1">
                                 <div className="item-body dashboard-wrapper w-full flex flex-col">
-                                    
-                                    <div class="justify-center items-center w-full flex">
+                                <ul>
+                                    <li className='mb-5 text-md'>
+                                        “Deleting your account will delete your access and all your information on this site. If you have a recurring subscription, you must cancel that first to stop payments. Are you sure you want to continue?”
+                                    </li>
+                                    <li className='list-disc ms-10 text-md'>
+                                        You will lose access to your order history, saved addresses, and preferences. This information cannot be recovered after deletion.
+                                    </li>
+                                    <li className='list-disc ms-10 text-md'>
+                                        You will no longer be able to access services such as order tracking, returns, and customer support using your current account.
+                                    </li>
+                                    <li className='list-disc ms-10 text-md'>
+                                        You will no longer receive updates on your orders, exclusive offers, and promotions from Flipkart.
+                                    </li>
+                                    <li className='mt-5 flex items-center font-bold'>
+                                        {/* <input className='me-2' type="checkbox" id='check' /> */}
+                                        <label htmlFor="check">If you are certain about deleting your account, please confirm by clicking the button below.</label>
+                                    </li>
+                                    <li className='mt-5'>
+                                        <button onClick={()=> {setDeleteAccount(true)}} className='border bg-red-600 text-sm  px-5 py-2 rounded-lg font-bold text-white'>DELETE</button>
+                                    </li>
+                                </ul>
+                                    {/* <div class="justify-center items-center w-full flex">
                                         <div class="relative p-4 w-full max-w-md max-h-full">
                                             <div class="relative bg-white rounded-lg shadow">
                                                 <div class="p-4 md:p-5 text-center">
@@ -39,7 +61,7 @@ const DeleteAccount = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -47,6 +69,8 @@ const DeleteAccount = () => {
                 </div>
             </div>
             <Footer />
+            
+            <DeleteDialogue DeleteAccount={DeleteAccount} setDeleteAccount={setDeleteAccount} />
         </>
     );
 }

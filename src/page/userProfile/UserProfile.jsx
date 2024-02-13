@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { Fragment,useState } from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
 import Profileimg from '../../asstes/img/edit-profileimg.jpg'
 import { LuBellDot, LuUnlock } from 'react-icons/lu';
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { MdClear } from "react-icons/md";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import { IoChatboxOutline, IoCloseCircleOutline } from 'react-icons/io5';
 import { AiOutlineLogout } from 'react-icons/ai';
+import { Dialog, Transition } from '@headlessui/react';
+import LogoutDialogue from '../../components/LogoutDialogue/LogoutDialogue';
 
 const UserProfile = () => {
+    const [logout, setLogout] = useState(true)
+    console.log('logout', logout)
     return (
         <>
             <Header />
@@ -25,7 +29,7 @@ const UserProfile = () => {
                         </div>
                         <div className="profile-wrapper w-full md:mt-8 mt-0 flex md:space-x-10">
                             <div className="w-[236px] min-h-[600px] border-r border-[rgba(0, 0, 0, 0.1)] max-md:hidden">
-                                <AllSideMenu />
+                                <AllSideMenu  setLogout={setLogout}/>
                             </div>
                             <div className="flex-1">
                                 <div className="item-body dashboard-wrapper w-full">
@@ -123,6 +127,58 @@ const UserProfile = () => {
                 </div>
             </div>
             <Footer />
+            <LogoutDialogue logout={logout} setLogout={setLogout}/>
+            {/* <Transition appear show={logout} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
+                <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+                    <div className="fixed inset-0 bg-black/25" />
+                </Transition.Child>
+
+                <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex min-h-full items-center justify-center p-4 text-center">
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0 scale-95"
+                        enterTo="opacity-100 scale-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100 scale-100"
+                        leaveTo="opacity-0 scale-95"
+                    >
+                        <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                        
+                        <div class="relative bg-white rounded-lg shadow">
+                            <button type="button" onClick={()=>{setLogout(false)}} class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                            <div class="p-4 md:p-5 text-center">
+                                <svg class="mx-auto mb-4 text-gray-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                </svg>
+                                <h3 class="mb-5 text-lg font-normal text-gray-500">Are you sure you want to logout?</h3>
+                                <Link to="/" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                                    Yes, logout
+                                </Link>
+                                <button onClick={()=>{setLogout(false)}} type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">No, cancel</button>
+                            </div>
+                        </div>
+                        </Dialog.Panel>
+                    </Transition.Child>
+                    </div>
+                </div>
+                </Dialog>
+            </Transition> */}
         </>
     );
 }
@@ -132,7 +188,7 @@ export default UserProfile
 
 
 
-export const AllSideMenu = () => {
+export const AllSideMenu = ({setLogout}) => {
     return (
         <div className="flex flex-col pr-3 md:gap-y-3">
             <div className="item group">
@@ -200,14 +256,15 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/">
+                <div className="group/link" onClick={()=>setLogout(true)}>
                     <div className="flex md:space-x-3 items-center py-3 md:bg-red-600 md:px-3 px-5 group-[.active]/link:rounded-lg md:rounded-lg md:hover:bg-red-400 md:!text-white text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden *:size-5'>
                             <AiOutlineLogout/>
                         </span>
                         <span className="font-semibold text-base">Logout</span>
+                        
                     </div>
-                </NavLink>
+                </div>
             </div>
         </div>
     )
