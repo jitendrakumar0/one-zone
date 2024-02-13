@@ -24,7 +24,7 @@ const Index = () => {
             <Clouds/>
             {/* <Blog/> */}
             <SellingProducts/>
-            <OfferBanner/>
+            {/* <OfferBanner/> */}
             {/* <Cta/> */}
             <Footer/>
         </>

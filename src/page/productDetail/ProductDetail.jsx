@@ -24,12 +24,8 @@ const ProductDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-1 gap-6">
             <div className="lg:col-span-5">
                 <div className="grid md:grid-cols-12 gap-3">
-                    <div className="md:col-span-12 relative ">
+                    <div className="md:col-span-12 ">
                             <Swiper
-                                navigation={{
-                                prevEl: '.prevBtn',
-                                nextEl: '.nextBtn',
-                                }}
                                 spaceBetween={10}
                                 // thumbs={{ swiper: thumbsSwiper }}
                                 thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
@@ -61,12 +57,6 @@ const ProductDetail = () => {
                                 <img src="https://p3-ofp.static.pub/fes/cms/2022/09/26/hif2cnxhohr2dh3dwgg1trg70pip4y581012.png" />
                                 </SwiperSlide>
                             </Swiper>
-                            <div className="prevBtn border md:flex hidden flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute top-[50%] -translate-y-1/2 z-10 left-[20px] border-black">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg>
-                            </div>
-                            <div className="nextBtn border md:flex hidden flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute top-[50%] -translate-y-1/2 z-10 end-[20px] border-black">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
-                            </div>
                             <Swiper
                                 onSwiper={setThumbsSwiper}
                                 spaceBetween={8}
@@ -74,7 +64,11 @@ const ProductDetail = () => {
                                 freeMode={true}
                                 watchSlidesProgress={true}
                                 modules={[FreeMode, Navigation, Thumbs]}
-                                className="mySwiper"
+                                className="mySwiper relative"
+                                navigation={{
+                                prevEl: '.prevBtn',
+                                nextEl: '.nextBtn',
+                                }}
                             >
                                 
                                 <SwiperSlide className='p-1 swiperSlider'>
@@ -101,7 +95,15 @@ const ProductDetail = () => {
                                 <SwiperSlide className='p-1 swiperSlider'>
                                 <img className='border object-contain size-full' alt='' src="https://p3-ofp.static.pub/fes/cms/2022/09/26/hif2cnxhohr2dh3dwgg1trg70pip4y581012.png" />
                                 </SwiperSlide>
+                                
+                            {/* <div className="prevBtn border md:flex hidden flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute -top-[10px]  z-10 left-[1%] border-black">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg>
+                            </div>
+                            <div className="nextBtn border md:flex hidden flex items-center justify-center rounded-lg hover:bg-black hover:text-white w-9 h-9 absolute -top-[10px] right-[1%] z-10 end-[20px] border-black">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+                            </div> */}
                             </Swiper>
+                            
                         {/* <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
                             <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
                             <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div>
@@ -233,7 +235,7 @@ const ProductDetail = () => {
                     {
                         detailTabs === 'description' ? 
                     <div id="description" role="tabpanel" aria-labelledby="profile-tab">
-                        <p className="text-slate-400">The outstanding Asus VivoBook 15 laptop, created to simplify your workday and improve performance, offers fantastic efficiency and stunning aesthetics. This laptop handles all of your multitasking requirements and gives you dynamic performance thanks to the Intel Core processor. Additionally, the dual-storage ASUS VivoBook 15 offers you the benefits of incredibly fast data speed and ample storage capacity. Moreover, its svelte and exquisite form makes you the centre of attention everywhere you go when donning it with you.</p>
+                        <p className="text-slate-600">The outstanding Asus VivoBook 15 laptop, created to simplify your workday and improve performance, offers fantastic efficiency and stunning aesthetics. This laptop handles all of your multitasking requirements and gives you dynamic performance thanks to the Intel Core processor. Additionally, the dual-storage ASUS VivoBook 15 offers you the benefits of incredibly fast data speed and ample storage capacity. Moreover, its svelte and exquisite form makes you the centre of attention everywhere you go when donning it with you.</p>
                     </div>
                     : detailTabs === 'additional' ?
 
@@ -242,32 +244,32 @@ const ProductDetail = () => {
                             <tbody>
                                 <tr className="bg-white dark:bg-slate-900">
                                     <td className="font-semibold py-4">Sales Package</td>
-                                    <td className="text-slate-400 py-4">Laptop, Battery, Adapter, Cables and User Manuals</td>
+                                    <td className="text-slate-600 py-4">Laptop, Battery, Adapter, Cables and User Manuals</td>
                                 </tr>
 
                                 <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
                                     <td className="font-semibold py-4">Model Number</td>
-                                    <td className="text-slate-400 py-4">X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS</td>
+                                    <td className="text-slate-600 py-4">X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS</td>
                                 </tr>
 
                                 <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
                                     <td className="font-semibold py-4">Part Number</td>
-                                    <td className="text-slate-400 py-4">90NB0TY2-M00JK0 | 90NB0TY2-M047X0 | 90NB0TY6-M03EL0</td>
+                                    <td className="text-slate-600 py-4">90NB0TY2-M00JK0 | 90NB0TY2-M047X0 | 90NB0TY6-M03EL0</td>
                                 </tr>
 
                                 <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
                                     <td className="font-semibold py-4">Model Name</td>
-                                    <td className="text-slate-400 py-4">X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS</td>
+                                    <td className="text-slate-600 py-4">X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS</td>
                                 </tr>
 
                                 <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
                                     <td className="font-semibold py-4">Series</td>
-                                    <td className="text-slate-400 py-4">Vivobook 15</td>
+                                    <td className="text-slate-600 py-4">Vivobook 15</td>
                                 </tr>
 
                                 <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
                                     <td className="font-semibold py-4">Color</td>
-                                    <td className="text-slate-400 py-4">Transparent Silver</td>
+                                    <td className="text-slate-600 py-4">Transparent Silver</td>
                                 </tr>
                             </tbody>
                         </table>

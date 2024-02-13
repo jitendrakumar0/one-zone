@@ -66,7 +66,7 @@ const Featured = () => {
                         <SwiperSlide className='swiperSlider'>
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
-                                        <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
@@ -99,7 +99,7 @@ const Featured = () => {
                         <SwiperSlide className='swiperSlider'>
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
-                                        <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
@@ -132,7 +132,7 @@ const Featured = () => {
                         <SwiperSlide className='swiperSlider'>
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
-                                        <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
@@ -165,7 +165,7 @@ const Featured = () => {
                         <SwiperSlide className='swiperSlider'>
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
-                                        <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
@@ -198,7 +198,7 @@ const Featured = () => {
                         <SwiperSlide className='swiperSlider'>
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
-                                        <div className=" w-full lg:relative shrink-0 grid items-center justify-center">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
                                             <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
