@@ -14,7 +14,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         
         {
             id: 'sort',
-            name: 'sort',
+            name: 'Sort By',
             options: [
                 { value: 'MSI', label: 'newest to oldest' },
                 { value: 'MSI', label: 'oldest to newest' },
@@ -44,19 +44,6 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         ],
         },
         {
-        id: 'subBrand',
-        name: 'Sub Brand',
-        options: [
-            { value: 'Razer', label: 'Razer', checked: false },
-            { value: 'LG', label: 'LG', checked: false },
-            { value: 'Fujitsu', label: 'Fujitsu', checked: false },
-            { value: 'Xiaomi', label: 'Xiaomi', checked: false },
-            { value: 'Huawei', label: 'Huawei', checked: false },
-            { value: 'Toshiba', label: 'Toshiba', checked: false },
-            { value: 'Inspiron', label: 'Inspiron', checked: false },
-        ],
-        },
-        {
         id: 'Condition',
         name: 'Condition',
         options: [
@@ -75,10 +62,6 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         ],
         },
     ]
-
-    function classNames(...classes) {
-        return classes.filter(Boolean).join(' ')
-    }
 
 const WindowsProducts = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
@@ -326,7 +309,7 @@ const WindowsProducts = () => {
 
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
                                 <button className="border-2 grow border-b-black  font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
-                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
                         </form>
 

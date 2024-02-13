@@ -18,6 +18,11 @@ import Chat from "./page/chat/Chat";
 import SellerLogin from "./page/auth/sellerLogin/SellerLogin";
 import SellerSignup from "./page/auth/sellerSignup/SellerSignup";
 import EmailConfirmation from "./page/auth/emailConfirmation/EmailConfirmation";
+import About from "./page/about/About";
+import Contact from "./page/contact/Contact";
+import TermsOfUse from "./page/termsOfUse/TermsOfUse";
+import PrivacyPolicy from "./page/privacyPolicy/PrivacyPolicy";
+import Faq from "./page/faq/Faq";
 
 function App() {
 
@@ -49,6 +54,11 @@ function App() {
           <Route path="/reset-password" element={<ResetPassword/>}></Route>
           <Route path="/delete-account" element={<DeleteAccount/>}></Route>
           <Route path="/chat" element={<Chat/>}></Route>
+          <Route path="/about" element={<About/>}></Route>
+          <Route path="/contact" element={<Contact/>}></Route>
+          <Route path="/terms-of-use" element={<TermsOfUse/>}></Route>
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>}></Route>
+          <Route path="/faq" element={<Faq/>}></Route>
         </Routes>
     </>
   );

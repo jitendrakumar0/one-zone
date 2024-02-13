@@ -58,16 +58,16 @@ const Footer = () => {
                 <div className="lg:grow md:w-1/2 w-full lg:shrink flex flex-col gap-7">
                     <div className="flex flex-col gap-3">
                         <div className="font-bold md:text-sm text-xs uppercase">Company</div>
-                        <Link className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">About Us</Link>
-                        <Link className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">Terms of Use</Link>
-                        <Link className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">Privacy Policy</Link>
+                        <Link to="/about" className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">About Us</Link>
+                        <Link to="/terms-of-use" className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">Terms of Use</Link>
+                        <Link to="/privacy-policy" className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">Privacy Policy</Link>
                     </div>
                 </div>
                 <div className="lg:grow md:w-1/2 w-full lg:shrink flex flex-col gap-7">
                     <div className="flex flex-col gap-3">
                         <div className="font-bold md:text-sm text-xs uppercase">Support</div>
-                        <Link className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">Contact Us</Link>
-                        <Link className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">FAQ</Link>
+                        <Link to="/contact" className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">Contact Us</Link>
+                        <Link to="/faq" className="w-full md:text-base text-sm font-semibold text-gray-600 md:hover:text-black">FAQ</Link>
                     </div>
                     <div className="flex flex-col gap-3">
                         <div className="font-bold md:text-sm text-xs uppercase">Languages</div>

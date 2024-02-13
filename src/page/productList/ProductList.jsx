@@ -69,37 +69,6 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         ],
         },
         {
-        id: 'subBrand',
-        name: 'Sub Brand',
-        options: [
-            { value: 'Razer', label: 'Razer', checked: false },
-            { value: 'LG', label: 'LG', checked: false },
-            { value: 'Fujitsu', label: 'Fujitsu', checked: false },
-            { value: 'Xiaomi', label: 'Xiaomi', checked: false },
-            { value: 'Huawei', label: 'Huawei', checked: false },
-            { value: 'Toshiba', label: 'Toshiba', checked: false },
-            { value: 'Inspiron', label: 'Inspiron', checked: false },
-        ],
-        },
-        {
-        id: 'Condition',
-        name: 'Condition',
-        options: [
-            { value: 'New', label: 'New', checked: false },
-            { value: 'Pre-owned', label: 'Pre-owned', checked: false },
-            { value: 'Refurbished', label: 'Refurbished', checked: false },
-        ],
-        },
-        {
-        id: 'Warranty',
-        name: 'Warranty',
-        options: [
-            { value: 'Yes', label: 'Yes', checked: false },
-            { value: 'No', label: 'No', checked: false },
-            { value: 'Does not apply', label: 'Does not apply', checked: false },
-        ],
-        },
-        {
         id: 'Condition',
         name: 'Condition',
         options: [

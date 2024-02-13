@@ -2,14 +2,6 @@ import React from 'react'
 import { Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import collectionImg from '../../asstes/img/Frame_2_360x.webp'
-import Windows from '../../asstes/img/windows.svg'
-import apple from '../../asstes/img/apple.svg'
-import collectionImgg from '../../asstes/img/Server.svg'
-import cromebook from '../../asstes/img/Chromebook.svg'
-import tab from '../../asstes/img/mobile&tablet.svg'
-import printers from '../../asstes/img/printer.svg'
-import server from '../../asstes/img/Server.svg'
 import { Link } from 'react-router-dom';
 import { GrWindows } from "react-icons/gr";
 import { BsApple } from "react-icons/bs";
@@ -31,9 +23,9 @@ export const ConnectionList = () => {
                             </div>
                         </div>
                         <div className="grow">
-                            <div className="connectionprev sm:flex hidden  border hover:bg-black transition hover:text-white  hover:border  items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[60px] top-[18px] border-black"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
+                            <div className="connectionprev sm:flex hidden  border hover:bg-black transition hover:text-white  hover:border  items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[60px] top-[18px] border-black"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
                             <div className="connectionnext sm:flex hidden  border hover:bg-black transition hover:text-white hover:border   items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[18px] top-[18px] border-black">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
                             </div>
                         </div>
                     </div>
