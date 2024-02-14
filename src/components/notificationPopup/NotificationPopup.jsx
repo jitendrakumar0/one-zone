@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const NotificationPopup = () => {
     return (
         <>
-            <Menu as="div" className="relative inline-block text-left pt-2 z-40">
+            <Menu as="div" className="relative inline-block text-left z-40">
                 <Menu.Button className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
                     <LuBellDot className="size-4" />
                 </Menu.Button>

@@ -227,11 +227,11 @@ const Header2 = () => {
                 to="/"
                 className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
-                Login <LiaSignInAltSolid className="size-5 md:block hidden" />
+                Login <LiaSignInAltSolid className="size-5" />
               </Link>
               <Link
                 to="/seller-signup"
-                className="text-black bg-theme1 border-2 border-theme1 md:h-[40px] h-[32px] border-b-black font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
+                className="text-black max-md:hidden bg-theme1 border-2 border-theme1 md:h-[40px] h-[32px] border-b-black font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
               >
                 Become A Seller
                 {/* <LiaSignInAltSolid className="size-5" /> */}
@@ -477,7 +477,7 @@ const Header2 = () => {
         </div>
       </nav>
 
-      <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
+      <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm md:!hidden" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
           <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full flex flex-col overflow-hidden">
               <Dialog.Title className="py-3 px-6 md:text-xl text-lg font-bold border-b border-gray-200 bg-black text-theme1 flex items-center justify-between">
                   <div className="grow">

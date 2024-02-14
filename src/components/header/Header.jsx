@@ -222,7 +222,7 @@ const Header = () => {
           <Link to="/home" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
-          <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 md:mt-[8px] mt-0">
+          <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 mt-0">
               <NotificationPopup/>
               <Menu as="div" className="relative inline-block text-left pt-2">
                 <Menu.Button className="inline-flex items-center gap-1 relative md:pr-5">
@@ -563,7 +563,7 @@ const Header = () => {
         </Dialog>
       </Transition>
 
-      <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
+      <Dialog className="fixed inset-0 z-[1000] bg-black/10 backdrop-blur-sm md:!hidden" open={sidebarIsOpen} onClose={() => setSidebarIsOpen(false)}>
           <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full flex flex-col overflow-hidden">
               <Dialog.Title className="py-3 px-6 md:text-xl text-lg font-bold border-b border-gray-200 bg-black text-theme1 flex items-center justify-between">
                   <div className="grow">
@@ -587,6 +587,10 @@ export default Header
 export const HeaderMenu = () => {
   return (
     <>
+    <li className='list-none md:hidden'>
+      <NavLink to="/seller-signup" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Become A Seller</NavLink>
+    </li>
     <li className='list-none'>
       <NavLink to="/home" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Home</NavLink>
