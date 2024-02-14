@@ -194,7 +194,6 @@ const Contact = () => {
                                                 autoCapitalize="off"
                                                 spellCheck="false"
                                                 rows={4}
-                                                defaultValue={""}
                                             />
                                         </div>
                                         <button

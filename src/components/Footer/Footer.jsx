@@ -47,7 +47,7 @@ const Footer = () => {
     const [country, setCountry] = useState(allcountries[0])
   return (
     <>
-        <div className="bg-gray-200 md:py-10 py-6">
+        <div className="bg-gray-200 md:py-10 py-6 relative z-50">
             <div className="flex max-md:flex-wrap text-black md:py-8 gap-y-10 max-w-screen-xl justify-between mx-auto p-4 max-md:text-center">
                 <div className="lg:w-1/3 md:w-1/2 w-full md:pr-8 lg:shrink-0 flex flex-col gap-7">
                     <div className="flex flex-col gap-3">
@@ -107,7 +107,7 @@ const Footer = () => {
                                         {person.name}
                                         </span>
                                         {selected ? (
-                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-theme1">
+                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
                                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
                                         </span>
                                         ) : null}
@@ -161,7 +161,7 @@ const Footer = () => {
                                         {person.name}
                                         </span>
                                         {selected ? (
-                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-theme1">
+                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
                                             <CheckIcon className="h-5 w-5" aria-hidden="true" />
                                         </span>
                                         ) : null}
