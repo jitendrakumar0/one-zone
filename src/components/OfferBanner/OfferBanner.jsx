@@ -22,7 +22,7 @@ const OfferBanner = () => {
                                 </Link>
                                 <div className="pt-1 sm:pt-2">
                                     <Link className="sm:text-lg text-base font-semibold text-white duration-300 md:group-hover:text-yellow-400">
-                                        Let's Chat
+                                        Chat with Seller
                                     </Link>
                                 </div>
                             </div>
@@ -44,7 +44,7 @@ const OfferBanner = () => {
                                 </Link>
                                 <div className="pt-1 sm:pt-2">
                                     <Link className="sm:text-lg text-base font-semibold text-white duration-300 md:group-hover:text-yellow-400">
-                                        Let's Chat
+                                        Chat with Seller
                                     </Link>
                                 </div>
                             </div>

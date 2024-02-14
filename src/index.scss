@@ -15,3 +15,28 @@ body{
     height: unset !important;
 }
 
+@media( max-width: '767px'){
+    body{
+        & .chatParent{
+            // padding: 0 ;
+        }
+        &.active-class{
+            overflow: hidden;
+            & .rightPart{
+                position: absolute;
+                display: block !important;
+                width: 100% !important;
+                height: 100%;
+                z-index: 99999;
+                border-left: 1px solid rgb(185, 182, 182);
+                border-right: 1px solid rgb(185, 182, 182);
+                border-radius: 0.375rem !important;
+                left: 0;
+                right: 16px;
+                top: 0;
+                // top: 106px;
+            }
+        }
+    }
+}
+
