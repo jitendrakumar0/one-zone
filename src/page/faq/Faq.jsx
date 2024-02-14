@@ -1,7 +1,7 @@
 import React from 'react'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/header/Header'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Disclosure } from '@headlessui/react'
 
 const Faq = () => {

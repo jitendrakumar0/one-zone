@@ -126,7 +126,7 @@ const Header = () => {
                               {person.name}
                             </span>
                             {selected ? (
-                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 ">
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
                                 <CheckIcon
                                   className="h-5 w-5"
                                   aria-hidden="true"
@@ -187,7 +187,7 @@ const Header = () => {
                               {person.name}
                             </span>
                             {selected ? (
-                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-theme1">
+                              <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
                                 <CheckIcon
                                   className="h-5 w-5"
                                   aria-hidden="true"
@@ -253,7 +253,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/profile"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -275,7 +275,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/reset-password"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -297,7 +297,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/wishlist"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -319,7 +319,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/chat-history"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
@@ -341,7 +341,7 @@ const Header = () => {
                         {({ active }) => (
                           <Link to="/delete-account"
                             className={`${
-                              active ? "bg-theme1 text-white" : "text-gray-900"
+                              active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (

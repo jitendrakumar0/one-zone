@@ -53,12 +53,12 @@ function App() {
           <Route path="/notification" element={<Notification/>}></Route>
           <Route path="/reset-password" element={<ResetPassword/>}></Route>
           <Route path="/delete-account" element={<DeleteAccount/>}></Route>
-          <Route path="/chat" element={<Chat/>}></Route>
           <Route path="/about" element={<About/>}></Route>
           <Route path="/contact" element={<Contact/>}></Route>
           <Route path="/terms-of-use" element={<TermsOfUse/>}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy/>}></Route>
           <Route path="/faq" element={<Faq/>}></Route>
+          <Route path="/chat-history" element={<Chat/>}></Route>
         </Routes>
     </>
   );
