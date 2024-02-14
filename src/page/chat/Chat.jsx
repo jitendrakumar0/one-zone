@@ -1,10 +1,34 @@
 import React from 'react'
+import Header from '../../components/header/Header';
 
 const Chat = () => {
     
     return (
         <>
-        <div>
+            <Header/>
+            <div className='max-w-screen-xl flex justify-between mx-auto p-4 pt-8'>
+                <div className='col-auto w-2/5'>
+                    <div className='w-full h-16 flex items-center justify-between bg-gray-200 border border-slate-400 p-4 rounded-tl-lg '>
+                        <div className='text-black text-xl font-bold'>INBOX</div>
+                        <div className='font-bold'>
+                            <svg className='size-3' stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" id="search" x="0px" y="0px" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g><path d="M20.031,20.79c0.46,0.46,1.17-0.25,0.71-0.7l-3.75-3.76c1.27-1.41,2.04-3.27,2.04-5.31
+                            c0-4.39-3.57-7.96-7.96-7.96s-7.96,3.57-7.96,7.96c0,4.39,3.57,7.96,7.96,7.96c1.98,0,3.81-0.73,5.21-1.94L20.031,20.79z
+                            M4.11,11.02c0-3.84,3.13-6.96,6.96-6.96c3.84,0,6.96,3.12,6.96,6.96c0,3.84-3.12,6.96-6.96,6.96C7.24,17.98,4.11,14.86,4.11,11.02
+                            z"></path></g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div className='flex-grow'>
+
+                </div>
+            </div>
+
+
+
+
+
+        {/* <div>
             <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
                 <div className="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
                     <div className="relative flex items-center gap-x-4">
@@ -39,7 +63,6 @@ const Chat = () => {
                             <div className="text-xl mt-1 flex items-center max-w-72">
                                 <span className="text-gray-700 text-balance ml-3 font-semibold w-full md:text-base text-sm overflow-hidden text-ellipsis [-webkit-line-clamp:2] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</span>
                             </div>
-                            {/* <span className="text-base text-gray-600 text-right">Junior Developer</span> */}
                         </div>
                     </div>
                 </div>
@@ -348,7 +371,7 @@ const Chat = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         </>
     );
 }
