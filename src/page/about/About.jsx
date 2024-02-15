@@ -9,7 +9,7 @@ const About = () => {
             <Header />
             <div className="md:py-8 lg:py-10">
                 <div className="max-w-screen-xl mx-auto p-4">
-                    <section class="relative md:py-24 py-16">
+                    <section className="relative md:py-24 py-16">
                         <div>
                             <div className="container relative">
                                 <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6">

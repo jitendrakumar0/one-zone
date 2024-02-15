@@ -44,14 +44,14 @@ const DeleteAccount = () => {
                                         <button onClick={()=> {setDeleteAccount(true)}} className='text-white bg-red-500 border-2 border-red-500 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>DELETE</button>
                                     </li>
                                 </ul>
-                                    {/* <div class="justify-center items-center w-full flex">
-                                        <div class="relative p-4 w-full max-w-md max-h-full">
-                                            <div class="relative bg-white rounded-lg shadow">
-                                                <div class="p-4 md:p-5 text-center">
+                                    {/* <div className="justify-center items-center w-full flex">
+                                        <div className="relative p-4 w-full max-w-md max-h-full">
+                                            <div className="relative bg-white rounded-lg shadow">
+                                                <div className="p-4 md:p-5 text-center">
                                                     <TiDeleteOutline className='mx-auto mb-4 text-gray-400 w-12 h-12' />
-                                                    <h3 class="mb-5 text-lg font-normal text-gray-500">Are you sure you want to delete your account?</h3>
+                                                    <h3 className="mb-5 text-lg font-normal text-gray-500">Are you sure you want to delete your account?</h3>
                                                     <div className="action-area flex space-x-4 items-center pb-4 justify-center">
-                                                        <div class="inline-flex gap-4">
+                                                        <div className="inline-flex gap-4">
                                                             <Link to="/signup" className="text-white bg-red-600 border-2 grow border-red-600 border-b-red-800 font-bold text-sm md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-red-900 md:hover:bg-red-800 shadow-md shadow-red-800/40">Yes, I'm sure</Link>
                                                             <button className="border-2 grow border-b-black font-bold text-sm md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-black hover:border-b-black shadow-md hover:text-theme1 shadow-black/40">No, cancel</button>
                                                         </div>

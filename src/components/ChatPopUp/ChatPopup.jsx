@@ -1,6 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
 import React, { Fragment } from 'react'
-import { LuBellDot } from 'react-icons/lu'
 import { Link } from 'react-router-dom'
 import { HiDotsVertical } from "react-icons/hi";
 
