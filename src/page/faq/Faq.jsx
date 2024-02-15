@@ -18,9 +18,9 @@ const Faq = () => {
                                         <div>
                                             <h5 className="text-2xl font-semibold">Buying Product</h5>
                                             <div className="mt-6">
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>How does it work ?</span>
                                                             <svg data-accordion-icon className="size-4 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -29,13 +29,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>Do I need a designer to use Cartzio ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -44,13 +44,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What do I need to do to start selling ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -59,13 +59,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What happens when I receive an order ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -74,7 +74,7 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
@@ -83,9 +83,9 @@ const Faq = () => {
                                         <div className="mt-8">
                                             <h5 className="text-2xl font-semibold">General Questions</h5>
                                             <div id="accordion-collapsetwo" data-accordion="collapse" className="mt-6">
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>How does it work ?</span>
                                                             <svg data-accordion-icon className="size-4 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -94,13 +94,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>Do I need a designer to use Cartzio ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -109,13 +109,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What do I need to do to start selling ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -124,13 +124,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What happens when I receive an order ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -139,7 +139,7 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
@@ -148,9 +148,9 @@ const Faq = () => {
                                         <div id="payment" className="mt-8">
                                             <h5 className="text-2xl font-semibold">Payments Questions</h5>
                                             <div id="accordion-collapsethree" data-accordion="collapse" className="mt-6">
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>How does it work ?</span>
                                                             <svg data-accordion-icon className="size-4 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -159,13 +159,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>Do I need a designer to use Cartzio ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -174,13 +174,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What do I need to do to start selling ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -189,13 +189,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What happens when I receive an order ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -204,7 +204,7 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
@@ -213,9 +213,9 @@ const Faq = () => {
                                         <div id="support" className="mt-8">
                                             <h5 className="text-2xl font-semibold">Support Questions</h5>
                                             <div id="accordion-collapsefour" data-accordion="collapse" className="mt-6">
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>How does it work ?</span>
                                                             <svg data-accordion-icon className="size-4 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -224,13 +224,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>Do I need a designer to use Cartzio ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -239,13 +239,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What do I need to do to start selling ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -254,13 +254,13 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>
-                                                <Disclosure as="div" className="relative shadow dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                                                <Disclosure as="div" className="relative shadow rounded-md overflow-hidden mt-4">
                                                     <Disclosure.Button className="text-base font-semibold w-full">
-                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 dark:bg-slate-800 text-black">
+                                                        <div className="flex justify-between items-center p-5 w-full font-medium text-start bg-gray-50 text-black">
                                                             <span>What happens when I receive an order ?</span>
                                                             <svg data-accordion-icon className="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                                 <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -269,7 +269,7 @@ const Faq = () => {
                                                     </Disclosure.Button>
                                                     <Disclosure.Panel>
                                                         <div className="p-5">
-                                                            <p className="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                            <p className="text-slate-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
                                                         </div>
                                                     </Disclosure.Panel>
                                                 </Disclosure>

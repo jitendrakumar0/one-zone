@@ -16,13 +16,13 @@ const Signin = () => {
                                 <div className="w-full">
                                     <div className="px-2">
                                         <label htmlFor="name" className="text-base font-medium inline-block mb-2 text-black">First Name</label>
-                                        <input type="text" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Your First Name" name="name"/>
+                                        <input type="text" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Your First Name" name="name"/>
                                     </div>
                                 </div>
                                 <div className="w-full">
                                     <div className="px-2">
                                         <label htmlFor="name" className="text-base font-medium inline-block mb-2 text-black">Password</label>
-                                        <input type="password" id="name" autoComplete="current-password" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Password" name="name"/>
+                                        <input type="password" id="name" autoComplete="current-password" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Password" name="name"/>
                                     </div>
                                 </div>
                             </div>

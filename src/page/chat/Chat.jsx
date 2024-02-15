@@ -288,13 +288,13 @@ const Chat = () => {
                                 
                                 <div class="flex items-start gap-2.5 mx-5 mt-5 group/bubble [&.sent]:[direction:rtl]">
                                     <img class="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
-                                    <div class="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl dark:bg-gray-700">
+                                    <div class="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                                            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                                            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                            <span class="text-sm font-semibold text-gray-900">Bonnie Green</span>
+                                            <span class="text-sm font-normal text-gray-500">11:46</span>
                                         </div>
-                                        <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">That's awesome. I think our users will really appreciate the improvements.</p>
-                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Not Delivered</span>
+                                        <p class="text-sm font-normal py-2.5 text-gray-900">That's awesome. I think our users will really appreciate the improvements.</p>
+                                        <span class="text-sm font-normal text-gray-500">Not Delivered</span>
                                     </div>
                                     <div className='inline-flex self-center items-center group-[.sent]/bubble:[direction:ltr]'>
                                         <ChatPopup dropDownOptions={Chatoption}/>
@@ -303,13 +303,13 @@ const Chat = () => {
                                 
                                 <div class="flex items-start gap-2.5 mx-5 mt-5 group/bubble sent [&.sent]:[direction:rtl]">
                                     <img class="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
-                                    <div class="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl dark:bg-gray-700">
+                                    <div class="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                                            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                                            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                            <span class="text-sm font-semibold text-gray-900">Bonnie Green</span>
+                                            <span class="text-sm font-normal text-gray-500">11:46</span>
                                         </div>
-                                        <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">That's awesome. I think our users will really appreciate the improvements.</p>
-                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Pending</span>
+                                        <p class="text-sm font-normal py-2.5 text-gray-900">That's awesome. I think our users will really appreciate the improvements.</p>
+                                        <span class="text-sm font-normal text-gray-500">Pending</span>
                                     </div>
                                     <div className='inline-flex self-center items-center group-[.sent]/bubble:[direction:ltr]'>
                                         <ChatPopup dropDownOptions={Chatoption}/>
@@ -319,27 +319,27 @@ const Chat = () => {
                                     <div class="flex items-start gap-2.5 mx-5 mt-5">
                                     <img class="w-8 h-8 rounded-full" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
                                     <div class="flex flex-col gap-1">
-                                        <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+                                        <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
                                             <div class="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-                                                <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                                                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                                <span class="text-sm font-semibold text-gray-900">Bonnie Green</span>
+                                                <span class="text-sm font-normal text-gray-500">11:46</span>
                                             </div>
-                                            <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office </p>
+                                            <p class="text-sm font-normal text-gray-900">This is the new office </p>
                                             <div class="group relative my-2.5">
                                                 <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                                    <button data-tooltip-target="download" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
+                                                    <button data-tooltip-target="download" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none focus:ring-gray-50">
                                                         <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
+                                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
                                                         </svg>
                                                     </button>
-                                                    <div id="download" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    <div id="download" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                                                         Download image
                                                         <div class="tooltip-arrow" data-popper-arrow></div>
                                                     </div>
                                                 </div>
-                                                <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" class="rounded-lg" />
+                                                <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="" class="rounded-lg" />
                                             </div>
-                                            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+                                            <span class="text-sm font-normal text-gray-500">Delivered</span>
                                         </div>
                                     </div>
                                     <div className='inline-flex self-center items-center'>
@@ -352,15 +352,15 @@ const Chat = () => {
                                     <img class="w-8 h-8 rounded-full" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
                                     <div class="flex flex-col gap-1">
                                         <div class="flex items-center space-x-2 rtl:space-x-reverse">
-                                            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                                            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                            <span class="text-sm font-semibold text-gray-900">Bonnie Green</span>
+                                            <span class="text-sm font-normal text-gray-500">11:46</span>
                                         </div>
-                                        <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
-                                            <div class="flex items-start bg-gray-50 dark:bg-gray-600 rounded-xl p-2">
+                                        <div class="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
+                                            <div class="flex items-start bg-gray-50 rounded-xl p-2">
                                                 <div class="me-2">
-                                                <span class="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white pb-2">
+                                                <span class="flex items-center gap-2 text-sm font-medium text-gray-900 pb-2">
                                                     <svg fill="none" aria-hidden="true" class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 21">
-                                                        <g clip-path="url(#clip0_3173_1381)">
+                                                        <g clipPath="url(#clip0_3173_1381)">
                                                             <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"/>
                                                             <path fill="#B0B7BD" d="M15.024 5.5h3.75l-5-5v3.75c0 .688.562 1.25 1.25 1.25z"/>
                                                             <path fill="#CAD1D8" d="M18.774 9.25l-3.75-3.75h3.75v3.75z"/>
@@ -376,7 +376,7 @@ const Chat = () => {
                                                     </svg>
                                                     Flowbite Terms & Conditions
                                                 </span>
-                                                <span class="flex text-xs font-normal text-gray-500 dark:text-gray-400 gap-2">
+                                                <span class="flex text-xs font-normal text-gray-500 gap-2">
                                                     12 Pages 
                                                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="self-center" width="3" height="4" viewBox="0 0 3 4" fill="none">
                                                         <circle cx="1.5" cy="2" r="1.5" fill="#6B7280"/>
@@ -389,8 +389,8 @@ const Chat = () => {
                                                 </span>
                                                 </div>
                                                 <div class="inline-flex self-center items-center">
-                                                <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-600 dark:hover:bg-gray-500 dark:focus:ring-gray-600" type="button">
-                                                    <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <button class="inline-flex self-center items-center p-2 text-sm font-medium text-center text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-50" type="button">
+                                                    <svg class="w-4 h-4 text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                                         <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
                                                         <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
                                                     </svg>
@@ -398,7 +398,7 @@ const Chat = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+                                        <span class="text-sm font-normal text-gray-500">Delivered</span>
                                     </div>
                                     <div className='inline-flex self-center items-center'>
                                         <ChatPopup dropDownOptions={Chatoption}/>
@@ -839,16 +839,16 @@ const Chat = () => {
                     leaveTo="opacity-0 scale-95"
                 >
                 <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                    <div class="relative bg-white rounded-md shadow dark:bg-gray-700 ">
-                        <div class="flex items-start justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    <div class="relative bg-white rounded-md shadow ">
+                        <div class="flex items-start justify-between p-4 md:p-5 border-b rounded-t">
+                            <h3 class="text-xl font-semibold text-gray-900">
                                 REQUEST NUMBER
                                 
                             <div className='text-sm text-gray-600 mt-4'>We will contact you on the number provided here and address you by the name shared in the form. Please share your name and phone number.</div>
                             </h3>
-                            <button onClick={closeModal} type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="authentication-modal">
+                            <button onClick={closeModal} type="button" class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="authentication-modal">
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                                 </svg>
                                 <span class="sr-only">Close modal</span>
                             </button>
@@ -856,31 +856,31 @@ const Chat = () => {
                         <div class="p-4 md:p-5">
                             <form class="space-y-4" action="#">
                                 <div>
-                                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name*</label>
-                                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required/>
+                                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Full Name*</label>
+                                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required/>
                                 </div>
                                 <div className='flex gap-4'>
                                 <div className='col-auto'>
-                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Country*</label>
-                                    <input type="number" name="number" id="password" placeholder="+ 91" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" readOnly required/>
+                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Country*</label>
+                                    <input type="number" name="number" id="password" placeholder="+ 91" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" readOnly required/>
                                 </div>
                                 <div className="grow">
-                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mobile Number*</label>
-                                    <input type="number" name="number" id="password" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required/>
+                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Mobile Number*</label>
+                                    <input type="number" name="number" id="password" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
                                 </div>
                                 </div>
                                 {/* <div class="flex justify-between">
                                     <div class="flex items-start">
                                         <div class="flex items-center h-5">
-                                            <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required/>
+                                            <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required/>
                                         </div>
-                                        <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+                                        <label for="remember" class="ms-2 text-sm font-medium text-gray-900">Remember me</label>
                                     </div>
-                                    <Link to="#" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</Link>
+                                    <Link to="#" class="text-sm text-blue-700 hover:underline">Lost Password?</Link>
                                 </div> */}
                                 <button type="submit" class="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Next</button>
-                                {/* <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
-                                    Not registered? <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
+                                {/* <div class="text-sm font-medium text-gray-500">
+                                    Not registered? <a href="#" class="text-blue-700 hover:underline">Create account</a>
                                 </div> */}
                             </form>
                         </div>
@@ -941,59 +941,59 @@ const Chat = () => {
                     leaveTo="opacity-0 scale-95"
                 >
                 <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">  
-                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    <div class="relative bg-white rounded-lg shadow">
+                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                            <h3 class="text-xl font-semibold text-gray-900">
                                 User Report
                             </h3>
-                            <button onClick={closeFlagModal} type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                            <button onClick={closeFlagModal} type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
                                 <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                                 </svg>
                                 <span class="sr-only">Close modal</span>
                             </button>
                         </div>
                         <div class="p-4 md:p-5 space-y-4">
-                            <ul class="text-sm font-medium text-gray-900 bg-white  dark:text-white w-full">
-                                <li class="w-full border-gray-200 rounded-t-lg dark:border-gray-600">
+                            <ul class="text-sm font-medium text-gray-900 bg-white  w-full">
+                                <li class="w-full border-gray-200 rounded-t-lg">
                                     <div class="flex items-center ps-3">
-                                        <input id="list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300   dark:bg-gray-600 dark:border-gray-500"/>
-                                        <label for="list-radio-license" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Spam </label>
+                                        <input id="list-radio-license" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
+                                        <label for="list-radio-license" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">Spam </label>
                                     </div>
                                 </li>
-                                <li class="w-full border-gray-200 rounded-t-lg dark:border-gray-600">
+                                <li class="w-full border-gray-200 rounded-t-lg">
                                     <div class="flex items-center ps-3">
-                                        <input id="list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300   dark:bg-gray-600 dark:border-gray-500"/>
-                                        <label for="list-radio-id" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Fraud</label>
+                                        <input id="list-radio-id" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
+                                        <label for="list-radio-id" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">Fraud</label>
                                     </div>
                                 </li>
-                                <li class="w-full border-gray-200 rounded-t-lg dark:border-gray-600">
+                                <li class="w-full border-gray-200 rounded-t-lg">
                                     <div class="flex items-center ps-3">
-                                        <input id="list-radio-military" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300   dark:bg-gray-600 dark:border-gray-500"/>
-                                        <label for="list-radio-military" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Inappropriate profile picture</label>
+                                        <input id="list-radio-military" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
+                                        <label for="list-radio-military" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">Inappropriate profile picture</label>
                                     </div>
                                 </li>
-                                <li class="w-full  border-gray-200 rounded-t-lg dark:border-gray-600">
+                                <li class="w-full  border-gray-200 rounded-t-lg">
                                     <div class="flex items-center ps-3">
-                                        <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300   dark:bg-gray-600 dark:border-gray-500"/>
-                                        <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">This user is threatening me</label>
+                                        <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
+                                        <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">This user is threatening me</label>
                                     </div>
                                 </li>
-                                <li class="w-full  border-gray-200 rounded-t-lg dark:border-gray-600">
+                                <li class="w-full  border-gray-200 rounded-t-lg">
                                     <div class="flex items-center ps-3">
-                                        <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300   dark:bg-gray-600 dark:border-gray-500"/>
-                                        <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">This user is insulting me</label>
+                                        <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
+                                        <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">This user is insulting me</label>
                                     </div>
                                 </li>
-                                <li class="w-full  border-gray-200 rounded-t-lg dark:border-gray-600">
+                                <li class="w-full  border-gray-200 rounded-t-lg">
                                     <div class="flex items-center ps-3">
-                                        <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300   dark:bg-gray-600 dark:border-gray-500"/>
-                                        <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Other</label>
+                                        <input id="list-radio-passport" type="radio" value="" name="list-radio" class="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
+                                        <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">Other</label>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
                             <button data-modal-hide="default-modal" type="button" class="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Complaint</button>
                         </div>
                     </div>

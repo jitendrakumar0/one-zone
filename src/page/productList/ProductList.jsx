@@ -261,10 +261,10 @@ const ProductList = () => {
                         {/* Filters */}
                         <form className="hidden lg:block">
                             <div className="w-full relative mb-4">
-                                <label htmlFor="small-range" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price Range</label>
+                                <label htmlFor="small-range" className="block mb-2 text-sm font-medium text-gray-900">Price Range</label>
                                 <input id="small-range" onChange={(e)=>{setPriceRange(e.target.value)}} type="range" value={priceRange} min="100" max="8000" className="w-full accent-black h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm" />
-                                <span className="text-sm text-gray-500 dark:text-gray-400 font-bold absolute start-0 -bottom-2">₹100</span>
-                                <span className="text-sm text-gray-500 dark:text-gray-400 font-bold absolute end-0 -bottom-2">₹8000</span>
+                                <span className="text-sm text-gray-500 font-bold absolute start-0 -bottom-2">₹100</span>
+                                <span className="text-sm text-gray-500 font-bold absolute end-0 -bottom-2">₹8000</span>
                             </div>
 
                             {filters.map((section) => (
@@ -322,7 +322,7 @@ const ProductList = () => {
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
@@ -352,7 +352,7 @@ const ProductList = () => {
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/z/o/z/all-in-one-27-cb1345in-hp-original-imagntpzpvkvktgg.jpeg?q=70" alt="jk" />
@@ -382,7 +382,7 @@ const ProductList = () => {
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/kvzkosw0/laptop-battery/laptop-battery/d/i/m/genuine-battery-for-hpi-elitebook-folio-9470m-9480m-bt04xl-original-imag8rqz8mgzmsbd.jpeg?q=70" alt="jk" />

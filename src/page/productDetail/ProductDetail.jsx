@@ -190,10 +190,10 @@ const ProductDetail = () => {
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Colors:</h5>
                             <div className="space-x-2">
-                                <Link className="size-6 rounded-full ring-2 ring-gray-200 dark:ring-slate-800 bg-red-600 inline-flex align-middle" title="Red"></Link>
-                                <Link className="size-6 rounded-full ring-2 ring-gray-200 dark:ring-slate-800 bg-orange-600 inline-flex align-middle" title="Orange"></Link>
-                                <Link className="size-6 rounded-full ring-2 ring-gray-200 dark:ring-slate-800 bg-slate-900 inline-flex align-middle" title="Black"></Link>
-                                <Link className="size-6 rounded-full ring-2 ring-gray-200 dark:ring-slate-800 bg-gray-300 inline-flex align-middle" title="Gray"></Link>
+                                <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-red-600 inline-flex align-middle" title="Red"></Link>
+                                <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-orange-600 inline-flex align-middle" title="Orange"></Link>
+                                <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-slate-900 inline-flex align-middle" title="Black"></Link>
+                                <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-gray-300 inline-flex align-middle" title="Gray"></Link>
                             </div>
                         </div>
                     </div>
@@ -216,7 +216,7 @@ const ProductDetail = () => {
         <div className="grid md:grid-cols-12 grid-cols-1 mt-6 gap-6">
             <div className="lg:col-span-3 md:col-span-12">
                 <div className="sticky top-20">
-                    <ul className="flex-col p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md gap-4 flex" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <ul className="flex-col p-6 bg-white shadow rounded-md gap-4 flex" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li role="presentation">
                             <button className={`w-full py-2 text-center border shadow-lg ${detailTabs === 'description' ? ' text-white bg-black border-b-2 border-b-theme1':'text-white bg-gray-500'}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
                         </li>
@@ -231,7 +231,7 @@ const ProductDetail = () => {
             </div>
 
             <div className="lg:col-span-9 md:col-span-12">
-                <div id="myTabContent" className="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
+                <div id="myTabContent" className="p-6 bg-white shadow rounded-md">
                     {
                         detailTabs === 'description' ? 
                     <div id="description" role="tabpanel" aria-labelledby="profile-tab">
@@ -242,32 +242,32 @@ const ProductDetail = () => {
                     <div id="addinfo" role="tabpanel" aria-labelledby="addinfo-tab">
                         <table className="w-full text-start">
                             <tbody>
-                                <tr className="bg-white dark:bg-slate-900">
+                                <tr className="bg-white">
                                     <td className="font-semibold py-4">Sales Package</td>
                                     <td className="text-slate-600 py-4">Laptop, Battery, Adapter, Cables and User Manuals</td>
                                 </tr>
 
-                                <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
+                                <tr className="bg-white border-t border-gray-100">
                                     <td className="font-semibold py-4">Model Number</td>
                                     <td className="text-slate-600 py-4">X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS</td>
                                 </tr>
 
-                                <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
+                                <tr className="bg-white border-t border-gray-100">
                                     <td className="font-semibold py-4">Part Number</td>
                                     <td className="text-slate-600 py-4">90NB0TY2-M00JK0 | 90NB0TY2-M047X0 | 90NB0TY6-M03EL0</td>
                                 </tr>
 
-                                <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
+                                <tr className="bg-white border-t border-gray-100">
                                     <td className="font-semibold py-4">Model Name</td>
                                     <td className="text-slate-600 py-4">X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS</td>
                                 </tr>
 
-                                <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
+                                <tr className="bg-white border-t border-gray-100">
                                     <td className="font-semibold py-4">Series</td>
                                     <td className="text-slate-600 py-4">Vivobook 15</td>
                                 </tr>
 
-                                <tr className="bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-700">
+                                <tr className="bg-white border-t border-gray-100">
                                     <td className="font-semibold py-4">Color</td>
                                     <td className="text-slate-600 py-4">Transparent Silver</td>
                                 </tr>
@@ -290,7 +290,7 @@ const ProductDetail = () => {
 
                                 {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
-                            <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
+                            <div className="p-4 bg-gray-50 rounded-md shadow mt-6">
                                 <ul className="list-none inline-block text-theme1">
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
@@ -317,7 +317,7 @@ const ProductDetail = () => {
 
                                 {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
-                            <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
+                            <div className="p-4 bg-gray-50 rounded-md shadow mt-6">
                                 <ul className="list-none inline-block text-theme1">
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
@@ -344,7 +344,7 @@ const ProductDetail = () => {
 
                                 {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
-                            <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
+                            <div className="p-4 bg-gray-50 rounded-md shadow mt-6">
                                 <ul className="list-none inline-block text-theme1">
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
@@ -371,7 +371,7 @@ const ProductDetail = () => {
 
                                 {/* <Link className="text-black bg-gray-300 text-sm px-4 py-2 font-bold rounded-lg hover:text-theme1 hover:bg-black duration-500 ms-5"><i className="mdi mdi-reply"></i> Reply</Link> */}
                             </div>
-                            <div className="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
+                            <div className="p-4 bg-gray-50 rounded-md shadow mt-6">
                                 <ul className="list-none inline-block text-theme1">
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
                                     <li className="inline"><i className="mdi mdi-star text-lg"></i></li>
@@ -385,7 +385,7 @@ const ProductDetail = () => {
                             </div>
                         </div>
 
-                        <div className="p-6 rounded-md shadow dark:shadow-gray-800 mt-8">
+                        <div className="p-6 rounded-md shadow mt-8">
                             <h5 className="text-lg font-semibold">Leave A Comment:</h5>
 
                             <form className="mt-8">
@@ -394,8 +394,8 @@ const ProductDetail = () => {
                                         <div className="text-start">
                                             <label for="name" className="font-semibold">Your Name:</label>
                                             <div className="form-icon relative mt-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-user w-4 h-4 absolute top-3 start-4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                                <input name="name" id="name" type="text" className="ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Name :" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user w-4 h-4 absolute top-3 start-4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                <input name="name" id="name" type="text" className="ps-11 w-full py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Name :" />
                                             </div>
                                         </div>
                                     </div>
@@ -404,8 +404,8 @@ const ProductDetail = () => {
                                         <div className="text-start">
                                             <label for="email" className="font-semibold">Your Email:</label>
                                             <div className="form-icon relative mt-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-mail w-4 h-4 absolute top-3 start-4"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                                <input name="email" id="email" type="email" className="ps-11 w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Email :" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-mail w-4 h-4 absolute top-3 start-4"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                                <input name="email" id="email" type="email" className="ps-11 w-full py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Email :" />
                                             </div>
                                         </div>
                                     </div>
@@ -416,8 +416,8 @@ const ProductDetail = () => {
                                         <div className="text-start">
                                             <label for="comments" className="font-semibold">Your Comment:</label>
                                             <div className="form-icon relative mt-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="feather feather-message-circle w-4 h-4 absolute top-3 start-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                                                <textarea name="comments" id="comments" className="ps-11 w-full py-2 px-3 h-28 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded outline-none border border-gray-100 dark:border-gray-800 focus:ring-0" placeholder="Message :"></textarea>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-message-circle w-4 h-4 absolute top-3 start-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                                <textarea name="comments" id="comments" className="ps-11 w-full py-2 px-3 h-28 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Message :"></textarea>
                                             </div>
                                         </div>
                                     </div>

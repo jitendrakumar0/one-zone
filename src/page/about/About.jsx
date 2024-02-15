@@ -14,7 +14,7 @@ const About = () => {
                             <div className="container relative">
                                 <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6">
                                     <div className="lg:col-span-5 md:col-span-6">
-                                        <img src="https://shreethemes.in/cartzio/layouts/assets/images/ab1.jpg" className="rounded-t-full shadow-md dark:shadow-gray-800" alt="" />
+                                        <img src="https://shreethemes.in/cartzio/layouts/assets/images/ab1.jpg" className="rounded-t-full shadow-md" alt="" />
                                     </div>
                                     <div className="lg:col-span-7 md:col-span-6">
                                         <div className="lg:ms-8">
@@ -42,18 +42,18 @@ const About = () => {
                             <div className="container relative md:mt-24 mt-16">
                                 <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-6">
                                     <div className="lg:col-span-5 md:col-span-6 md:order-2 order-1">
-                                        <img src="https://shreethemes.in/cartzio/layouts/assets/images/ab2.jpg" className="rounded-b-full shadow-md dark:shadow-gray-800" alt="" />
+                                        <img src="https://shreethemes.in/cartzio/layouts/assets/images/ab2.jpg" className="rounded-b-full shadow-md" alt="" />
                                     </div>
                                     <div className="lg:col-span-7 md:col-span-6 md:order-1 order-2">
                                         <h6 className="text-black font-semibold uppercase text-lg">Founder</h6>
                                         <h5 className="font-semibold text-3xl leading-normal my-4">Maria J. Rose</h5>
                                         <p className="text-slate-400 max-w-xl">Donec non interdum nisl. Sed ut est ac lacus sodales convallis. Nam non velit justo. Mauris vel ultrices tortor. Proin bibendum magna porttitor porttitor suscipit. Praesent sit amet consequat eros. Quisque ullamcorper ornare vulputate. Nam sodales sem id diam sollicitudin, id lobortis tellus tincidunt.</p>
                                         <ul className="list-none mt-6 space-x-2">
-                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black dark:hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-dribbble size-5 align-middle" title="dribbble"><circle cx={12} cy={12} r={10} /><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" /></svg></Link></li>
-                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black dark:hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-linkedin size-5 align-middle" title="Linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x={2} y={9} width={4} height={12} /><circle cx={4} cy={4} r={2} /></svg></Link></li>
-                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black dark:hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook size-5 align-middle" title="facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></Link></li>
-                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black dark:hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram size-5 align-middle" title="instagram"><rect x={2} y={2} width={20} height={20} rx={5} ry={5} /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg></Link></li>
-                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black dark:hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter size-5 align-middle" title="twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" /></svg></Link></li>
+                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-dribbble size-5 align-middle" title="dribbble"><circle cx={12} cy={12} r={10} /><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" /></svg></Link></li>
+                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-linkedin size-5 align-middle" title="Linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x={2} y={9} width={4} height={12} /><circle cx={4} cy={4} r={2} /></svg></Link></li>
+                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook size-5 align-middle" title="facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></Link></li>
+                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram size-5 align-middle" title="instagram"><rect x={2} y={2} width={20} height={20} rx={5} ry={5} /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg></Link></li>
+                                            <li className="inline"><Link target="_blank" className="inline-flex hover:text-black"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter size-5 align-middle" title="twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" /></svg></Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@ const About = () => {
                                     <h5 className="font-semibold text-3xl leading-normal my-4">We Designed and <br /> Developed Products</h5>
                                 </div>
                                 <div className="grid md:grid-cols-3 grid-cols-1 mt-6 gap-6">
-                                    <div className="p-6 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-md bg-white dark:bg-slate-900">
+                                    <div className="p-6 shadow hover:shadow-md duration-500 rounded-md bg-white">
                                         <i className="mdi mdi-truck-check-outline text-4xl text-black" />
                                         <div className="content mt-6">
                                             <Link className="title h5 text-xl font-medium hover:text-black">Free Shipping</Link>
@@ -74,7 +74,7 @@ const About = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="p-6 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-md bg-white dark:bg-slate-900">
+                                    <div className="p-6 shadow hover:shadow-md duration-500 rounded-md bg-white">
                                         <i className="mdi mdi-account-wrench-outline text-4xl text-black" />
                                         <div className="content mt-6">
                                             <Link className="title h5 text-xl font-medium hover:text-black">24/7 Support</Link>
@@ -84,7 +84,7 @@ const About = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="p-6 shadow hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-md bg-white dark:bg-slate-900">
+                                    <div className="p-6 shadow hover:shadow-md duration-500 rounded-md bg-white">
                                         <i className="mdi mdi-cash-multiple text-4xl text-black" />
                                         <div className="content mt-6">
                                             <Link className="title h5 text-xl font-medium hover:text-black">Payment Process</Link>

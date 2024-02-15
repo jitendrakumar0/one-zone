@@ -119,7 +119,7 @@ const SellingProducts = () => {
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full  shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
@@ -151,7 +151,7 @@ const SellingProducts = () => {
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full  shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
@@ -183,7 +183,7 @@ const SellingProducts = () => {
                                 <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                         <div className=" w-full  shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70" alt="jk" />

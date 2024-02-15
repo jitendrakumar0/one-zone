@@ -22,15 +22,15 @@ const NotificationPopup = () => {
                     <Menu.Items className="absolute right-0 mt-2 w-96 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold">
                         <div
                             id="dropdownNotification"
-                            className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-800 dark:divide-gray-700"
+                            className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-lg shadow"
                             aria-labelledby="dropdownNotificationButton"
                         >
-                            <div className="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
+                            <div className="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50">
                                 Notifications
                             </div>
-                            <div className="divide-y divide-gray-100 dark:divide-gray-700">
+                            <div className="divide-y divide-gray-100">
                                 <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -38,7 +38,7 @@ const NotificationPopup = () => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
                                             alt="Jese imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-black border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-black border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -52,20 +52,20 @@ const NotificationPopup = () => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
+                                        <div className="text-gray-500 text-sm mb-1.5">
                                             New message from{" "}
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                            <span className="font-semibold text-gray-900">
                                                 Jese Leos
                                             </span>
                                             : "Hey, what's up? All set for the presentation?"
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             a few moments ago
                                         </div>
                                     </div>
                                 </Link>
                                 <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -73,7 +73,7 @@ const NotificationPopup = () => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
                                             alt="Joseph imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-gray-900 border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-gray-900 border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -86,23 +86,23 @@ const NotificationPopup = () => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-gray-500 text-sm mb-1.5">
+                                            <span className="font-semibold text-gray-900">
                                                 Joseph Mcfall
                                             </span>{" "}
                                             and{" "}
-                                            <span className="font-medium text-gray-900 dark:text-white">
+                                            <span className="font-medium text-gray-900">
                                                 5 others
                                             </span>{" "}
                                             started following you.
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             10 minutes ago
                                         </div>
                                     </div>
                                 </Link>
                                 <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -110,7 +110,7 @@ const NotificationPopup = () => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
                                             alt="Bonnie imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-red-600 border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-red-600 border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -123,23 +123,23 @@ const NotificationPopup = () => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-gray-500 text-sm mb-1.5">
+                                            <span className="font-semibold text-gray-900">
                                                 Bonnie Green
                                             </span>{" "}
                                             and{" "}
-                                            <span className="font-medium text-gray-900 dark:text-white">
+                                            <span className="font-medium text-gray-900">
                                                 141 others
                                             </span>{" "}
                                             love your story. See it and view more stories.
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             44 minutes ago
                                         </div>
                                     </div>
                                 </Link>
                                 <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -147,7 +147,7 @@ const NotificationPopup = () => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
                                             alt="Leslie imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-green-400 border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -160,8 +160,8 @@ const NotificationPopup = () => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-gray-500 text-sm mb-1.5">
+                                            <span className="font-semibold text-gray-900">
                                                 Leslie Livingston
                                             </span>{" "}
                                             mentioned you in a comment:{" "}
@@ -170,13 +170,13 @@ const NotificationPopup = () => {
                                             </span>{" "}
                                             what do you say?
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             1 hour ago
                                         </div>
                                     </div>
                                 </Link>
                                 <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -184,7 +184,7 @@ const NotificationPopup = () => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                                             alt="Robert imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-purple-500 border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -197,14 +197,14 @@ const NotificationPopup = () => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-gray-500 text-sm mb-1.5">
+                                            <span className="font-semibold text-gray-900">
                                                 Robert Brown
                                             </span>{" "}
                                             posted a new video: Glassmorphism - learn how to implement
                                             the new design trend.
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             3 hours ago
                                         </div>
                                     </div>
@@ -212,11 +212,11 @@ const NotificationPopup = () => {
                             </div>
                             <Menu.Item>
                                 <Link to="/notification"
-                                    className="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white"
+                                    className="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100"
                                 >
                                     <div className="inline-flex items-center ">
                                         <svg
-                                            className="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
+                                            className="w-4 h-4 me-2 text-gray-500"
                                             aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="currentColor"

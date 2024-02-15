@@ -1,12 +1,10 @@
 import React from 'react'
 import frame from '../../asstes/img/Frame.png'
 import { Link } from 'react-router-dom'
-import Header2 from '../header2/Header2'
 
 const Signup = () => {
   return (
     <div>
-    {/* <Header2/> */}
     <div className="max-w-5xl px-5 lg:px-10 flex items-center h-screen flex-wrap mx-auto py-5">
         <div className="flex flex-wrap items-center justify-center">
             <div id="profile" className="order-2 lg:order-1 w-full h-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none rounded-tl-none lg:rounded-tl-lg rounded-tr-none lg:rounded-tr-lg shadow-2xl bg-white opacity-75">
@@ -17,44 +15,44 @@ const Signup = () => {
                             <div className="w-full sm:w-1/2">
                                 <div className="px-2">
                                     <label htmlFor="name" className="text-base font-medium inline-block mb-2 text-black">First Name</label>
-                                    <input type="text" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Your First Name" name="name"/>
+                                    <input type="text" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Your First Name" name="name"/>
                                 </div>
                             </div>
                             <div className="w-full sm:w-1/2">
                                 <div className="px-2">
                                     <label htmlFor="name" className="text-base font-medium inline-block mb-2 text-black">Last Name</label>
-                                    <input type="text" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Your Last Name" name="name"/>
+                                    <input type="text" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Your Last Name" name="name"/>
                                 </div>
                             </div>
                             <div className="w-full sm:w-1/2">
                                 <div className="px-2">
                                     <label htmlFor="email" className="text-base font-medium inline-block mb-2 text-black">Email</label>
-                                    <input type="email" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Email" name="name"/>
+                                    <input type="email" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Email" name="name"/>
                                 </div>
                             </div>
                             <div className="w-full sm:w-1/2">
                                 <div className="px-2">
                                     <label htmlFor="tel" className="text-base font-medium inline-block mb-2 text-black">Phone Number</label>
-                                    <input type="tel" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Contact Number" name="name"/>
+                                    <input type="tel" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Contact Number" name="name"/>
                                 </div>
                             </div>
                             <div className="w-full sm:w-1/2">
                                 <div className="px-2">
                                     <label htmlFor="password" className="text-base font-medium inline-block mb-2 text-black">password</label>
-                                    <input type="password" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Password" name="name"/>
+                                    <input type="password" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Password" name="name"/>
                                 </div>
                             </div>
                             <div className="w-full sm:w-1/2">
                                 <div className="px-2">
                                     <label htmlFor="password" className="text-base font-medium inline-block mb-2 text-black">Confirm Password</label>
-                                    <input type="password" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border dark:bg-default-50" placeholder="Address" name="name"/>
+                                    <input type="password" id="name" className="py-4 ps-4  w-full h-12 text-black rounded border focus:ring-0 focus:border" placeholder="Address" name="name"/>
                                 </div>
                             </div>
                             <div className="w-full sm:w-1/2">
                                 <div className="flex items-center h-5">
-                                <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+                                <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required />
                                 </div>
-                                <label for="terms" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Accept <Link className="text-blue-600 hover:underline dark:text-blue-500">Terms & Conditions</Link></label>
+                                <label for="terms" className="ms-2 text-sm font-medium text-gray-900">Accept <Link className="text-blue-600 hover:underline">Terms & Conditions</Link></label>
                             </div>
                         </div>
                     </form>

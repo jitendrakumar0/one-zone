@@ -23,17 +23,17 @@ const ChatPopup = ({dropDownOptions}) => {
                     <Menu.Items className="absolute right-4 -top-7 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold">
                         <div
                             id="dropdownNotification"
-                            className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-md shadow dark:bg-gray-800 dark:divide-gray-700"
+                            className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-md shadow"
                             aria-labelledby="dropdownNotificationButton"
                         >
-                            {/* <div className="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-800 dark:text-white">
+                            {/* <div className="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50">
                                 Notifications
                             </div> */}
-                            <div className="divide-y divide-gray-100 dark:divide-gray-700">
+                            <div className="divide-y divide-gray-100">
                             {
                                 dropDownOptions?.map((item)=>(
                                     <Link
-                                        className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md text-sm text-gray-700"
+                                        className="flex px-4 py-3 hover:bg-gray-100 rounded-md text-sm text-gray-700"
                                     >
                                         {item.name}
                                         {/* <div className="flex-shrink-0">
@@ -42,7 +42,7 @@ const ChatPopup = ({dropDownOptions}) => {
                                                 src="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
                                                 alt="Jese imag"
                                             />
-                                            <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-black border border-white rounded-full dark:border-gray-800">
+                                            <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-black border border-white rounded-full">
                                                 <svg
                                                     className="w-2 h-2 text-white"
                                                     aria-hidden="true"
@@ -56,14 +56,14 @@ const ChatPopup = ({dropDownOptions}) => {
                                             </div>
                                         </div>
                                         <div className="w-full ps-3">
-                                            <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
+                                            <div className="text-gray-500 text-sm mb-1.5">
                                                 New message from{" "}
-                                                <span className="font-semibold text-gray-900 dark:text-white">
+                                                <span className="font-semibold text-gray-900">
                                                     Jese Leos
                                                 </span>
                                                 : "Hey, what's up? All set for the presentation?"
                                             </div>
-                                            <div className="text-xs text-black dark:text-black">
+                                            <div className="text-xs text-black">
                                                 a few moments ago
                                             </div>
                                         </div> */}
@@ -71,7 +71,7 @@ const ChatPopup = ({dropDownOptions}) => {
                                 ))
                             }
                                 {/* <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md text-sm text-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100 rounded-md text-sm text-gray-700"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -79,7 +79,7 @@ const ChatPopup = ({dropDownOptions}) => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
                                             alt="Leslie imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-green-400 border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-green-400 border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -92,8 +92,8 @@ const ChatPopup = ({dropDownOptions}) => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-gray-500 text-sm mb-1.5">
+                                            <span className="font-semibold text-gray-900">
                                                 Leslie Livingston
                                             </span>{" "}
                                             mentioned you in a comment:{" "}
@@ -102,13 +102,13 @@ const ChatPopup = ({dropDownOptions}) => {
                                             </span>{" "}
                                             what do you say?
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             1 hour ago
                                         </div>
                                     </div>
                                 </Link>
                                 <Link
-                                    className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm text-gray-700"
+                                    className="flex px-4 py-3 hover:bg-gray-100 text-sm text-gray-700"
                                 >
                                     <div className="flex-shrink-0">
                                         <img
@@ -116,7 +116,7 @@ const ChatPopup = ({dropDownOptions}) => {
                                             src="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
                                             alt="Robert imag"
                                         />
-                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-purple-500 border border-white rounded-full dark:border-gray-800">
+                                        <div className="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-purple-500 border border-white rounded-full">
                                             <svg
                                                 className="w-2 h-2 text-white"
                                                 aria-hidden="true"
@@ -129,14 +129,14 @@ const ChatPopup = ({dropDownOptions}) => {
                                         </div>
                                     </div>
                                     <div className="w-full ps-3">
-                                        <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                                            <span className="font-semibold text-gray-900 dark:text-white">
+                                        <div className="text-gray-500 text-sm mb-1.5">
+                                            <span className="font-semibold text-gray-900">
                                                 Robert Brown
                                             </span>{" "}
                                             posted a new video: Glassmorphism - learn how to implement
                                             the new design trend.
                                         </div>
-                                        <div className="text-xs text-black dark:text-black">
+                                        <div className="text-xs text-black">
                                             3 hours ago
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@ const ChatPopup = ({dropDownOptions}) => {
                                 >
                                     {/* <div className="inline-flex items-center ">
                                         <svg
-                                            className="w-4 h-4 me-2 text-gray-500 dark:text-gray-400"
+                                            className="w-4 h-4 me-2 text-gray-500"
                                             aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="currentColor"
