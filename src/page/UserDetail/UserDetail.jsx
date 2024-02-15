@@ -4,18 +4,19 @@ import { Link } from 'react-router-dom'
 import { FaRegHeart } from 'react-icons/fa';
 import { RiChat1Line } from 'react-icons/ri';
 import { IoLocationSharp } from "react-icons/io5";
+import user from '../../asstes/img/user.png'
 
 const UserDetail = () => {
     return (
         <>
         <Header/>
-            <div className='max-w-screen-xl justify-between mx-auto   md:h-[calc(100vh-174px)]  overflow-hidden p-4'>
-                <div className='flex md:h-full'>
-                    <div className=" flex-none md:w-80 w-full h-full">
-                        <div className="userDetail border p-4 rounded-lg bg-white h-full">
-                            <div className="object-cover overflow-hidden size-52 rounded-lg border m-auto"><img className='size-full rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFuaQWiuGJEie7ZxemO4bjBvNAnNzKd3R5A&usqp=CAU" alt="" />
+            <div className='max-w-screen-xl justify-between mx-auto md:h-[calc(100vh-174px)]  overflow-hidden p-4'>
+                <div className='flex flex-col md:flex-row md:h-full'>
+                    <div className=" flex-none md:w-80 w-full md:h-full">
+                        <div className="userDetail border p-4 rounded-lg bg-white md:h-full">
+                            <div className="object-cover overflow-hidden size-52 rounded-lg  m-auto"><img className='size-full rounded-lg' src={user} alt="" />
                             </div>
-                            <div className='pt-4'>
+                            <div className='rounded-lg border p-4 bg-gray-100'>
                                 <div className='text-lg font-bold text-black'>Rohit Sharma</div>
                                 <div className='text-md font-normal text-gray-600'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, deleniti.</div>
                                 <Link to='' className='flex items-center mt-2'>
@@ -25,7 +26,7 @@ const UserDetail = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="grow mx-5 h-full overflow-y-auto">
+                    <div className="grow md:mx-5 mt-5 md:mt-0 md:h-full overflow-y-auto">
                         <div className='grid lg:grid-cols-2 grid-col-1 gap-4'>
                             <div className="flex flex-wrap items-stretch">
                                 <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
