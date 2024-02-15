@@ -24,6 +24,8 @@ import TermsOfUse from "./page/termsOfUse/TermsOfUse";
 import PrivacyPolicy from "./page/privacyPolicy/PrivacyPolicy";
 import Faq from "./page/faq/Faq";
 import UserDetail from "./page/UserDetail/UserDetail";
+import SelectCategory from "./page/SelectCategory/SelectCategory";
+import SelectedCategory from "./page/SelectedCategory/SelectedCategory";
 
 function App() {
 
@@ -61,6 +63,8 @@ function App() {
           <Route path="/faq" element={<Faq/>}></Route>
           <Route path="/chat" element={<Chat/>}></Route>
           <Route path="/seller-profile" element={<UserDetail/>}></Route>
+          <Route path="/select-category" element={<SelectCategory/>}></Route>
+          <Route path="/selected-category" element={<SelectedCategory/>}></Route>
         </Routes>
     </>
   );
