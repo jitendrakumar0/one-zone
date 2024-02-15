@@ -9,9 +9,9 @@ const UserDetail = () => {
     return (
         <>
         <Header/>
-            <div className='max-w-screen-xl justify-between mx-auto h-[calc(100vh-174px)]  overflow-hidden p-4'>
-                <div className='flex h-full'>
-                    <div className=" flex-none w-80 h-full">
+            <div className='max-w-screen-xl justify-between mx-auto   md:h-[calc(100vh-174px)]  overflow-hidden p-4'>
+                <div className='flex md:h-full'>
+                    <div className=" flex-none md:w-80 w-full h-full">
                         <div className="userDetail border p-4 rounded-lg bg-white h-full">
                             <div className="object-cover overflow-hidden size-52 rounded-lg border m-auto"><img className='size-full rounded-lg' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFuaQWiuGJEie7ZxemO4bjBvNAnNzKd3R5A&usqp=CAU" alt="" />
                             </div>
@@ -26,8 +26,8 @@ const UserDetail = () => {
                         </div>
                     </div>
                     <div className="grow mx-5 h-full overflow-y-auto">
-                        <div className='flex gap-4'>
-                            <div className="flex flex-wrap w-full h-full items-stretch">
+                        <div className='grid lg:grid-cols-2 grid-col-1 gap-4'>
+                            <div className="flex flex-wrap items-stretch">
                                 <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                     <div className=" w-full  shrink-0 grid items-center justify-center">
                                         <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
@@ -57,7 +57,7 @@ const UserDetail = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex flex-wrap  w-full h-full items-stretch">
+                            <div className="flex flex-wrap items-stretch">
                                 <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                     <div className=" w-full  shrink-0 grid items-center justify-center">
                                         <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
@@ -87,7 +87,7 @@ const UserDetail = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* <div className="flex flex-wrap  w-full h-full items-stretch">
+                            {/* <div className="flex flex-wrap items-stretch">
                                 <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
                                     <div className=" w-full  shrink-0 grid items-center justify-center">
                                         <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
