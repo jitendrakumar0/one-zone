@@ -218,6 +218,9 @@ const ProductDetail = () => {
                 <div className="sticky top-20">
                     <ul className="flex-col p-6 bg-white shadow rounded-md gap-4 flex" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                         <li role="presentation">
+                            <Link to='/user-detail' className='text-black w-full  bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-3 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40' >User</Link>
+                        </li>
+                        <li role="presentation">
                             <button className={`w-full py-2 text-center border shadow-lg ${detailTabs === 'description' ? ' text-white bg-black border-b-2 border-b-theme1':'text-white bg-gray-500'}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
                         </li>
                         <li role="presentation">
