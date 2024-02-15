@@ -77,7 +77,7 @@ const SafetyModal = ({isOpenSaftey, setIsOpenSaftey}) => {
                                         </li>
                                     </ul>
                                     <div>
-                                        <Link to="/chat-history" class="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">
+                                        <Link to="/chat" class="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">
                                             Continue to Chat</Link>
                                     </div>
                                 </div>

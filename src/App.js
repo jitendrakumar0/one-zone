@@ -59,8 +59,8 @@ function App() {
           <Route path="/terms-of-use" element={<TermsOfUse/>}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy/>}></Route>
           <Route path="/faq" element={<Faq/>}></Route>
-          <Route path="/chat-history" element={<Chat/>}></Route>
-          <Route path="/user-detail" element={<UserDetail/>}></Route>
+          <Route path="/chat" element={<Chat/>}></Route>
+          <Route path="/seller-profile" element={<UserDetail/>}></Route>
         </Routes>
     </>
   );

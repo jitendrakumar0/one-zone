@@ -235,7 +235,7 @@ const Chat = () => {
                 <div className='flex-grow md:block hidden rightPart'>
                     <div className='w-full flex flex-col h-full border border-slate-400 border-l-0 md:rounded-tr-md overflow-hidden'>
                         <div className='header'>
-                            <Link to='/user-detail' className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tr-md px-2 md:px-5 border border-b-slate-400'>
+                            <Link to='/seller-profile' className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tr-md px-2 md:px-5 border border-b-slate-400'>
                                 <div className='col-auto flex items-center'>
                                 <IoMdArrowBack onClick={()=>setClick(false)} className='me-2 size-6 md:hidden block'/>
                                     <div className="user  rounded-md relative cursor-pointer">

@@ -316,7 +316,7 @@ const Header = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to="/chat-history"
+                          <Link to="/chat"
                             className={`${
                               active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -332,7 +332,7 @@ const Header = () => {
                                 aria-hidden="true"
                               />
                             )}
-                            Chat History
+                            Chat 
                           </Link>
                         )}
                       </Menu.Item>

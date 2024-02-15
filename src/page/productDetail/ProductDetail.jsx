@@ -198,7 +198,23 @@ const ProductDetail = () => {
                         </div>
                     </div>
 
-                    <div className="mt-4 space-x-1">
+                        
+                    <div className="p-3 w-96 bg-white rounded-lg mt-4 border">
+                        <Link to='/seller-profile' className="flex items-center mb-4">
+                            <div>
+                                <img className="size-10 rounded-full" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
+                            </div>
+                            <div className="text-base ms-2 font-bold leading-none text-black dark:text-white">
+                                <div>Rohit Sharma</div>
+                                <div className='text-xs'>123 B New colony</div>
+                            </div>
+                        </Link>
+                        <Link to='/chat' className="text-black w-full mb-2 bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+
+                        <button className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Wishlist <FaHeart className='size-5' /></button>
+                    </div>
+
+                    {/* <div className="mt-4 space-x-1">
                         <button className="text-black w-auto bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                         <button type='button' className="text-black w-auto bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"
                         onClick={()=>{setWished(!wished)}}>Wishlist 
@@ -208,7 +224,7 @@ const ProductDetail = () => {
                             :
                             <FaHeart className='size-5' />
                         } </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
@@ -217,9 +233,6 @@ const ProductDetail = () => {
             <div className="lg:col-span-3 md:col-span-12">
                 <div className="sticky top-20">
                     <ul className="flex-col p-6 bg-white shadow rounded-md gap-4 flex" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                        <li role="presentation">
-                            <Link to='/user-detail' className='text-black w-full  bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-3 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40' >User</Link>
-                        </li>
                         <li role="presentation">
                             <button className={`w-full py-2 text-center border shadow-lg ${detailTabs === 'description' ? ' text-white bg-black border-b-2 border-b-theme1':'text-white bg-gray-500'}`} onClick={()=>{setDetailTabs('description')}} >Description</button>
                         </li>
