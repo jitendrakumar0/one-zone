@@ -23,14 +23,14 @@ const About = () => {
                                             <p className="text-slate-400 max-w-xl">Donec non interdum nisl. Sed ut est ac lacus sodales convallis. Nam non velit justo. Mauris vel ultrices tortor. Proin bibendum magna porttitor porttitor suscipit. Praesent sit amet consequat eros. Quisque ullamcorper ornare vulputate. Nam sodales sem id diam sollicitudin, id lobortis tellus tincidunt.</p>
                                             <div className="flex items-center mt-6">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-phone w-6 h-6 me-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                                                <div className>
+                                                <div>
                                                     <h5 className="title font-bold mb-0">Phone</h5>
                                                     <Link className="tracking-wide text-black">+152 534-468-854</Link>
                                                 </div>
                                             </div>
                                             <div className="flex items-center mt-6">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-map-pin w-6 h-6 me-4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx={12} cy={10} r={3} /></svg>
-                                                <div className>
+                                                <div>
                                                     <h5 className="title font-bold mb-0">Location</h5>
                                                     <Link data-type="iframe" className="tracking-wide text-center text-black lightbox">View on Google map</Link>
                                                 </div>
@@ -105,7 +105,7 @@ const About = () => {
                                     <div className="lg:col-span-3 md:col-span-6">
                                         <div className="group text-center">
                                             <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/04.jpg" className alt="" />
+                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/04.jpg" alt="" />
                                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
                                                 <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
                                                     <li className="inline"><Link className="size-8 inline-flex items-center justify-center align-middle rounded-full bg-black text-white"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook h-4 w-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></Link></li>
@@ -122,7 +122,7 @@ const About = () => {
                                     <div className="lg:col-span-3 md:col-span-6">
                                         <div className="group text-center">
                                             <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/16.jpg" className alt="" />
+                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/16.jpg" alt="" />
                                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
                                                 <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
                                                     <li className="inline"><Link className="size-8 inline-flex items-center justify-center align-middle rounded-full bg-black text-white"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook h-4 w-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></Link></li>
@@ -139,7 +139,7 @@ const About = () => {
                                     <div className="lg:col-span-3 md:col-span-6">
                                         <div className="group text-center">
                                             <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/06.jpg" className alt="" />
+                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/06.jpg" alt="" />
                                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
                                                 <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
                                                     <li className="inline"><Link className="size-8 inline-flex items-center justify-center align-middle rounded-full bg-black text-white"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook h-4 w-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></Link></li>
@@ -156,7 +156,7 @@ const About = () => {
                                     <div className="lg:col-span-3 md:col-span-6">
                                         <div className="group text-center">
                                             <div className="relative inline-block mx-auto h-52 w-52 rounded-full overflow-hidden">
-                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/07.jpg" className alt="" />
+                                                <img src="https://shreethemes.in/cartzio/layouts/assets/images/client/07.jpg" alt="" />
                                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black h-52 w-52 rounded-full opacity-0 group-hover:opacity-100 duration-500" />
                                                 <ul className="list-none absolute start-0 end-0 -bottom-20 group-hover:bottom-5 duration-500">
                                                     <li className="inline"><Link className="size-8 inline-flex items-center justify-center align-middle rounded-full bg-black text-white"><svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook h-4 w-4"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg></Link></li>

@@ -32,7 +32,6 @@ const Contact = () => {
                                         </span>
                                         <span className="text-sm text-body">
                                             <Link
-                                                className
                                                 target="_blank"
                                                 title="NY State Thruway, New York, USA"
                                             >
