@@ -9,11 +9,10 @@ import { RiChat1Line } from 'react-icons/ri';
 const SellingProducts = () => {
     return (
         <>
-        <div className="max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10 bg-[#F5F5F7] relative">
-            <div className="flex justify-between items-center w-full mb-5">
-                <div className="md:text-black md:text-3xl font-bold text-2xl flex items-center">Best
-                    Selling   
-                    <Link to='/windows-products' className="text-sm font-bold bg-slate-200  px-3 py-2 rounded-lg ms-4 flex items-center">
+        <div className="max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10 bg-gray-100 relative">
+            <div className="flex justify-between items-center w-full mb-2 md:mb-5">
+                <div className="md:text-black md:text-3xl font-bold text-2xl flex items-center max-sm:w-full max-sm:justify-between">Best Selling   
+                    <Link to='/windows-products' className="text-sm font-bold bg-slate-200  px-3 py-1 rounded-lg ms-4 flex items-center">
                         View All
                         <span className="size-4 inline-block justify-center">
                             <svg stroke="white" fill="currentColor"
@@ -26,7 +25,7 @@ const SellingProducts = () => {
                         </span>
                     </Link>
                     </div>
-                <div className="text-md text-nowrap cursor-pointer flex items-center text-[black]">
+                <div className="inline-flex gap-2 items-center">
                     {/* <Link to='/windows-products' className="text">
                         View All
                         <span className="size-5 inline-block justify-center pt-1 hover:text-[#FCEB19]">
@@ -39,8 +38,8 @@ const SellingProducts = () => {
                             </svg>
                         </span>
                     </Link> */}
-                        <div className="prev md:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[62px] border-black"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
-                        <div className="next md:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg w-9 h-9 absolute z-10 end-[20px] border-black">
+                        <div className="prev sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
+                        <div className="next sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40">
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
                         </div>
                 </div>

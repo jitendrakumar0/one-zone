@@ -37,16 +37,6 @@ const Chat = () => {
         };
     }, [click]);
 
-    const [activeTab, setActiveTab] = useState('tab1');
-    const handleTabClick = (tab) => {
-    setActiveTab(tab);
-    };
-        const allChat = [
-        { name: 'Delete Chat' },
-        { name: 'Delete Multiple Chats' },
-        ];
-        
-    const [deleteChat, setdeleteChat] = useState(allChat[0])
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenFlag, setIsOpenFlag] = useState(false)
     const [isOpenSaftey, setIsOpenSaftey] = useState(false)
@@ -109,7 +99,7 @@ const Chat = () => {
                                                 </ul>
                                             </div>
                                             <div className="relative w-full">
-                                                <input type="search" id="search-dropdown" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-gray-50  border border-gray-300" placeholder="Search" required />
+                                                <input type="search" id="search-dropdown" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300" placeholder="Search" required />
                                                 <button type="submit" className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-theme1 bg-black rounded-e-lg border border-black-700 hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-black-300 dark:bg-black-600 dark:hover:bg-black-700 dark:focus:ring-blue-800">
                                                     <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
@@ -119,45 +109,10 @@ const Chat = () => {
                                             </div>
                                         </div>
                                     </form>
-                                    {/* <div className='text-black text-xl font-bold w-full'>INBOX</div> */}
-                                    <div className='font-bold flex gap-4'>
-                                        {/* <FaSearch /> */}
-                                        {/* <HiDotsVertical /> */}
-                                    </div>
-                                    <div></div>
                                 </div>
-                                {/* <div className='text-xs text-black mb-2 px-5 pt-2'>Quick Filters</div>
-                                <div className="flex items-center px-5 pb-4">
-                                    <button
-                                        className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab1' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
-                                        onClick={() => handleTabClick('tab1')}
-                                    >
-                                    All
-                                    </button>
-                                    <button
-                                        className={`w-24 text-center border mx-2  shadow-lg text-white py-1 ${activeTab === 'tab2' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
-                                        onClick={() => handleTabClick('tab2')}
-                                        >
-                                        Meeting
-                                    </button>
-                                    <button
-                                        className={`w-24 text-center border  shadow-lg text-white mx-2 py-1 ${activeTab === 'tab3' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
-                                        onClick={() => handleTabClick('tab3')}
-                                        >
-                                        Unread
-                                    </button>
-                                    <button
-                                        className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab4' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
-                                        onClick={() => handleTabClick('tab4')}
-                                        >
-                                        Important
-                                    </button>
-                                </div> */}
                             </div>
                             <div className="bodyyy overflow-y-auto flex-grow h-full">
                                 <div className="tab-content">
-                                    {activeTab === 'tab1' && 
-                                        <>
                                             <div onClick={handleClick} className='flex bg-gray-200 px-5 py-6 border border-b-slate-400'>
                                                 <div className='col-auto'>
                                                     <div className="user  rounded-md relative cursor-pointer">
@@ -272,11 +227,6 @@ const Chat = () => {
                                                     <div className='flex items-center text-sm text-gray-500 mt-2 mx-6'><IoCheckmarkDone />Are you there ?</div>
                                                 </div>
                                             </div>
-                                        </>
-                                    }
-                                    {activeTab === 'tab2' && <p>Content for Tab 2 goes here.</p>}
-                                    {activeTab === 'tab3' && <p>Content for Tab 3 goes here.</p>}
-                                    {activeTab === 'tab4' && <p>Content for Tab 4 goes here.</p>}
                                 </div>
                             </div>
                         </div>
@@ -368,7 +318,7 @@ const Chat = () => {
                                                     <div className="tooltip-arrow" data-popper-arrow></div>
                                                 </div>
                                             </div>
-                                            <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" className="rounded-lg" />
+                                            <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" className="rounded-lg" alt="" />
                                         </div>
                                         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
                                     </div>
@@ -399,7 +349,7 @@ const Chat = () => {
                                                     <div className="tooltip-arrow" data-popper-arrow></div>
                                                 </div>
                                             </div>
-                                            <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" className="rounded-lg" />
+                                            <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" className="rounded-lg" alt="" />
                                         </div>
                                         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
                                     </div>

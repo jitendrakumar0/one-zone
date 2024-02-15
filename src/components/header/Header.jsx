@@ -11,7 +11,6 @@ import { FiEdit2, FiHeart } from "react-icons/fi";
 import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../asstes/img/logo.svg'
-import { AllSideMenu } from '../../page/userProfile/UserProfile';
 import NotificationPopup from '../notificationPopup/NotificationPopup';
 
 const allcountries = [
@@ -573,7 +572,7 @@ const Header = () => {
               </Dialog.Title>
               <div className="flex p-5 flex-col overflow-y-auto">
                   <HeaderMenu/>
-                  <AllSideMenu />
+                  {/* <AllSideMenu /> */}
               </div>
           </Dialog.Panel>
       </Dialog>

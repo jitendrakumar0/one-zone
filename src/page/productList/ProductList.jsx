@@ -193,7 +193,7 @@ const ProductList = () => {
                     </Transition.Root>
 
                     <main className="max-w-screen-xl justify-between mx-auto p-4">
-                    <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
+                    <div className="flex items-baseline justify-between md:border-b border-gray-200 md:pb-6 md:pt-6">
                         <h1 className="text-2xl font-bold tracking-tight text-gray-900">All Products</h1>
 
                         <div className="flex items-center">
@@ -311,8 +311,8 @@ const ProductList = () => {
                             ))}
 
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
-                                <button className="border-2 grow border-b-black  font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
-                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                                <button className="border-2 grow border-b-black  font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
+                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
                         </form>
 
@@ -338,13 +338,13 @@ const ProductList = () => {
                                                 <li>1 Year Onsite Warranty</li>
                                             </ul>
                                         </div>
-                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
-                                            <div className="w-full grow">
+                                        <div className="lg:w-40 gap-3 w-full shrink-0 flex lg:flex-col">
+                                            <div className="grow">
                                                 <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                             </div>
-                                            <div className="w-full">
-                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                                            <div className="shrink-0">
+                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -368,13 +368,13 @@ const ProductList = () => {
                                                 <li>1 Year Onsite Warranty</li>
                                             </ul>
                                         </div>
-                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
-                                            <div className="w-full grow">
+                                        <div className="lg:w-40 gap-3 w-full shrink-0 flex lg:flex-col">
+                                            <div className="grow">
                                                 <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹54,490</div>
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                             </div>
-                                            <div className="w-full">
-                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                                            <div className="shrink-0">
+                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -395,13 +395,13 @@ const ProductList = () => {
                                                 <li>4 Cells</li>
                                             </ul>
                                         </div>
-                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col">
-                                            <div className="w-full grow">
+                                        <div className="lg:w-40 gap-3 w-full shrink-0 flex lg:flex-col">
+                                            <div className="grow">
                                                 <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹2,349</div>
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                             </div>
-                                            <div className="w-full">
-                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                                            <div className="shrink-0">
+                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
                                             </div>
                                         </div>
                                     </div>
