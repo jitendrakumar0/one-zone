@@ -293,7 +293,7 @@ const ProductList = () => {
                                             defaultValue={option.value}
                                             type="checkbox"
                                             defaultChecked={option.checked}
-                                            className="h-4 w-4 accent-[#FCEB19] rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                            className="h-4 w-4 accent-theme1 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                             />
                                             <label
                                             htmlFor={`filter-${section.id}-${optionIdx}`}
