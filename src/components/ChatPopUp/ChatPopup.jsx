@@ -32,8 +32,8 @@ const ChatPopup = ({dropDownOptions}) => {
                             <div className="divide-y divide-gray-100">
                             {
                                 dropDownOptions?.map((item)=>(
-                                    <Link
-                                        className="flex px-4 py-3 hover:bg-gray-100 rounded-md text-sm text-gray-700"
+                                    <div onClick={item?.fun}
+                                        className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md text-sm text-gray-700"
                                     >
                                         {item.name}
                                         {/* <div className="flex-shrink-0">
@@ -67,7 +67,7 @@ const ChatPopup = ({dropDownOptions}) => {
                                                 a few moments ago
                                             </div>
                                         </div> */}
-                                    </Link>
+                                    </div>
                                 ))
                             }
                                 {/* <Link

@@ -13,12 +13,11 @@ import { Link } from 'react-router-dom';
 import { Dialog } from '@headlessui/react'
 import { IoClose } from "react-icons/io5";
 import { IoMdArrowBack } from "react-icons/io";
+import { MdWarning } from "react-icons/md";
+import { FaLaptop } from "react-icons/fa";
+import { GiTakeMyMoney } from "react-icons/gi";
+import SafetyModal from './Component/SafetyModal';
 
-const dropDownOptions = [
-    {id:1, name: 'Saftey Tips'},
-    {id:1, name: 'Delete Chat'},
-    {id:1, name: 'Block User'},
-]
 
 const deleteChatoption =[
     {id:1, name: 'Delete Chat'},
@@ -29,7 +28,7 @@ const Chatoption =[
     // {id:1, name: 'Reply'},
     // {id:1, name: 'Forward'},
     {id:1, name: 'Copy'},
-    {id:1, name: 'Report'},
+    // {id:1, name: 'Report'},
     {id:1, name: 'Delete'},
 ]
 
@@ -59,9 +58,18 @@ const Chat = () => {
     const [deleteChat, setdeleteChat] = useState(allChat[0])
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenFlag, setIsOpenFlag] = useState(false)
+    const [isOpenSaftey, setIsOpenSaftey] = useState(false)
 
+    const openSafteyModal = ()=>{
+        setIsOpenSaftey(true)
+    }
+
+    const dropDownOptions = [
+        {id:1, name: 'Saftey Tips', fun:openSafteyModal},
+        // {id:1, name: 'Delete Chat'},
+        // {id:1, name: 'Block User'},
+    ]
     
-
         const handleClick = () => {
         setClick(!click);
     };
@@ -90,14 +98,47 @@ const Chat = () => {
                         <div className='w-full flex flex-col h-full overflow-hidden'>
                             <div className='header'>
                                 <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tl-md px-5 border border-b-slate-400'>
-                                    <div className='text-black text-xl font-bold w-full'>INBOX</div>
+                                    <form class="w-full mx-auto">
+                                        <div class="flex">
+                                            {/* <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                                            <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                    </svg></button> */}
+                                            <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                                                <li>
+                                                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
+                                                </li>
+                                                </ul>
+                                            </div>
+                                            <div class="relative w-full">
+                                                <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-gray-50  border border-gray-300" placeholder="Search" required />
+                                                <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-theme1 bg-black rounded-e-lg border border-black-700 hover:bg-black-800 focus:ring-4 focus:outline-none focus:ring-black-300 dark:bg-black-600 dark:hover:bg-black-700 dark:focus:ring-blue-800">
+                                                    <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                                    </svg>
+                                                    <span class="sr-only">Search</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    {/* <div className='text-black text-xl font-bold w-full'>INBOX</div> */}
                                     <div className='font-bold flex gap-4'>
-                                        <FaSearch />
-                                        <HiDotsVertical />
+                                        {/* <FaSearch /> */}
+                                        {/* <HiDotsVertical /> */}
                                     </div>
                                     <div></div>
                                 </div>
-                                <div className='text-xs text-black mb-2 px-5 pt-2'>Quick Filters</div>
+                                {/* <div className='text-xs text-black mb-2 px-5 pt-2'>Quick Filters</div>
                                 <div className="flex items-center px-5 pb-4">
                                     <button
                                         className={`w-24 text-center border  shadow-lg text-white py-1 ${activeTab === 'tab1' ? 'bg-black text-white border-0 border-b-2 border-theme1' : 'bg-[#9f9fa1]'}`}
@@ -123,7 +164,7 @@ const Chat = () => {
                                         >
                                         Important
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="bodyyy overflow-y-auto flex-grow h-full">
                                 <div className="tab-content">
@@ -258,7 +299,7 @@ const Chat = () => {
                         <div className='header'>
                             <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tr-md px-2 md:px-5 border border-b-slate-400'>
                                 <div className='col-auto flex items-center'>
-                                <IoMdArrowBack onClick={()=>setClick(false)} className='me-2 size-6'/>
+                                <IoMdArrowBack onClick={()=>setClick(false)} className='me-2 size-6 md:hidden block'/>
                                     <div className="user  rounded-md relative cursor-pointer">
                                         <img className='w-10 h-10 rounded-md' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FBe113B4a9BYPo2IMGrtgym2plpPyfOfiA&usqp=CAU" alt="" />
                                         <img className='absolute size-6 rounded-full top-5 -right-2 border border-white' src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="" />
@@ -269,7 +310,7 @@ const Chat = () => {
                                         <div className='text-black text-md font-bold'>OLX India</div>
                                         <div className='flex gap-4 items-center'>
                                             <FaRegFlag onClick={openFlagModal}/>
-                                            <TbPhoneCall onClick={openModal} />
+                                            {/* <TbPhoneCall onClick={openModal} /> */}
                                             <ChatPopup dropDownOptions={dropDownOptions}/>
                                             {/* <IoClose onClick={()=>setClick(false)} className='md:hidden block size-6'/> */}
                                             {/* <HiDotsVertical /> */}
@@ -277,15 +318,15 @@ const Chat = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='w-full flex gap-6 px-5 py-2 bg-white'>
+                            <Link to='/product-detail' className='w-full flex gap-6 px-5 py-2 bg-white'>
                                 <div className='text-sm tex-black'>Lenovo 18 128</div>
                                 <div className='text-sm font-bold tex-black'>₹120000</div>
-                            </div>
+                            </Link>
                         </div>
                         <div className='bodyy h-full flex-grow overflow-y-auto flex flex-col-reverse'>
                             <div className='w-full bg-gray-200 py-5   '>
                                 <div className='text-center text-gray-600 font-medium text-sm uppercase mt-2'>Yesterday</div>
-                                
+                                {/* text chat */}
                                 <div class="flex items-start gap-2.5 mx-5 mt-5 group/bubble [&.sent]:[direction:rtl]">
                                     <img class="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
                                     <div class="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
@@ -315,42 +356,76 @@ const Chat = () => {
                                         <ChatPopup dropDownOptions={Chatoption}/>
                                     </div>
                                 </div>
-                                <div className=''>
-                                    <div class="flex items-start gap-2.5 mx-5 mt-5">
-                                    <img class="w-8 h-8 rounded-full" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl">
-                                            <div class="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-                                                <span class="text-sm font-semibold text-gray-900">Bonnie Green</span>
-                                                <span class="text-sm font-normal text-gray-500">11:46</span>
-                                            </div>
-                                            <p class="text-sm font-normal text-gray-900">This is the new office </p>
-                                            <div class="group relative my-2.5">
-                                                <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                                    <button data-tooltip-target="download" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none focus:ring-gray-50">
-                                                        <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
-                                                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
-                                                        </svg>
-                                                    </button>
-                                                    <div id="download" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
-                                                        Download image
-                                                        <div class="tooltip-arrow" data-popper-arrow></div>
-                                                    </div>
-                                                </div>
-                                                <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="" class="rounded-lg" />
-                                            </div>
-                                            <span class="text-sm font-normal text-gray-500">Delivered</span>
+                                {/* text chat */}
+                                
+                                {/* image chat */}
+                                <div class="flex items-start gap-2.5 mx-5 mt-5  group/bubble sent [&.sent]:[direction:rtl]">
+                                <img class="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700 group-[.sent]/bubble:[direction:ltr]">
+                                        <div class="flex items-center space-x-2 rtl:space-x-reverse mb-2">
+                                            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
+                                            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
                                         </div>
-                                    </div>
-                                    <div className='inline-flex self-center items-center'>
-                                        <ChatPopup dropDownOptions={Chatoption}/>
-                                    </div>
+                                        <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office </p>
+                                        <div class="group relative my-2.5">
+                                            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                                <button data-tooltip-target="download" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
+                                                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
+                                                    </svg>
+                                                </button>
+                                                <div id="download" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    Download image
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>
+                                            <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" class="rounded-lg" />
+                                        </div>
+                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
                                     </div>
                                 </div>
+                                <div className='inline-flex self-center items-center  group-[.sent]/bubble:[direction:ltr]'>
+                                    <ChatPopup dropDownOptions={Chatoption}/>
+                                </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-2.5 mx-5 mt-5  group/bubble sent [&.sent]:[direction:rtl]">
+                                <img class="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
+                                <div class="flex flex-col gap-1">
+                                    <div class="flex flex-col w-full max-w-[326px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700 group-[.sent]/bubble:[direction:ltr]">
+                                        <div class="flex items-center space-x-2 rtl:space-x-reverse mb-2">
+                                            <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
+                                            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                        </div>
+                                        <p class="text-sm font-normal text-gray-900 dark:text-white">This is the new office </p>
+                                        <div class="group relative my-2.5">
+                                            <div class="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                                <button data-tooltip-target="download" class="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
+                                                    <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
+                                                    </svg>
+                                                </button>
+                                                <div id="download" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                    Download image
+                                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                                </div>
+                                            </div>
+                                            <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" class="rounded-lg" />
+                                        </div>
+                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+                                    </div>
+                                </div>
+                                <div className='inline-flex self-center items-center  group-[.sent]/bubble:[direction:ltr]'>
+                                    <ChatPopup dropDownOptions={Chatoption}/>
+                                </div>
+                                </div>
+
+                                {/* image chat */}
                                 <div>
                                     <div class="flex items-start gap-2.5 mx-5 mt-5">
                                     <img class="w-8 h-8 rounded-full" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
-                                    <div class="flex flex-col gap-1">
+                                    <div class="flex flex-col gap-1 group-[.sent]/bubble:[direction:ltr]">
                                         <div class="flex items-center space-x-2 rtl:space-x-reverse">
                                             <span class="text-sm font-semibold text-gray-900">Bonnie Green</span>
                                             <span class="text-sm font-normal text-gray-500">11:46</span>
@@ -812,7 +887,7 @@ const Chat = () => {
             </div>
         </div> */}
 
-        
+        {/* flag modal */}
         <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-[1000]" onClose={closeModal}>
             <Transition.Child
@@ -915,6 +990,7 @@ const Chat = () => {
             </Dialog>
         </Transition>
 
+        {/* call modal */}
         <Transition appear show={isOpenFlag} as={Fragment}>
         <Dialog as="div" className="relative z-[1000]" onClose={closeFlagModal}>
             <Transition.Child
@@ -991,6 +1067,11 @@ const Chat = () => {
                                         <label for="list-radio-passport" class="w-full py-3 ms-2 text-sm font-medium text-gray-900">Other</label>
                                     </div>
                                 </li>
+                                <li>
+                                <div class="pt-2">
+                                    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Login -> Enter user/Social -> Consents screen"></textarea>
+                                </div>
+                                </li>
                             </ul>
                         </div>
                         <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
@@ -1004,6 +1085,7 @@ const Chat = () => {
             </Dialog>
         </Transition>
 
+        <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
         </>
     );
 }
