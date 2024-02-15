@@ -23,6 +23,7 @@ import Contact from "./page/contact/Contact";
 import TermsOfUse from "./page/termsOfUse/TermsOfUse";
 import PrivacyPolicy from "./page/privacyPolicy/PrivacyPolicy";
 import Faq from "./page/faq/Faq";
+import UserDetail from "./page/UserDetail/UserDetail";
 
 function App() {
 
@@ -59,6 +60,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy/>}></Route>
           <Route path="/faq" element={<Faq/>}></Route>
           <Route path="/chat-history" element={<Chat/>}></Route>
+          <Route path="/user-detail" element={<UserDetail/>}></Route>
         </Routes>
     </>
   );
