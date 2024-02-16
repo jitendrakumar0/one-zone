@@ -24,6 +24,7 @@ import TermsOfUse from "./page/termsOfUse/TermsOfUse";
 import PrivacyPolicy from "./page/privacyPolicy/PrivacyPolicy";
 import Faq from "./page/faq/Faq";
 import UserDetail from "./page/UserDetail/UserDetail";
+import Home from "./sellerPage/home/Home";
 
 function App() {
 
@@ -61,6 +62,9 @@ function App() {
           <Route path="/faq" element={<Faq/>}></Route>
           <Route path="/chat" element={<Chat/>}></Route>
           <Route path="/seller-profile" element={<UserDetail/>}></Route>
+          <Route path="/seller" element={<Home/>}>
+            {/* <Route path="/" element={<Home/>}></Route> */}
+          </Route>
         </Routes>
     </>
   );
