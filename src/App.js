@@ -27,6 +27,11 @@ import UserDetail from "./page/UserDetail/UserDetail";
 import SelectCategory from "./page/SelectCategory/SelectCategory";
 import SelectedCategory from "./page/SelectedCategory/SelectedCategory";
 import Home from "./sellerPage/home/Home";
+import SellerProductDetail from "./sellerPage/SellerProductDetail/SellerProductDetail";
+import EditProductDetail from "./sellerPage/EditProductDetail/EditProductDetail";
+import SellerWindowProduct from "./sellerPage/SellerWindowProduct/SellerWindowProduct";
+import SelectPackages from "./sellerPage/SelectPackages/SelectPackages";
+import { PackageDiscount } from "./sellerPage/PackageDiscount/PackageDiscount";
 
 function App() {
 
@@ -66,6 +71,11 @@ function App() {
           <Route path="/seller-profile" element={<UserDetail/>}></Route>
           <Route path="/select-category" element={<SelectCategory/>}></Route>
           <Route path="/selected-category" element={<SelectedCategory/>}></Route>
+          <Route path="/seller-productdetail" element={<SellerProductDetail/>}></Route>
+          <Route path="/edit-productdetail" element={<EditProductDetail/>}></Route>
+          <Route path="/seller-windowProductDetail" element={<SellerWindowProduct/>}></Route>
+          <Route path="/select-packages" element={<SelectPackages/>}></Route>
+          <Route path="/package-discount" element={<PackageDiscount/>}></Route>
           <Route path="/seller" element={<Home/>}>
             {/* <Route path="/select-category" element={<SelectCategory/>}></Route>
             <Route path="/selected-category" element={<SelectedCategory/>}></Route> */}

@@ -187,19 +187,19 @@ const WindowsProducts = () => {
                         <div className="max-md:w-full max-md:pt-5">
                             <div className="flex items-center gap-4">
                                 <button
-                                    className={`text-center border shadow-lg text-white py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab1')}
                                 >
                                 Laptop
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg text-white py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab2')}
                                     >
                                     PC
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg text-white py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab3')}
                                     >
                                     Sper Parts

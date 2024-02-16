@@ -5,13 +5,14 @@ import { Listbox, Transition, Menu, Dialog } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import { FaGlobeAmericas } from "react-icons/fa";
 import { LuUnlock } from "react-icons/lu";
-import { MdOutlineTranslate } from "react-icons/md";
+import { MdOutlineBusinessCenter, MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import { FiEdit2, FiHeart } from "react-icons/fi";
 import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../../asstes/img/logo.svg'
 import NotificationPopup from '../../../components/notificationPopup/NotificationPopup';
+import { IoIosAddCircleOutline } from 'react-icons/io';
 
 const allcountries = [
   { name: 'India', sortName: 'IN' },
@@ -51,7 +52,7 @@ const allLanguages = [
 
 
 
-const Header = () => {
+const Header = ({seller}) => {
   
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
@@ -217,7 +218,7 @@ const Header = () => {
         </div>
       </div>
       <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
-        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-start justify-between">
+        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center md:items-start justify-between">
           <Link to="/seller" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
@@ -294,6 +295,28 @@ const Header = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
+                          <Link to="/select-packages"
+                            className={`${
+                              active ? "bg-gray-900 text-theme1" : "text-gray-900"
+                            } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                          >
+                            {active ? (
+                              <MdOutlineBusinessCenter
+                                className="mr-3 ml-1 h-5 w-5"
+                                aria-hidden="true"
+                              />
+                            ) : (
+                              <MdOutlineBusinessCenter
+                                className="mr-3 ml-1 h-5 w-5"
+                                aria-hidden="true"
+                              />
+                            )}
+                              Buy Business Packages
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
                           <Link to="/chat"
                             className={`${
                               active ? "bg-gray-900 text-theme1" : "text-gray-900"
@@ -364,6 +387,7 @@ const Header = () => {
                   </Menu.Items>
                 </Transition>
               </Menu>
+              <Link to='/select-category' className='relative z-10 text-black w-20 bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>{seller ? 'ADD' : ''}<IoIosAddCircleOutline className='size-4'/></Link>
             <button
               onClick={() => setSidebarIsOpen(true)}
               data-collapse-toggle="navbar-sticky"

@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";import { RiChat1Line } from "react-icons
 import { FaRegHeart } from "react-icons/fa";
 import { MdClear } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import { BiMessageSquareDetail } from "react-icons/bi";
+import { TfiReload } from "react-icons/tfi";
 
 
     const filters = [
@@ -61,7 +63,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
         },
     ]
 
-const AllProducts = () => {
+const AllProducts = ({setIsOpenSaftey}) => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [priceRange, setPriceRange] = useState(1000);
     const [activeTab, setActiveTab] = useState('tab1');
@@ -181,19 +183,19 @@ const AllProducts = () => {
                         <div className="max-md:w-full max-md:pt-5">
                             <div className="flex items-center gap-4">
                                 <button
-                                    className={`text-center border shadow-lg text-white py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab1')}
                                 >
                                 Laptop
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg text-white py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab2')}
                                     >
                                     PC
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg text-white py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab3')}
                                     >
                                     Sper Parts
@@ -255,16 +257,16 @@ const AllProducts = () => {
                         </div> */}
                     </div>
 
-                    <section aria-labelledby="products-heading" className="pb-24 pt-6">
+                    <section aria-labelledby="products-heading" className="pb-20 pt-6">
                         <h2 id="products-heading" className="sr-only">
                         Products
                         </h2>
 
-                        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+                        <div className="flex">
                             
                         {/* Filters */}
-                        <form className="hidden lg:block">
-                            <div className="w-full relative mb-4">
+                        <form className="hidden lg:block flex-none w-72 me-8">
+                            <div className="col-auto  relative mb-4">
                                 <label htmlFor="small-range" className="block mb-2 text-sm font-medium text-gray-900">Price Range</label>
                                 <input id="small-range" onChange={(e)=>{setPriceRange(e.target.value)}} type="range" value={priceRange} min="100" max="8000" className="w-full accent-black h-1 mb-6 bg-gray-200 rounded-lg appearance-none cursor-pointer range-sm" />
                                 <span className="text-sm text-gray-500 font-bold absolute start-0 -bottom-2">₹100</span>
@@ -322,21 +324,21 @@ const AllProducts = () => {
 
                         {/* Product grid */}
                         
-                        
-                                <div className="lg:col-span-3">
-                                    <div className="flex flex-wrap lg:gap-y-8 lg:pl-4 lg:pt-4 -m-4">
+                        <div className="grow w-full">
+                                <div className="grid lg:grid-col-2 gap-4">
                                         {activeTab === 'tab1' && 
                                             <>
-                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                                 <FaRegHeart className="size-full" />
-                                                            </button>
-                                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
                                                         </div>
-                                                        <div className="lg:grow max-lg:w-full">
-                                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
@@ -346,164 +348,362 @@ const AllProducts = () => {
                                                                 <li>1 Year Onsite Warranty</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
+                                                        <div className="w-full shrink-0 flex">
                                                             <div className="grow">
-                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                                 <FaRegHeart className="size-full" />
-                                                            </button>
-                                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/e/y/j/-original-imagwzwcxf5ffarf.jpeg?q=70" alt="jk" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
                                                         </div>
-                                                        <div className="lg:grow max-lg:w-full">
-                                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                                <li>Windows 11 Home</li>
-                                                                <li>Intel Core i3</li>
-                                                                <li>RAM 8 GB DDR4</li>
-                                                                <li>27 inch Display</li>
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
                                                                 <li>39.62 cm (15.6 Inch) Display</li>
                                                                 <li>1 Year Onsite Warranty</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
+                                                        <div className="w-full shrink-0 flex">
                                                             <div className="grow">
-                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹54,490</div>
-                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                                 <FaRegHeart className="size-full" />
-                                                            </button>
-                                                            <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/l48s9zk0/computer/6/z/k/hp-laptop-255-g8-notebook-notebook-hp-original-imagf6hthg9zbxug.jpeg?q=70" alt="jk" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70" alt="jk" />
                                                         </div>
-                                                        <div className="lg:grow max-lg:w-full">
-                                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                                <li>Battery Type: Lithium-ion</li>
-                                                                <li>Capacity: 4000 mAh</li>
-                                                                <li>4 Cells</li>
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
+                                                        <div className="w-full shrink-0 flex">
                                                             <div className="grow">
-                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹2,349</div>
-                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/l5fnhjk0/computer/4/d/z/inspiron-7420-thin-and-light-laptop-dell-original-imagg45kbtghzthr.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/81UMeWQ6xWL._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/51NvEfo1l9L._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             </>
                                         }
                                         {activeTab === 'tab2' &&    
                                         <>
-                                            <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                    <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                        <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                                            <FaRegHeart className="size-full" />
-                                                        </button>
-                                                        <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/6/c/z/gaming-pc-with-2-gb-graphics-nvidia-geforce-gt-630-graphics-card-original-imagw7yykauzf2uz.jpeg?q=70" alt="jk" />
-                                                    </div>
-                                                    <div className="lg:grow max-lg:w-full">
-                                                        <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                            <li>Intel Core i3 Processor (11th Gen)</li>
-                                                            <li>8 GB DDR4 RAM</li>
-                                                            <li>64 bit Windows 11 Operating System</li>
-                                                            <li>512 GB SSD</li>
-                                                            <li>39.62 cm (15.6 Inch) Display</li>
-                                                            <li>1 Year Onsite Warranty</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
-                                                        <div className="grow">
-                                                            <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                            <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/6/c/z/gaming-pc-with-2-gb-graphics-nvidia-geforce-gt-630-graphics-card-original-imagw7yykauzf2uz.jpeg?q=70" alt="jk" />
                                                         </div>
-                                                        <div className="shrink-0">
-                                                            <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                    <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                        <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                                            <FaRegHeart className="size-full" />
-                                                        </button>
-                                                        <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/l2qhjm80/allinone-desktop/i/j/f/enti5-650-8gb-1tb-120-22led-entwino-original-imageyjg2gezegph.jpeg?q=70" alt="jk" />
-                                                    </div>
-                                                    <div className="lg:grow max-lg:w-full">
-                                                        <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                            <li>Intel Core i3 Processor (11th Gen)</li>
-                                                            <li>8 GB DDR4 RAM</li>
-                                                            <li>64 bit Windows 11 Operating System</li>
-                                                            <li>512 GB SSD</li>
-                                                            <li>39.62 cm (15.6 Inch) Display</li>
-                                                            <li>1 Year Onsite Warranty</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
-                                                        <div className="grow">
-                                                            <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                            <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
-                                                        </div>
-                                                        <div className="shrink-0">
-                                                            <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                    <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                        <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                                            <FaRegHeart className="size-full" />
-                                                        </button>
-                                                        <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/g/b/2/i5-8-gb-ddr3-500-gb-120-gb-ssd-windows-10-home-512-mb-18-5-inch-original-imagtmerxbsja3c3.jpeg?q=70" alt="jk" />
-                                                    </div>
-                                                    <div className="lg:grow max-lg:w-full">
-                                                        <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                            <li>Intel Core i3 Processor (11th Gen)</li>
-                                                            <li>8 GB DDR4 RAM</li>
-                                                            <li>64 bit Windows 11 Operating System</li>
-                                                            <li>512 GB SSD</li>
-                                                            <li>39.62 cm (15.6 Inch) Display</li>
-                                                            <li>1 Year Onsite Warranty</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
-                                                        <div className="grow">
-                                                            <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                            <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/612/612/l2qhjm80/allinone-desktop/i/j/f/enti5-650-8gb-1tb-120-22led-entwino-original-imageyjg2gezegph.jpeg?q=70" alt="jk" />
                                                         </div>
-                                                        <div className="shrink-0">
-                                                            <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/g/b/2/i5-8-gb-ddr3-500-gb-120-gb-ssd-windows-10-home-512-mb-18-5-inch-original-imagtmerxbsja3c3.jpeg?q=70" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZQK0PQFURd8m9bm7lTEJqs8Uq9-pzWysbfA&usqp=CAU" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/71mh4lZ+bFL._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/71EKLf9dZkL._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -512,16 +712,17 @@ const AllProducts = () => {
                                         }
                                         {activeTab === 'tab3' && 
                                             <>
-                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                                 <FaRegHeart className="size-full" />
-                                                            </button>
-                                                            <img className="w-full aspect-square" src="https://rukminim2.flixcart.com/image/612/612/xif0q/laptop-battery/laptop-battery/1/p/m/laptop-battery-compatible-for-bt04xl-bt04-battery-for-hp-original-imagzdpczw678kf6.jpeg?q=70" alt="jk" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/613-BDN4k1L._AC_UY218_.jpg" alt="jk" />
                                                         </div>
-                                                        <div className="lg:grow max-lg:w-full">
-                                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
@@ -531,27 +732,28 @@ const AllProducts = () => {
                                                                 <li>1 Year Onsite Warranty</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
+                                                        <div className="w-full shrink-0 flex">
                                                             <div className="grow">
-                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                                 <FaRegHeart className="size-full" />
-                                                            </button>
-                                                            <img className="w-full aspect-square" src="https://rukminim2.flixcart.com/image/612/612/l2ghgnk0/worldwide-adaptor/c/7/f/smps-adapter-power-supply-for-ro8-rosmps-15-allprowater-tech-original-imagdsjvzczexyym.jpeg?q=70" alt="jk" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/81uD83dG1nL._AC_UY218_.jpg" alt="jk" />
                                                         </div>
-                                                        <div className="lg:grow max-lg:w-full">
-                                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
@@ -561,27 +763,28 @@ const AllProducts = () => {
                                                                 <li>1 Year Onsite Warranty</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
+                                                        <div className="w-full shrink-0 flex">
                                                             <div className="grow">
-                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
-                                                    <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
-                                                        <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                                            <button className="size-8 rounded-full bg-white/20 shadow-md md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                                 <FaRegHeart className="size-full" />
-                                                            </button>
-                                                            <img className="w-full aspect-square" src="https://rukminim2.flixcart.com/image/612/612/xif0q/laptop-adapter/6/e/d/ro-power-adapter-24v-2-5a-universal-type-smps-power-supply-ro-original-imagxtkt7bkug6sq.jpeg?q=70" alt="jk" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/610kFYGWTfL._AC_UY218_.jpg" alt="jk" />
                                                         </div>
-                                                        <div className="lg:grow max-lg:w-full">
-                                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
@@ -591,22 +794,120 @@ const AllProducts = () => {
                                                                 <li>1 Year Onsite Warranty</li>
                                                             </ul>
                                                         </div>
-                                                        <div className="lg:w-40 w-full shrink-0 flex lg:flex-col gap-3">
+                                                        <div className="w-full shrink-0 flex">
                                                             <div className="grow">
-                                                                <div className="w-full lg:text-2xl md:text-lg font-bold text-black">₹31,990</div>
-                                                                <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/61Aoe0rtFUL._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/613-jTtBmhL._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                                    <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                                                <FaRegHeart className="size-full" />
+                                                            </button> */}
+                                                            <img className="w-full " src="https://m.media-amazon.com/images/I/71wG-FknGuL._AC_UY218_.jpg" alt="jk" />
+                                                        </div>
+                                                        <div className="w-full">
+                                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                                <li>Intel Core i3 Processor (11th Gen)</li>
+                                                                <li>8 GB DDR4 RAM</li>
+                                                                <li>64 bit Windows 11 Operating System</li>
+                                                                <li>512 GB SSD</li>
+                                                                <li>39.62 cm (15.6 Inch) Display</li>
+                                                                <li>1 Year Onsite Warranty</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className="w-full shrink-0 flex">
+                                                            <div className="grow">
+                                                                <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
+                                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
+                                                            </div>
+                                                            <div className="shrink-0">
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                            </div>
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             </>
                                         
                                         }
-                                    </div>
                                 </div>
+                                <div className="w-full text-center pt-8">
+                                    <button className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"><TfiReload className='size-5' /> Load More</button>
+                                </div>
+                        </div>
                         {/* <div className="lg:col-span-3">
                             <div className="flex flex-wrap lg:gap-y-8 lg:pl-4 lg:pt-4 -m-4">
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">

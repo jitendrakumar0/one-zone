@@ -11,14 +11,14 @@ const Home = () => {
     const [auth, setAuth] = useState(false);
   return (
     <>
-    <Header auth={auth} setAuth={setAuth} />
+    <Header seller={true} auth={auth} setAuth={setAuth} />
     
         {/* <HeroBanner/> */}
         <ConnectionList/>
         <AllProducts/>
         <Featured/>
         <Clouds/>
-        <SellingProducts/>
+        {/* <SellingProducts/> */}
         <Footer/>
     </>
   )

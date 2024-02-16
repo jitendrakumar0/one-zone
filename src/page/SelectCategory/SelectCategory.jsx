@@ -9,7 +9,7 @@ const SelectCategory = () => {
     return (
         <>
             <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
-                <Link to=''>
+                <Link to='/seller'>
                     <IoArrowUndo className='size-6'/>
                 </Link>
             </div>

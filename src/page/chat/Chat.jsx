@@ -302,10 +302,10 @@ const Chat = () => {
                                 <div className="flex flex-col gap-1">
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-                                            <span className="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                                            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                            <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
+                                            <span className="text-sm font-normal text-gray-500">11:46</span>
                                         </div>
-                                        <p className="text-sm font-normal text-gray-900 dark:text-white">This is the new office </p>
+                                        <p className="text-sm font-normal text-gray-900 ">This is the new office </p>
                                         <div className="group relative my-2.5">
                                             <div className="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                                                 <button data-tooltip-target="download" className="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
@@ -333,10 +333,10 @@ const Chat = () => {
                                 <div className="flex flex-col gap-1">
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
-                                            <span className="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-                                            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+                                            <span className="text-sm font-semibold text-gray-900 ">Bonnie Green</span>
+                                            <span className="text-sm font-normal text-gray-500">11:46</span>
                                         </div>
-                                        <p className="text-sm font-normal text-gray-900 dark:text-white">This is the new office </p>
+                                        <p className="text-sm font-normal text-gray-900">This is the new office </p>
                                         <div className="group relative my-2.5">
                                             <div className="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                                                 <button data-tooltip-target="download" className="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">

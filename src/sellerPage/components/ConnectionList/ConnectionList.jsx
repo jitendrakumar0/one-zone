@@ -75,7 +75,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windowsProducts" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                            <Link to="#" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
                                 <BsApple className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
                                     {/* <img src={apple} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
@@ -84,7 +84,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windowsProducts" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                            <Link to="#" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
                                 <BsBrowserChrome className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale' />
                                     {/* <img src={cromebook} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
@@ -93,7 +93,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windowsProducts" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                            <Link to="#" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
                                 <FaMobile className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
                                     {/* <img src={tab} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
@@ -102,7 +102,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windowsProducts" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                            <Link to="#" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
                                 <BsFillPrinterFill className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale' />
                                     {/* <img src={printers} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
@@ -111,7 +111,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windowsProducts" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                            <Link to="#" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
                                 <FaServer className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
                                     {/* <img src={server} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
@@ -120,7 +120,7 @@ export const ConnectionList = () => {
                             </Link>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <Link to="/windowsProducts" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
+                            <Link to="#" className="collectioncard duration-300 md:hover:scale-95 [&.active]:!border-black border-2 border-transparent md:hover:border-theme1 group cursor-pointer block rounded-xl shadow-sm py-6 bg-white">
                                 <div className="bg-white mx-auto md:w-24 sm:w-20 w-16 overflow-hidden md:px-7 px-5 flex items-center justify-center relative *:relative *:z-0 before:absolute before:z-10 before:inset-0 before:bg-theme1 before:mix-blend-overlay">
                                 <FaServer className='size-full object-contain duration-300 md:group-hover:scale-105 grayscale'/>
                                     {/* <img src={server} alt="frame" className="size-full object-contain duration-300 md:group-hover:scale-105 grayscale"/> */}
