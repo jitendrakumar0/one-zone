@@ -14,7 +14,13 @@ body{
 .swiperSlider{
     height: unset !important;
 }
-
+.yesCheckbox{
+    &.active{
+        & .usedperiodBox{
+            display: block;
+        }
+    }
+}
 @media( max-width: '767px'){
     body{
         & .chatParent{

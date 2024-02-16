@@ -8,13 +8,13 @@ import { Disclosure } from '@headlessui/react';
 const SelectCategory = () => {
     return (
         <>
-            <div className="header w-full h-20 bg-gray-200 flex items-center px-8">
+            <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
                 <Link to=''>
                     <IoArrowUndo className='size-6'/>
                 </Link>
             </div>
             <div className="max-w-screen-lg mx-auto my-5">
-                <div className="header font-bold text-2xl text-center bg-black text-white rounded-lg py-4">
+                <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     POST YOUR AD
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
@@ -23,13 +23,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Windows</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>
@@ -45,13 +45,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Mac</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>
@@ -67,13 +67,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Chromebook</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>
@@ -87,13 +87,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Mobile</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>
@@ -108,13 +108,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Tablets</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>
@@ -130,13 +130,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Photocopy Machine</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>
@@ -150,13 +150,13 @@ const SelectCategory = () => {
                         <Disclosure.Button className="w-full">
                             <div className='flex items-center w-full bg-white shadow p-4 mt-4 rounded-lg border-b-2 border-black'>
                                 <div className="flex-none">
-                                    <SiWindows10 className='size-8'/>
+                                    <SiWindows10 className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
                                     <div className='text-base font-bold ms-5'>Servers</div>
                                 </div>
                                 <div className="flex-none">
-                                    <BsArrowDownSquareFill className='size-8'/>
+                                    <BsArrowDownSquareFill className='sm:size-8 size-6'/>
                                 </div>
                             </div>
                         </Disclosure.Button>

@@ -57,19 +57,30 @@ const allcountries = [
     { name: 'Guinea', sortName: 'GN' },
     { name: 'Guinea-Bissau', sortName: 'GW' }
 ];
+const used = [
+    { id: 1, name: '0-6 Months'},
+    { id: 2, name: '0-8 Months'},
+    { id: 3, name: '0-10 Months' },
+    { id: 4, name: '0-11 Months'},
+    { id: 5, name: '0-1 Year'},
+]
 const SelectedCategory = () => {
 const [brand, setbrand] = useState(allBrands[0])
 const [country, setCountry] = useState(allcountries[0])
-
+const [usedProduct, setUsedProduct] = useState(used[0])
+const [yesSelected, setYesSelected] = useState(false)
+const handleClick = () => {
+    setYesSelected(!yesSelected);
+};
     return (
         <>
-            <div className="header w-full h-20 bg-gray-200 flex items-center px-8">
-                <Link to=''>
+            <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
+                <Link to='/select-category'>
                     <IoArrowUndo className='size-6'/>
                 </Link>
             </div>
             <div className="max-w-screen-lg mx-auto my-5">
-                <div className="header font-bold text-2xl text-center bg-black text-white rounded-lg py-4">
+                <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     POST YOUR AD
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
@@ -99,7 +110,7 @@ const [country, setCountry] = useState(allcountries[0])
                     <div className='text-lg font-semibold  rounded-lg py-2 mt-5'>INCLUDE SOME DETAILS</div>
                     <div className='py-2 overflow-hidden'>
                         <div className='text-md font-bold text-black mb-1'>Upload Up to 4*</div>
-                        <div className='grid grid-cols-4 gap-4'>
+                        <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4'>
                             <div className="flex items-center justify-center w-full">
                             <label for="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
@@ -175,6 +186,140 @@ const [country, setCountry] = useState(allcountries[0])
                         </div>
                     </div>
                     <div className='py-2'>
+                        <div className='text-md font-bold text-black mb-1'>Used Product</div>
+                        <div className= {`grid grid-cols-2 yesCheckbox gap-4 ${yesSelected ? 'active' : ''}`}>
+                                <div className= 'flex items-center ps-4 border border-gray-200 rounded has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600 '>
+                                    <input onClick={handleClick} id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                    <label for="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yes</label>
+                                </div>
+                                <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700 has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
+                                    <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                    <label for="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No</label>
+                                </div>
+                                <div className='usedperiodBox hidden'>
+                                    <Listbox value={usedProduct} onChange={setUsedProduct}>
+                                        <div className="relative mt-1">
+                                            <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-5 shadow border-b-2 border-black">
+                                            <span className="block truncate text-black">{usedProduct.name}</span>
+                                            <span className="pointer-events-none absolute inset-y-0 right-[10px] flex items-center">
+                                                <ChevronDownIcon
+                                                className="h-5 w-5 text-gray-600"
+                                                aria-hidden="true"
+                                                />
+                                            </span>
+                                            </Listbox.Button>
+                                            <Transition
+                                            as={Fragment}
+                                            enter="transition duration-100 ease-out"
+                                            enterFrom="transform scale-95 opacity-0"
+                                            enterTo="transform scale-100 opacity-100"
+                                            leave="transition duration-75 ease-out"
+                                            leaveFrom="transform scale-100 opacity-100"
+                                            leaveTo="transform scale-95 opacity-0"
+                                            >
+                                            <Listbox.Options className="absolute z-50 mt-1 max-h-52 w-full right-0 left-0 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 sm:text-sm">
+                                                {used.map((person, personIdx) => (
+                                                <Listbox.Option
+                                                    key={personIdx}
+                                                    className={({ active }) =>
+                                                    `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                                                        active
+                                                        ? "bg-black text-theme1 cursor-pointer"
+                                                        : "text-gray-900"
+                                                    }`
+                                                    }
+                                                    value={person}
+                                                >
+                                                    {({ selected }) => (
+                                                    <>
+                                                        <span
+                                                        className={`block truncate ${
+                                                            selected ? "font-medium" : "font-normal"
+                                                        }`}
+                                                        >
+                                                        {person.name}
+                                                        </span>
+                                                        {selected ? (
+                                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                                            <CheckIcon
+                                                            className="h-5 w-5"
+                                                            aria-hidden="true"
+                                                            />
+                                                        </span>
+                                                        ) : null}
+                                                    </>
+                                                    )}
+                                                </Listbox.Option>
+                                                ))}
+                                            </Listbox.Options>
+                                            </Transition>
+                                        </div>
+                                    </Listbox>
+                                </div>
+                            {/* <div>
+                                <div className='text-md font-bold text-black mb-1'>Used Product</div>
+                                <Listbox value={usedProduct} onChange={setUsedProduct}>
+                                    <div className="relative mt-1">
+                                        <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-4 shadow border-b-2 border-black">
+                                        <span className="block truncate text-black">{used.name}</span>
+                                        <span className="pointer-events-none absolute inset-y-0 right-[10px] flex items-center">
+                                            <ChevronDownIcon
+                                            className="h-5 w-5 text-gray-600"
+                                            aria-hidden="true"
+                                            />
+                                        </span>
+                                        </Listbox.Button>
+                                        <Transition
+                                        as={Fragment}
+                                        enter="transition duration-100 ease-out"
+                                        enterFrom="transform scale-95 opacity-0"
+                                        enterTo="transform scale-100 opacity-100"
+                                        leave="transition duration-75 ease-out"
+                                        leaveFrom="transform scale-100 opacity-100"
+                                        leaveTo="transform scale-95 opacity-0"
+                                        >
+                                        <Listbox.Options className="absolute z-50 mt-1 max-h-52 w-full right-0 left-0 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 sm:text-sm">
+                                            {used.map((person, personIdx) => (
+                                            <Listbox.Option
+                                                key={personIdx}
+                                                className={({ active }) =>
+                                                `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                                                    active
+                                                    ? "bg-black text-theme1 cursor-pointer"
+                                                    : "text-gray-900"
+                                                }`
+                                                }
+                                                value={person}
+                                            >
+                                                {({ selected }) => (
+                                                <>
+                                                    <span
+                                                    className={`block truncate ${
+                                                        selected ? "font-medium" : "font-normal"
+                                                    }`}
+                                                    >
+                                                    {person.name}
+                                                    </span>
+                                                    {selected ? (
+                                                    <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                                                        <CheckIcon
+                                                        className="h-5 w-5"
+                                                        aria-hidden="true"
+                                                        />
+                                                    </span>
+                                                    ) : null}
+                                                </>
+                                                )}
+                                            </Listbox.Option>
+                                            ))}
+                                        </Listbox.Options>
+                                        </Transition>
+                                    </div>
+                                </Listbox>
+                            </div> */}
+                        </div>
+                    </div>
+                    <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Country</div>
                         <Listbox value={country} onChange={setCountry}>
                             <div className="relative mt-1">
@@ -182,7 +327,7 @@ const [country, setCountry] = useState(allcountries[0])
                                 {/* <span>
                                     <FaGlobeAmericas className="size-4 text-theme1" />
                                 </span> */}
-                                <span className="block truncate text-black">{country.sortName}</span>
+                                <span className="block truncate text-black">{country.name}</span>
                                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                     <ChevronDownIcon
                                     className="h-5 w-5 text-gray-600"
@@ -311,24 +456,24 @@ const [country, setCountry] = useState(allcountries[0])
                     </div>
                     <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Condition Of The Product</div>
-                        <div className='grid grid-cols-3 gap-4'>
-                            <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700">
-                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-black"/>
+                        <div className='grid sm:grid-cols-3 gap-4'>
+                            <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700 has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
+                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
                                 <label for="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pre</label>
                             </div>
-                            <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700">
-                                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-black"/>
+                            <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700 has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
+                                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
                                 <label for="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pre Owned</label>
                             </div>
-                            <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700">
-                                <input id="bordered-checkbox-3" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-black"/>
+                            <div className="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700 has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
+                                <input id="bordered-checkbox-3" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
                                 <label for="bordered-checkbox-3" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Refurbished</label>
                             </div>
                         </div>
                     </div>
                     <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Specification</div>
-                        <div className='grid grid-cols-3 gap-4'>
+                        <div className='grid sm:grid-cols-3 gap-4'>
                             <div className=" inline-block w-full text-sm text-gray-500  bg-white border border-gray-200 rounded-lg shadow-sm  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                                 <div className="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700">
                                     <h3 className="font-semibold text-gray-900 dark:text-white">Modal Type</h3>
