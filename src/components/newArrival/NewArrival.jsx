@@ -16,7 +16,7 @@ const NewArrival = () => {
                 <div className="text-md text-nowrap cursor-pointer flex items-center text-[black]">
                     <Link to='/windows-products' className="text">
                         View All
-                        <span className="size-5 inline-block justify-center pt-1 hover:text-[#FCEB19]">
+                        <span className="size-5 inline-block justify-center pt-1 hover:text-theme1">
                             <svg stroke="white" fill="currentColor"
                                 strokeWidth="0" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">

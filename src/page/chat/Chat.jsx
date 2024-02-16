@@ -122,7 +122,7 @@ const Chat = () => {
                                                 </div>
                                                 <div className='flex-grow '>
                                                     <div className='flex items-center justify-between mx-6'>
-                                                        <div className='text-black text-md font-bold'>OLX India</div>
+                                                        <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600'>YESTERDAY</div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
@@ -145,7 +145,7 @@ const Chat = () => {
                                                 </div>
                                                 <div className='flex-grow '>
                                                     <div className='flex items-center justify-between mx-6'>
-                                                        <div className='text-black text-md font-bold'>OLX India</div>
+                                                        <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600'>YESTERDAY</div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
@@ -168,7 +168,7 @@ const Chat = () => {
                                                 </div>
                                                 <div className='flex-grow '>
                                                     <div className='flex items-center justify-between mx-6'>
-                                                        <div className='text-black text-md font-bold'>OLX India</div>
+                                                        <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600'>YESTERDAY</div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
@@ -191,7 +191,7 @@ const Chat = () => {
                                                 </div>
                                                 <div className='flex-grow '>
                                                     <div className='flex items-center justify-between mx-6'>
-                                                        <div className='text-black text-md font-bold'>OLX India</div>
+                                                        <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600'>YESTERDAY</div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
@@ -214,7 +214,7 @@ const Chat = () => {
                                                 </div>
                                                 <div className='flex-grow '>
                                                     <div className='flex items-center justify-between mx-6'>
-                                                        <div className='text-black text-md font-bold'>OLX India</div>
+                                                        <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600'>YESTERDAY</div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
@@ -245,7 +245,7 @@ const Chat = () => {
                                 </div>
                                 <div className='flex-grow'>
                                     <div className='flex items-center justify-between ms-5 mr-1'>
-                                        <div className='text-black text-md font-bold'>OLX India</div>
+                                        <div className='text-black text-md font-bold'>ONEZONE</div>
                                         <div className='flex gap-4 items-center'>
                                             <FaRegFlag onClick={openFlagModal}/>
                                             {/* <TbPhoneCall onClick={openModal} /> */}
