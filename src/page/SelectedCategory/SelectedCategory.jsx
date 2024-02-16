@@ -75,7 +75,7 @@ const handleClick = () => {
     return (
         <>
             <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
-                <Link to='/select-category'>
+                <Link to='/seller/select-category'>
                     <IoArrowUndo className='size-6'/>
                 </Link>
             </div>

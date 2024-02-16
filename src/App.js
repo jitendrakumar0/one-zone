@@ -64,10 +64,11 @@ function App() {
           <Route path="/faq" element={<Faq/>}></Route>
           <Route path="/chat" element={<Chat/>}></Route>
           <Route path="/seller-profile" element={<UserDetail/>}></Route>
-          <Route path="/seller" element={<Home/>}>
-            {/* <Route path="/" element={<Home/>}></Route> */}
           <Route path="/select-category" element={<SelectCategory/>}></Route>
           <Route path="/selected-category" element={<SelectedCategory/>}></Route>
+          <Route path="/seller" element={<Home/>}>
+            {/* <Route path="/select-category" element={<SelectCategory/>}></Route>
+            <Route path="/selected-category" element={<SelectedCategory/>}></Route> */}
           </Route>
         </Routes>
     </>
