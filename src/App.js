@@ -26,6 +26,7 @@ import Faq from "./page/faq/Faq";
 import UserDetail from "./page/UserDetail/UserDetail";
 import SelectCategory from "./page/SelectCategory/SelectCategory";
 import SelectedCategory from "./page/SelectedCategory/SelectedCategory";
+import Home from "./sellerPage/home/Home";
 
 function App() {
 
@@ -63,8 +64,11 @@ function App() {
           <Route path="/faq" element={<Faq/>}></Route>
           <Route path="/chat" element={<Chat/>}></Route>
           <Route path="/seller-profile" element={<UserDetail/>}></Route>
+          <Route path="/seller" element={<Home/>}>
+            {/* <Route path="/" element={<Home/>}></Route> */}
           <Route path="/select-category" element={<SelectCategory/>}></Route>
           <Route path="/selected-category" element={<SelectedCategory/>}></Route>
+          </Route>
         </Routes>
     </>
   );

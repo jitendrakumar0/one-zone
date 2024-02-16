@@ -78,7 +78,7 @@ const Chat = () => {
                                 <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tl-md px-5 border border-b-slate-400'>
                                     <form className="w-full mx-auto">
                                         <div className="flex">
-                                            {/* <label for="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                                            {/* <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
                                             <button id="dropdown-button" data-dropdown-toggle="dropdown" className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                                     </svg></button> */}
@@ -235,17 +235,17 @@ const Chat = () => {
                 <div className='flex-grow md:block hidden rightPart'>
                     <div className='w-full flex flex-col h-full border border-slate-400 border-l-0 md:rounded-tr-md overflow-hidden'>
                         <div className='header'>
-                            <Link to='/seller-profile' className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tr-md px-2 md:px-5 border border-b-slate-400'>
-                                <div className='col-auto flex items-center'>
+                            <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tr-md px-2 md:px-5 border border-b-slate-400'>
+                                <Link to='/seller-profile' className='col-auto flex items-center'>
                                 <IoMdArrowBack onClick={()=>setClick(false)} className='me-2 size-6 md:hidden block'/>
                                     <div className="user  rounded-md relative cursor-pointer">
                                         <img className='w-10 h-10 rounded-md' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FBe113B4a9BYPo2IMGrtgym2plpPyfOfiA&usqp=CAU" alt="" />
                                         <img className='absolute size-6 rounded-full top-5 -right-2 border border-white' src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="" />
                                     </div>
-                                </div>
+                                </Link>
                                 <div className='flex-grow'>
                                     <div className='flex items-center justify-between ms-5 mr-1'>
-                                        <div className='text-black text-md font-bold'>ONEZONE</div>
+                                        <Link to='/seller-profile' className='text-black text-md font-bold'>ONEZONE</Link>
                                         <div className='flex gap-4 items-center'>
                                             <FaRegFlag onClick={openFlagModal}/>
                                             {/* <TbPhoneCall onClick={openModal} /> */}
@@ -255,7 +255,7 @@ const Chat = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </Link>
+                            </div>
                             <Link to='/product-detail' className='w-full flex gap-6 px-5 py-2 bg-white'>
                                 <div className='text-sm tex-black'>Lenovo 18 128</div>
                                 <div className='text-sm font-bold tex-black'>₹120000</div>
@@ -926,16 +926,16 @@ const Chat = () => {
                         <div className="p-4 md:p-5">
                             <form className="space-y-4" action="#">
                                 <div>
-                                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900">Full Name*</label>
+                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Full Name*</label>
                                     <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required/>
                                 </div>
                                 <div className='flex gap-4'>
                                 <div className='col-auto'>
-                                    <label for="password" className="block mb-2 text-sm font-medium text-gray-900">Country*</label>
+                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Country*</label>
                                     <input type="number" name="number" id="password" placeholder="+ 91" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" readOnly required/>
                                 </div>
                                 <div className="grow">
-                                    <label for="password" className="block mb-2 text-sm font-medium text-gray-900">Mobile Number*</label>
+                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Mobile Number*</label>
                                     <input type="number" name="number" id="password" placeholder="" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required/>
                                 </div>
                                 </div>
@@ -944,7 +944,7 @@ const Chat = () => {
                                         <div className="flex items-center h-5">
                                             <input id="remember" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required/>
                                         </div>
-                                        <label for="remember" className="ms-2 text-sm font-medium text-gray-900">Remember me</label>
+                                        <label htmlFor="remember" className="ms-2 text-sm font-medium text-gray-900">Remember me</label>
                                     </div>
                                     <Link to="#" className="text-sm text-blue-700 hover:underline">Lost Password?</Link>
                                 </div> */}
@@ -1029,37 +1029,37 @@ const Chat = () => {
                                 <li className="w-full border-gray-200 rounded-t-lg">
                                     <div className="flex items-center ps-3">
                                         <input id="list-radio-license" type="radio" value="" name="list-radio" className="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
-                                        <label for="list-radio-license" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Spam </label>
+                                        <label htmlFor="list-radio-license" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Spam </label>
                                     </div>
                                 </li>
                                 <li className="w-full border-gray-200 rounded-t-lg">
                                     <div className="flex items-center ps-3">
                                         <input id="list-radio-id" type="radio" value="" name="list-radio" className="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
-                                        <label for="list-radio-id" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Fraud</label>
+                                        <label htmlFor="list-radio-id" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Fraud</label>
                                     </div>
                                 </li>
                                 <li className="w-full border-gray-200 rounded-t-lg">
                                     <div className="flex items-center ps-3">
                                         <input id="list-radio-military" type="radio" value="" name="list-radio" className="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
-                                        <label for="list-radio-military" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Inappropriate profile picture</label>
+                                        <label htmlFor="list-radio-military" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Inappropriate profile picture</label>
                                     </div>
                                 </li>
                                 <li className="w-full  border-gray-200 rounded-t-lg">
                                     <div className="flex items-center ps-3">
                                         <input id="list-radio-passport" type="radio" value="" name="list-radio" className="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
-                                        <label for="list-radio-passport" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">This user is threatening me</label>
+                                        <label htmlFor="list-radio-passport" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">This user is threatening me</label>
                                     </div>
                                 </li>
                                 <li className="w-full  border-gray-200 rounded-t-lg">
                                     <div className="flex items-center ps-3">
                                         <input id="list-radio-passport" type="radio" value="" name="list-radio" className="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
-                                        <label for="list-radio-passport" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">This user is insulting me</label>
+                                        <label htmlFor="list-radio-passport" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">This user is insulting me</label>
                                     </div>
                                 </li>
                                 <li className="w-full  border-gray-200 rounded-t-lg">
                                     <div className="flex items-center ps-3">
                                         <input id="list-radio-passport" type="radio" value="" name="list-radio" className="w-4 h-4 text-black accent-black bg-gray-100 border-gray-300 "/>
-                                        <label for="list-radio-passport" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Other</label>
+                                        <label htmlFor="list-radio-passport" className="w-full py-3 ms-2 text-sm font-medium text-gray-900">Other</label>
                                     </div>
                                 </li>
                                 <li>

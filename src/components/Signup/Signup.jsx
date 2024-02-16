@@ -52,7 +52,7 @@ const Signup = () => {
                                 <div className="flex items-center h-5">
                                 <input id="terms" type="checkbox" value="" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required />
                                 </div>
-                                <label for="terms" className="ms-2 text-sm font-medium text-gray-900">Accept <Link className="text-blue-600 hover:underline">Terms & Conditions</Link></label>
+                                <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900">Accept <Link className="text-blue-600 hover:underline">Terms & Conditions</Link></label>
                             </div>
                         </div>
                     </form>

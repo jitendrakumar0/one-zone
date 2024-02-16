@@ -5,32 +5,33 @@ import { Link } from 'react-router-dom'
 import { IoStar } from 'react-icons/io5'
 import { CiCircleCheck } from 'react-icons/ci'
 import { RiChat1Line } from 'react-icons/ri'
-import { FaHeart, FaRegHeart } from 'react-icons/fa'
+import { FaRegHeart } from 'react-icons/fa'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import SafetyModal from '../chat/Component/SafetyModal'
 
 const ProductDetail = () => {
-    const [wished, setWished] = useState(false);
     const [detailTabs, setDetailTabs] = useState('description');
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [isOpenSaftey, setIsOpenSaftey] = useState(false)
   return (
     <>
     <Header />
     <div className="container relative max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-1 gap-6">
-            <div className="lg:col-span-5">
-                <div className="grid md:grid-cols-12 gap-3">
-                    <div className="md:col-span-12 ">
+        <div className="flex max-lg:flex-col max-lg:gap-5">
+            <div className="md:max-w-md w-full overflow-hidden shrink-0">
+                <div className="w-full">
+                    <div className="flex w-full flex-col">
                             <Swiper
                                 spaceBetween={10}
                                 // thumbs={{ swiper: thumbsSwiper }}
                                 thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
                                 modules={[FreeMode, Navigation, Thumbs]}
-                                className="mySwiper2"
+                                className="mySwiper2 w-full"
                                 >
                                 <SwiperSlide>
                                 <img src="https://p2-ofp.static.pub/fes/cms/2022/09/26/i6zlcap44kafmcywlh54d9rd1wieh1215035.png" alt="" />
@@ -64,7 +65,7 @@ const ProductDetail = () => {
                                 freeMode={true}
                                 watchSlidesProgress={true}
                                 modules={[FreeMode, Navigation, Thumbs]}
-                                className="mySwiper relative"
+                                className="mySwiper relative w-full"
                                 navigation={{
                                 prevEl: '.prevBtn',
                                 nextEl: '.nextBtn',
@@ -104,41 +105,13 @@ const ProductDetail = () => {
                             </div> */}
                             </Swiper>
                             
-                        {/* <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
-                            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
-                            <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div>
-                        </Link> */}
-                    </div>
-                    <div className="md:col-span-6 hidden">
-                        <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
-                            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/i/x/o/-original-imagdx9qedcveu2m.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
-                            {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
-                        </Link>
-                    </div>
-                    <div className="md:col-span-6 hidden">
-                        <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
-                            <img src="https://rukminim2.flixcart.com/image/416/416/l2m78280/computer/d/p/e/-original-imagdx9rywnvynyd.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
-                            {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
-                        </Link>
-                    </div>
-                    <div className="md:col-span-12 hidden">
-                        <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
-                            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/h/v/o/-original-imagdx9qzpmh4hvf.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
-                            {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
-                        </Link>
-                    </div>
-                    <div className="md:col-span-12 hidden">
-                        <Link className="lightbox duration-500 group-hover:scale-105 tobii-zoom w-full" title="">
-                            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/computer/r/e/a/-original-imagdx9qenr28djr.jpeg?q=70&crop=false" className="shadow w-full" alt="Mens Brown Jecket" />
-                            {/* <div className="tobii-zoom__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 16v5h-5"></path><path d="M8 21H3v-5"></path><path d="M16 3h5v5"></path><path d="M3 8V3h5"></path></svg></div> */}
-                        </Link>
                     </div>
                 </div>
             </div>
 
-            <div className="lg:col-span-7">
+            <div className="grow">
                 <div className="lg:ms-6 sticky top-24">
-                    <h5 className="text-2xl font-semibold">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS Thin and Light Laptop  (15.6 Inch, Transparent Silver, 1.80 kg, With MS Office)</h5>
+                    <h5 className="md:text-2xl sm:text-xl text-lg font-semibold">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X515EA-EJ328WS | X1500EA-EJ3379WS Thin and Light Laptop  (15.6 Inch, Transparent Silver, 1.80 kg, With MS Office)</h5>
                     <div className="flex py-3">
                         <span className='text-theme1 bg-black rounded-md shadow-md px-3 py-1 font-bold inline-block'>6 Months Used</span>
                     </div>
@@ -199,7 +172,7 @@ const ProductDetail = () => {
                     </div>
 
                         
-                    <div className="p-3 w-96 bg-white rounded-lg mt-4 border">
+                    <div className="p-3 md:max-w-md bg-white rounded-lg mt-4 border">
                         <Link to='/seller-profile' className="flex items-center mb-4">
                             <div>
                                 <img className="size-10 rounded-full" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
@@ -209,9 +182,9 @@ const ProductDetail = () => {
                                 <div className='text-xs'>123 B New colony</div>
                             </div>
                         </Link>
-                        <Link to='/chat' className="text-black w-full mb-2 bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                        <button onClick={()=>{setIsOpenSaftey(true)}} className="text-black w-full mb-2 bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
 
-                        <button className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Wishlist <FaHeart className='size-5' /></button>
+                        <button className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Add to Wishlist <FaRegHeart className='size-5' /></button>
                     </div>
 
                     {/* <div className="mt-4 space-x-1">
@@ -408,7 +381,7 @@ const ProductDetail = () => {
                                 <div className="grid lg:grid-cols-12 lg:gap-6">
                                     <div className="lg:col-span-6 mb-5">
                                         <div className="text-start">
-                                            <label for="name" className="font-semibold">Your Name:</label>
+                                            <label htmlFor="name" className="font-semibold">Your Name:</label>
                                             <div className="form-icon relative mt-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user w-4 h-4 absolute top-3 start-4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                                 <input name="name" id="name" type="text" className="ps-11 w-full py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Name :" />
@@ -418,7 +391,7 @@ const ProductDetail = () => {
     
                                     <div className="lg:col-span-6 mb-5">
                                         <div className="text-start">
-                                            <label for="email" className="font-semibold">Your Email:</label>
+                                            <label htmlFor="email" className="font-semibold">Your Email:</label>
                                             <div className="form-icon relative mt-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-mail w-4 h-4 absolute top-3 start-4"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                                 <input name="email" id="email" type="email" className="ps-11 w-full py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Email :" />
@@ -430,7 +403,7 @@ const ProductDetail = () => {
                                 <div className="grid grid-cols-1">
                                     <div className="mb-5">
                                         <div className="text-start">
-                                            <label for="comments" className="font-semibold">Your Comment:</label>
+                                            <label htmlFor="comments" className="font-semibold">Your Comment:</label>
                                             <div className="form-icon relative mt-2">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-message-circle w-4 h-4 absolute top-3 start-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                                                 <textarea name="comments" id="comments" className="ps-11 w-full py-2 px-3 h-28 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Message :"></textarea>
@@ -447,6 +420,7 @@ const ProductDetail = () => {
             </div>
         </div>
     </div>
+    <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
     <Footer />
     </>
   )

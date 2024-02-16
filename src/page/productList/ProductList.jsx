@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";import { RiChat1Line } from "react-icons
 import { FaRegHeart } from "react-icons/fa";
 import { MdClear } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
+import SafetyModal from "../chat/Component/SafetyModal";
 
 
     
@@ -95,6 +96,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 const ProductList = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [priceRange, setPriceRange] = useState(1000);
+    const [isOpenSaftey, setIsOpenSaftey] = useState(false)
     return (
         <>
         <Header />
@@ -322,13 +324,13 @@ const ProductList = () => {
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="lg:grow max-lg:w-full">
-                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
@@ -344,7 +346,7 @@ const ProductList = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -352,13 +354,13 @@ const ProductList = () => {
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/xif0q/allinone-desktop/z/o/z/all-in-one-27-cb1345in-hp-original-imagntpzpvkvktgg.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="lg:grow max-lg:w-full">
-                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
+                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                 <li>Windows 11 Home</li>
                                                 <li>Intel Core i3</li>
@@ -374,7 +376,7 @@ const ProductList = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -382,13 +384,13 @@ const ProductList = () => {
                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
+                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full" src="https://rukminim2.flixcart.com/image/612/612/kvzkosw0/laptop-battery/laptop-battery/d/i/m/genuine-battery-for-hpi-elitebook-folio-9470m-9480m-bt04xl-original-imag8rqz8mgzmsbd.jpeg?q=70" alt="jk" />
                                         </div>
                                         <div className="lg:grow max-lg:w-full">
-                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
+                                            <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                 <li>Battery Type: Lithium-ion</li>
                                                 <li>Capacity: 4000 mAh</li>
@@ -401,7 +403,7 @@ const ProductList = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <Link className="text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></Link>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -413,6 +415,7 @@ const ProductList = () => {
                     </main>
                 </div>
             </div>
+            <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
         <Footer />
         </>
     );

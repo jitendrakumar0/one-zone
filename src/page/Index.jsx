@@ -6,25 +6,28 @@ import { ConnectionList } from '../components/ConnectionList/ConnectionList'
 import Footer from '../components/Footer/Footer'
 import Clouds from '../components/clouds/Clouds'
 import Featured from '../components/Featured/Featured'
+import SafetyModal from './chat/Component/SafetyModal'
 
 
 
 const Index = () => {
     const [auth, setAuth] = useState(false);
+    const [isOpenSaftey, setIsOpenSaftey] = useState(false)
     return (
         <>
         <Header auth={auth} setAuth={setAuth} />
         
             <HeroBanner/>
             <ConnectionList/>
-            <Featured/>
+            <Featured setIsOpenSaftey={setIsOpenSaftey} />
             {/* <OfferBanner/> */}
             <Clouds/>
             {/* <Blog/> */}
-            <SellingProducts/>
+            <SellingProducts setIsOpenSaftey={setIsOpenSaftey}/>
             {/* <OfferBanner/> */}
             {/* <Cta/> */}
             <Footer/>
+            <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
         </>
     )
 }
