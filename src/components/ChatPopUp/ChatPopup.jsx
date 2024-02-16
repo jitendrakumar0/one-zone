@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { HiDotsVertical } from "react-icons/hi";
 
-const ChatPopup = ({dropDownOptions}) => {
+const ChatPopup = ({dropDownOptions, fromUser}) => {
     return (
         <>
             <Menu as="div" className="relative inline-block text-left">
@@ -19,7 +19,7 @@ const ChatPopup = ({dropDownOptions}) => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="absolute right-4 -top-7 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold">
+                    <Menu.Items className={`absolute ${fromUser ? 'left-4 md:right-4' : 'right-4 '} -top-7 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold`}>
                         <div
                             id="dropdownNotification"
                             className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-md shadow"

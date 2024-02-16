@@ -265,9 +265,9 @@ const Chat = () => {
                             <div className='w-full bg-gray-200 py-5   '>
                                 <div className='text-center text-gray-600 font-medium text-sm uppercase mt-2'>Yesterday</div>
                                 {/* text chat */}
-                                <div className="flex items-start gap-2.5 mx-5 mt-5 group/bubble [&.sent]:[direction:rtl]">
-                                    <img className="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
-                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
+                                <div className="flex relative items-start gap-1.5 sm:gap-2.5 sm:mx-5 ms-3 me-10 mt-5 group/bubble [&.sent]:[direction:rtl]">
+                                    <img className="sm:size-8 size-6 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
+                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] sm:p-4 p-3 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse">
                                             <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
                                             <span className="text-sm font-normal text-gray-500">11:46</span>
@@ -280,8 +280,8 @@ const Chat = () => {
                                     </div>
                                 </div>
                                 
-                                <div className="flex items-start gap-2.5 mx-5 mt-5 group/bubble sent [&.sent]:[direction:rtl]">
-                                    <img className="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
+                                <div className="flex items-start gap-1.5 sm:gap-2.5 sm:mx-5 ms-3 me-10 mt-5 group/bubble sent [&.sent]:[direction:rtl]">
+                                    <img className="sm:size-8 size-6 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse">
                                             <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
@@ -291,14 +291,14 @@ const Chat = () => {
                                         <span className="text-sm font-normal text-gray-500">Pending</span>
                                     </div>
                                     <div className='inline-flex self-center items-center group-[.sent]/bubble:[direction:ltr]'>
-                                        <ChatPopup dropDownOptions={Chatoption}/>
+                                        <ChatPopup fromUser={true} dropDownOptions={Chatoption}/>
                                     </div>
                                 </div>
                                 {/* text chat */}
                                 
                                 {/* image chat */}
-                                <div className="flex items-start gap-2.5 mx-5 mt-5  group/bubble  [&.sent]:[direction:rtl]">
-                                <img className="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
+                                <div className="flex items-start gap-1.5 sm:gap-2.5 sm:mx-5 ms-3 me-10 mt-5  group/bubble  [&.sent]:[direction:rtl]">
+                                <img className="size-6 sm:size-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
                                 <div className="flex flex-col gap-1">
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
@@ -328,8 +328,8 @@ const Chat = () => {
                                 </div>
                                 </div>
                                     
-                                <div className="flex items-start gap-2.5 mx-5 mt-5  group/bubble sent [&.sent]:[direction:rtl]">
-                                <img className="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
+                                <div className="flex items-start gap-1.5 sm:gap-2.5 ms-3 me-10 sm:mx-5 mt-5  group/bubble sent [&.sent]:[direction:rtl]">
+                                <img className="size-6 sm:size-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
                                 <div className="flex flex-col gap-1">
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
@@ -355,15 +355,15 @@ const Chat = () => {
                                     </div>
                                 </div>
                                 <div className='inline-flex self-center items-center  group-[.sent]/bubble:[direction:ltr]'>
-                                    <ChatPopup dropDownOptions={Chatoption}/>
+                                    <ChatPopup fromUser={true} dropDownOptions={Chatoption}/>
                                 </div>
                                 </div>
                                 {/* image chat */}
                                 
                                 
                                  {/*file chat  */}
-                                <div className="flex items-start gap-2.5 mx-5 mt-5 group/bubble  [&.sent]:[direction:rtl]">
-                                <img className="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
+                                <div className="flex items-start gap-1.5 sm:gap-2.5 ms-3 me-10 sm:mx-5 mt-5 group/bubble  [&.sent]:[direction:rtl]">
+                                <img className="size-6 sm:size-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
                                 <div className="flex flex-col gap-1 group-[.sent]/bubble:[direction:ltr]">
                                     <div className="flex items-center space-x-2 rtl:space-x-reverse">
                                         <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
@@ -372,7 +372,7 @@ const Chat = () => {
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-start bg-gray-50 rounded-xl p-2">
                                             <div className="me-2">
-                                            <span className="flex items-center gap-2 text-sm font-medium text-gray-900 pb-2">
+                                            <span className="flex items-center gap-2 text-xs sm:text-sm font-medium text-gray-900 pb-2">
                                                 <svg fill="none" aria-hidden="true" className="w-5 h-5 flex-shrink-0" viewBox="0 0 20 21">
                                                     <g clipPath="url(#clip0_3173_1381)">
                                                         <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"/>
@@ -420,7 +420,7 @@ const Chat = () => {
                                 </div>
 
                                 <div className="flex items-start gap-2.5 mx-5 mt-5 group/bubble sent [&.sent]:[direction:rtl]">
-                                <img className="w-8 h-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
+                                <img className="sm:size-8 size-6 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
                                 <div className="flex flex-col gap-1 group-[.sent]/bubble:[direction:ltr]">
                                     <div className="flex items-center space-x-2 rtl:space-x-reverse">
                                         <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
@@ -429,7 +429,7 @@ const Chat = () => {
                                     <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-start bg-gray-50 rounded-xl p-2">
                                             <div className="me-2">
-                                            <span className="flex items-center gap-2 text-sm font-medium text-gray-900 pb-2">
+                                            <span className="flex items-center gap-2 text-xs sm:text-sm font-medium text-gray-900 pb-2">
                                                 <svg fill="none" aria-hidden="true" className="w-5 h-5 flex-shrink-0" viewBox="0 0 20 21">
                                                     <g clipPath="url(#clip0_3173_1381)">
                                                         <path fill="#E2E5E7" d="M5.024.5c-.688 0-1.25.563-1.25 1.25v17.5c0 .688.562 1.25 1.25 1.25h12.5c.687 0 1.25-.563 1.25-1.25V5.5l-5-5h-8.75z"/>
@@ -471,15 +471,15 @@ const Chat = () => {
                                     </div>
                                     <span className="text-sm font-normal text-gray-500">Delivered</span>
                                 </div>
-                                <div className='inline-flex self-center items-center'>
-                                    <ChatPopup dropDownOptions={Chatoption}/>
+                                <div className='inline-flex self-center items-center group-[.sent]/bubble:[direction:ltr]'>
+                                    <ChatPopup fromUser={true} dropDownOptions={Chatoption}/>
                                 </div>
                                 </div>
                                 {/*file chat  */}
                             </div>
                         </div>
                         <div className='footer'>
-                            <div className="border-t-2 border-gray-200 px-4 py-4 mb-2 sm:mb-0 bg-white">
+                            <div className="border-t-2 border-gray-200 px-4 py-4  sm:mb-0 bg-white">
                                 <div className="relative flex">
                                     <span className="absolute inset-y-0 flex items-center">
                                         <button
