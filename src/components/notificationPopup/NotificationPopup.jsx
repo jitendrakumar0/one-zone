@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 const NotificationPopup = () => {
     return (
         <>
-            <Link to="/notification" className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300 md:hidden">
+            <Link to="/notification" className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-full text-black md:hover:bg-black md:hover:text-theme1 duration-300 border-2 border-b-black md:hidden">
                 <LuBellDot className="size-4" />
             </Link>
             <Menu as="div" className="relative inline-block text-left z-40 max-md:hidden">
-                <Menu.Button className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-md text-black md:hover:bg-black md:hover:text-theme1 duration-300">
+                <Menu.Button className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-full text-black md:hover:bg-black md:hover:text-theme1 duration-300 border-2 border-b-black">
                     <LuBellDot className="size-4" />
                 </Menu.Button>
                 <Transition

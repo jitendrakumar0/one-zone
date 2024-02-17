@@ -1,11 +1,9 @@
 import React, {useState } from 'react'
-import Header from '../../components/header/Header'
+import Header from '../components/header/Header'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import { IoStar } from 'react-icons/io5'
 import { CiCircleCheck } from 'react-icons/ci'
-import { RiChat1Line } from 'react-icons/ri'
-import { FaRegHeart } from 'react-icons/fa'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import 'swiper/css';
@@ -174,8 +172,8 @@ const SellerProductDetail = () => {
                             </div>
 
                                 <div className='mt-5'>
-                                    <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>Delete</button>
-                                    <Link to='/edit-productdetail' className='ms-5 relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase  md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 md:px-8 px-4  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Edit</Link>
+                                    <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>Delete</button>
+                                    <Link to='/edit-productdetail' className='ms-5 relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase  md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 md:px-8 px-4  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Edit</Link>
                                 </div>
                         </div>
                     </div>
@@ -390,7 +388,7 @@ const SellerProductDetail = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button type="submit" id="submit" name="send" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Message</button>
+                                        <button type="submit" id="submit" name="send" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Message</button>
                                     </form>
                                 </div>
                             </div>

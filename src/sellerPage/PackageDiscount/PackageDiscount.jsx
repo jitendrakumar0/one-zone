@@ -1,57 +1,99 @@
 import React from 'react'
-import { CiDiscount1 } from 'react-icons/ci'
 import { IoMdCheckmark } from 'react-icons/io'
-import { SlLocationPin } from 'react-icons/sl'
+import Header from '../components/header/Header'
+import Footer from '../../components/Footer/Footer'
+import { MdOutlineDiscount } from 'react-icons/md'
+import { RiAdvertisementLine } from 'react-icons/ri'
+import { FaCircleCheck, FaRegCircleCheck } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 export const PackageDiscount = () => {
     return (
         <>
-            <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
-                <Link className='font-bold text-xl text-black' to='/'>
-                ONE ZONE
-                    {/* <IoArrowUndo className='size-6'/> */}
-                </Link>
-            </div>
+        <Header/>
             <div className="max-w-screen-sm mx-auto my-5 border rounded-lg p-4">
                 <div>
-                    <div className="bg-amber-100 w-full h-40 rounded-lg flex items-center justify-center flex-col">
-                        <CiDiscount1 className='size-8 text-amber-800 mb-4' />
+                    <div className="bg-theme1 shadow-md shadow-black/20 w-full h-40 rounded-lg flex items-center justify-center flex-col">
+                        <MdOutlineDiscount className='size-12 text-amber-800 mb-4' />
                         <div className='text-xl font-bold text-black'>Heavy discount on Packages</div>
                     </div>
                 </div>
-                <div className='py-4 border-b'>
-                    <div className='text-base text-black font-bold'>POST MORE ADS AND AUTO BOOST</div>
-                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Post more ads and ads get boosted to the top every few days</div>
+                <div className='py-6 border-b'>
+                    <div className='text-base text-black font-bold'>FEATURE AD</div>
+                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Get noticed with 'FEATURED' tag in a top position</div>
                     <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Package available for 30 days</div>
                 </div>
-                <div className='py-4 border-b'>
-                    <div className='text-sm text-black font-bold'>Post Ads & Auto boost every 7 days</div>
-                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Reach upto 4 times more buyers</div>
-                    
-                    <ul class="grid grid-cols gap-4 items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex">
-                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
-                            <div class="flex items-center ps-3 ">
-                                <input id="vue-checkbox-list" type="checkbox" value="" class="w-4 h-4 accent-gray-600 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "/>
-                                <label for="vue-checkbox-list" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">50 Ads</label>
-                                {/* <div className=' top-0 left-0 bg-red-100 text-sm w-full h-10'>7,000</div> */}
+                <div className="pt-6">
+                    <div className='text-sm text-black font-bold'>Featured ads for 30 days</div>
+                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Reach up to 10 times more buyers</div>
+
+                    <div className="grid grid-cols-1 gap-5 py-5">
+                        <label htmlFor='ad1' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-gray-800 border-2 border-gray-200 rounded-lg shadow sm:p-4 group/ads">
+                            <ul className="space-y-5">
+                                <li className="flex items-center">
+                                    <FaRegCircleCheck className="flex-shrink-0 size-6 text-gray-400 group-has-[:checked]/ads:hidden" />
+                                    <FaCircleCheck className="flex-shrink-0 size-6 text-gray-900 hidden group-has-[:checked]/ads:block" />
+                                    <span className="text-lg font-bold leading-tight text-gray-500 ms-3">5 Ads</span>
+                                    <input className='hidden' type="radio" id='ad1' name='ads' />
+                                </li>
+                            </ul>
+                            <div className="flex items-end text-gray-900 flex-col">
+                                <span className='flex items-baseline gap-1'>
+                                    <span className="text-xl font-semibold">₹</span>
+                                    <span className="text-2xl font-extrabold tracking-tight">7,080</span>
+                                </span>
+                                <span className='flex items-center'>
+                                    <del className="ms-2 text-base font-bold text-gray-500">₹ 9,434</del>
+                                    <span className="ms-2 text-base font-bold text-lime-700">-25% off</span>
+                                </span>
                             </div>
-                        </li>
-                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
-                            <div class="flex items-center ps-3">
-                                <input id="vue-checkbox-list" type="checkbox" value="" class="w-4 h-4 accent-gray-600 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "/>
-                                <label for="vue-checkbox-list" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">50 Ads</label>
+                        </label>
+                        <label htmlFor='ad2' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-gray-800 border-2 border-gray-200 rounded-lg shadow sm:p-4 group/ads">
+                            <ul className="space-y-5">
+                                <li className="flex items-center">
+                                    <FaRegCircleCheck className="flex-shrink-0 size-6 text-gray-400 group-has-[:checked]/ads:hidden" />
+                                    <FaCircleCheck className="flex-shrink-0 size-6 text-gray-900 hidden group-has-[:checked]/ads:block" />
+                                    <span className="text-lg font-bold leading-tight text-gray-500 ms-3">3 Ads</span>
+                                    <input className='hidden' type="radio" id='ad2' name='ads' />
+                                </li>
+                            </ul>
+                            <div className="flex items-end text-gray-900 flex-col">
+                                <span className='flex items-baseline gap-1'>
+                                    <span className="text-xl font-semibold">₹</span>
+                                    <span className="text-2xl font-extrabold tracking-tight">4,720</span>
+                                </span>
+                                <span className='flex items-center'>
+                                    <del className="ms-2 text-base font-bold text-gray-500">₹ 5,660</del>
+                                    <span className="ms-2 text-base font-bold text-lime-700">-17% off</span>
+                                </span>
                             </div>
-                        </li>
-                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r ">
-                            <div class="flex items-center ps-3">
-                                <input id="vue-checkbox-list" type="checkbox" value="" class="w-4 h-4 accent-gray-600 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 "/>
-                                <label for="vue-checkbox-list" class="w-full py-3 ms-2 text-sm font-medium text-gray-900 ">50 Ads</label>
+                        </label>
+                        <label htmlFor='ad3' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-gray-800 border-2 border-gray-200 rounded-lg shadow sm:p-4 group/ads">
+                            <ul className="space-y-5">
+                                <li className="flex items-center">
+                                    <FaRegCircleCheck className="flex-shrink-0 size-6 text-gray-400 group-has-[:checked]/ads:hidden" />
+                                    <FaCircleCheck className="flex-shrink-0 size-6 text-gray-900 hidden group-has-[:checked]/ads:block" />
+                                    <span className="text-lg font-bold leading-tight text-gray-500 ms-3">1 Ad</span>
+                                    <input className='hidden' type="radio" id='ad3' name='ads' />
+                                </li>
+                            </ul>
+                            <div className="flex items-end text-gray-900 flex-col">
+                                <span className='flex items-baseline gap-1'>
+                                    <span className="text-xl font-semibold">₹</span>
+                                    <span className="text-2xl font-extrabold tracking-tight">2,360</span>
+                                </span>
                             </div>
-                        </li>
-                    </ul>
+                        </label>
+                    </div>
+
+
                 </div>
+                <div className="w-full text-center bg-gray-100 sticky bottom-0 py-4">
+                    <Link to='/select-category' className='relative z-10 text-black px-4 text-nowrap bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-base uppercase md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Pay ₹ 7,080</Link>
+                </div>
+                
             </div>
+        <Footer/>
         </>
     )
 }

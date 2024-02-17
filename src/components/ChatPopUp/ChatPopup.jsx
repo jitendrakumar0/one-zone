@@ -33,7 +33,7 @@ const ChatPopup = ({dropDownOptions, fromUser}) => {
                                 dropDownOptions?.map((item)=>(
                                     <div onClick={item?.fun}
                                     key={item}
-                                        className="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md text-sm text-gray-700"
+                                        className="flex px-4 py-3 hover:bg-gray-100 rounded-md text-sm text-gray-700"
                                     >
                                         {item.name}
                                         {/* <div className="flex-shrink-0">

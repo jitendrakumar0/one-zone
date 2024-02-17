@@ -7,7 +7,7 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { LuUnlock } from "react-icons/lu";
 import { MdOutlineBusinessCenter, MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
-import { FiEdit2, FiHeart } from "react-icons/fi";
+import { FiEdit2 } from "react-icons/fi";
 import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../../asstes/img/logo.svg'
@@ -387,7 +387,7 @@ const Header = ({seller}) => {
                   </Menu.Items>
                 </Transition>
               </Menu>
-              <Link to='/select-category' className='relative z-10 text-black w-20 bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>{seller ? 'ADD' : ''}<IoIosAddCircleOutline className='size-4'/></Link>
+              <Link to='/select-category' className='relative z-10 text-black px-4 text-nowrap bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><IoIosAddCircleOutline className='size-6'/>Add Item</Link>
             <button
               onClick={() => setSidebarIsOpen(true)}
               data-collapse-toggle="navbar-sticky"
@@ -426,6 +426,7 @@ const Header = ({seller}) => {
                     className="flex flex-1 items-center py-0.5"
                   >
                     <input
+                      type='search'
                       id="top-bar-search"
                       className="text-heading outline-none w-full h-[52px] pl-5 md:pl-6 pr-14 md:pr-16 bg-brand-light text-brand-dark text-sm lg:text-15px rounded-md transition-all duration-200 focus:border-brand focus:ring-0 placeholder:text-brand-dark/50 border border-border-base"
                       placeholder="What are you looking..."
@@ -593,17 +594,17 @@ export const HeaderMenu = () => {
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Become A Seller</NavLink>
     </li>
     <li className='list-none'>
-      <NavLink to="/home" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+      <NavLink to="/seller" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Home</NavLink>
     </li>
     <li className='list-none'>
       <NavLink to="/about" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">About</NavLink>
     </li>
-    <li className='list-none'>
+    {/* <li className='list-none'>
       <NavLink to="/windows-products" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Categories</NavLink>
-    </li>
+    </li> */}
     <li className='list-none'>
       <NavLink to="/contact" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Contact</NavLink>

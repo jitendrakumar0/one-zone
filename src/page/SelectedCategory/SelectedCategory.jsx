@@ -1,12 +1,10 @@
 import React, { Fragment, useState } from 'react'
 import { IoArrowUndo } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import { SiWindows10 } from "react-icons/si";
-import { BsArrowDownSquareFill } from "react-icons/bs";
-import { Disclosure, Listbox, Transition } from '@headlessui/react';
-import { MdOutlineTranslate } from 'react-icons/md';
+import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
-import { FaGlobeAmericas } from 'react-icons/fa';
+import Header from '../../sellerPage/components/header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const allBrands = [
     { name: 'Acer' },
@@ -74,14 +72,10 @@ const handleClick = () => {
 };
     return (
         <>
-            <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
-                <Link to='/seller/select-category'>
-                    <IoArrowUndo className='size-6'/>
-                </Link>
-            </div>
+        <Header/>
             <div className="max-w-screen-lg mx-auto my-5">
                 <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
-                    POST YOUR AD
+                    Add Your Product
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
                     <div className='text-lg font-semibold  rounded-lg py-2'>SELECTED CATEGORY</div>
@@ -89,7 +83,7 @@ const handleClick = () => {
                         <nav className="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50" aria-label="Breadcrumb">
                         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                             <li className="inline-flex items-center">
-                            <Link to="#" className="inline-flex items-center text-sm font-medium text-gray-700">
+                            <Link className="inline-flex items-center text-sm font-medium text-gray-700">
                                 Window
                             </Link>
                             </li>
@@ -98,66 +92,106 @@ const handleClick = () => {
                                 <svg className="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
                                 </svg>
-                                <Link to="#" className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 ">Windows</Link>
+                                <Link className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 ">Laptop</Link>
                             </div>
                             </li>
                             <li>
-                                <Link to='' className='text-white ms-5 w-auto bg-black border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Edit</Link>
+                                <Link to="/select-category" className='text-white ms-5 w-auto bg-black border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Edit</Link>
                             </li>
                         </ol>
                         </nav>
                     </div>
                     <div className='text-lg font-semibold  rounded-lg py-2 mt-5'>INCLUDE SOME DETAILS</div>
                     <div className='py-2 overflow-hidden'>
-                        <div className='text-md font-bold text-black mb-1'>Upload Up to 4*</div>
+                        <div className='text-md font-bold text-black mb-1'>Product Image</div>
                         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4'>
                             <div className="flex items-center justify-center w-full">
-                            <label for="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
-                                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                                    </svg>
-                                    <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p className="text-xs text-gray-500 ">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                                </div>
-                                <input id="dropzone-file" type="file" className="hidden" />
-                            </label>
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
                             </div> 
                             <div className="flex items-center justify-center w-full">
-                            <label for="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100">
-                                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                                    </svg>
-                                    <p className="mb-2 text-sm text-gray-500 "><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p className="text-xs text-gray-500 ">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                                </div>
-                                <input id="dropzone-file" type="file" className="hidden" />
-                            </label>
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
                             </div> 
                             <div className="flex items-center justify-center w-full">
-                            <label for="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
-                                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                                    </svg>
-                                    <p className="mb-2 text-sm text-gray-500 "><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p className="text-xs text-gray-500 ">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                                </div>
-                                <input id="dropzone-file" type="file" className="hidden" />
-                            </label>
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
                             </div> 
                             <div className="flex items-center justify-center w-full">
-                            <label for="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
-                                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                                    </svg>
-                                    <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span> or drag and drop</p>
-                                    <p className="text-xs text-gray-500 ">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-                                </div>
-                                <input id="dropzone-file" type="file" className="hidden" />
-                            </label>
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
+                            </div> 
+                            <div className="flex items-center justify-center w-full">
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
+                            </div> 
+                            <div className="flex items-center justify-center w-full">
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500 "><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
+                            </div> 
+                            <div className="flex items-center justify-center w-full">
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500 "><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
+                            </div> 
+                            <div className="flex items-center justify-center w-full">
+                                <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                                        <svg className="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                        </svg>
+                                        <p className="mb-2 text-sm text-gray-500"><span className="font-semibold">Click to upload</span></p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" className="hidden" />
+                                </label>
                             </div> 
                         </div>
                     </div>
@@ -189,12 +223,12 @@ const handleClick = () => {
                         <div className='text-md font-bold text-black mb-1'>Used Product</div>
                         <div className= {`grid grid-cols-2 yesCheckbox gap-4 ${yesSelected ? 'active' : ''}`}>
                                 <div className= 'flex items-center ps-4 border border-gray-200 rounded has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600 '>
-                                    <input onClick={handleClick} id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                    <label for="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900">Yes</label>
+                                    <input onClick={handleClick} id="wes-checkbox-1" type="radio" value="" name="dfer" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                    <label htmlFor="wes-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900">Yes</label>
                                 </div>
                                 <div className="flex items-center ps-4 border border-gray-200 rounded has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
-                                    <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                    <label for="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900">No</label>
+                                    <input id="wes-checkbox-2" type="radio" value="" name="dfer" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                    <label htmlFor="wes-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900">No</label>
                                 </div>
                                 <div className='usedperiodBox hidden'>
                                     <Listbox value={usedProduct} onChange={setUsedProduct}>
@@ -452,22 +486,22 @@ const handleClick = () => {
                     </div>
                     <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Location</div>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Write your Location..."></textarea>
+                        <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Write your Location..."></textarea>
                     </div>
                     <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Condition Of The Product</div>
                         <div className='grid sm:grid-cols-3 gap-4'>
                             <div className="flex items-center ps-4 border border-gray-200 rounded  has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
-                                <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                <label for="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Pre</label>
+                                <input id="bordered-checkbox-1" type="radio" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                <label htmlFor="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Pre</label>
                             </div>
                             <div className="flex items-center ps-4 border border-gray-200 rounded  has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
-                                <input id="bordered-checkbox-2" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                <label for="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Pre Owned</label>
+                                <input id="bordered-checkbox-2" type="radio" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                <label htmlFor="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Pre Owned</label>
                             </div>
                             <div className="flex items-center ps-4 border border-gray-200 rounded  has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
-                                <input id="bordered-checkbox-3" type="checkbox" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                <label for="bordered-checkbox-3" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Refurbished</label>
+                                <input id="bordered-checkbox-3" type="radio" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                <label htmlFor="bordered-checkbox-3" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Refurbished</label>
                             </div>
                         </div>
                     </div>
@@ -507,14 +541,18 @@ const handleClick = () => {
                     </div>
                     <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Seller Location</div>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Write your Location..."></textarea>
+                        <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Write your Location..."></textarea>
                     </div>
                     <div className='py-2'>
                     <div className='text-md font-bold text-black mb-1'>Discription</div>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder=""></textarea>
+                        <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder=""></textarea>
                     </div>
                 </div>
+                <div className="w-full text-center pt-5">
+                    <Link class="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40" to="/seller"> Post Now</Link>
+                </div>
             </div>
+        <Footer/>
         </>
     )
 }

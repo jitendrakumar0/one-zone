@@ -113,8 +113,8 @@ const UserProfile = () => {
                                     </div>
                                     <div className="action-area flex space-x-4 items-center md:pt-8 pt-5">
                                         <div className="inline-flex gap-4 max-md:ml-auto">
-                                            <button className="border-2 grow border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Cancel <MdClear className='size-5' /></button>
-                                            <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Save Changes <FaRegCircleCheck className='size-5' /></button>
+                                            <button className="border-2 grow border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Cancel <MdClear className='size-5' /></button>
+                                            <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Save Changes <FaRegCircleCheck className='size-5' /></button>
                                         </div>
                                     </div>
                                 </div>

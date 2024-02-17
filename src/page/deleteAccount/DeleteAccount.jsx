@@ -41,7 +41,7 @@ const DeleteAccount = () => {
                                         <label htmlFor="check">If you are certain about deleting your account, please confirm by clicking the button below.</label>
                                     </li>
                                     <li className='mt-5'>
-                                        <button onClick={()=> {setDeleteAccount(true)}} className='text-white bg-red-500 border-2 border-red-500 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>DELETE</button>
+                                        <button onClick={()=> {setDeleteAccount(true)}} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>DELETE</button>
                                     </li>
                                 </ul>
                                     {/* <div className="justify-center items-center w-full flex">
@@ -53,7 +53,7 @@ const DeleteAccount = () => {
                                                     <div className="action-area flex space-x-4 items-center pb-4 justify-center">
                                                         <div className="inline-flex gap-4">
                                                             <Link to="/signup" className="text-white bg-red-600 border-2 grow border-red-600 border-b-red-800 font-bold text-sm md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-red-900 md:hover:bg-red-800 shadow-md shadow-red-800/40">Yes, I'm sure</Link>
-                                                            <button className="border-2 grow border-b-black font-bold text-sm md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-black hover:border-b-black shadow-md hover:text-theme1 shadow-black/40">No, cancel</button>
+                                                            <button className="border-2 grow border-b-black md:hover:border-b-black !rounded-full font-bold text-sm md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-black hover:border-b-black shadow-md hover:text-theme1 shadow-black/40">No, cancel</button>
                                                         </div>
                                                     </div>
                                                 </div>

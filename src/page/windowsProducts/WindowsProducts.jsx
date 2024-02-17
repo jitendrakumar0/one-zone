@@ -187,19 +187,19 @@ const WindowsProducts = () => {
                         <div className="max-md:w-full max-md:pt-5">
                             <div className="flex items-center gap-4">
                                 <button
-                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-full md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab1')}
                                 >
                                 Laptop
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-full md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab2')}
                                     >
                                     PC
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-full md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab3')}
                                     >
                                     Sper Parts
@@ -321,8 +321,8 @@ const WindowsProducts = () => {
                             ))}
 
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
-                                <button className="border-2 grow border-b-black  font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
-                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                                <button className="border-2 grow border-b-black md:hover:border-b-black !rounded-full  font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
+                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
                         </form>
 
@@ -358,7 +358,7 @@ const WindowsProducts = () => {
                                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -388,7 +388,7 @@ const WindowsProducts = () => {
                                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -415,7 +415,7 @@ const WindowsProducts = () => {
                                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -449,7 +449,7 @@ const WindowsProducts = () => {
                                                             <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                         </div>
                                                         <div className="shrink-0">
-                                                            <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                            <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -479,7 +479,7 @@ const WindowsProducts = () => {
                                                             <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                         </div>
                                                         <div className="shrink-0">
-                                                            <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                            <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -509,7 +509,7 @@ const WindowsProducts = () => {
                                                             <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                         </div>
                                                         <div className="shrink-0">
-                                                            <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                            <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -543,7 +543,7 @@ const WindowsProducts = () => {
                                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -573,7 +573,7 @@ const WindowsProducts = () => {
                                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -603,7 +603,7 @@ const WindowsProducts = () => {
                                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -640,7 +640,7 @@ const WindowsProducts = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -670,7 +670,7 @@ const WindowsProducts = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -697,7 +697,7 @@ const WindowsProducts = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>

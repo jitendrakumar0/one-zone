@@ -77,7 +77,7 @@ const Signup = () => {
                                             <div className="pt-5 flex items-center justify-between flex-wrap">
                                                 <div className="">
                                                     
-                                                    <Link to="/verify-account" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                    <Link to="/verify-account" className="text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                 </div>
                                                 <Link to="/">
                                                     <div className="text-base font-semibold text-black hover:text-black/70">
@@ -140,7 +140,7 @@ const Signup = () => {
                                                 <div className="pt-5 flex items-center w-full justify-between flex-wrap">
                                                     <div className="">
                                                         
-                                                        <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                        <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                     </div>
                                                     <Link to="/">
                                                         <div className="text-base font-semibold text-black hover:text-black/70">

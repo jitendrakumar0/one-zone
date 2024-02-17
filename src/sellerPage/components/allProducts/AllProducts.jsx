@@ -2,8 +2,7 @@ import React, { Fragment, useState } from "react";
 import { Dialog, Disclosure, Transition } from "@headlessui/react";
 import { FunnelIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from "react-router-dom";import { RiChat1Line } from "react-icons/ri";
-import { FaRegHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { MdClear } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { BiMessageSquareDetail } from "react-icons/bi";
@@ -63,7 +62,7 @@ import { TfiReload } from "react-icons/tfi";
         },
     ]
 
-const AllProducts = ({setIsOpenSaftey}) => {
+const AllProducts = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [priceRange, setPriceRange] = useState(1000);
     const [activeTab, setActiveTab] = useState('tab1');
@@ -183,19 +182,19 @@ const AllProducts = ({setIsOpenSaftey}) => {
                         <div className="max-md:w-full max-md:pt-5">
                             <div className="flex items-center gap-4">
                                 <button
-                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-full md:text-sm text-xs font-semibold ${activeTab === 'tab1' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab1')}
                                 >
                                 Laptop
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-full md:text-sm text-xs font-semibold ${activeTab === 'tab2' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab2')}
                                     >
                                     PC
                                 </button>
                                 <button
-                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-lg md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
+                                    className={`text-center border shadow-lg py-2 px-3 grow uppercase rounded-full md:text-sm text-xs font-semibold ${activeTab === 'tab3' ? 'bg-black text-theme1' : 'bg-gray-200 text-black/70'}`}
                                     onClick={() => handleTabClick('tab3')}
                                     >
                                     Sper Parts
@@ -317,8 +316,8 @@ const AllProducts = ({setIsOpenSaftey}) => {
                             ))}
 
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
-                                <button className="border-2 grow border-b-black  font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
-                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                                <button className="border-2 grow border-b-black md:hover:border-b-black !rounded-full  font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
+                                <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
                             </div>
                         </form>
 
@@ -354,9 +353,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -385,9 +384,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -416,9 +415,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -447,9 +446,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -478,9 +477,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -509,9 +508,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -546,9 +545,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -577,9 +576,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -608,9 +607,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -639,9 +638,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -670,9 +669,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -701,9 +700,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -738,9 +737,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -769,9 +768,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -800,9 +799,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -831,9 +830,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -862,9 +861,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -893,9 +892,9 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                                             </div>
                                                             <div className="shrink-0">
-                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
+                                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                                             </div>
-                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded absolute top-4 left-4'>FEATURED</div> */}
+                                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -905,7 +904,7 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                         }
                                 </div>
                                 <div className="w-full text-center pt-8">
-                                    <button className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"><TfiReload className='size-5' /> Load More</button>
+                                    <button className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"><TfiReload className='size-5' /> Load More</button>
                                 </div>
                         </div>
                         {/* <div className="lg:col-span-3">
@@ -935,7 +934,7 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -965,7 +964,7 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -992,7 +991,7 @@ const AllProducts = ({setIsOpenSaftey}) => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>

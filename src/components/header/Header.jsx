@@ -424,6 +424,7 @@ const Header = () => {
                     className="flex flex-1 items-center py-0.5"
                   >
                     <input
+                      type='search'
                       id="top-bar-search"
                       className="text-heading outline-none w-full h-[52px] pl-5 md:pl-6 pr-14 md:pr-16 bg-brand-light text-brand-dark text-sm lg:text-15px rounded-md transition-all duration-200 focus:border-brand focus:ring-0 placeholder:text-brand-dark/50 border border-border-base"
                       placeholder="What are you looking..."

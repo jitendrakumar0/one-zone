@@ -78,23 +78,23 @@ const Chat = () => {
                                 <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tl-md px-5 border border-b-slate-400'>
                                     <form className="w-full mx-auto">
                                         <div className="flex">
-                                            {/* <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
-                                            <button id="dropdown-button" data-dropdown-toggle="dropdown" className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                            {/* <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only">Your Email</label>
+                                            <button id="dropdown-button" data-dropdown-toggle="dropdown" className="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100" type="button">All categories <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                                     </svg></button> */}
-                                            <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                                                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                                            <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                                <ul className="py-2 text-sm text-gray-700" aria-labelledby="dropdown-button">
                                                 <li>
-                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
+                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100">Mockups</button>
                                                 </li>
                                                 <li>
-                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
+                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100">Templates</button>
                                                 </li>
                                                 <li>
-                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
+                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100">Design</button>
                                                 </li>
                                                 <li>
-                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
+                                                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100">Logos</button>
                                                 </li>
                                                 </ul>
                                             </div>
@@ -308,19 +308,19 @@ const Chat = () => {
                                         <p className="text-sm font-normal text-gray-900 ">This is the new office </p>
                                         <div className="group relative my-2.5">
                                             <div className="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                                <button data-tooltip-target="download" className="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
+                                                <button data-tooltip-target="download" className="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none focus:ring-gray-50">
                                                     <svg className="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
                                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
                                                     </svg>
                                                 </button>
-                                                <div id="download" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                <div id="download" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                                                     Download image
                                                     <div className="tooltip-arrow" data-popper-arrow></div>
                                                 </div>
                                             </div>
                                             <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" className="rounded-lg" alt="" />
                                         </div>
-                                        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+                                        <span className="text-sm font-normal text-gray-500">Delivered</span>
                                     </div>
                                 </div>
                                 <div className='inline-flex self-center items-center  group-[.sent]/bubble:[direction:ltr]'>
@@ -339,19 +339,19 @@ const Chat = () => {
                                         <p className="text-sm font-normal text-gray-900">This is the new office </p>
                                         <div className="group relative my-2.5">
                                             <div className="absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                                <button data-tooltip-target="download" className="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50">
+                                                <button data-tooltip-target="download" className="inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none focus:ring-gray-50">
                                                     <svg className="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 18">
                                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"/>
                                                     </svg>
                                                 </button>
-                                                <div id="download" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                <div id="download" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                                                     Download image
                                                     <div className="tooltip-arrow" data-popper-arrow></div>
                                                 </div>
                                             </div>
                                             <img src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" className="rounded-lg" alt="" />
                                         </div>
-                                        <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+                                        <span className="text-sm font-normal text-gray-500">Delivered</span>
                                     </div>
                                 </div>
                                 <div className='inline-flex self-center items-center  group-[.sent]/bubble:[direction:ltr]'>
@@ -948,7 +948,7 @@ const Chat = () => {
                                     </div>
                                     <Link to="#" className="text-sm text-blue-700 hover:underline">Lost Password?</Link>
                                 </div> */}
-                                <button type="submit" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Next</button>
+                                <button type="submit" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Next</button>
                                 {/* <div className="text-sm font-medium text-gray-500">
                                     Not registered? <a href="#" className="text-blue-700 hover:underline">Create account</a>
                                 </div> */}
@@ -1070,7 +1070,7 @@ const Chat = () => {
                             </ul>
                         </div>
                         <div className="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
-                            <button data-modal-hide="default-modal" type="button" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Complaint</button>
+                            <button data-modal-hide="default-modal" type="button" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Complaint</button>
                         </div>
                     </div>
                     </Dialog.Panel>

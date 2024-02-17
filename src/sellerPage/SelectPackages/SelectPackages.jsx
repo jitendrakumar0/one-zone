@@ -1,13 +1,11 @@
-import React, { Fragment, useState } from 'react'
+import { Fragment, useState } from 'react';
 import { IoArrowUndo } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import { SiWindows10 } from "react-icons/si";
-import { BsArrowDownSquareFill } from "react-icons/bs";
-import { Disclosure, Listbox, Transition } from '@headlessui/react';
-import { MdOutlineTranslate } from 'react-icons/md';
+import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
-import { FaGlobeAmericas } from 'react-icons/fa';
 import { SlLocationPin } from "react-icons/sl";
+import Header from '../components/header/Header';
+import Footer from '../../components/Footer/Footer';
 
 const allBrands = [
     { name: 'Windows' },
@@ -58,34 +56,18 @@ const allcountries = [
     // { name: 'Guinea', sortName: 'GN' },
     // { name: 'Guinea-Bissau', sortName: 'GW' }
 ];
-const used = [
-    { id: 1, name: '0-6 Months'},
-    { id: 2, name: '0-8 Months'},
-    { id: 3, name: '0-10 Months' },
-    { id: 4, name: '0-11 Months'},
-    { id: 5, name: '0-1 Year'},
-]
 
 const SelectPackages = () => {
 
     const [brand, setbrand] = useState(allBrands[0])
     const [country, setCountry] = useState(allcountries[0])
-    const [usedProduct, setUsedProduct] = useState(used[0])
-    const [yesSelected, setYesSelected] = useState(false)
-    const handleClick = () => {
-        setYesSelected(!yesSelected);
-    };
 
     return (
         <>
-        <div className="header w-full h-10 md:h-20 bg-gray-200 flex items-center px-8">
-                <Link to='/seller/select-category'>
-                    <IoArrowUndo className='size-6'/>
-                </Link>
-            </div>
-            <div className="max-w-screen-lg mx-auto my-5">
+        <Header/>
+            <div className="max-w-screen-md mx-auto my-5">
                 <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
-                    SELECT OPTIONS TO SHOW PACKAGES
+                    Select Options to Show Packages
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
                     <div className='py-2'>
@@ -230,10 +212,11 @@ const SelectPackages = () => {
                             </div>
                     </div>
                     <div className='py-2 mt-4'>
-                        <Link to='' className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black font-bold text-xs uppercase px-4 md:py-2 py-4 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Show Packages</Link>
+                        <Link to='/package-discount' className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-4 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Show Packages</Link>
                     </div>
                 </div>
             </div>
+        <Footer/>
         </>
     )
 }
