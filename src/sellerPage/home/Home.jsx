@@ -16,7 +16,7 @@ const Home = () => {
         <ConnectionList/>
         <AllProducts/>
         <Featured/>
-        <Clouds/>
+        {/* <Clouds/> */}
         {/* <SellingProducts/> */}
         <Footer/>
     </>

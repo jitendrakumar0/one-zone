@@ -460,7 +460,7 @@ const Header = () => {
       </nav>
       
       <Transition appear show={logout} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
+        <Dialog as="div" className="relative z-[1000]" onClose={()=>{setLogout(false)}}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -512,7 +512,7 @@ const Header = () => {
       </Transition>
       
       <Transition appear show={deleteAccount} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={()=>{setDeleteAccount(false)}}>
+        <Dialog as="div" className="relative z-[1000]" onClose={()=>{setDeleteAccount(false)}}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"

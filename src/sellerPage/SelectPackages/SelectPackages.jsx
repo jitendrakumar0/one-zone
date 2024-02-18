@@ -1,83 +1,44 @@
-import { Fragment, useState } from 'react';
-import { IoArrowUndo } from "react-icons/io5";
+// import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Listbox, Transition } from '@headlessui/react';
-import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
+// import { Listbox, Transition } from '@headlessui/react';
+// import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import { SlLocationPin } from "react-icons/sl";
 import Header from '../components/header/Header';
 import Footer from '../../components/Footer/Footer';
+import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
-const allBrands = [
-    { name: 'Windows' },
-    { name: 'Mac' },
-    { name: 'Cromebook' },
-    { name: 'Mobile' },
-    { name: 'Tablets' },
-    { name: 'Photocopy Machine' },
-    { name: 'Servers' },
-    // { name: 'BenQ' },
-    // { name: 'Chuwi' },
-    // { name: 'Compaq' },
-    // { name: 'CyberPowerPC' },
-    // { name: 'Dell' },
-    // { name: 'Dynabook' },
-    // { name: 'Fujitsu' },
-    // { name: 'HCL' },
-    // { name: 'IBM' },
-];
-const allcountries = [
-    { name: 'Sub Category', sortName: 'IN' },
-    { name: 'Window', sortName: 'AF' },
-    // { name: 'Algeria', sortName: 'DZ' },
-    // { name: 'Angola', sortName: 'AO' },
-    // { name: 'Armenia', sortName: 'AM' },
-    // { name: 'Azerbaijan', sortName: 'AZ' },
-    // { name: 'Bahrain', sortName: 'BH' },
-    // { name: 'Bangladesh', sortName: 'BD' },
-    // { name: 'Burkina Faso', sortName: 'BF' },
-    // { name: 'Burundi', sortName: 'BI' },
-    // { name: 'Cameroon', sortName: 'CM' },
-    // { name: 'Canada', sortName: 'CA' },
-    // { name: 'Central African Republic', sortName: 'CF' },
-    // { name: 'Chad', sortName: 'TD' },
-    // { name: 'China', sortName: 'CN' },
-    // { name: 'Colombia', sortName: 'CO' },
-    // { name: 'Comoros', sortName: 'KM' },
-    // { name: 'Congo (Congo-Brazzaville)', sortName: 'CG' },
-    // { name: 'Democratic Republic of the Congo', sortName: 'CD' },
-    // { name: 'Djibouti', sortName: 'DJ' },
-    // { name: 'Egypt', sortName: 'EG' },
-    // { name: 'Equatorial Guinea', sortName: 'GQ' },
-    // { name: 'Eritrea', sortName: 'ER' },
-    // { name: 'Ethiopia', sortName: 'ET' },
-    // { name: 'Gabon', sortName: 'GA' },
-    // { name: 'Gambia', sortName: 'GM' },
-    // { name: 'Ghana', sortName: 'GH' },
-    // { name: 'Guinea', sortName: 'GN' },
-    // { name: 'Guinea-Bissau', sortName: 'GW' }
-];
+// const allBrands = [
+//     { name: 'Windows' },
+//     { name: 'Mac' },
+//     { name: 'Cromebook' },
+//     { name: 'Mobile' },
+//     { name: 'Tablets' },
+//     { name: 'Photocopy Machine' },
+//     { name: 'Servers' },
+// ];
+// const allcountries = [
+//     { name: 'Sub Category', sortName: 'IN' },
+//     { name: 'Window', sortName: 'AF' },
+// ];
 
 const SelectPackages = () => {
 
-    const [brand, setbrand] = useState(allBrands[0])
-    const [country, setCountry] = useState(allcountries[0])
+    // const [brand, setbrand] = useState(allBrands[0])
+    // const [country, setCountry] = useState(allcountries[0])
 
     return (
         <>
         <Header/>
             <div className="max-w-screen-md mx-auto my-5">
                 <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
-                    Select Options to Show Packages
+                    Select Your Location
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
-                    <div className='py-2'>
+                    {/* <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Category</div>
                         <Listbox value={brand} onChange={setbrand}>
                         <div className="relative mt-1">
                             <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-4 shadow border-b-2 border-black">
-                            {/* <span>
-                                <MdOutlineTranslate className="size-4 text-theme1" />
-                            </span> */}
                             <span className="block truncate text-black">{brand.name}</span>
                             <span className="pointer-events-none absolute inset-y-0 right-[10px] flex items-center">
                                 <ChevronDownIcon
@@ -139,9 +100,6 @@ const SelectPackages = () => {
                         <Listbox value={country} onChange={setCountry}>
                             <div className="relative mt-1">
                                 <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-4 shadow border-b-2 border-black">
-                                {/* <span>
-                                    <FaGlobeAmericas className="size-4 text-theme1" />
-                                </span> */}
                                 <span className="block truncate text-black">{country.name}</span>
                                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                     <ChevronDownIcon
@@ -200,7 +158,7 @@ const SelectPackages = () => {
                                 </Transition>
                             </div>
                         </Listbox>
-                    </div>
+                    </div> */}
                     <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Location</div>
                         <div className="relative w-full">
@@ -211,8 +169,8 @@ const SelectPackages = () => {
                                 bg-gray-50 border  border-gray-300 text-gray-900 text-sm block p-2.5 " placeholder="Enter Location" required />
                             </div>
                     </div>
-                    <div className='py-2 mt-4'>
-                        <Link to='/package-discount' className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-4 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Show Packages</Link>
+                    <div className='py-2 mt-4 text-center'>
+                        <Link to='/package-discount' className='relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-4 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Next <MdOutlineKeyboardArrowRight className="size-5" /></Link>
                     </div>
                 </div>
             </div>

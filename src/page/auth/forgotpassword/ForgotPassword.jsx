@@ -18,7 +18,7 @@ const ForgotPassword = () => {
                     <div className="text-2xl font-bold text-center pb-2">Forgot Password!</div>
                     <div className="text-base font-semibold text-center">fill your registered email id for get reset password link on your email.</div>
                 </div>
-                <div id="profile" className="w-full bg-white opacity-75">
+                <div id="profile" className="w-full bg-white">
                     <div className="p-4 md:p-10">
                         <form>
                             <div className="flex flex-wrap items-center gap-y-3"> 

@@ -6,7 +6,7 @@ const LogoutDialogue = ({logout, setLogout}) => {
     return (
         <>
             <Transition appear show={logout} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
+                <Dialog as="div" className="relative z-[1000]" onClose={()=>{setLogout(false)}}>
                 <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"

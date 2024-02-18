@@ -47,7 +47,7 @@ const Login = () => {
                                         <div className="text-2xl font-bold text-center pb-2">Welcome Back !</div>
                                         <div className="text-base font-semibold text-center">Sign in as buyer to continue to Onezone</div>
                                     </div>
-                                    <div id="profile" className="w-full bg-white opacity-75">
+                                    <div id="profile" className="w-full bg-white">
                                         <div className="p-4 md:p-10">
                                             <form>
                                                 <div className="flex flex-wrap items-center gap-y-3">
@@ -64,10 +64,10 @@ const Login = () => {
                                                     </div>
                                                 </div>
                                             </form>
-                                            <div className="pt-5 flex items-center justify-between flex-wrap">
+                                            <div className="pt-5 flex items-center justify-between flex-wrap max-md:flex-col max-md:gap-4 max-md:items-start">
                                                 <div className="">
                                                     
-                                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Login <LiaSignInAltSolid className='size-5' /></Link>
+                                                    <Link to="/home" className="text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-sm uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Login <LiaSignInAltSolid className='size-5' /></Link>
                                                 </div>
                                                 <Link to="/signup">
                                                     <div className="text-base font-semibold text-black hover:text-black/70">
@@ -84,7 +84,7 @@ const Login = () => {
                                         <div className="text-2xl font-bold text-center pb-2">Welcome Back !</div>
                                         <div className="text-base font-semibold text-center">Sign in as seller to continue to Onezone</div>
                                     </div>
-                                    <div id="profile" className="w-full bg-white opacity-75">
+                                    <div id="profile" className="w-full bg-white">
                                         <div className="p-4 md:p-10">
                                             <form>
                                                 <div className="flex flex-wrap items-center gap-y-3">

@@ -3,7 +3,6 @@ import { IoMdCheckmark } from 'react-icons/io'
 import Header from '../components/header/Header'
 import Footer from '../../components/Footer/Footer'
 import { MdOutlineDiscount } from 'react-icons/md'
-import { RiAdvertisementLine } from 'react-icons/ri'
 import { FaCircleCheck, FaRegCircleCheck } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
@@ -15,17 +14,17 @@ export const PackageDiscount = () => {
                 <div>
                     <div className="bg-theme1 shadow-md shadow-black/20 w-full h-40 rounded-lg flex items-center justify-center flex-col">
                         <MdOutlineDiscount className='size-12 text-amber-800 mb-4' />
-                        <div className='text-xl font-bold text-black'>Heavy discount on Packages</div>
+                        <div className='text-xl font-bold text-black px-4 text-balance text-center'>Grow your business with feature post</div>
                     </div>
                 </div>
                 <div className='py-6 border-b'>
                     <div className='text-base text-black font-bold'>FEATURE AD</div>
-                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Get noticed with 'FEATURED' tag in a top position</div>
-                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Package available for 30 days</div>
+                    <div className='flex items-start text-md text-gray-600'><IoMdCheckmark className='size-4 me-2 mt-1' />Get noticed with 'FEATURED' tag in a top position</div>
+                    <div className='flex items-start text-md text-gray-600'><IoMdCheckmark className='size-4 me-2 mt-1' />Package available for 30 days</div>
                 </div>
                 <div className="pt-6">
                     <div className='text-sm text-black font-bold'>Featured ads for 30 days</div>
-                    <div className='flex items-center text-md text-gray-600'><IoMdCheckmark className='size-4 me-2' />Reach up to 10 times more buyers</div>
+                    <div className='flex items-start text-md text-gray-600'><IoMdCheckmark className='size-4 me-2 mt-1' />Reach up to 10 times more buyers</div>
 
                     <div className="grid grid-cols-1 gap-5 py-5">
                         <label htmlFor='ad1' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-gray-800 border-2 border-gray-200 rounded-lg shadow sm:p-4 group/ads">

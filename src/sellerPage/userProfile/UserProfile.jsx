@@ -203,7 +203,17 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/seller-chat">
+                <NavLink className="group/link" to="/wishlist">
+                    <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
+                        <span className='max-md:hidden *:size-5'>
+                            <FiHeart/>
+                        </span>
+                        <span className="font-semibold text-base">My Favorite</span>
+                    </div>
+                </NavLink>
+            </div>
+            <div className="item group">
+                <NavLink className="group/link" to="/chat">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden *:size-5'>
                             <IoChatboxOutline/>
@@ -213,7 +223,7 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/seller-notification">
+                <NavLink className="group/link" to="/notification">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden *:size-5'>
                             <LuBellDot />
@@ -223,7 +233,7 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/seller-reset-password">
+                <NavLink className="group/link" to="/reset-password">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden *:size-5'>
                             <LuUnlock/>
@@ -235,7 +245,7 @@ export const AllSideMenu = () => {
                 </NavLink>
             </div>
             <div className="item group">
-                <NavLink className="group/link" to="/seller-delete-account">
+                <NavLink className="group/link" to="/delete-account">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden *:size-5'>
                             <IoCloseCircleOutline />

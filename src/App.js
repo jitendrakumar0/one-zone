@@ -32,6 +32,11 @@ import EditProductDetail from "./sellerPage/EditProductDetail/EditProductDetail"
 import SellerWindowProduct from "./sellerPage/SellerWindowProduct/SellerWindowProduct";
 import SelectPackages from "./sellerPage/SelectPackages/SelectPackages";
 import { PackageDiscount } from "./sellerPage/PackageDiscount/PackageDiscount";
+import SellerUserProfile from "./sellerPage/sellerUserProfile/SellerUserProfile";
+import SellerNotification from "./sellerPage/sellerNotification/SellerNotification";
+import SellerResetPassword from "./sellerPage/sellerResetPassword/SellerResetPassword";
+import SellerDeleteAccount from "./sellerPage/sellerDeleteAccount/SellerDeleteAccount";
+import SellerChat from "./sellerPage/sellerChat/SellerChat";
 
 function App() {
 
@@ -72,6 +77,11 @@ function App() {
 
 
           
+          <Route path="/seller-userprofile" element={<SellerUserProfile/>}></Route>
+          <Route path="/seller-notification" element={<SellerNotification/>}></Route>
+          <Route path="/seller-reset-password" element={<SellerResetPassword/>}></Route>
+          <Route path="/seller-delete-account" element={<SellerDeleteAccount/>}></Route>
+          <Route path="/seller-chat" element={<SellerChat/>}></Route>
           <Route path="/select-category" element={<SelectCategory/>}></Route>
           <Route path="/selected-category" element={<SelectedCategory/>}></Route>
           <Route path="/seller-productdetail" element={<SellerProductDetail/>}></Route>

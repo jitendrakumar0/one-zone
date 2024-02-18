@@ -47,7 +47,7 @@ const Signup = () => {
                                     <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
                                     <div className="text-2xl font-bold text-center pb-2">Register as Buyer</div>
                                 </div>
-                                <div id="profile" className="w-full bg-white opacity-75">
+                                <div id="profile" className="w-full bg-white">
                                     <div className="p-4 md:p-10">
                                         <form>
                                             <div className="flex flex-wrap items-center gap-y-3">
@@ -74,10 +74,10 @@ const Signup = () => {
                                                 </div>
                                                 <label htmlFor="terms" className="ms-2 text-sm font-medium text-gray-900">Accept <Link className="text-blue-600 hover:underline">Terms & Conditions</Link></label>
                                             </div>
-                                            <div className="pt-5 flex items-center justify-between flex-wrap">
+                                            <div className="pt-5 flex items-center justify-between flex-wrap max-md:flex-col max-md:gap-4 max-md:items-start">
                                                 <div className="">
                                                     
-                                                    <Link to="/verify-account" className="text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
+                                                    <Link to="/verify-account" className="text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-sm uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Register <LiaSignInAltSolid className='size-5' /></Link>
                                                 </div>
                                                 <Link to="/">
                                                     <div className="text-base font-semibold text-black hover:text-black/70">
@@ -95,7 +95,7 @@ const Signup = () => {
                                     <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
                                     <div className="text-2xl font-bold text-center pb-2">Register as Seller</div>
                                 </div>
-                                <div id="profile" className="w-full bg-white opacity-75">
+                                <div id="profile" className="w-full bg-white">
                                     <div className="p-4 md:p-10">
                                         <form>
                                             <div className="flex flex-wrap items-center gap-y-3">

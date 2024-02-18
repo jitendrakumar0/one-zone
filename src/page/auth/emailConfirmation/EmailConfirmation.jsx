@@ -17,7 +17,7 @@ const EmailConfirmation = () => {
                     <div className="text-2xl font-bold text-center pb-2">Check your email!</div>
                     <div className="text-base font-semibold text-center text-balance">Please enter the 4 digit verification code that was sent to your email. The code is valid for 30 minutes.</div>
                 </div>
-                <div id="profile" className="w-full bg-white opacity-75">
+                <div id="profile" className="w-full bg-white">
                     <div className="p-4 md:p-10">
                         <form>
                             <div className="flex flex-wrap items-center gap-y-3"> 

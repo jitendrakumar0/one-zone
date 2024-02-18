@@ -9,7 +9,6 @@ import { MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
 import Logo from '../../asstes/img/logo.svg'
 import { HeaderMenu } from '../header/Header';
-import { AllSideMenu } from '../../page/userProfile/UserProfile';
 import { IoClose } from 'react-icons/io5';
 
 const allcountries = [
@@ -487,7 +486,7 @@ const Header2 = () => {
               </Dialog.Title>
               <div className="flex p-5 flex-col overflow-y-auto">
                   <HeaderMenu/>
-                  <AllSideMenu />
+                  {/* <AllSideMenu /> */}
               </div>
           </Dialog.Panel>
       </Dialog>

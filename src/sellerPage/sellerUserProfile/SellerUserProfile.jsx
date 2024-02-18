@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer';
-import Header from '../../components/header/Header';
+import Header from '../components/header/Header';
 import Profileimg from '../../asstes/img/edit-profileimg.jpg'
 import { LuBellDot, LuUnlock } from 'react-icons/lu';
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { MdClear } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 import { FaRegUserCircle } from 'react-icons/fa';
-import { FiHeart } from 'react-icons/fi';
 import { IoChatboxOutline, IoCloseCircleOutline } from 'react-icons/io5';
 import { AiOutlineLogout } from 'react-icons/ai';
 import LogoutDialogue from '../../components/LogoutDialogue/LogoutDialogue';
 
-const UserProfile = () => {
+const SellerUserProfile = () => {
     return (
         <>
             <Header />
@@ -180,7 +179,7 @@ const UserProfile = () => {
 }
 
 
-export default UserProfile
+export default SellerUserProfile
 
 
 
@@ -191,7 +190,7 @@ export const AllSideMenu = () => {
         <>
         <div className="flex flex-col pr-3 md:gap-y-3">
             <div className="item group">
-                <NavLink className="group/link" to="/seller-profile">
+                <NavLink className="group/link" to="/seller-userprofile">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
                         <span className='max-md:hidden *:size-5'>
                             <FaRegUserCircle />

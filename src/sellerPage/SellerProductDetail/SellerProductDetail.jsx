@@ -12,6 +12,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SafetyModal from '../../page/chat/Component/SafetyModal'
 import DeleteDialogue from '../../components/DeleteDialogue/DeleteDialogue'
+import { AiTwotoneDelete } from 'react-icons/ai'
+import { FiEdit2 } from 'react-icons/fi'
 
 const SellerProductDetail = () => {
     const [detailTabs, setDetailTabs] = useState('description');
@@ -144,36 +146,34 @@ const SellerProductDetail = () => {
                                 <div className="flex items-center">
                                     <h5 className="text-lg font-semibold me-2">Size:</h5>
                                     <div className="space-x-1">
-                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 text-black font-bold hover:text-black">S</Link>
-                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 text-black font-bold hover:text-black">M</Link>
-                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 text-black font-bold hover:text-black">L</Link>
-                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 text-black font-bold hover:text-black">XL</Link>
+                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center border-r last:border-r-0 text-black font-bold">S</Link>
+                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center border-r last:border-r-0 text-black font-bold">M</Link>
+                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center border-r last:border-r-0 text-black font-bold">L</Link>
+                                        <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center border-r last:border-r-0 text-black font-bold">XL</Link>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center">
                                     <h5 className="text-lg font-semibold me-2">Quantity:</h5>
-                                    <div className="qty-icons ms-3 space-x-0.5">
-                                        {/* <button className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white minus">-</button> */}
-                                        <input min="0" name="quantity" value="15" type="number" className="h-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white pointer-events-none w-16 ps-4 quantity" />
-                                        {/* <button className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white plus">+</button> */}
+                                    <div className="qty-icons ms-3 text-base font-bold">
+                                        15
                                     </div>
                                 </div>
 
                                 <div className="flex items-center">
                                     <h5 className="text-lg font-semibold me-2">Colors:</h5>
                                     <div className="space-x-2">
-                                        <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-red-600 inline-flex align-middle" title="Red"></Link>
-                                        <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-orange-600 inline-flex align-middle" title="Orange"></Link>
-                                        <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-slate-900 inline-flex align-middle" title="Black"></Link>
-                                        <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-gray-300 inline-flex align-middle" title="Gray"></Link>
+                                        <Link className="size-6 ring-2 ring-gray-200 bg-red-600 inline-flex align-middle" title="Red"></Link>
+                                        <Link className="size-6 ring-2 ring-gray-200 bg-orange-600 inline-flex align-middle" title="Orange"></Link>
+                                        <Link className="size-6 ring-2 ring-gray-200 bg-slate-900 inline-flex align-middle" title="Black"></Link>
+                                        <Link className="size-6 ring-2 ring-gray-200 bg-gray-300 inline-flex align-middle" title="Gray"></Link>
                                     </div>
                                 </div>
                             </div>
 
                                 <div className='mt-5'>
-                                    <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'>Delete</button>
-                                    <Link to='/edit-productdetail' className='ms-5 relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase  md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 md:px-8 px-4  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Edit</Link>
+                                    <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'><AiTwotoneDelete className='size-5' /> Delete</button>
+                                    <Link to='/edit-productdetail' className='ms-5 relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase  md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 md:px-8 px-4  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><FiEdit2 className='size-5' /> Edit</Link>
                                 </div>
                         </div>
                     </div>
@@ -349,47 +349,6 @@ const SellerProductDetail = () => {
 
                                         <p className="text-slate-600 italic">" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
                                     </div>
-                                </div>
-
-                                <div className="p-6 rounded-md shadow mt-8">
-                                    <h5 className="text-lg font-semibold">Leave A Comment:</h5>
-
-                                    <form className="mt-8">
-                                        <div className="grid lg:grid-cols-12 lg:gap-6">
-                                            <div className="lg:col-span-6 mb-5">
-                                                <div className="text-start">
-                                                    <label htmlFor="name" className="font-semibold">Your Name:</label>
-                                                    <div className="form-icon relative mt-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user w-4 h-4 absolute top-3 start-4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                                        <input name="name" id="name" type="text" className="ps-11 w-full py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Name :" />
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div className="lg:col-span-6 mb-5">
-                                                <div className="text-start">
-                                                    <label htmlFor="email" className="font-semibold">Your Email:</label>
-                                                    <div className="form-icon relative mt-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-mail w-4 h-4 absolute top-3 start-4"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                                        <input name="email" id="email" type="email" className="ps-11 w-full py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Email :" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="grid grid-cols-1">
-                                            <div className="mb-5">
-                                                <div className="text-start">
-                                                    <label htmlFor="comments" className="font-semibold">Your Comment:</label>
-                                                    <div className="form-icon relative mt-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-message-circle w-4 h-4 absolute top-3 start-4"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                                                        <textarea name="comments" id="comments" className="ps-11 w-full py-2 px-3 h-28 bg-transparent rounded outline-none border border-gray-100 focus:ring-0" placeholder="Message :"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" id="submit" name="send" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Message</button>
-                                    </form>
                                 </div>
                             </div>
                             }

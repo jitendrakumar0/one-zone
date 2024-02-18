@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import { BiSupport } from "react-icons/bi";
 import { Listbox, Transition, Menu, Dialog } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
-import { FaGlobeAmericas } from "react-icons/fa";
+import { FaCrown, FaGlobeAmericas } from "react-icons/fa";
 import { LuUnlock } from "react-icons/lu";
 import { MdOutlineBusinessCenter, MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
@@ -11,8 +11,8 @@ import { FiEdit2 } from "react-icons/fi";
 import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../../asstes/img/logo.svg'
-import NotificationPopup from '../../../components/notificationPopup/NotificationPopup';
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import NotificationPopup from '../notificationPopup/NotificationPopup';
 
 const allcountries = [
   { name: 'India', sortName: 'IN' },
@@ -251,7 +251,7 @@ const Header = ({seller}) => {
                     <div className="px-1 py-1 ">
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to="/profile"
+                          <Link to="/seller-userprofile"
                             className={`${
                               active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -273,7 +273,7 @@ const Header = ({seller}) => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to="/reset-password"
+                          <Link to="/seller-reset-password"
                             className={`${
                               active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -301,23 +301,23 @@ const Header = ({seller}) => {
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                           >
                             {active ? (
-                              <MdOutlineBusinessCenter
+                              <FaCrown
                                 className="mr-3 ml-1 h-5 w-5"
                                 aria-hidden="true"
                               />
                             ) : (
-                              <MdOutlineBusinessCenter
+                              <FaCrown
                                 className="mr-3 ml-1 h-5 w-5"
                                 aria-hidden="true"
                               />
                             )}
-                              Buy Business Packages
+                              Feature Your Post
                           </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to="/chat"
+                          <Link to="/seller-chat"
                             className={`${
                               active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -339,7 +339,7 @@ const Header = ({seller}) => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link to="/delete-account"
+                          <Link to="/seller-delete-account"
                             className={`${
                               active ? "bg-gray-900 text-theme1" : "text-gray-900"
                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
@@ -387,7 +387,7 @@ const Header = ({seller}) => {
                   </Menu.Items>
                 </Transition>
               </Menu>
-              <Link to='/select-category' className='relative z-10 text-black px-4 text-nowrap bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><IoIosAddCircleOutline className='size-6'/>Add Item</Link>
+              <Link to='/select-category' className='relative z-10 text-black md:px-4 px-1 text-nowrap bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><IoIosAddCircleOutline className='size-6'/><span className='max-md:hidden'>Product</span></Link>
             <button
               onClick={() => setSidebarIsOpen(true)}
               data-collapse-toggle="navbar-sticky"
@@ -462,7 +462,7 @@ const Header = ({seller}) => {
       </nav>
       
       <Transition appear show={logout} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={()=>{setLogout(false)}}>
+        <Dialog as="div" className="relative z-[1000]" onClose={()=>{setLogout(false)}}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -514,7 +514,7 @@ const Header = ({seller}) => {
       </Transition>
       
       <Transition appear show={deleteAccount} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={()=>{setDeleteAccount(false)}}>
+        <Dialog as="div" className="relative z-[1000]" onClose={()=>{setDeleteAccount(false)}}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
