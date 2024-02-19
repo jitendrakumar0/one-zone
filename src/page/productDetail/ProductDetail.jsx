@@ -140,7 +140,7 @@ const ProductDetail = () => {
                     </div>
                     <div className="flex py-3 font-semibold text-black md:text-base text-sm">1 Year Onsite Warranty</div>
 
-                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-4">
+                    <div className="grid lg:grid-cols-1 grid-cols-1 gap-6 mt-4">
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Size:</h5>
                             <div className="space-x-1">
@@ -151,14 +151,14 @@ const ProductDetail = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center">
+                        {/* <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Quantity:</h5>
                             <div className="qty-icons ms-3 space-x-0.5">
                                 <button className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white minus">-</button>
                                 <input min="0" name="quantity" value="0" type="number" className="h-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white pointer-events-none w-16 ps-4 quantity" />
                                 <button className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-sm text-center rounded-md bg-black/10 font-bold hover:bg-theme1 text-black hover:text-white plus">+</button>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Colors:</h5>

@@ -4,6 +4,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid';
 import Footer from '../../components/Footer/Footer';
 import Header from '../components/header/Header';
+import { BsCurrencyDollar } from 'react-icons/bs';
 
 const allBrands = [
     { name: 'Acer' },
@@ -199,13 +200,30 @@ const used = [
                         <div className='text-md font-bold text-black mb-1'>Product Name*</div>
                         <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
                     </div>
-                    <div className='py-2'>
+                    {/* <div className='py-2'>
                         <div className='text-md font-bold text-black mb-1'>Price</div>
                         <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
-                    </div>
+                    </div> */}
                     <div className='py-2'>
-                        <div className='text-md font-bold text-black mb-1'>$USD Price</div>
-                        <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
+                    <div className='grid grid-cols-3 gap-4'>
+                        <div>
+                            <div className='text-md font-bold text-black mb-1'>Price</div>
+                            <div className="relative w-full">
+                                <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <BsCurrencyDollar />
+                                </div>
+                                <input type="text" id="voice-search" class=" w-full py-4 rounded-lg ps-10 shadow" placeholder="" required />
+                            </div>
+                        </div>
+                        <div>
+                            <div className='text-md font-bold text-black mb-1'>% Discount</div>
+                            <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
+                        </div>
+                        <div>
+                            <div className='text-md font-bold text-black mb-1'>Discounted Price</div>
+                            <input className='w-full py-4 rounded-lg ps-10 shadow' readOnly type="text" />
+                        </div>
+                    </div>
                     </div>
                     <div className='py-2'>
                         <div className='grid grid-cols-2 gap-4'>
@@ -227,7 +245,7 @@ const used = [
                                     <label htmlFor="wes-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900">Yes</label>
                                 </div>
                                 <div className="flex items-center ps-4 border border-gray-200 rounded has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
-                                    <input id="wes-checkbox-2" type="radio" value="" name="dfer" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
+                                    <input onClick={()=>handleClick(false)} id="wes-checkbox-2" type="radio" value="" name="dfer" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
                                     <label htmlFor="wes-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900">No</label>
                                 </div>
                                 <div className='usedperiodBox hidden'>

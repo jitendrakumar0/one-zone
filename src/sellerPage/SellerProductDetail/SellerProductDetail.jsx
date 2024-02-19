@@ -14,6 +14,7 @@ import SafetyModal from '../../page/chat/Component/SafetyModal'
 import DeleteDialogue from '../../components/DeleteDialogue/DeleteDialogue'
 import { AiTwotoneDelete } from 'react-icons/ai'
 import { FiEdit2 } from 'react-icons/fi'
+import { FaCrown } from 'react-icons/fa'
 
 const SellerProductDetail = () => {
     const [detailTabs, setDetailTabs] = useState('description');
@@ -142,7 +143,7 @@ const SellerProductDetail = () => {
                             </div>
                             <div className="flex py-3 font-semibold text-black md:text-base text-sm">1 Year Onsite Warranty</div>
 
-                            <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-4">
+                            <div className="grid lg:grid-cols-1 grid-cols-1 gap-6 mt-4">
                                 <div className="flex items-center">
                                     <h5 className="text-lg font-semibold me-2">Size:</h5>
                                     <div className="space-x-1">
@@ -153,12 +154,12 @@ const SellerProductDetail = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex items-center">
+                                {/* <div className="flex items-center">
                                     <h5 className="text-lg font-semibold me-2">Quantity:</h5>
                                     <div className="qty-icons ms-3 text-base font-bold">
                                         15
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="flex items-center">
                                     <h5 className="text-lg font-semibold me-2">Colors:</h5>
@@ -171,10 +172,10 @@ const SellerProductDetail = () => {
                                 </div>
                             </div>
 
-                                <div className='mt-5'>
+                                {/* <div className='mt-5 sticky bottom-0'>
                                     <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'><AiTwotoneDelete className='size-5' /> Delete</button>
                                     <Link to='/edit-productdetail' className='ms-5 relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase  md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 md:px-8 px-4  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><FiEdit2 className='size-5' /> Edit</Link>
-                                </div>
+                                </div> */}
                         </div>
                     </div>
                 </div>
@@ -358,6 +359,13 @@ const SellerProductDetail = () => {
             </div>
     <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
     <DeleteDialogue name={'product'} DeleteAccount={DeleteAccount} setDeleteAccount={setDeleteAccount}/>
+            <div className='mt-5 sticky bottom-0 flex  w-auto justify-center items-center z-40 '>
+                <div className='bg-white shadow px-5 py-4 rounded-t-lg '>
+                <Link to='/select-packages' className='text-black animatepulse me-4 bg-[#EFC469] border-2 border-[#EFC469] border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300  shadow-md shadow-black/40'><FaCrown className='size-5' /> Feature your post</Link>
+                <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase w-8 h-8 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'><AiTwotoneDelete className='size-5' /> </button>
+                <Link to='/edit-productdetail' className='ms-4 relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase w-8 h-8 text-center inline-flex items-center justify-center gap-2  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><FiEdit2 className='size-5' /> </Link>
+                </div>
+        </div>
     <Footer />
         </>
     )

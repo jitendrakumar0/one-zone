@@ -223,7 +223,10 @@ const Header = ({seller}) => {
             <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 mt-0">
-              <NotificationPopup/>
+            <div className='relative'>
+                <NotificationPopup className='z-1'/>
+                <div className='size-2 bg-green-500 absolute top-[4px] rounded-full right-0 z-50'></div>
+            </div>
               <Menu as="div" className="relative inline-block text-left pt-2">
                 <Menu.Button className="inline-flex items-center gap-1 relative md:pr-5">
                   <img
@@ -293,7 +296,7 @@ const Header = ({seller}) => {
                           </Link>
                         )}
                       </Menu.Item>
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <Link to="/select-packages"
                             className={`${
@@ -314,7 +317,7 @@ const Header = ({seller}) => {
                               Feature Your Post
                           </Link>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
                           <Link to="/seller-chat"
@@ -333,7 +336,7 @@ const Header = ({seller}) => {
                                 aria-hidden="true"
                               />
                             )}
-                            Chat 
+                            Chat <span className='rounded-full size-5 bg-theme1 text-black ms-2 text-xs flex items-center justify-center'>4</span>
                           </Link>
                         )}
                       </Menu.Item>
@@ -608,6 +611,10 @@ max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md
     <li className='list-none'>
       <NavLink to="/contact" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Contact</NavLink>
+    </li>
+    <li className='list-none'>
+      <NavLink to="/seller" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black  border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0  rounded-0">Featured Post</NavLink>
     </li>
     </>
   )
