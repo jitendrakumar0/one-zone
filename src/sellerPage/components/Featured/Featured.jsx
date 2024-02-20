@@ -72,7 +72,7 @@ const Featured = ({setIsOpenSaftey}) => {
 
                         {/* new card */}
                                 <div className="flex flex-wrap w-full h-full items-stretch">
-                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-gray-400 shadow-lg  bg-white/60 rounded-xl shadow-theme1/20">
+                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-red-400 shadow-lg  bg-white/60 rounded-xl shadow-theme1/20">
                                         <div className=" w-full shrink-0 grid items-center justify-center">
                                             {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
@@ -91,20 +91,20 @@ const Featured = ({setIsOpenSaftey}) => {
                                             </ul> */}
                                         </div>
                                         <div className="w-full shrink-0 flex">
-                                            <div className="grow">
-                                                <div className="w-full md:text-lg font-bold text-black">$31,990</div>
-                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">$49,990</div>
+                                            <div className="grow flex items-center gap-3">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                                 <div className="text-lime-600">36% off</div>
                                             </div>
                                             {/* <div className="shrink-0">
                                                 <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                             </div> */}
-                                            <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute top-4 left-4 border-2'>2 days left</div>
+                                            <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute top-4 left-4 border-2'>2 Days Left</div>
                                             <div className='text-xs font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-br-lg rounded-tl-lg border-red px-4 py-2 text-white  absolute top-4 right-4 border-2 border-b-black shadow '>PREMIUM</div>
                                         </div>
                                         
                                         <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancle</button>
+                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
                                             <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                         </div>
                                     </div>
@@ -133,20 +133,20 @@ const Featured = ({setIsOpenSaftey}) => {
                                             </ul> */}
                                         </div>
                                         <div className="w-full shrink-0 flex">
-                                            <div className="grow">
-                                                <div className="w-full md:text-lg font-bold text-black">$31,990</div>
-                                                <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">$49,990</div>
+                                            <div className="grow flex items-center gap-3">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                                 <div className="text-lime-600">36% off</div>
                                             </div>
                                             {/* <div className="shrink-0">
                                                 <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                             </div> */}
-                                            <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute top-4 left-4 border-2'>one month left</div>
+                                            <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute top-4 left-4 border-2'>1 Month Left</div>
                                             <div className='text-xs font-bold bg-green-600 rounded-br-lg rounded-tl-lg px-4 py-2 text-white absolute top-4 right-4 border-2 bg-gradient-to-r from-teal-600 to-green-500 border-white border-b-black shadow'>STANDARD</div>
                                         </div>
                                         
                                         <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancle</button>
+                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
                                             <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                         </div>
                                     </div>
@@ -176,20 +176,20 @@ const Featured = ({setIsOpenSaftey}) => {
                                     </ul> */}
                                 </div>
                                 <div className="w-full shrink-0 flex">
-                                    <div className="grow">
-                                        <div className="w-full md:text-lg font-bold text-black">$31,990</div>
-                                        <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">$49,990</div>
+                                    <div className="grow flex items-center gap-3">
+                                        <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                        <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                         <div className="text-lime-600">36% off</div>
                                     </div>
                                     {/* <div className="shrink-0">
                                         <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                     </div> */}
-                                    <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute top-4 left-4 border-2'>15 days left</div>
+                                    <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute top-4 left-4 border-2'>15 Days Left</div>
                                     <div className='text-xs font-bold bg-yellow-800 px-4 py-2  text-white rounded-br-lg rounded-tl-lg shadow absolute top-4 right-4 border-2 border-b-black border-white-800 bg-gradient-to-r from-red-500 to-orange-500'>BASIC</div>
                                 </div>
                                 
                                 <div className='flex w-full gap-4'>
-                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancle</button>
+                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
                                     <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                         <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
                                     </div>
                                 <div className=''>
-                                    <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute -top-1 md:-top-3 left-0 border-2'>few days left</div>
+                                    <div className='text-xs font-bold bg-gray-200 px-4 py-1 text-black rounded-full absolute -top-1 md:-top-3 left-0 border-2'>Expired</div>
                                     <div className='text-xs font-bold bg-yellow-800 px-4 py-2 text-white rounded-br-lg rounded-tl-lg absolute -top-2 md:-top-4 right-0 border-2 border-b-black bg-gradient-to-r from-red-500 to-orange-500 border-white shadow'>BASIC</div>
                                 </div>
                                     <div className="w-full">
@@ -222,9 +222,9 @@ const Featured = ({setIsOpenSaftey}) => {
                                         </ul> */}
                                     </div>
                                     <div className="w-full shrink-0 flex">
-                                        <div className="grow">
-                                            <div className="w-full md:text-lg font-bold text-black">$31,990</div>
-                                            <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">$49,990</div>
+                                        <div className="grow flex items-center gap-3">
+                                            <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                            <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                             <div className="text-lime-600">36% off</div>
                                         </div>
                                         {/* <div className="shrink-0">
@@ -233,7 +233,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                     </div>
                                 </div>
                                 <div className='flex w-full gap-4 mt-3'>
-                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancle</button>
+                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Remove</button>
                                     <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                 </div>
                             </div>
