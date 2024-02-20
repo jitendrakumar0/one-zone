@@ -357,16 +357,16 @@ const SellerProductDetail = () => {
                     </div>
                 </div>
             </div>
-    <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
-    <DeleteDialogue name={'product'} DeleteAccount={DeleteAccount} setDeleteAccount={setDeleteAccount}/>
-            <div className='mt-5 sticky bottom-0 flex  w-auto justify-center items-center z-40 '>
-                <div className='bg-white shadow px-5 py-4 rounded-t-lg '>
-                <Link to='/select-packages' className='text-black animatepulse me-4 bg-[#EFC469] border-2 border-[#EFC469] border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300  shadow-md shadow-black/40'><FaCrown className='size-5' /> Feature your post</Link>
-                <button onClick={()=>setDeleteAccount(true)} className='text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase w-8 h-8 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'><AiTwotoneDelete className='size-5' /> </button>
-                <Link to='/edit-productdetail' className='ms-4 relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase w-8 h-8 text-center inline-flex items-center justify-center gap-2  duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><FiEdit2 className='size-5' /> </Link>
+            <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
+            <DeleteDialogue name={'product'} DeleteAccount={DeleteAccount} setDeleteAccount={setDeleteAccount}/>
+            <div className='mt-5 sticky bottom-0 flex md:w-auto w-full justify-center items-center z-40'>
+                <div className='bg-white shadow p-6 rounded-t-3xl max-md:w-full max-md:flex'>
+                <Link to='/select-packages' className='grow text-black animatepulse me-4 bg-[#EFC469] border-2 border-[#cea44a] border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 py-2 text-center inline-flex items-center justify-center gap-2 duration-300  shadow-md shadow-black/40'><FaCrown className='size-5' /> Feature your post</Link>
+                <button onClick={()=>setDeleteAccount(true)} className='shrink text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase text-center md:px-4 p-2 inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40'><AiTwotoneDelete className='size-5' /> <span className="max-md:hidden">Delete</span></button>
+                <Link to='/edit-productdetail' className='shrink ms-4 relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase text-center md:px-4 p-2 inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><FiEdit2 className='size-5' /> <span className="max-md:hidden">Edit</span></Link>
                 </div>
-        </div>
-    <Footer />
+            </div>
+            <Footer />
         </>
     )
 }
