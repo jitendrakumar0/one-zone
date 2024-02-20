@@ -256,7 +256,7 @@ const AllProducts = () => {
                         </div> */}
                     </div>
 
-                    <section aria-labelledby="products-heading" className="pb-20 pt-6">
+                    <section aria-labelledby="products-heading" className=" pb-8 lg:pb-20 pt-6">
                         <h2 id="products-heading" className="sr-only">
                         Products
                         </h2>

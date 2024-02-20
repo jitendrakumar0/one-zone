@@ -33,10 +33,10 @@ const SellerUserProfile = () => {
                                         <div className="w-full">
 
                                             <div className="w-full flex max-md:flex-col md:gap-10 gap-5 items-center relative">
-                                                <div className="update-logo w-auto ">
+                                                <div className="update-logo w-auto mt-8 md:mt-0">
                                                     <div className="flex justify-center">
                                                         <div className="relative">
-                                                            <div className="lg:size-32 size-20 rounded-full overflow-hidden relative">
+                                                            <div className="lg:size-32 size-28 rounded-full overflow-hidden relative">
                                                                 <img
                                                                     src={Profileimg}
                                                                     alt=""
@@ -86,7 +86,7 @@ const SellerUserProfile = () => {
                                                 </div>
                                             </div>
 
-                                            <div className="grid lg:grid-cols-2 md:gap-6 pt-10">
+                                            <div className="grid lg:grid-cols-2 md:gap-6 pt-5 md:pt-10">
                                                 <div className="relative z-0 w-full mb-5 group">
                                                     <input type="text" name="floating_first_name" id="floating_first_name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
                                                     <label htmlFor="floating_first_name" className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full name</label>

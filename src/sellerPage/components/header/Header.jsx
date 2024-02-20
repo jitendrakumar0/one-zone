@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react'
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import { BiSupport } from "react-icons/bi";
 import { Listbox, Transition, Menu, Dialog } from '@headlessui/react'
 import { CheckIcon, ChevronDownIcon } from '@heroicons/react/20/solid'
@@ -590,6 +590,20 @@ export default Header
 
 
 export const HeaderMenu = () => {
+  const navigate = useNavigate()
+  const scrollToSection = () => {
+    navigate('/seller')
+    setTimeout(() => {
+      const targetSection = document.getElementById('featured');
+      console.log('targetSection', targetSection)
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }, 1000);
+  };
   return (
     <>
     <li className='list-none md:hidden'>
@@ -613,8 +627,8 @@ max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Contact</NavLink>
     </li>
     <li className='list-none'>
-      <NavLink to="/seller" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black  border-b border-gray-100
-max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0  rounded-0">Featured Post</NavLink>
+      <div onClick={scrollToSection} className="relative cursor-pointer after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black  border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0  rounded-0">Featured Post</div>
     </li>
     </>
   )

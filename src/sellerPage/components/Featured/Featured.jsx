@@ -7,7 +7,8 @@ import { TfiReload } from "react-icons/tfi";
 const Featured = ({setIsOpenSaftey}) => {
     return (
         <>
-            <div className="realtive md:py-8 lg:py-8 bg-gray-100">
+            <div  id='featured' className="relative md:py-8 lg:py-8 bg-gray-100">
+            {/* <div  className=' -top-[123px] h-[123px] w-full bg-red-400'></div> */}
                 <div className="max-w-screen-xl mx-auto p-4 z-[1] relative">
                     <div className="flex items-center pb-2 md:pb-8">
                         <div className="grow">
