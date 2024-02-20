@@ -13,6 +13,8 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SafetyModal from '../chat/Component/SafetyModal'
+import banner1 from '../../asstes/img/addBanner.jpg'
+
 
 const ProductDetail = () => {
     const [detailTabs, setDetailTabs] = useState('description');
@@ -21,7 +23,7 @@ const ProductDetail = () => {
   return (
     <>
     <Header />
-    <div className="container relative max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10">
+    <div className="container relative max-w-screen-xl mx-auto px-4 py-5 sm:py-8 lg:py-10">
         <div className="flex max-lg:flex-col max-lg:gap-5">
             <div className="md:max-w-md w-full overflow-hidden shrink-0">
                 <div className="w-full">
@@ -411,7 +413,7 @@ const ProductDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" id="submit" name="send" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Message</button>
+                                <button type="submit" id="submit" name="send" className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Send Message</button>
                             </form>
                         </div>
                     </div>
@@ -419,11 +421,22 @@ const ProductDetail = () => {
                 </div>
             </div>
         </div>
-    </div>
+        <div className="w-full pt-8 pb-4">
+            <div className='w-full'>
+                <div className='w-full h-60 rounded-lg relative'>
+                    <img className='size-full object-cover rounded-lg' src={banner1} alt="" />
+                    <div className='absolute inset-0 m-auto flex justify-center items-center flex-col'>
+                        <div className='text-xl md:text-3xl font-bold mb-0 md:mb-2 text-black'>Your Add Will Come Here</div>
+                        <div className='text-md text-black'>Hurry up to reserve your post</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
     <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
     <Footer />
     </>
-  )
+)
 }
 
 export default ProductDetail

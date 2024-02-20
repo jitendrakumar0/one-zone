@@ -7,9 +7,9 @@ import { TfiReload } from "react-icons/tfi";
 const Featured = ({setIsOpenSaftey}) => {
     return (
         <>
-            <div  id='featured' className="relative md:py-8 lg:py-8 bg-gray-100">
+            <div  id='featured' className="relative md:py-8 py-4 bg-gray-100">
             {/* <div  className=' -top-[123px] h-[123px] w-full bg-red-400'></div> */}
-                <div className="max-w-screen-xl mx-auto p-4 z-[1] relative">
+                <div className="max-w-screen-xl mx-auto px-4 z-[1] relative">
                     <div className="flex items-center pb-2 md:pb-8">
                         <div className="grow">
                             <div className="md:text-2xl text-xl text-black font-bold">
@@ -105,8 +105,8 @@ const Featured = ({setIsOpenSaftey}) => {
                                         </div>
                                         
                                         <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
-                                            <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
+                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
+                                            <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                         </div>
                                     </div>
                                 </div>
@@ -147,8 +147,8 @@ const Featured = ({setIsOpenSaftey}) => {
                                         </div>
                                         
                                         <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
-                                            <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
+                                            <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
+                                            <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                         </div>
                                     </div>
                                 </div>
@@ -190,8 +190,8 @@ const Featured = ({setIsOpenSaftey}) => {
                                 </div>
                                 
                                 <div className='flex w-full gap-4'>
-                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
-                                    <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
+                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Cancel</button>
+                                    <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                 </div>
                             </div>
                         </div>
@@ -234,8 +234,8 @@ const Featured = ({setIsOpenSaftey}) => {
                                     </div>
                                 </div>
                                 <div className='flex w-full gap-4 mt-3'>
-                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Remove</button>
-                                    <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
+                                    <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Remove</button>
+                                    <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                 </div>
                             </div>
                         </div>
@@ -251,8 +251,8 @@ const Featured = ({setIsOpenSaftey}) => {
                         {/* </SwiperSlide>
                     </Swiper> */}
                     </div>
-                    <div className="w-full text-center pt-8">
-                        <Link to='/seller-productdetail' className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"><TfiReload className='size-5' /> Load More</Link>
+                    <div className="w-full text-center py-8">
+                        <Link to='/seller-productdetail' className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"><TfiReload className='size-5' /> Load More</Link>
                     </div>
                     
                 </div>

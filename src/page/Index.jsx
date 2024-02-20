@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer'
 import Clouds from '../components/clouds/Clouds'
 import Featured from '../components/Featured/Featured'
 import SafetyModal from './chat/Component/SafetyModal'
+import AddBanner from '../components/AddBanner/AddBanner'
 
 
 
@@ -21,6 +22,7 @@ const Index = () => {
             <ConnectionList/>
             <Featured setIsOpenSaftey={setIsOpenSaftey} />
             {/* <OfferBanner/> */}
+            <AddBanner/>
             <Clouds/>
             {/* <Blog/> */}
             <SellingProducts setIsOpenSaftey={setIsOpenSaftey}/>

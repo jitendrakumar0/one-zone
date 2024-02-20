@@ -7,7 +7,8 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { LiaSignInAltSolid } from "react-icons/lia";
 import { MdOutlineTranslate } from "react-icons/md";
 import { CgMenuRight } from "react-icons/cg";
-import Logo from '../../asstes/img/logo.svg'
+import Logo from '../../asstes/img/logo.png'
+import LogoMobile from '../../asstes/img/logoMobile.png'
 import { HeaderMenu } from '../header/Header';
 import { IoClose } from 'react-icons/io5';
 
@@ -215,7 +216,8 @@ const Header2 = () => {
       <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
         <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
           <Link to="/home" className="flex items-center space-x-3">
-            <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
+            <img src={Logo} className="lg:block hidden md:h-12 h-8" alt="Flowbite Logo" />
+            <img src={LogoMobile} className="block lg:hidden md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2  md:space-x-0 items-center md:gap-3 gap-1">
             {/* <Link className="bg-theme1 inline-flex items-center justify-center md:size-9 size-7 rounded-full text-black md:hover:bg-black md:hover:text-theme1 duration-300 border-2 border-b-black">

@@ -10,7 +10,8 @@ import { CgMenuRight } from "react-icons/cg";
 import { FiEdit2, FiHeart } from "react-icons/fi";
 import { IoChatboxOutline, IoClose, IoCloseCircleOutline } from "react-icons/io5";
 import { AiOutlineLogout } from "react-icons/ai";
-import Logo from '../../asstes/img/logo.svg'
+import Logo from '../../asstes/img/logo.png'
+import LogoMobile from '../../asstes/img/logoMobile.png'
 import NotificationPopup from '../notificationPopup/NotificationPopup';
 
 const allcountries = [
@@ -216,10 +217,11 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
-        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-start justify-between">
+      <nav className="bg-white stcky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
+        <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center md:items-start justify-between">
           <Link to="/home" className="flex items-center space-x-3 md:mt[5px] mt-0">
-            <img src={Logo} className="md:h-12 h-8" alt="Flowbite Logo" />
+            <img src={Logo} className="md:block hidden md:h-12 h-8" alt="Flowbite Logo" />
+            <img src={LogoMobile} className="block md:hidden md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 mt-0">
               <NotificationPopup/>
@@ -246,7 +248,7 @@ const Header = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold">
+                  <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold z-50">
                     <div className="px-1 py-1 ">
                       <Menu.Item>
                         {({ active }) => (

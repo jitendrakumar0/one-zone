@@ -9,6 +9,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdClear } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import SafetyModal from "../chat/Component/SafetyModal";
+import banner1 from '../../asstes/img/addBanner.jpg'
 
 
     const filters = [
@@ -261,7 +262,7 @@ const WindowsProducts = () => {
                         </div> */}
                     </div>
 
-                    <section aria-labelledby="products-heading" className="pb-24 pt-6">
+                    <section aria-labelledby="products-heading" className="pb-4 lg:pb-24 pt-6">
                         <h2 id="products-heading" className="sr-only">
                         Products
                         </h2>
@@ -393,6 +394,17 @@ const WindowsProducts = () => {
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div className="w-full border-b pb-8 lg:mx-0 mx-4">
+                                                    <div className='w-full'>
+                                                        <div className='w-full h-60 rounded-lg relative'>
+                                                            <img className='size-full object-cover rounded-lg' src={banner1} alt="" />
+                                                            <div className='absolute inset-0 m-auto flex justify-center items-center flex-col'>
+                                                                <div className='text-xl md:text-3xl font-bold mb-0 md:mb-2'>Your Add Will Come Here</div>
+                                                                <div className='text-md text-black'>Hurry up to reserve your post</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                                     <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                                         <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
@@ -484,6 +496,17 @@ const WindowsProducts = () => {
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div className="w-full border-b pb-8 lg:mx-0 mx-4">
+                                                    <div className='w-full'>
+                                                        <div className='w-full h-60 rounded-lg relative'>
+                                                            <img className='size-full object-cover rounded-lg' src={banner1} alt="" />
+                                                            <div className='absolute inset-0 m-auto flex justify-center items-center flex-col'>
+                                                                <div className='text-xl md:text-3xl font-bold mb-0 md:mb-2'>Your Add Will Come Here</div>
+                                                                <div className='text-md text-black'>Hurry up to reserve your post</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </div>
                                             <div className="flex flex-wrap lg:w-full md:w-1/2 max-lg:p-4">
                                                 <div className="w-full flex max-lg:flex-wrap relative items-stretch gap-8 border-b border-gray-200 lg:pb-8 max-lg:p-5 max-lg:border max-lg:border-gray-200 max-lg:rounded-xl max-lg:shadow-lg max-lg:shadow-theme1/20">
                                                     <div className="lg:w-72 w-full lg:relative shrink-0 grid items-center justify-center">
@@ -574,6 +597,17 @@ const WindowsProducts = () => {
                                                             </div>
                                                             <div className="shrink-0">
                                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="w-full border-b pb-8 lg:mx-0 mx-4">
+                                                    <div className='w-full'>
+                                                        <div className='w-full h-60 rounded-lg relative'>
+                                                            <img className='size-full object-cover rounded-lg' src={banner1} alt="" />
+                                                            <div className='absolute inset-0 m-auto flex justify-center items-center flex-col'>
+                                                                <div className='text-xl md:text-3xl font-bold mb-0 md:mb-2'>Your Add Will Come Here</div>
+                                                                <div className='text-md text-black'>Hurry up to reserve your post</div>
                                                             </div>
                                                         </div>
                                                     </div>

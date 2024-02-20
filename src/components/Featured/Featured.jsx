@@ -10,7 +10,7 @@ const Featured = ({setIsOpenSaftey}) => {
     return (
         <>
             <div className="realtive md:py-8 lg:py-10 bg-gray-100">
-                <div className="max-w-screen-xl mx-auto p-4 z-[1] relative">
+                <div className="max-w-screen-xl mx-auto px-4 z-[1] relative">
                     <div className="flex items-center pb-2 md:pb-8">
                         <div className="grow">
                             <div className="md:text-2xl text-xl text-black font-bold">

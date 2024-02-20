@@ -9,7 +9,7 @@ import { RiChat1Line } from 'react-icons/ri';
 const SellingProducts = ({setIsOpenSaftey}) => {
     return (
         <>
-        <div className="max-w-screen-xl mx-auto p-4 py-5 sm:py-8 lg:py-10 bg-gray-100 relative">
+        <div className="max-w-screen-xl mx-auto px-4 py-4 sm:py-8 lg:py-10 bg-gray-100 relative">
             <div className="flex justify-between items-center w-full mb-2 md:mb-5">
                 <div className="md:text-black md:text-3xl font-bold text-2xl flex items-center max-sm:w-full max-sm:justify-between">Best Selling   
                     <Link to='/windows-products' className="text-sm font-bold bg-slate-200  px-3 py-1 rounded-lg ms-4 flex items-center">

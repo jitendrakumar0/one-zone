@@ -74,7 +74,7 @@ const used = [
     return (
         <>
         <Header/>
-            <div className="max-w-screen-lg mx-auto my-5">
+            <div className="max-w-screen-lg mx-auto my-5 px-4">
                 <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     Add Your Product
                 </div>
@@ -205,7 +205,7 @@ const used = [
                         <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
                     </div> */}
                     <div className='py-2'>
-                    <div className='grid grid-cols-3 gap-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                         <div>
                             <div className='text-md font-bold text-black mb-1'>Price</div>
                             <div className="relative w-full">
@@ -567,7 +567,7 @@ const used = [
                     </div>
                 </div>
                 <div className="w-full text-center pt-5">
-                    <Link className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40" to="/seller"> Save Changes</Link>
+                    <Link className="relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40" to="/seller"> Save Changes</Link>
                 </div>
             </div>
         <Footer/>

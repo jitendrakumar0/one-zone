@@ -29,7 +29,7 @@ const SelectPackages = () => {
     return (
         <>
         <Header/>
-            <div className="max-w-screen-md mx-auto my-5">
+            <div className="max-w-screen-md mx-auto my-5 p-5">
                 <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     Select Your Location
                 </div>
@@ -170,7 +170,7 @@ const SelectPackages = () => {
                             </div>
                     </div>
                     <div className='py-2 mt-4 text-center'>
-                        <Link to='/package-discount' className='relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-4 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Next <MdOutlineKeyboardArrowRight className="size-5" /></Link>
+                        <Link to='/package-discount' className='relative z-10 text-black bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Next <MdOutlineKeyboardArrowRight className="size-5" /></Link>
                     </div>
                 </div>
             </div>
