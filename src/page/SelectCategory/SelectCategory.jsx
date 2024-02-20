@@ -11,7 +11,7 @@ const SelectCategory = () => {
     return (
         <>
         <Header/>
-            <div className="max-w-screen-md mx-auto my-5">
+            <div className="max-w-screen-md mx-auto my-5 px-4">
                 <div className="header font-bold text-xl md:text-2xl text-center bg-black text-theme1 rounded-lg py-2 md:py-4">
                     Add Your Product
                 </div>
