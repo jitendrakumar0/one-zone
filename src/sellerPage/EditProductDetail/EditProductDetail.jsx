@@ -80,6 +80,7 @@ const used = [
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
                     <div className='text-lg font-semibold  rounded-lg py-2'>SELECTED CATEGORY</div>
+                    <div className='text-lg font-semibold  rounded-lg py-2'>SELECTED CATEGORY</div>
                     <div>
                         <nav className="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50" aria-label="Breadcrumb">
                         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
