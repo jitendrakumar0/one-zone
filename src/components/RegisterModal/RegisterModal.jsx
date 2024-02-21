@@ -39,7 +39,7 @@ const RegisterModal = ({isOpenRegister, setIsOpenRegister,setisOpenLogin}) => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                 >
-                    <Dialog.Panel className="w-full mx-5 max-w-2xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                    <Dialog.Panel className="w-full mx-5 max-w-xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                     <div className="w-full overflow-hidden relative *:relative *:z-10 py-5 text-white">
                         <img src={frame} className="size-full object-cover object-center !absolute !z-0 inset-x-0 top-0" alt=""/>
                         <div className="text-2xl font-bold text-center pb-2">Register as Buyer</div>

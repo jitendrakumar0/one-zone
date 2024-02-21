@@ -51,8 +51,8 @@ function App() {
   return (
     <>
         <Routes>
-          <Route path="/home" element={<Index/>}></Route>
-          <Route path="/" element={<Login/>}></Route>
+          <Route path="/" element={<Index/>}></Route>
+          {/* <Route path="/" element={<Login/>}></Route> */}
           <Route path="/seller-login" element={<SellerLogin/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/seller-signup" element={<SellerSignup/>}></Route>
