@@ -67,7 +67,7 @@ const Header2 = () => {
             <ul className="flex flex-col py-4 md:p-0">
               <li>
                 <Link className="py-2 md:hover:text-white/70 rounded inline-flex items-center gap-1 text-theme1 duration-300">
-                  <BiSupport className="size-4" /> support@onezone.com
+                  <BiSupport className="size-4" /> support@onezone.pro
                 </Link>
               </li>
             </ul>

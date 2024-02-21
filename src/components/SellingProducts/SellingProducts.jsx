@@ -147,16 +147,16 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                                 </div>
                         </SwiperSlide>
                         <SwiperSlide className='swiperSlider'>
-                                <div className="flex flex-wrap w-full h-full items-stretch">
+                        <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-8 border-b lg:py-8 p-5 border border-gray-200 shadow-lg bg-white rounded-xl shadow-theme1/20">
-                                        <div className=" w-full  shrink-0 grid items-center justify-center">
-                                            <button className="size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black backdrop-blur-2xl p-2 flex items-center justify-center absolute top-3 right-3">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                            <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
                                             </button>
                                             <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
                                         </div>
-                                        <div className="w-full">
-                                            <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                        <div className="w-full flex flex-col justify-between">
+                                            <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
@@ -165,15 +165,16 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                                                 <li>39.62 cm (15.6 Inch) Display</li>
                                                 <li>1 Year Onsite Warranty</li>
                                             </ul>
-                                        </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="grow">
                                                 <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
                                                 <div className="w-full text-gray-600 font-semibold md:text-sm text-xs">₹49,990 <span className="text-lime-600 pl-1">36% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
+                                            {/* <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div> */}
+                                        </div>
                                         </div>
                                     </div>
                                 </div>

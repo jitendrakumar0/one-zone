@@ -7,7 +7,7 @@ import { MdClear } from "react-icons/md";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { TfiReload } from "react-icons/tfi";
-
+import banner1 from '../../../asstes/img/addBanner.jpg'
 
     const filters = [
         
@@ -227,7 +227,7 @@ const AllProducts = () => {
                                         {sortOptions.map((option) => (
                                             <Menu.Item key={option.name}>
                                             {({ active }) =>
-                                             (
+                                            (
                                                 <Link
                                                 className={classNames(
                                                     option.current ? 'font-medium text-gray-900' : 'text-gray-500',
@@ -318,6 +318,15 @@ const AllProducts = () => {
                             <div className="w-full flex items-center sticky bottom-0 gap-3 py-2 bg-white">
                                 <button className="border-2 grow border-b-black md:hover:border-b-black !rounded-full  font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40">Clear <MdClear className='size-5' /></button>
                                 <button className="text-black bg-theme1 border-2 grow border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 hover:border-b-theme1 md:hover:bg-black hover:text-theme1 shadow-md shadow-black/40">Apply <FaRegCircleCheck className='size-5' /></button>
+                            </div>
+                            <div className='w-full col-auto lg:w-[18rem] mt-5 sticky top-[10px]'>
+                                <div className='w-full h-96 rounded-lg relative'>
+                                    <img className='size-full object-cover rounded-lg' src={banner1} alt="" />
+                                    <div className='absolute inset-0 m-auto flex justify-center items-center flex-col'>
+                                        <div className='text-xl font-bold text-black'>Your Add Will Come Here</div>
+                                        <div className='text-md text-black'>Hurry up to reserve your post</div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
 

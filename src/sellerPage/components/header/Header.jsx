@@ -72,7 +72,7 @@ const Header = ({seller}) => {
             <ul className="flex flex-col py-4 md:p-0">
               <li>
                 <Link className="py-2 md:hover:text-white/70 rounded inline-flex items-center gap-1 text-theme1 duration-300">
-                  <BiSupport className="size-4" /> support@onezone.com
+                  <BiSupport className="size-4" /> support@onezone.pro
                 </Link>
               </li>
             </ul>
@@ -218,7 +218,7 @@ const Header = ({seller}) => {
           </div>
         </div>
       </div>
-      <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
+      <nav className="bg-white stick w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
         <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center md:items-start justify-between">
           <Link to="/seller" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="lg:block hidden md:h-12 h-8" alt="Flowbite Logo" />

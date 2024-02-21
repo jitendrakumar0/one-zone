@@ -13,6 +13,8 @@ import { AiOutlineLogout } from "react-icons/ai";
 import Logo from '../../asstes/img/logo.png'
 import LogoMobile from '../../asstes/img/logoMobile.png'
 import NotificationPopup from '../notificationPopup/NotificationPopup';
+import LogInModal from '../LogInModal/LogInModal';
+import RegisterModal from '../RegisterModal/RegisterModal';
 
 const allcountries = [
   { name: 'India', sortName: 'IN' },
@@ -52,7 +54,7 @@ const allLanguages = [
 
 
 
-const Header = () => {
+const Header = ({isOpenLogin,setisOpenLogin, isOpenRegister, setIsOpenRegister}) => {
   
   const [country, setCountry] = useState(allcountries[0])
   const [language, setlanguage] = useState(allLanguages[0])
@@ -71,7 +73,7 @@ const Header = () => {
             <ul className="flex flex-col py-4 md:p-0">
               <li>
                 <Link className="py-2 md:hover:text-white/70 rounded inline-flex items-center gap-1 text-theme1 duration-300">
-                  <BiSupport className="size-4" /> support@onezone.com
+                  <BiSupport className="size-4" /> support@onezone.pro
                 </Link>
               </li>
             </ul>
@@ -579,6 +581,10 @@ const Header = () => {
               </div>
           </Dialog.Panel>
       </Dialog>
+      
+            
+      <LogInModal isOpenLogin={isOpenLogin} setisOpenLogin={setisOpenLogin} setIsOpenRegister={setIsOpenRegister}/>
+      <RegisterModal isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister} setisOpenLogin={setisOpenLogin}/>
     </>
   );
 }

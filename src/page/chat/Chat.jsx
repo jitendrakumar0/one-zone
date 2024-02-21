@@ -40,6 +40,8 @@ const Chat = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [isOpenFlag, setIsOpenFlag] = useState(false)
     const [isOpenSaftey, setIsOpenSaftey] = useState(false)
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
 
     const openSafteyModal = ()=>{
         setIsOpenSaftey(true)
@@ -69,7 +71,7 @@ const Chat = () => {
 
     return (
         <>
-            <Header/>
+            <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
             <div className= 'chatParent  max-w-screen-xl flex justify-between mx-auto p-4 pt-4 h-[calc(100vh-70px)] md:h-[calc(100vh-174px)] overflow-hidden '>
                 <div className='col-auto relative w-full md:w-[50%] lg:w-2/5'>
                     <div className='w-full h-full border border-slate-400 md:rounded-tl-md'>

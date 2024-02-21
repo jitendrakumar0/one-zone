@@ -88,7 +88,7 @@ import SafetyModal from "../chat/Component/SafetyModal";
         ],
         },
     ]
-  
+
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
@@ -97,9 +97,12 @@ const ProductList = () => {
     const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
     const [priceRange, setPriceRange] = useState(1000);
     const [isOpenSaftey, setIsOpenSaftey] = useState(false)
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
+
     return (
         <>
-        <Header />
+        <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
 
         <div className="bg-white">
                 <div>
@@ -224,7 +227,7 @@ const ProductList = () => {
                                         {sortOptions.map((option) => (
                                             <Menu.Item key={option.name}>
                                             {({ active }) =>
-                                             (
+                                            (
                                                 <Link
                                                 className={classNames(
                                                     option.current ? 'font-medium text-gray-900' : 'text-gray-500',
@@ -346,7 +349,7 @@ const ProductList = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹49,990 <span className="text-lime-600 lg:pl-3 pl-1">36% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setisOpenLogin(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -376,7 +379,7 @@ const ProductList = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹62,990 <span className="text-lime-600 lg:pl-3 pl-1">13% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setisOpenLogin(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>
@@ -403,7 +406,7 @@ const ProductList = () => {
                                                 <div className="w-full text-gray-600 font-semibold lg:text-base md:text-sm text-xs">₹9,499 <span className="text-lime-600 lg:pl-3 pl-1">75% off</span></div>
                                             </div>
                                             <div className="shrink-0">
-                                                <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                                                <button onClick={()=>{setisOpenLogin(true)}} className="relative z-10 text-black max-lg:w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                         </div>
                                     </div>

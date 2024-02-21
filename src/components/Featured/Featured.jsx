@@ -105,7 +105,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                             </button>
                                             <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
                                         </div>
-                                        <div className="w-full">
+                                        <div className="w-full flex flex-col justify-between">
                                             <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                             <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
@@ -115,7 +115,6 @@ const Featured = ({setIsOpenSaftey}) => {
                                                 <li>39.62 cm (15.6 Inch) Display</li>
                                                 <li>1 Year Onsite Warranty</li>
                                             </ul>
-                                        </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="grow">
                                                 <div className="w-full md:text-lg font-bold text-black">₹31,990</div>
@@ -125,6 +124,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
                                             <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>

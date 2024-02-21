@@ -20,9 +20,11 @@ const ProductDetail = () => {
     const [detailTabs, setDetailTabs] = useState('description');
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [isOpenSaftey, setIsOpenSaftey] = useState(false)
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
   return (
     <>
-    <Header />
+    <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
     <div className="container relative max-w-screen-xl mx-auto px-4 py-5 sm:py-8 lg:py-10">
         <div className="flex max-lg:flex-col max-lg:gap-5">
             <div className="md:max-w-md w-full overflow-hidden shrink-0">
@@ -184,7 +186,7 @@ const ProductDetail = () => {
                                 <div className='text-xs'>123 B New colony</div>
                             </div>
                         </Link>
-                        <button onClick={()=>{setIsOpenSaftey(true)}} className="text-black w-full mb-2 bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
+                        <button onClick={()=>{setisOpenLogin(true)}} className="text-black w-full mb-2 bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
 
                         <button className="text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Add to Wishlist <FaRegHeart className='size-5' /></button>
                     </div>
@@ -433,7 +435,7 @@ const ProductDetail = () => {
             </div>
         </div>
 </div>
-    <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/>
+    {/* <SafetyModal isOpenSaftey={isOpenSaftey} setIsOpenSaftey={setIsOpenSaftey}/> */}
     <Footer />
     </>
 )

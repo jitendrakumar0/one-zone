@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom'
 
 const EmailConfirmation = () => {
     const [auth, setAuth] = useState(false);
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
   return (
     <>
-    <Header auth={auth} setAuth={setAuth} />
+    <Header auth={auth} setAuth={setAuth} isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
     <div className='w-full flex justify-center'>
         <div className="max-w-2xl w-full px-5 lg:px-10 flex items-center min-h-[calc(100dvh-130px)] flex-wrap mx-auto py-5">
             <div className="flex flex-col w-full flex-wrap items-center justify-center rounded-2xl overflow-hidden shadow-2xl">

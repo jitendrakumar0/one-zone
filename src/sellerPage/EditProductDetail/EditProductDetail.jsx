@@ -212,7 +212,7 @@ const used = [
                                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                 <BsCurrencyDollar />
                                 </div>
-                                <input type="text" id="voice-search" class=" w-full py-4 rounded-lg ps-10 shadow" placeholder="" required />
+                                <input type="text" id="voice-search" className="w-full py-4 rounded-lg ps-10 shadow" placeholder="" required />
                             </div>
                         </div>
                         <div>

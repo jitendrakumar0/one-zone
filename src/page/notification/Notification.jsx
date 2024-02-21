@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/header/Header';
 import { Link } from 'react-router-dom';
 import { AllSideMenu } from '../userProfile/UserProfile';
 
 const Notification = () => {
+    
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
     return (
         <>
-            <Header />
+            <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
             <div className="md:py-8 lg:py-10">
                 <div className="max-w-screen-xl mx-auto p-4">
                     <div className="w-full bg-white rounded-xl shadow-xl md:px-10 md:py-6 p-5">
