@@ -226,7 +226,10 @@ const Header = ({isOpenLogin,setisOpenLogin, isOpenRegister, setIsOpenRegister})
             <img src={LogoMobile} className="block md:hidden md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
           <div className="flex md:order-2 gap-x-3 md:gap-x-3 items-center gap-4 mt-0">
-              <NotificationPopup/>
+          <div className='relative'>
+                <NotificationPopup className='z-1'/>
+                <div className='size-2 bg-green-500 absolute top-[4px] rounded-full right-0 z-50'></div>
+            </div>
               <Menu as="div" className="relative inline-block text-left pt-2">
                 <Menu.Button className="inline-flex items-center gap-1 relative md:pr-5">
                   <img
@@ -336,7 +339,7 @@ const Header = ({isOpenLogin,setisOpenLogin, isOpenRegister, setIsOpenRegister})
                                 aria-hidden="true"
                               />
                             )}
-                            Chat 
+                            Chat <span className='rounded-full size-5 bg-theme1 text-black ms-2 text-xs flex items-center justify-center'>4</span>
                           </Link>
                         )}
                       </Menu.Item>
@@ -502,7 +505,7 @@ const Header = ({isOpenLogin,setisOpenLogin, isOpenRegister, setIsOpenRegister})
                               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                           </svg>
                           <h3 className="mb-5 text-lg font-normal text-gray-500">Are you sure you want to logout?</h3>
-                          <Link to="/" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                          <Link to="/login" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
                               Yes, logout
                           </Link>
                           <button onClick={()=>{setLogout(false)}} type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">No, cancel</button>
