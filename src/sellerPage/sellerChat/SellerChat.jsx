@@ -125,7 +125,7 @@ const SellerChat = () => {
                                                     <div className='flex items-center justify-between ms-6'>
                                                         <div className='text-black text-md font-bold'>Piyush Mehta</div>
                                                         <div className='text-sm text-gray-600 flex items-center'>YESTERDAY
-                                                        <span className='size-4 ms-3 bg-black text-theme1 rounded-full text-[10px] flex items-center justify-center'>5</span></div>
+                                                        <span className='size-4 ms-3 bg-black font-bold text-theme1 rounded-full text-[10px] flex items-center justify-center'>5</span></div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
                                                         <div className='text-sm text-black'>iPhone 13 128  GB</div>
@@ -153,7 +153,7 @@ const SellerChat = () => {
                                                     <div className='flex items-center justify-between ms-6'>
                                                         <div className='text-black text-md font-bold'>Piyush Mehta</div>
                                                         <div className='text-sm text-gray-600 flex items-center'>YESTERDAY
-                                                        <span className='size-4 ms-3 bg-black text-theme1 rounded-full text-[10px] flex items-center justify-center'>2</span></div>
+                                                        <span className='size-4 ms-3 bg-black font-bold text-theme1 rounded-full text-[10px] flex items-center justify-center'>2</span></div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
                                                         <div className='text-sm text-black'>iPhone 13 128  GB</div>

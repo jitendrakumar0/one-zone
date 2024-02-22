@@ -30,7 +30,7 @@ const SelectPackages = () => {
         <>
         <Header/>
             <div className="max-w-screen-md mx-auto my-5 p-5">
-                <div className="header font-bold text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
+                <div className="header text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     Select Your Location
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
@@ -160,7 +160,7 @@ const SelectPackages = () => {
                         </Listbox>
                     </div> */}
                     <div className='py-2'>
-                        <div className='text-md font-bold text-black mb-1'>Location</div>
+                        <div className='text-md text-black mb-1'>Location</div>
                         <div className="relative w-full">
                                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                     <SlLocationPin />

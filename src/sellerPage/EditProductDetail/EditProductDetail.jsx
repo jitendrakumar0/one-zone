@@ -75,7 +75,7 @@ const used = [
         <>
         <Header/>
             <div className="max-w-screen-lg mx-auto my-5 px-4">
-                <div className="header font-medium text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
+                <div className="header text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     Add Your Product
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
@@ -104,7 +104,7 @@ const used = [
                     </div>
                     <div className='text-lg font-semibold  rounded-lg py-2 mt-5'>INCLUDE SOME DETAILS</div>
                     <div className='py-2 overflow-hidden'>
-                        <div className='text-md font-medium text-black mb-1'>Product Image</div>
+                        <div className='text-md text-black mb-1'>Product Image</div>
                         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 gap-4'>
                             <div className="flex items-center justify-center w-full">
                                 <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
@@ -197,7 +197,7 @@ const used = [
                         </div>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Product Name*</div>
+                        <div className='text-md text-black mb-1'>Product Name*</div>
                         <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
                     </div>
                     {/* <div className='py-2'>
@@ -207,7 +207,7 @@ const used = [
                     <div className='py-2'>
                     <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                         <div>
-                            <div className='text-md font-medium text-black mb-1'>Price</div>
+                            <div className='text-md text-black mb-1'>Price</div>
                             <div className="relative w-full">
                                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                 <BsCurrencyDollar />
@@ -216,11 +216,11 @@ const used = [
                             </div>
                         </div>
                         <div>
-                            <div className='text-md font-medium text-black mb-1'>% Discount</div>
+                            <div className='text-md text-black mb-1'>% Discount</div>
                             <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
                         </div>
                         <div>
-                            <div className='text-md font-medium text-black mb-1'>Discounted Price</div>
+                            <div className='text-md text-black mb-1'>Discounted Price</div>
                             <input className='w-full py-4 rounded-lg ps-10 shadow' readOnly type="text" />
                         </div>
                     </div>
@@ -228,17 +228,17 @@ const used = [
                     <div className='py-2'>
                         <div className='grid grid-cols-2 gap-4'>
                             <div>
-                                <div className='text-md font-medium text-black mb-1'>Year*</div>
+                                <div className='text-md text-black mb-1'>Year*</div>
                                 <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
                             </div>
                             <div>
-                                <div className='text-md font-medium text-black mb-1'>Warranty Period*</div>
+                                <div className='text-md text-black mb-1'>Warranty Period*</div>
                                 <input className='w-full py-4 rounded-lg ps-10 shadow' type="text" />
                             </div>
                         </div>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Used Product</div>
+                        <div className='text-md text-black mb-1'>Used Product</div>
                         <div className= {`grid grid-cols-2 yesCheckbox gap-4 ${yesSelected ? 'active' : ''}`}>
                                 <div className= 'flex items-center ps-4 border border-gray-200 rounded has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600 '>
                                     <input onClick={handleClick} id="wes-checkbox-1" type="radio" value="" name="dfer" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
@@ -372,7 +372,7 @@ const used = [
                         </div>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Country</div>
+                        <div className='text-md text-black mb-1'>Country</div>
                         <Listbox value={country} onChange={setCountry}>
                             <div className="relative mt-1">
                                 <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-4 shadow border-b-2 border-black">
@@ -439,7 +439,7 @@ const used = [
                         </Listbox>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Brands*</div>
+                        <div className='text-md text-black mb-1'>Brands*</div>
                         <Listbox value={brand} onChange={setbrand}>
                         <div className="relative mt-1">
                             <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-4 shadow border-b-2 border-black">
@@ -503,28 +503,28 @@ const used = [
                         </Listbox>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Location</div>
+                        <div className='text-md text-black mb-1'>Location</div>
                         <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Write your Location..."></textarea>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Condition Of The Product</div>
+                        <div className='text-md text-black mb-1'>Condition Of The Product</div>
                         <div className='grid sm:grid-cols-3 gap-4'>
                             <div className="flex items-center ps-4 border border-gray-200 rounded  has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
                                 <input id="bordered-checkbox-1" type="radio" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                <label htmlFor="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Pre</label>
+                                <label htmlFor="bordered-checkbox-1" className="w-full py-4 ms-2 text-sm text-gray-900 ">Pre</label>
                             </div>
                             <div className="flex items-center ps-4 border border-gray-200 rounded  has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
                                 <input id="bordered-checkbox-2" type="radio" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                <label htmlFor="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Pre Owned</label>
+                                <label htmlFor="bordered-checkbox-2" className="w-full py-4 ms-2 text-sm text-gray-900 ">Pre Owned</label>
                             </div>
                             <div className="flex items-center ps-4 border border-gray-200 rounded  has-[:checked]:bg-gray-200 has-[:checked]:border-gray-600">
                                 <input id="bordered-checkbox-3" type="radio" value="" name="bordered-checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded accent-gray-600"/>
-                                <label htmlFor="bordered-checkbox-3" className="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Refurbished</label>
+                                <label htmlFor="bordered-checkbox-3" className="w-full py-4 ms-2 text-sm text-gray-900 ">Refurbished</label>
                             </div>
                         </div>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Specification</div>
+                        <div className='text-md text-black mb-1'>Specification</div>
                         <div className='grid sm:grid-cols-3 gap-4'>
                             <div className=" inline-block w-full text-sm text-gray-500  bg-white border border-gray-200 rounded-lg shadow-sm">
                                 <div className="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg">
@@ -558,11 +558,11 @@ const used = [
                         </div>
                     </div>
                     <div className='py-2'>
-                        <div className='text-md font-medium text-black mb-1'>Seller Location</div>
+                        <div className='text-md text-black mb-1'>Seller Location</div>
                         <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder="Write your Location..."></textarea>
                     </div>
                     <div className='py-2'>
-                    <div className='text-md font-medium text-black mb-1'>Discription</div>
+                    <div className='text-md text-black mb-1'>Discription</div>
                         <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 " placeholder=""></textarea>
                     </div>
                 </div>

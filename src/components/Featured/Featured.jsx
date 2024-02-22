@@ -5,6 +5,7 @@ import 'swiper/css';
 import { Link } from 'react-router-dom';
 import { FaRegHeart } from 'react-icons/fa';
 import { RiChat1Line } from 'react-icons/ri';
+import { ImPower } from 'react-icons/im';
 
 const Featured = ({setIsOpenSaftey}) => {
     return (
@@ -91,7 +92,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                             <div className="shrink-0">
                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
-                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div>
+                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black flex items-center'><ImPower className='me-1' />FEATURED</div>
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +124,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                             <div className="shrink-0">
                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
-                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div>
+                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black flex items-center'><ImPower className='me-1' />FEATURED</div>
                                         </div>
                                         </div>
                                     </div>
@@ -157,7 +158,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                             <div className="shrink-0">
                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
-                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div>
+                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black flex items-center'><ImPower className='me-1' />FEATURED</div>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +191,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                             <div className="shrink-0">
                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
-                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div>
+                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black flex items-center'><ImPower className='me-1' />FEATURED</div>
                                         </div>
                                     </div>
                                 </div>
@@ -223,7 +224,7 @@ const Featured = ({setIsOpenSaftey}) => {
                                             <div className="shrink-0">
                                                 <button onClick={()=>{setIsOpenSaftey(true)}} className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40">Chat with Seller <RiChat1Line className='size-5' /></button>
                                             </div>
-                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black'>FEATURED</div>
+                                            <div className='text-xs font-bold bg-theme1 px-4 py-1 rounded-md absolute top-4 left-4 border-2 border-b-black flex items-center'><ImPower className='me-1' />FEATURED</div>
                                         </div>
                                     </div>
                                 </div>

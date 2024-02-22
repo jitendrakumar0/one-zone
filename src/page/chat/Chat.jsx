@@ -126,7 +126,7 @@ const Chat = () => {
                                                     <div className='flex items-center justify-between ms-6'>
                                                         <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600 flex items-center'>YESTERDAY
-                                                        <span className='size-4 ms-3 bg-black text-theme1 rounded-full text-[10px] flex items-center justify-center'>4</span>
+                                                        <span className='size-4 ms-3 font-bold bg-black text-theme1 rounded-full text-[10px] flex items-center justify-center'>4</span>
                                                         </div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
@@ -153,7 +153,7 @@ const Chat = () => {
                                                     <div className='flex items-center justify-between ms-6'>
                                                         <div className='text-black text-md font-bold'>ONEZONE</div>
                                                         <div className='text-sm text-gray-600 flex items-center'>YESTERDAY
-                                                        <span className='size-4 ms-3 bg-black text-theme1 rounded-full text-[10px] flex items-center justify-center'>1</span></div>
+                                                        <span className='size-4 ms-3 font-bold bg-black text-theme1 rounded-full text-[10px] flex items-center justify-center'>1</span></div>
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
                                                         <div className='text-sm text-black'>iPhone 13 128  GB</div>

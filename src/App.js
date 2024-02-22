@@ -39,6 +39,7 @@ import SellerDeleteAccount from "./sellerPage/sellerDeleteAccount/SellerDeleteAc
 import SellerChat from "./sellerPage/sellerChat/SellerChat";
 import Loader from "./sellerPage/components/Loader/Loader";
 import FeaturedPost from "./sellerPage/FeaturedPost/FeaturedPost";
+import Congratulation from "./sellerPage/CongratulationScreen/Congratulation";
 
 function App() {
 
@@ -102,6 +103,7 @@ function App() {
           <Route path="/seller-windowProductDetail" element={<SellerWindowProduct/>}></Route>
           <Route path="/select-packages" element={<SelectPackages/>}></Route>
           <Route path="/package-discount" element={<PackageDiscount/>}></Route>
+          <Route path="/congratulation" element={<Congratulation/>}></Route>
           <Route path="/seller" element={<Home/>}>
             {/* <Route path="/select-category" element={<SelectCategory/>}></Route>
             <Route path="/selected-category" element={<SelectedCategory/>}></Route> */}
