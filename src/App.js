@@ -8,7 +8,7 @@ import ProductList from "./page/productList/ProductList";
 import ChangePassword from "./page/auth/changePassword/ChangePassword";
 import ProductDetail from "./page/productDetail/ProductDetail";
 import UserProfile from "./page/userProfile/UserProfile";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Wishlist from "./page/wishlist/Wishlist";
 import WindowsProducts from "./page/windowsProducts/WindowsProducts";
 import Notification from "./page/notification/Notification";
@@ -37,6 +37,7 @@ import SellerNotification from "./sellerPage/sellerNotification/SellerNotificati
 import SellerResetPassword from "./sellerPage/sellerResetPassword/SellerResetPassword";
 import SellerDeleteAccount from "./sellerPage/sellerDeleteAccount/SellerDeleteAccount";
 import SellerChat from "./sellerPage/sellerChat/SellerChat";
+import Loader from "./sellerPage/components/Loader/Loader";
 
 function App() {
 
@@ -47,9 +48,19 @@ function App() {
     behavior: "smooth",
   })
 }, [location.pathname])
+  const [isLoader, setIsLoader] = useState(true)
+
+  useEffect(()=>{
+    const timer = setTimeout(() => {
+      setIsLoader(false)
+    }, 3000);
+    return ()=> clearTimeout(timer)
+  },[])
 
   return (
     <>
+    { isLoader && <Loader/>}
+        
         <Routes>
           <Route path="/" element={<Index/>}></Route>
           <Route path="/login" element={<Login/>}></Route>
