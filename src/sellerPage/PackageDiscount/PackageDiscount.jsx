@@ -32,9 +32,9 @@ export const PackageDiscount = () => {
                                 <li className="">
                                     <div className="text-lg font-bold leading-tight text-yellow-600 mb-2">Premium</div>
                                     <div className='flex items-center'>
-                                        <FaRegCircleCheck className="flex-shrink-0 size-6 text-gray-400 group-has-[:checked]/ads:hidden" />
-                                        <FaCircleCheck className="flex-shrink-0 size-6 text-yellow-600 hidden group-has-[:checked]/ads:block" />
-                                        <span className="text-lg sm:w-full font-bold leading-tight text-gray-400 group-has-[:checked]/ads:text-black ms-3">Featured ads for 6 months</span>
+                                        <FaRegCircleCheck className="flex-shrink-0 size-5 text-gray-800 group-has-[:checked]/ads:hidden" />
+                                        <FaCircleCheck className="flex-shrink-0 size-5 text-yellow-600 hidden group-has-[:checked]/ads:block" />
+                                        <span className="text-lg sm:w-full leading-tight text-gray-800 group-has-[:checked]/ads:text-black ms-3">Featured ads for 6 months</span>
                                         <input className='hidden' type="radio" id='ad1' name='ads' />
                                     </div>
                                 </li>
@@ -42,7 +42,7 @@ export const PackageDiscount = () => {
                             <div className="flex items-end text-gray-900 flex-col">
                                 <span className='flex items-baseline gap-1'>
                                     <span className="text-xl font-semibold">$</span>
-                                    <span className="text-lg sm:text-2xl font-extrabold tracking-tight">7,080</span>
+                                    <span className="text-lg sm:text-2xl font-bold tracking-tight">7,080</span>
                                 </span>
                                 <span className='flex flex-col sm:flex-row items-center'>
                                     <del className="ms-2 text-xs sm:text-base font-bold group-has-[:checked]/ads:text-black text-gray-500">$ 9,434</del>
@@ -55,9 +55,9 @@ export const PackageDiscount = () => {
                                 <li className="">
                                 <div className="text-lg font-bold leading-tight text-teal-600 mb-2">Standard</div>
                                 <div className='flex items-center'>
-                                    <FaRegCircleCheck className="flex-shrink-0 size-6 text-gray-400 group-has-[:checked]/ads:hidden" />
-                                    <FaCircleCheck className="flex-shrink-0 size-6 text-teal-600 hidden group-has-[:checked]/ads:block" />
-                                    <span className="text-lg font-bold leading-tight text-gray-500 ms-3 group-has-[:checked]/ads:text-black ">Featured ads for 30 days</span>
+                                    <FaRegCircleCheck className="flex-shrink-0 size-5 text-gray-800 group-has-[:checked]/ads:hidden" />
+                                    <FaCircleCheck className="flex-shrink-0 size-5 text-teal-600 hidden group-has-[:checked]/ads:block" />
+                                    <span className="text-lg leading-tight text-gray-800 ms-3 group-has-[:checked]/ads:text-black ">Featured ads for 30 days</span>
                                     <input className='hidden' type="radio" id='ad2' name='ads' />
                                 </div>
                                 </li>
@@ -65,7 +65,7 @@ export const PackageDiscount = () => {
                             <div className="flex items-end text-gray-900 flex-col">
                                 <span className='flex items-baseline gap-1'>
                                     <span className="text-xl font-semibold">$</span>
-                                    <span className="text-lg sm:text-2xl font-extrabold tracking-tight">4,720</span>
+                                    <span className="text-lg sm:text-2xl font-bold tracking-tight">4,720</span>
                                 </span>
                                 <span className='flex items-center flex-col sm:flex-row'>
                                     <del className="ms-2 text-xs sm:text-base font-bold group-has-[:checked]/ads:text-black text-gray-500">$ 5,660</del>
@@ -78,9 +78,9 @@ export const PackageDiscount = () => {
                                 <li className="">
                                 <div className="text-lg font-bold leading-tight text-red-600 mb-2">Basic</div>
                                 <div className='flex items-center'>
-                                    <FaRegCircleCheck className="flex-shrink-0 size-6 text-gray-400 group-has-[:checked]/ads:hidden" />
-                                    <FaCircleCheck className="flex-shrink-0 size-6 text-red-600 hidden group-has-[:checked]/ads:block" />
-                                    <span className="text-lg font-bold leading-tight text-gray-500  group-has-[:checked]/ads:text-black ms-3">Featured ads for 15 days</span>
+                                    <FaRegCircleCheck className="flex-shrink-0 size-5 text-gray-800 group-has-[:checked]/ads:hidden" />
+                                    <FaCircleCheck className="flex-shrink-0 size-5 text-red-600 hidden group-has-[:checked]/ads:block" />
+                                    <span className="text-lg leading-tight text-gray-800  group-has-[:checked]/ads:text-black ms-3">Featured ads for 15 days</span>
                                     <input className='hidden' type="radio" id='ad3' name='ads' />
                                 </div>
                                 </li>
@@ -88,7 +88,7 @@ export const PackageDiscount = () => {
                             <div className="flex items-end text-gray-900 flex-col">
                                 <span className='flex items-baseline gap-1'>
                                     <span className="text-xl font-semibold">$</span>
-                                    <span className="text-lg sm:text-2xl font-extrabold tracking-tight">2,360</span>
+                                    <span className="text-lg sm:text-2xl font-bold tracking-tight">2,360</span>
                                 </span>
                             </div>
                         </label>

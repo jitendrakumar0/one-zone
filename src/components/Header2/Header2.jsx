@@ -215,7 +215,7 @@ const Header2 = () => {
       </div>
       <nav className="bg-white sticky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
         <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-between">
-          <Link to="/home" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img src={Logo} className="lg:block hidden md:h-12 h-8" alt="Flowbite Logo" />
             <img src={LogoMobile} className="block lg:hidden md:h-12 h-8" alt="Flowbite Logo" />
           </Link>

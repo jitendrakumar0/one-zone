@@ -9,9 +9,11 @@ import SafetyModal from '../chat/Component/SafetyModal';
 
 const UserDetail = () => {
     const [isOpenSaftey, setIsOpenSaftey] = useState(false)
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
     return (
         <>
-        <Header/>
+        <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister} />
             <div className='max-w-screen-xl justify-between mx-auto md:h-[calc(100vh-174px)]  overflow-hidden p-4'>
                 <div className='flex flex-col md:flex-row md:h-full'>
                     <div className=" flex-none md:w-80 w-full md:h-full">

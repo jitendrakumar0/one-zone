@@ -221,7 +221,7 @@ const Header = ({isOpenLogin,setisOpenLogin, isOpenRegister, setIsOpenRegister})
       </div>
       <nav className="bg-white stcky w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
         <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center md:items-start justify-between">
-          <Link to="/home" className="flex items-center space-x-3 md:mt[5px] mt-0">
+          <Link to="/" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="md:block hidden md:h-12 h-8" alt="Flowbite Logo" />
             <img src={LogoMobile} className="block md:hidden md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
@@ -603,7 +603,7 @@ export const HeaderMenu = () => {
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Become A Seller</NavLink>
     </li>
     <li className='list-none'>
-      <NavLink to="/home" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+      <NavLink to="/" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Home</NavLink>
     </li>
     <li className='list-none'>

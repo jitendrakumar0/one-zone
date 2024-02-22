@@ -38,6 +38,7 @@ import SellerResetPassword from "./sellerPage/sellerResetPassword/SellerResetPas
 import SellerDeleteAccount from "./sellerPage/sellerDeleteAccount/SellerDeleteAccount";
 import SellerChat from "./sellerPage/sellerChat/SellerChat";
 import Loader from "./sellerPage/components/Loader/Loader";
+import FeaturedPost from "./sellerPage/FeaturedPost/FeaturedPost";
 
 function App() {
 
@@ -89,6 +90,7 @@ function App() {
 
           
           <Route path="/seller-userprofile" element={<SellerUserProfile/>}></Route>
+          <Route path="/seller-featuredPost" element={<FeaturedPost/>}></Route>
           <Route path="/seller-notification" element={<SellerNotification/>}></Route>
           <Route path="/seller-reset-password" element={<SellerResetPassword/>}></Route>
           <Route path="/seller-delete-account" element={<SellerDeleteAccount/>}></Route>

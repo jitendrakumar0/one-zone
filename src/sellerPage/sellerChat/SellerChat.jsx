@@ -118,6 +118,7 @@ const SellerChat = () => {
                                                     <div className="user  rounded-md relative cursor-pointer">
                                                         <img className='w-14 h-14 rounded-md' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FBe113B4a9BYPo2IMGrtgym2plpPyfOfiA&usqp=CAU" alt="" />
                                                         <img className='absolute size-8 rounded-full top-8 -right-4 border border-white' src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="" />
+                                                        <span class="size-2 absolute -bottom-[8px] -right-[14px] bg-green-500 rounded-full block"></span>
                                                     </div>
                                                 </div>
                                                 <div className='flex-grow '>
@@ -127,12 +128,15 @@ const SellerChat = () => {
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
                                                         <div className='text-sm text-black'>iPhone 13 128  GB</div>
-                                                        <div>
+                                                        <div className=''>
                                                         {/* <HiDotsVertical /> */}
                                                             <ChatPopup dropDownOptions={deleteChatoption}/>
                                                         </div>
                                                     </div>
-                                                    <div className='flex items-center text-sm text-gray-500 mt-2 mx-6'><IoCheckmarkDone />Are you there ?</div>
+                                                    <div className='w-full flex justify-between'>
+                                                        <div className='flex items-center text-sm text-gray-500 mx-6'><IoCheckmarkDone />Are you there ?</div>
+                                                        <div className='size-5 bg-green-500 text-white rounded-full text-xs flex items-center justify-center'>4</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             
@@ -140,7 +144,8 @@ const SellerChat = () => {
                                                 <div className='col-auto'>
                                                     <div className="user  rounded-md relative cursor-pointer">
                                                         <img className='w-14 h-14 rounded-md' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FBe113B4a9BYPo2IMGrtgym2plpPyfOfiA&usqp=CAU" alt="" />
-                                                        <img className='absolute size-8 rounded-full top-8 -right-4 border border-white' src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="" />
+                                                        <img className='absolute size-8 rounded-full top-8 -right-4 border border-white' src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt=""/>
+                                                        <span class="size-2 absolute -bottom-[8px] -right-[14px] bg-green-500 rounded-full block"></span>
                                                     </div>
                                                 </div>
                                                 <div className='flex-grow '>
@@ -150,12 +155,15 @@ const SellerChat = () => {
                                                     </div>
                                                     <div className="flex justify-between items-center ms-6 me-0">
                                                         <div className='text-sm text-black'>iPhone 13 128  GB</div>
-                                                        <div>
+                                                        <div className='flex items-center'>
                                                         {/* <HiDotsVertical /> */}
                                                             <ChatPopup dropDownOptions={deleteChatoption}/>
                                                         </div>
                                                     </div>
-                                                    <div className='flex items-center text-sm text-gray-500 mt-2 mx-6'><IoCheckmarkDone />Are you there ?</div>
+                                                    <div className='w-full flex justify-between'>
+                                                        <div className='flex items-center text-sm text-gray-500 mx-6'><IoCheckmarkDone />Are you there ?</div>
+                                                        <div className='size-5 bg-green-500 text-white rounded-full text-xs flex items-center justify-center'>1</div>
+                                                    </div>
                                                 </div>
                                             </div>
 

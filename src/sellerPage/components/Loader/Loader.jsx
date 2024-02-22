@@ -11,7 +11,7 @@ const Loader = () => {
                 <img src='https://media.licdn.com/dms/image/C4E12AQEU7wL9bjrlKw/article-cover_image-shrink_600_2000/0/1626498811833?e=2147483647&v=beta&t=5zrCk-yAFm9ZbXUYFF89qpoOIfzYup7pliGALaorKis' className="!size-full object-cover !absolute !inset-0 !z-0" alt="Flowbite Logo" />
                 <div className='flex flex-col items-center gap-5'>
                     <div className="text-lg">            
-                        <img src={LogoMobile} className="h-14" alt="Flowbite Logo" />
+                        <img src={LogoMobile} className="h-24" alt="Flowbite Logo" />
                     </div>
                     <div className="text-lg text-theme1">
                     <svg aria-hidden="true" role="status" class="inline size-7 animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

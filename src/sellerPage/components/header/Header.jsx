@@ -629,8 +629,8 @@ max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Contact</NavLink>
     </li>
     <li className='list-none'>
-      <div onClick={scrollToSection} className="relative cursor-pointer after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black  border-b border-gray-100
-max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0  rounded-0">Featured Post</div>
+      <Link to='/seller-featuredPost' className="relative cursor-pointer after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black  border-b border-gray-100
+max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0  rounded-0">Featured Post</Link>
     </li>
     </>
   )

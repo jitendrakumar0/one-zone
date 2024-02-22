@@ -12,7 +12,7 @@ const SelectCategory = () => {
         <>
         <Header/>
             <div className="max-w-screen-md  mx-auto my-5 px-4">
-                <div className="header font-bold text-xl md:text-2xl text-center bg-black text-theme1 rounded-lg py-2 md:py-4">
+                <div className="header font-medium text-xl md:text-2xl text-center bg-black text-white rounded-lg py-2 md:py-4">
                     Add Your Product
                 </div>
                 <div className="border border-gray-400 p-4 rounded-lg mt-8">
@@ -24,7 +24,7 @@ const SelectCategory = () => {
                                     <GrWindows className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Windows</div>
+                                    <div className='text-base font-medium ms-5'>Windows</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
@@ -46,7 +46,7 @@ const SelectCategory = () => {
                                     <BsApple className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Mac</div>
+                                    <div className='text-base font-medium ms-5'>Mac</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
@@ -68,7 +68,7 @@ const SelectCategory = () => {
                                     <BsBrowserChrome className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Chromebook</div>
+                                    <div className='text-base font-medium ms-5'>Chromebook</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
@@ -88,7 +88,7 @@ const SelectCategory = () => {
                                     <FaMobile className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Mobile</div>
+                                    <div className='text-base font-medium ms-5'>Mobile</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
@@ -109,7 +109,7 @@ const SelectCategory = () => {
                                     <FaMobile className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Mob & Tab</div>
+                                    <div className='text-base font-medium ms-5'>Mob & Tab</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
@@ -131,7 +131,7 @@ const SelectCategory = () => {
                                     <BsFillPrinterFill className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Photocopy Machine</div>
+                                    <div className='text-base font-medium ms-5'>Photocopy Machine</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
@@ -151,7 +151,7 @@ const SelectCategory = () => {
                                     <FaServer className='sm:size-8 size-6'/>
                                 </div>
                                 <div className="grow text-start">
-                                    <div className='text-base font-bold ms-5'>Servers</div>
+                                    <div className='text-base font-medium ms-5'>Servers</div>
                                 </div>
                                 <div className="flex-none">
                                     <BsArrowDownSquareFill className='sm:size-8 size-6'/>
