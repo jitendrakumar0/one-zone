@@ -8,7 +8,7 @@ const Loader = () => {
     return (
         <>
             <div className='w-full h-dvh fixed inset-0 flex z-[10000] justify-center items-center *:relative *:z-10 text-center before:bg-gradient-to-br before:from-black before:to-theme4 before:z-[9] before:inset-0 before:absolute before:mix-blend-multiply'>            
-                <img src='https://media.licdn.com/dms/image/C4E12AQEU7wL9bjrlKw/article-cover_image-shrink_600_2000/0/1626498811833?e=2147483647&v=beta&t=5zrCk-yAFm9ZbXUYFF89qpoOIfzYup7pliGALaorKis' className="!size-full !absolute !inset-0 !z-0" alt="Flowbite Logo" />
+                <img src='https://media.licdn.com/dms/image/C4E12AQEU7wL9bjrlKw/article-cover_image-shrink_600_2000/0/1626498811833?e=2147483647&v=beta&t=5zrCk-yAFm9ZbXUYFF89qpoOIfzYup7pliGALaorKis' className="!size-full object-cover !absolute !inset-0 !z-0" alt="Flowbite Logo" />
                 <div className='flex flex-col items-center gap-5'>
                     <div className="text-lg">            
                         <img src={LogoMobile} className="h-14" alt="Flowbite Logo" />
