@@ -574,7 +574,7 @@ const Header = ({seller}) => {
           <Dialog.Panel className="absolute inset-y-0 right-0 w-full ml-20 max-w-80 bg-white h-full flex flex-col overflow-hidden">
               <Dialog.Title className="py-3 px-6 md:text-xl text-lg font-bold border-b border-gray-200 bg-black text-theme1 flex items-center justify-between">
                   <div className="grow">
-                      <img src={Logo} className="md:h-12 h-8 mix-blend-luminosity invert" alt="Flowbite Logo" />
+                      <img src={LogoMobile} className="md:h-12 h-8" alt="Flowbite Logo" />
                   </div>
                   <button onClick={() => setSidebarIsOpen(false)}><IoClose className='size-6' /></button>
               </Dialog.Title>

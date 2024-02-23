@@ -3,6 +3,8 @@ import Header from '../components/header/Header'
 import { Link } from 'react-router-dom'
 import { MdAutorenew, MdDelete } from 'react-icons/md'
 import { ImPower } from "react-icons/im";
+import { RxCross2 } from "react-icons/rx";
+import { AiFillDelete } from 'react-icons/ai';
 
 const FeaturedPost = () => {
     return (
@@ -105,7 +107,7 @@ const FeaturedPost = () => {
                                             <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>PREMIUM</div>
                                         </div>
                                         <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><MdDelete /></button>
+                                            <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancle</button>
                                             <div className='relative z-10 text-black w-full border-red-400 bg-red-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>2 Days Left</div>
                                         </div>
                                         {/* <div className='flex items-center justify-between w-full gap-4'>
@@ -151,11 +153,11 @@ const FeaturedPost = () => {
                                             <div className='text-xs font-bold text-center border-green-400 bg-green-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>STANDARD</div>
                                         </div>
                                         <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><MdDelete /></button>
+                                        <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancle</button>
                                             <div className='relative z-10 text-black w-full border-green-400 bg-green-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>1 Month Left</div>
                                         </div>
                                         {/* <div className='flex w-full justify-between gap-4'>
-                                        <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><MdDelete /></button>
+                                        <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 />Cancle</button>
                                         <div className='text-base  px-4 py-2 rounded-lg borer-red-500 font-semibold text-black'>1 Month Left</div>
                                             <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
                                         </div> */}
@@ -199,7 +201,8 @@ const FeaturedPost = () => {
                                 </div>
                                 
                                 <div className='flex w-full gap-4'>
-                                    <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><MdDelete /></button>
+                                    <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancle</button>
+                                    
                                     <div className='relative z-10 text-black w-full border-orange-400 bg-orange-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>15 Days Left</div>
                                 </div>
                             </div>
@@ -218,7 +221,7 @@ const FeaturedPost = () => {
                                     </div>
                                 {/* <div className=''> */}
                                     {/* <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute -top-[32px] -left-[20px] border-r border-b shadow'>Expired</div> */}
-                                    <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl -top-[32px] -right-[20px] border-l border-b shadow'>BASIC</div>
+                                    <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl -top-[20px] lg:-top-[32px] -right-[20px] border-l border-b shadow'>BASIC</div>
                                 {/* </div> */}
                                     <div className="w-full">
                                         <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
@@ -243,11 +246,12 @@ const FeaturedPost = () => {
                                     </div>
                                 </div>
                                 <div className='flex w-full items-center mt-3 justify-between'>
-                                    {/* <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><MdDelete /></button> */}
+                                    {/* <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 />Cancle</button> */}
                                     <div className='flex items-center'>
                                         {/* <button className='relative z-10 me-2 text-black w-auto bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-theme1 shadow-md shadow-black/40'><ImPower /></button> */}
                                         <button className='relative z-10 text-black w-auto bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><ImPower className='size-5' />Renew Plan
                                         </button>
+                                        <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-2 uppercase py-2 ms-2 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><AiFillDelete className='text-lg' /></button>
                                     </div>
                                     <div className='font-bold text-base text-black'>Expired</div>
                                 </div>
