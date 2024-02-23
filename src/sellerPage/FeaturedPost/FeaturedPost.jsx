@@ -122,7 +122,7 @@ const FeaturedPost = () => {
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
                         <div className="flex flex-wrap w-full h-full items-stretch">
-                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-green-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
                                         <div className=" w-full shrink-0 grid items-center justify-center">
                                             {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                                 <FaRegHeart className="size-full" />
@@ -150,11 +150,11 @@ const FeaturedPost = () => {
                                                 <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                             </div> */}
                                             {/* <div className='text-xs font-bold text-center border-green-400 bg-green-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute top-0 left-0 border-r border-b shadow'>1 Month Left</div> */}
-                                            <div className='text-xs font-bold text-center border-green-400 bg-green-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>STANDARD</div>
+                                            <div className='text-xs font-bold text-center border-teal-500 bg-teal-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>STANDARD</div>
                                         </div>
                                         <div className='flex w-full gap-4'>
                                         <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
-                                            <div className='relative z-10 text-black w-full border-green-400 bg-green-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>1 Month Left</div>
+                                            <div className='relative z-10 text-black w-full border-teal-500 bg-teal-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>1 Month Left</div>
                                         </div>
                                         {/* <div className='flex w-full justify-between gap-4'>
                                         <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 />Cancel</button>
@@ -169,7 +169,7 @@ const FeaturedPost = () => {
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
                         <div className="flex flex-wrap w-full h-full items-stretch">
-                            <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-orange-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
+                            <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
                                 <div className=" w-full shrink-0 grid items-center justify-center">
                                     {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
                                         <FaRegHeart className="size-full" />
@@ -197,13 +197,13 @@ const FeaturedPost = () => {
                                         <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
                                     </div> */}
                                     {/* <div className='text-xs font-bold text-center border-orange-400 bg-orange-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute top-0 left-0 border-r border-b shadow'>15 Days Left</div> */}
-                                    <div className='text-xs font-bold text-center border-orange-400 bg-orange-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>BASIC</div>
+                                    <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>BASIC</div>
                                 </div>
                                 
                                 <div className='flex w-full gap-4'>
                                     <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
                                     
-                                    <div className='relative z-10 text-black w-full border-orange-400 bg-orange-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>15 Days Left</div>
+                                    <div className='relative z-10 text-black w-full border-red-400 bg-red-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>15 Days Left</div>
                                 </div>
                             </div>
                         </div>
