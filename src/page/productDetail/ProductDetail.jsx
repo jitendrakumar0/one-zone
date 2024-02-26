@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SafetyModal from '../chat/Component/SafetyModal'
 import banner1 from '../../asstes/img/addBanner.jpg'
+import { HiLocationMarker } from 'react-icons/hi'
 
 
 const ProductDetail = () => {
@@ -137,12 +138,13 @@ const ProductDetail = () => {
                         <p className="text-slate-400 mt-2">The outstanding Asus VivoBook 15 laptop, created to simplify your workday and improve performance, offers fantastic efficiency and stunning aesthetics. This laptop handles all of your multitasking requirements and gives you dynamic performance thanks to the Intel Core processor. Additionally, the dual-storage ASUS VivoBook 15 offers you the benefits of incredibly fast data speed and ample storage capacity. Moreover, its svelte and exquisite form makes you the centre of attention everywhere you go when donning it with you.</p> */}
                     
                         <ul className="list-none text-black mt-4">
-                            <li className="mb-1 flex items-center"><CiCircleCheck className='size-5 mr-2 text-lime-700' /> Digital Marketing Solutions for Tomorrow</li>
-                            <li className="mb-1 flex items-center"><CiCircleCheck className='size-5 mr-2 text-lime-700' /> Our Talented &amp; Experienced Marketing Agency</li>
-                            <li className="mb-1 flex items-center"><CiCircleCheck className='size-5 mr-2 text-lime-700' /> Create your own skin to match your brand</li>
+                            <li className="mb-1 flex items-center"><CiCircleCheck className='size-5 mr-2 text-lime-700 rtl:ml-2' /> Digital Marketing Solutions for Tomorrow</li>
+                            <li className="mb-1 flex items-center"><CiCircleCheck className='size-5 mr-2 text-lime-700 rtl:ml-2' /> Our Talented &amp; Experienced Marketing Agency</li>
+                            <li className="mb-1 flex items-center"><CiCircleCheck className='size-5 mr-2 text-lime-700 rtl:ml-2' /> Create your own skin to match your brand</li>
                         </ul>
                     </div>
                     <div className="flex py-3 font-semibold text-black md:text-base text-sm">1 Year Onsite Warranty</div>
+                    <div className="flex items-center py-2 font-semibold text-black md:text-base text-sm"><HiLocationMarker className='size-6 me-2' />21B New Delhi </div>
 
                     <div className="grid lg:grid-cols-1 grid-cols-1 gap-6 mt-4">
                         <div className="flex items-center">

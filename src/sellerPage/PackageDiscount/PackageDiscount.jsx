@@ -27,7 +27,7 @@ export const PackageDiscount = () => {
                     <div className='flex items-start text-md text-gray-600'><IoMdCheckmark className='size-4 me-2 mt-1' />Reach up to 10 times more buyers</div>
 
                     <div className="grid grid-cols-1 gap-5 py-5">
-                        <label htmlFor='ad1' className="w-full card p-4 flex justify-between items-center bg-white has-[:checked]:border-yellow-600 border-2  border-yellow-600 has-[:checked]:bg-gradient-to-r from-yellow-200 to-yellow-600  rounded-lg shadow sm:p-4 group/ads">
+                        <label htmlFor='ad1' className="w-full card p-4 flex justify-between items-center bg-white has-[:checked]:border-yellow-600 border-2  border-yellow-600 has-[:checked]:bg-gradient-to-r from-yellow-50 to-yellow-200  rounded-lg shadow sm:p-4 group/ads">
                             <ul className="space-y-5">
                                 <li className="">
                                     <div className="text-lg font-semibold leading-tight text-yellow-600 mb-2">Premium</div>
@@ -50,7 +50,7 @@ export const PackageDiscount = () => {
                                 </span>
                             </div>
                         </label>
-                        <label htmlFor='ad2' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-teal-500 border-2 border-teal-500 has-[:checked]:bg-gradient-to-r from-teal-200 to-green-500 rounded-lg shadow sm:p-4 group/ads ">
+                        <label htmlFor='ad2' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-teal-500 border-2 border-teal-500 has-[:checked]:bg-gradient-to-r from-teal-50 to-green-200 rounded-lg shadow sm:p-4 group/ads ">
                             <ul className="space-y-5">
                                 <li className="">
                                 <div className="text-lg font-semibold leading-tight text-teal-600 mb-2">Standard</div>
@@ -73,13 +73,13 @@ export const PackageDiscount = () => {
                                 </span>
                             </div>
                         </label>
-                        <label htmlFor='ad3' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-red-600 border-2 has-[:checked]:bg-gradient-to-r from-red-200 to-orange-500 border-red-600  rounded-lg shadow sm:p-4 group/ads">
+                        <label htmlFor='ad3' className="w-full p-4 flex justify-between items-center bg-white has-[:checked]:border-gray-400 border-2 has-[:checked]:bg-gradient-to-r from-gray-50 to-gray-200 border-gray-400  rounded-lg shadow sm:p-4 group/ads">
                             <ul className="space-y-5">
                                 <li className="">
-                                <div className="text-lg font-semibold leading-tight text-red-600 mb-2">Basic</div>
+                                <div className="text-lg font-semibold leading-tight text-gray-600 mb-2">Basic</div>
                                 <div className='flex items-center'>
                                     <FaRegCircleCheck className="flex-shrink-0 size-5 text-gray-800 group-has-[:checked]/ads:hidden" />
-                                    <FaCircleCheck className="flex-shrink-0 size-5 text-red-600 hidden group-has-[:checked]/ads:block" />
+                                    <FaCircleCheck className="flex-shrink-0 size-5 text-gray-600 hidden group-has-[:checked]/ads:block" />
                                     <span className="text-lg leading-tight text-gray-800  group-has-[:checked]/ads:text-black ms-3">Featured ads for 15 days</span>
                                     <input className='hidden' type="radio" id='ad3' name='ads' />
                                 </div>

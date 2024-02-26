@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/header/Header'
 import { Disclosure, Transition } from '@headlessui/react'
 
 const TermsOfUse = () => {
+    
+    const [isOpenLogin, setisOpenLogin] = useState(false)
+    const [isOpenRegister, setIsOpenRegister] = useState(false)
     return (
         <>
-            <Header />
+            <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
             <div className="md:py-8 lg:py-10">
                 <div className="max-w-screen-xl mx-auto p-4">
                     <div>

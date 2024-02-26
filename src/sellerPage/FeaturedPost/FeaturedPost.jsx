@@ -5,6 +5,12 @@ import { MdAutorenew, MdDelete } from 'react-icons/md'
 import { ImPower } from "react-icons/im";
 import { RxCross2 } from "react-icons/rx";
 import { AiFillDelete } from 'react-icons/ai';
+import Footer from '../../components/Footer/Footer';
+import lap1 from '../../asstes/img/lap1.svg'
+import lap2 from '../../asstes/img/lap2.svg'
+import lap3 from '../../asstes/img/lap3.svg'
+import lap5 from '../../asstes/img/lap5.svg'
+import lap6 from '../../asstes/img/lap6.svg'
 
 const FeaturedPost = () => {
     return (
@@ -19,12 +25,141 @@ const FeaturedPost = () => {
                                 Featured
                             </div>
                         </div>
-                        {/* <div className="inline-flex gap-2 items-center">
-                            <div className="featuredprev sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
-                            <div className="featurednext sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40">
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
+                    </div>
+                    <div className='grid lg:grid-cols-2 gap-5'>
+                        <div className="flex flex-wrap w-full h-full items-stretch">
+                            <div className="w-full flex flex-col sm:flex-row relative items-stretch gap-6 border-b lg:py8 p-4 border border-gray-400 shadow-lg rounded-xl shadow-gray/20">
+                                <div className=" w-full sm:w-[40%] shrink-0 grid items-center justify-center">
+                                    <img className="w-full object-contain" src={lap1} alt="jk" />
+                                </div>
+                                <div className="shrink">
+                                    <div className='flex flex-col justify-between'>
+                                        <div className="w-full">
+                                            <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box] mb-2">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                        </div>
+                                        <div className="w-full shrink-0 ">
+                                            <div className="grow flex items-center gap-3">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                <div className="text-lime-600">36% off</div>
+                                            </div>
+                                            <div className='text-sm font-bold text-yellow-600'>2 Days Left</div>
+                                            <div className='text-xs font-bold text-center bg-yellow-600 border-red-60 px-2 py-3 flex items-center justify-center text-white absolute top-0 writtingMode rounded-tl-xl rounded-br-xl left-0 shadow rtl:right-0 rtl:left-auto rtl:rounded-tr-xl rtl:rounded-tl-none rtl:rounded-bl-xl rtl:rounded-br-none'>PREMIUM</div>
+                                        </div>
+                                        <div className='flex w-full gap-4'>
+                                            <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div> */}
+                        </div>
+                        <div className="flex flex-wrap w-full h-full items-stretch">
+                            <div className="w-full flex flex-col sm:flex-row relative items-stretch gap-6 border-b lg:py8 p-4 border border-gray-400 shadow-lg rounded-xl shadow-gray/20">
+                                <div className="w-full sm:w-[40%] shrink-0 grid items-center justify-center">
+                                    <img className="w-full object-contain" src={lap2} alt="jk" />
+                                </div>
+                                <div className="shrink">
+                                    <div className='flex flex-col justify-between'>
+                                        <div className="w-full">
+                                            <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box] mb-2">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                        </div>
+                                        <div className="w-full shrink-0 ">
+                                            <div className="grow flex items-center gap-3">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                <div className="text-lime-600">36% off</div>
+                                            </div>
+                                            <div className='text-sm font-bold text-teal-600'>1 Month Left</div>
+                                            <div className='text-xs font-bold text-center bg-teal-500 border-red-60 px-2 py-3 flex items-center justify-center text-white absolute top-0 writtingMode rounded-tl-xl rounded-br-xl left-0 rtl:right-0 rtl:left-auto rtl:rounded-tr-xl rtl:rounded-tl-none rtl:rounded-bl-xl rtl:rounded-br-none shadow '>STANDARD</div>
+                                        </div>
+                                        <div className='flex w-full gap-4'>
+                                            <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap w-full h-full items-stretch">
+                            <div className="w-full flex-col sm:flex-row flex relative items-stretch gap-6 border-b lg:py8 p-4 border border-gray-400 shadow-lg rounded-xl shadow-gray/20">
+                                <div className="w-full sm:w-[40%] shrink-0 grid items-center justify-center">
+                                    <img className="w-full object-contain" src='https://rukminim2.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70'alt="jk" />
+                                </div>
+                                <div className="shrink">
+                                    <div className='flex flex-col justify-between'>
+                                        <div className="w-full">
+                                            <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box] mb-2">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                        </div>
+                                        <div className="w-full shrink-0 ">
+                                            <div className="grow flex items-center gap-3">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                <div className="text-lime-600">36% off</div>
+                                            </div>
+                                            <div className='text-sm font-bold text-gray-600'>15 Days Left</div>
+                                            <div className='text-xs font-bold text-center bg-gray-500 border-red-60 px-2 py-3 flex items-center justify-center text-white absolute top-0 writtingMode rounded-tl-xl rounded-br-xl left-0 shadow rtl:right-0 rtl:left-auto rtl:rounded-tr-xl rtl:rounded-tl-none rtl:rounded-bl-xl rtl:rounded-br-none'>BASIC</div>
+                                        </div>
+                                        <div className='flex w-full gap-4'>
+                                            <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap w-full h-full items-stretch">
+                            <div className="w-full flex flex-col sm:flex-row relative items-stretch gap-6 border-b lg:py8 p-4 border border-gray-400 shadow-lg rounded-xl shadow-gray/20">
+                                <div className="w-full sm:w-[40%] shrink-0 grid items-center justify-center">
+                                    <img className="w-full object-contain" src={lap5} alt="jk" />
+                                </div>
+                                <div className="shrink">
+                                    <div className='flex flex-col justify-between'>
+                                        <div className="w-full">
+                                            <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box] mb-2">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                        </div>
+                                        <div className="w-full shrink-0 ">
+                                            <div className="grow flex items-center gap-3">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                <div className="text-lime-600">36% off</div>
+                                            </div>
+                                            <div className='text-sm font-bold text-red-600'>1 Day Left</div>
+                                            <div className='text-xs font-bold text-center bg-red-600 border-red-60 px-2 py-3 flex items-center justify-center text-white absolute top-0 writtingMode rounded-tl-xl rounded-br-xl left-0 shadow rtl:right-0 rtl:left-auto rtl:rounded-tr-xl rtl:rounded-tl-none rtl:rounded-bl-xl rtl:rounded-br-none'>BASIC</div>
+                                        </div>
+                                        <div className='flex w-full gap-4'>
+                                            <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-wrap w-full h-full items-stretch relative z-10">
+                        <div className="layer bg-gray-200 rounded-xl w-full h-full absolute top-0 left-0 z-4"></div>
+                            <div className="w-full flex flex-col sm:flex-row relative items-stretch gap-6 border-b lg:py8 p-4 border border-gray-400 shadow-lg rounded-xl shadow-gray/20">
+                                <div className="w-full sm:w-[40%] shrink-0 grid grayscale items-center justify-center">
+                                    <img className="w-full object-contain" src={lap6} alt="jk" />
+                                </div>
+                                <div className="shrink">
+                                    <div className='flex flex-col justify-between'>
+                                        <div className="w-full grayscale">
+                                            <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box] mb-2">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                        </div>
+                                        <div className="w-full shrink-0">
+                                            <div className="grow flex items-center gap-3 grayscale">
+                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                <div className="text-lime-600">36% off</div>
+                                            </div>
+                                            <div className='text-sm font-bold text-red-600'>Expired</div>
+                                            <div className='text-xs font-bold grayscale text-center bg-red-600 border-red-60 px-2 py-3 flex items-center justify-center text-white absolute top-0 writtingMode rounded-tl-xl rounded-br-xl left-0 shadow rtl:right-0 rtl:left-auto rtl:rounded-tr-xl rtl:rounded-tl-none rtl:rounded-bl-xl rtl:rounded-br-none'>BASIC</div>
+                                        </div>
+                                        <div className='flex w-full gap-2 justify-end relative z-50'>
+                                            <button className='relative z-10 text-black w-auto bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><ImPower className='size-5' />Renew Plan
+                                            </button>
+                                            <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-2 uppercase py-2 ms-2 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><AiFillDelete className='text-lg' /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 gap-4">
                     {/* <Swiper
@@ -53,6 +188,7 @@ const FeaturedPost = () => {
                             992: {
                                 slidesPerView: 2.5,
                                 spaceBetween: 15,
+                                
                             }, 
                             1200: {
                                 slidesPerView: 2.5,
@@ -75,70 +211,93 @@ const FeaturedPost = () => {
                         <SwiperSlide className='swiperSlider relative'> */}
 
                         {/* new card */}
-                                <div className="flex flex-wrap w-full h-full items-stretch">
-                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-red-400 shadow-lg  bg-white/60 rounded-xl shadow-theme1/20">
+                        
+                                {/* <div className="flex flex-wrap w-full h-full items-stretch">
+                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py8 p-5 border border-yellow-600 shadow-lg bg-gradient-to-b from-white to-yellow-100 rounded-xl shadow-theme1/20">
                                         <div className=" w-full shrink-0 grid items-center justify-center">
-                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                                <FaRegHeart className="size-full" />
-                                            </button> */}
-                                            <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70" alt="jk" />
+                                            <img className="w-full aspect-[1/0.7] object-contain" src="https://rukminim2.flixcart.com/image/312/312/ky7lci80/tablet/e/d/m/sm-x205nzaeinu-samsung-original-imagahrshg78gwvb.jpeg?q=70" alt="jk" />
                                         </div>
-                                        <div className="w-full">
-                                            <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            {/* <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                <li>Intel Core i3 Processor (11th Gen)</li>
-                                                <li>8 GB DDR4 RAM</li>
-                                                <li>64 bit Windows 11 Operating System</li>
-                                                <li>512 GB SSD</li>
-                                                <li>39.62 cm (15.6 Inch) Display</li>
-                                                <li>1 Year Onsite Warranty</li>
-                                            </ul> */}
-                                        </div>
-                                        <div className="w-full shrink-0 flex">
-                                            <div className="grow flex items-center gap-3">
-                                                <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
-                                                <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
-                                                <div className="text-lime-600">36% off</div>
+                                        <div className='flex flex-col justify-between'>
+                                            <div className="w-full">
+                                                <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
                                             </div>
-                                            {/* <div className="shrink-0">
-                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
-                                            </div> */}
-                                            {/* <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute top-0 left-0 border-r border-b shadow'>2 Days Left</div> */}
-                                            <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>PREMIUM</div>
+                                            <div className="w-full shrink-0 ">
+                                                <div className="grow flex items-center gap-3">
+                                                    <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                    <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                    <div className="text-lime-600">36% off</div>
+                                                </div>
+                                                <div className='text-sm font-bold text-yellow-600'>2 Days Left</div>
+                                                <div className='text-xs font-bold text-center bg-yellow-600 border-red-60 px-4 py-2 flex items-center justify-center text-white absolute rounded-bl-lg rounded-tr-lg top-[25px] -left-[20px] shadow border-b-2 border-white'>PREMIUM</div>
+                                            </div>
+                                            <div className='flex w-full gap-4'>
+                                                <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-2 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                            </div>
                                         </div>
-                                        <div className='flex w-full gap-4'>
-                                            <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
-                                            <div className='relative z-10 text-black w-full border-red-400 bg-red-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>2 Days Left</div>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py8 p-5 border border-teal-500 shadow-lg bg-gradient-to-b from-white to-teal-100 rounded-xl shadow-theme1/20">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                            <img className="w-full aspect-[1/0.7] object-contain" src="https://m.media-amazon.com/images/I/61jyqpkeJQL._AC_UY218_.jpg" alt="jk" />
                                         </div>
-                                        {/* <div className='flex items-center justify-between w-full gap-4'>
-                                            <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>2 days left <MdAutorenew className='size-5' /></button>
-                                            <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold  px-4 uppercase py-2 text-center text-xs inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'>Delete<MdDelete className='text-base' /></button>
-                                            <div className='text-base border px-4 py-2 rounded-lg border-red-500 font-semibold text-black'>2 Days Left</div>
-                                        </div> */}
+                                        <div className='flex flex-col justify-between'>
+                                            <div className="w-full">
+                                                <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                            </div>
+                                            <div className="w-full shrink-0 ">
+                                                <div className="grow flex items-center gap-3">
+                                                    <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                    <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                    <div className="text-lime-600">36% off</div>
+                                                </div>
+                                                <div className='text-sm font-bold text-teal-500'>1 Month Left</div>
+                                                <div className='text-xs font-bold text-center bg-teal-500 border-red-60 px-4 py-2 flex items-center justify-center text-white absolute rounded-bl-lg rounded-tr-lg top-[25px] -left-[20px] shadow border-b-2 border-white'>STANDARD</div>
+                                            </div>
+                                            <div className='flex w-full gap-4'>
+                                                <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-2 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
 
+                                <div className="flex flex-wrap w-full h-full items-stretch">
+                                    <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py8 p-5 border border-red-600 shadow-lg bg-gradient-to-b from-white to-red-100 rounded-xl shadow-theme1/20">
+                                        <div className=" w-full shrink-0 grid items-center justify-center">
+                                            <img className="w-full aspect-[1/0.7] object-contain" src="https://m.media-amazon.com/images/I/61jyqpkeJQL._AC_UY218_.jpg" alt="jk" />
+                                        </div>
+                                        <div className='flex flex-col justify-between'>
+                                            <div className="w-full">
+                                                <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
+                                            </div>
+                                            <div className="w-full shrink-0 ">
+                                                <div className="grow flex items-center gap-3">
+                                                    <div className="w-auto md:text-lg font-bold text-black">$31,990</div>
+                                                    <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
+                                                    <div className="text-lime-600">36% off</div>
+                                                </div>
+                                                <div className='text-sm font-bold text-red-500'>1 Month Left</div>
+                                                <div className='text-xs font-bold text-center bg-red-600 border-red-600 px-4 py-2 flex items-center justify-center text-white absolute rounded-bl-lg rounded-tr-lg top-[25px] -left-[20px] shadow border-b-2 border-white'>BASIC</div>
+                                            </div>
+                                            <div className='flex w-full gap-4'>
+                                                <button className='relative z-10 text-white w-auto ms-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-2 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> */}
+
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
-                        <div className="flex flex-wrap w-full h-full items-stretch">
+
+                        {/* <div className="flex flex-wrap w-full h-full items-stretch">
                                     <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
                                         <div className=" w-full shrink-0 grid items-center justify-center">
-                                            {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                                <FaRegHeart className="size-full" />
-                                            </button> */}
                                             <img className="w-full " src="https://m.media-amazon.com/images/I/61jyqpkeJQL._AC_UY218_.jpg" alt="jk" />
                                         </div>
                                         <div className="w-full">
                                             <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            {/* <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                                <li>Intel Core i3 Processor (11th Gen)</li>
-                                                <li>8 GB DDR4 RAM</li>
-                                                <li>64 bit Windows 11 Operating System</li>
-                                                <li>512 GB SSD</li>
-                                                <li>39.62 cm (15.6 Inch) Display</li>
-                                                <li>1 Year Onsite Warranty</li>
-                                            </ul> */}
                                         </div>
                                         <div className="w-full shrink-0 flex">
                                             <div className="grow flex items-center gap-3">
@@ -146,46 +305,27 @@ const FeaturedPost = () => {
                                                 <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                                 <div className="text-lime-600">36% off</div>
                                             </div>
-                                            {/* <div className="shrink-0">
-                                                <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
-                                            </div> */}
-                                            {/* <div className='text-xs font-bold text-center border-green-400 bg-green-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute top-0 left-0 border-r border-b shadow'>1 Month Left</div> */}
                                             <div className='text-xs font-bold text-center border-teal-500 bg-teal-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>STANDARD</div>
                                         </div>
                                         <div className='flex w-full gap-4'>
                                         <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-4 uppercase py-1 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 className='text-lg' />Cancel</button>
                                             <div className='relative z-10 text-black w-full border-teal-500 bg-teal-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>1 Month Left</div>
                                         </div>
-                                        {/* <div className='flex w-full justify-between gap-4'>
-                                        <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 />Cancel</button>
-                                        <div className='text-base  px-4 py-2 rounded-lg borer-red-500 font-semibold text-black'>1 Month Left</div>
-                                            <button className='relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'>Renew Plan</button>
-                                        </div> */}
                                     </div>
-                                </div>
+                                </div> */}
+
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
                                 
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
-                        <div className="flex flex-wrap w-full h-full items-stretch">
+                        {/* <div className="flex flex-wrap w-full h-full items-stretch">
                             <div className="w-full flex flex-wrap relative items-stretch gap-6 border-b lg:py-8 p-5 border border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20">
                                 <div className=" w-full shrink-0 grid items-center justify-center">
-                                    {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                        <FaRegHeart className="size-full" />
-                                    </button> */}
                                     <img className="w-full " src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/q/e/z/-original-imagpxgqesgrthks.jpeg?q=70" alt="jk" />
                                 </div>
                                 <div className="w-full">
                                     <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                    {/* <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                        <li>Intel Core i3 Processor (11th Gen)</li>
-                                        <li>8 GB DDR4 RAM</li>
-                                        <li>64 bit Windows 11 Operating System</li>
-                                        <li>512 GB SSD</li>
-                                        <li>39.62 cm (15.6 Inch) Display</li>
-                                        <li>1 Year Onsite Warranty</li>
-                                    </ul> */}
                                 </div>
                                 <div className="w-full shrink-0 flex">
                                     <div className="grow flex items-center gap-3">
@@ -193,10 +333,6 @@ const FeaturedPost = () => {
                                         <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                         <div className="text-lime-600">36% off</div>
                                     </div>
-                                    {/* <div className="shrink-0">
-                                        <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
-                                    </div> */}
-                                    {/* <div className='text-xs font-bold text-center border-orange-400 bg-orange-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute top-0 left-0 border-r border-b shadow'>15 Days Left</div> */}
                                     <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl top-0 right-0 border-l border-b shadow'>BASIC</div>
                                 </div>
                                 
@@ -206,33 +342,19 @@ const FeaturedPost = () => {
                                     <div className='relative z-10 text-black w-full border-red-400 bg-red-100 rounded-tr-xl rounded-bl-xl border font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300'>15 Days Left</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
-                        <div className="flex flex-wrap w-full h-full items-stretch ">
-                            <div className='w-full   border-b lg:py-8 p-5 border relative border-gray-400 shadow-lg bg-white/60 rounded-xl shadow-theme1/20 '>
+                        {/* <div className="flex flex-wrap w-full h-full items-stretch ">
+                            <div className='w-full border-b lg:py-8 p-5 border relative border-gray-400 shadow-lg bg-gradient-to-b from-white to-gray-200 rounded-xl shadow-theme1/20 '>
                                 <div className="grayscale flex flex-wrap   items-stretch gap-8">
                                     <div className=" w-full shrink-0 grid items-center justify-center">
-                                        {/* <button className="z-10 size-8 rounded-full bg-white shadow-md shadow-black/20 md:hover:bg-white duration-300 text-black p-2 flex items-center justify-center absolute top-3 right-3">
-                                            <FaRegHeart className="size-full" />
-                                        </button> */}
                                         <img className="w-full aspect-[1/0.6] object-contain" src="https://rukminim2.flixcart.com/image/312/312/kp5sya80/screen-guard/tempered-glass/o/v/n/apple-macbook-air-m1-13-3-inch-lightwings-original-imag3gh5xftgbpg3.jpeg?q=70" alt="jk" />
                                     </div>
-                                {/* <div className=''> */}
-                                    {/* <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black rounded-tl-xl rounded-br-xl absolute -top-[32px] -left-[20px] border-r border-b shadow'>Expired</div> */}
-                                    <div className='text-xs font-bold text-center border-red-400 bg-red-100 px-2 py-1 flex items-center justify-center text-black absolute rounded-bl-xl rounded-tr-xl -top-[20px] lg:-top-[32px] -right-[20px] border-l border-b shadow'>BASIC</div>
-                                {/* </div> */}
+                                    <div className='text-xs font-bold text-center bg-red-600 border-red-60 px-4 py-2 flex items-center justify-center text-white absolute rounded-bl-lg rounded-tr-lg -top-[10px] -left-[35px] shadow border-b-2 border-white'>BASIC</div>
                                     <div className="w-full">
                                         <Link to="/seller-productdetail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                        {/* <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
-                                            <li>Intel Core i3 Processor (11th Gen)</li>
-                                            <li>8 GB DDR4 RAM</li>
-                                            <li>64 bit Windows 11 Operating System</li>
-                                            <li>512 GB SSD</li>
-                                            <li>39.62 cm (15.6 Inch) Display</li>
-                                            <li>1 Year Onsite Warranty</li>
-                                        </ul> */}
                                     </div>
                                     <div className="w-full shrink-0 flex">
                                         <div className="grow flex items-center gap-3">
@@ -240,15 +362,10 @@ const FeaturedPost = () => {
                                             <del className="w-auto text-gray-600 font-semibold md:text-sm text-xs">$49,990</del>
                                             <div className="text-lime-600">36% off</div>
                                         </div>
-                                        {/* <div className="shrink-0">
-                                            <Link to='/seller-productdetail' className="relative z-10 text-black w-full bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40"> <BiMessageSquareDetail className='size-5' /> View Detail</Link>
-                                        </div> */}
                                     </div>
                                 </div>
                                 <div className='flex w-full items-center mt-3 justify-between'>
-                                    {/* <button className='relative z-10 text-white w-full bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><RxCross2 />Cancel</button> */}
                                     <div className='flex items-center'>
-                                        {/* <button className='relative z-10 me-2 text-black w-auto bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xl px-2 uppercase py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-theme1 shadow-md shadow-black/40'><ImPower /></button> */}
                                         <button className='relative z-10 text-black w-auto bg-theme1 border-2 border-theme1 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase px-4 md:py-2 py-2 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-theme1 md:hover:border-theme1 shadow-md shadow-black/40'><ImPower className='size-5' />Renew Plan
                                         </button>
                                         <button className='relative z-10 text-white w-auto bg-red-600 border-2 border-red-600 border-b-black md:hover:border-b-black !rounded-full text-xs font-bold px-2 uppercase py-2 ms-2 text-center inline-flex items-center justify-center gap-1 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-600 shadow-md shadow-black/40'><AiFillDelete className='text-lg' /></button>
@@ -256,7 +373,7 @@ const FeaturedPost = () => {
                                     <div className='font-bold text-base text-black'>Expired</div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* </SwiperSlide>
                         <SwiperSlide className='swiperSlider relative'> */}
@@ -275,7 +392,7 @@ const FeaturedPost = () => {
                     
                 </div>
             </div> 
-
+            <Footer/>
         </>
     )
 }

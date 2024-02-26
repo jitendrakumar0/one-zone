@@ -38,7 +38,7 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                             </svg>
                         </span>
                     </Link> */}
-                        <div className="prev sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
+                        <div className="prev rtl:order-2 sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40"><svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path></svg></div>
                         <div className="next sm:flex hidden border hover:bg-black transition hover:text-white hover:border items-center justify-center rounded-lg size-8 border-black [&.swiper-button-disabled]:opacity-40">
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg>
                         </div>
@@ -125,7 +125,7 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                                         </div>
                                         <div className="w-full">
                                             <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
                                                 <li>64 bit Windows 11 Operating System</li>
@@ -157,7 +157,7 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                                         </div>
                                         <div className="w-full flex flex-col justify-between">
                                             <Link to="/product-detail" className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
                                                 <li>64 bit Windows 11 Operating System</li>
@@ -190,7 +190,7 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                                         </div>
                                         <div className="w-full">
                                             <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
                                                 <li>64 bit Windows 11 Operating System</li>
@@ -222,7 +222,7 @@ const SellingProducts = ({setIsOpenSaftey}) => {
                                         </div>
                                         <div className="w-full">
                                             <Link to='/product-detail' className="w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
                                                 <li>64 bit Windows 11 Operating System</li>

@@ -47,8 +47,8 @@ const Footer = () => {
     const [country, setCountry] = useState(allcountries[0])
   return (
     <>
-        <div className="bg-gray-200 md:py-10 py-6 relative z-50">
-            <div className="flex max-md:flex-wrap text-black md:py-8 gap-y-10 max-w-screen-xl justify-between mx-auto p-4 max-md:text-center">
+        <div className="bg-gray-200 md:pt-10 relative z-50">
+            <div className="flex max-md:flex-wrap md:pb-10 text-black md:py-8 gap-y-10 max-w-screen-xl justify-between mx-auto p-4 max-md:text-center">
                 <div className="lg:w-1/3 md:w-1/2 w-full md:pr-8 lg:shrink-0 flex flex-col gap-7">
                     <div className="flex flex-col gap-3">
                         <div className="font-bold md:text-sm text-xs uppercase">Onezone</div>
@@ -207,6 +207,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="text-xs font-semibold flex justify-center pb-4">Copyright©-2024 One Zone All rights Reserved</div>
         </div>
     </>
   )

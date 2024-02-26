@@ -74,10 +74,10 @@ const Chat = () => {
             <Header isOpenLogin={isOpenLogin}  setisOpenLogin={setisOpenLogin} isOpenRegister={isOpenRegister} setIsOpenRegister={setIsOpenRegister}/>
             <div className= 'chatParent  max-w-screen-xl flex justify-between mx-auto p-4 pt-4 h-[calc(100vh-70px)] md:h-[calc(100vh-174px)] overflow-hidden '>
                 <div className='col-auto relative w-full md:w-[50%] lg:w-2/5'>
-                    <div className='w-full h-full border border-slate-400 md:rounded-tl-md'>
+                    <div className='w-full h-full border border-slate-400 md:rounded-tl-md rtl:md:rounded-r-md'>
                         <div className='w-full flex flex-col h-full overflow-hidden'>
                             <div className='header'>
-                                <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tl-md px-5 border border-b-slate-400'>
+                                <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 rtl:md:rounded-r-md md:rounded-tl-md px-5 border border-b-slate-400'>
                                     <form className="w-full mx-auto">
                                         <div className="flex">
                                             {/* <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only">Your Email</label>
@@ -243,7 +243,7 @@ const Chat = () => {
                     </div>
                 </div>
                 <div className='flex-grow md:block hidden rightPart'>
-                    <div className='w-full flex flex-col h-full border border-slate-400 border-l-0 md:rounded-tr-md overflow-hidden'>
+                    <div className='w-full flex flex-col h-full border border-slate-400 border-l-0 rtl:border-l rtl:border-r-0 rtl:md:rounded-l-md rtl:md:rounded-tr-0 md:rounded-tr-md overflow-hidden'>
                         <div className='header'>
                             <div className='w-full flex items-center justify-between bg-gray-200 h-16 p-0 md:rounded-tr-md px-2 md:px-5 border border-b-slate-400'>
                                 <Link to='/seller-profile' className='col-auto flex items-center'>
@@ -290,9 +290,9 @@ const Chat = () => {
                                     </div>
                                 </div>
                                 
-                                <div className="flex items-start gap-1.5 sm:gap-2.5 sm:mx-5 ms-3 me-10 mt-5 group/bubble sent [&.sent]:[direction:rtl]">
+                                <div className="flex items-start gap-1.5 sm:gap-2.5 sm:mx-5 ms-3 me-10 mt-5 group/bubble sent [&.sent]:[direction:rtl] rtl:![direction:initial]">
                                     <img className="sm:size-8 size-6 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Jese"/>
-                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
+                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] rtl:group-[.sent]/bubble:[direction:rtl] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rtl:group-[.sent]/bubble:rounded-tl-none rtl:group-[.sent]/bubble:rounded-tr-xl rounded-e-xl group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse">
                                             <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
                                             <span className="text-sm font-normal text-gray-500">11:46</span>
@@ -310,7 +310,7 @@ const Chat = () => {
                                 <div className="flex items-start gap-1.5 sm:gap-2.5 sm:mx-5 ms-3 me-10 mt-5  group/bubble  [&.sent]:[direction:rtl]">
                                 <img className="size-6 sm:size-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
                                 <div className="flex flex-col gap-1">
-                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
+                                    <div className="flex p-4 flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr]p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
                                             <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
                                             <span className="text-sm font-normal text-gray-500">11:46</span>
@@ -338,10 +338,10 @@ const Chat = () => {
                                 </div>
                                 </div>
                                     
-                                <div className="flex items-start gap-1.5 sm:gap-2.5 ms-3 me-10 sm:mx-5 mt-5  group/bubble sent [&.sent]:[direction:rtl]">
+                                <div className="flex items-start gap-1.5 sm:gap-2.5 ms-3 me-10 sm:mx-5 mt-5  group/bubble sent [&.sent]:[direction:rtl] rtl:![direction:initial]">
                                 <img className="size-6 sm:size-8 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Bonnie Green"/>
                                 <div className="flex flex-col gap-1">
-                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
+                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr]  rtl:group-[.sent]/bubble:[direction:rtl]  p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl rtl:group-[.sent]/bubble:rounded-tl-none rtl:group-[.sent]/bubble:rounded-tr-xl">
                                         <div className="flex items-center space-x-2 rtl:space-x-reverse mb-2">
                                             <span className="text-sm font-semibold text-gray-900 ">Bonnie Green</span>
                                             <span className="text-sm font-normal text-gray-500">11:46</span>
@@ -429,14 +429,14 @@ const Chat = () => {
                                 </div>
                                 </div>
 
-                                <div className="flex items-start gap-2.5 mx-5 mt-5 group/bubble sent [&.sent]:[direction:rtl]">
+                                <div className="flex items-start gap-2.5 mx-5 mt-5 group/bubble sent [&.sent]:[direction:rtl] rtl:![direction:initial]">
                                 <img className="sm:size-8 size-6 rounded-full group-[.sent]/bubble:[direction:ltr]" src="https://t4.ftcdn.net/jpg/01/87/61/61/360_F_187616108_v8oMYk5q7rKJXtZOfWOLoz51HcVu0JZl.jpg" alt="Jese"/>
-                                <div className="flex flex-col gap-1 group-[.sent]/bubble:[direction:ltr]">
+                                <div className="flex flex-col gap-1 group-[.sent]/bubble:[direction:ltr] rtl:group-[.sent]/bubble:[direction:rtl]">
                                     <div className="flex items-center space-x-2 rtl:space-x-reverse">
                                         <span className="text-sm font-semibold text-gray-900">Bonnie Green</span>
                                         <span className="text-sm font-normal text-gray-500">11:46</span>
                                     </div>
-                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl">
+                                    <div className="flex flex-col w-full max-w-[320px] leading-1.5 group-[.sent]/bubble:[direction:ltr] p-4 border-gray-200 bg-gray-100 group-[.sent]/bubble:rounded-s-xl group-[.sent]/bubble:rounded-tr-none rounded-e-xl  group-[.sent]/bubble:rounded-ss-xl rounded-es-xl rtl:group-[.sent]/bubble:rounded-tl-none rtl:group-[.sent]/bubble:rounded-tr-xl">
                                         <div className="flex items-start bg-gray-50 rounded-xl p-2">
                                             <div className="me-2">
                                             <span className="flex items-center gap-2 text-xs sm:text-sm font-medium text-gray-900 pb-2">
@@ -515,7 +515,7 @@ const Chat = () => {
                                     <input
                                         type="text"
                                         placeholder="Write your message!"
-                                        className="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-md py-3"
+                                        className="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 rtl:pr-[108px] bg-gray-200 rounded-md py-3"
                                     />
                                     <div className="absolute right-0 items-center inset-y-0 sm:flex">
                                         <button
@@ -527,7 +527,7 @@ const Chat = () => {
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                                 fill="currentColor"
-                                                className="h-6 w-6 ml-2 transform rotate-90"
+                                                className="h-6 w-6 ml-2 rtl:mr-1 rtl:ml-0 transform rotate-90"
                                             >
                                                 <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
                                             </svg>

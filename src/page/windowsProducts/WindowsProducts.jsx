@@ -310,7 +310,7 @@ const WindowsProducts = () => {
                                             />
                                             <label
                                             htmlFor={`filter-${section.id}-${optionIdx}`}
-                                            className="ml-3 text-sm text-gray-600"
+                                            className="ml-3 rtl:mr-3 text-sm text-gray-600"
                                             >
                                             {option.label}
                                             </label>
@@ -346,7 +346,7 @@ const WindowsProducts = () => {
                                                         </div>
                                                         <div className="lg:grow max-lg:w-full">
                                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
                                                                 <li>64 bit Windows 11 Operating System</li>
@@ -376,7 +376,7 @@ const WindowsProducts = () => {
                                                         </div>
                                                         <div className="lg:grow max-lg:w-full">
                                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
-                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                                 <li>Windows 11 Home</li>
                                                                 <li>Intel Core i3</li>
                                                                 <li>RAM 8 GB DDR4</li>
@@ -417,7 +417,7 @@ const WindowsProducts = () => {
                                                         </div>
                                                         <div className="lg:grow max-lg:w-full">
                                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
-                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                                 <li>Battery Type: Lithium-ion</li>
                                                                 <li>Capacity: 4000 mAh</li>
                                                                 <li>4 Cells</li>
@@ -448,7 +448,7 @@ const WindowsProducts = () => {
                                                     </div>
                                                     <div className="lg:grow max-lg:w-full">
                                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                                             <li>8 GB DDR4 RAM</li>
                                                             <li>64 bit Windows 11 Operating System</li>
@@ -478,7 +478,7 @@ const WindowsProducts = () => {
                                                     </div>
                                                     <div className="lg:grow max-lg:w-full">
                                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                                             <li>8 GB DDR4 RAM</li>
                                                             <li>64 bit Windows 11 Operating System</li>
@@ -519,7 +519,7 @@ const WindowsProducts = () => {
                                                     </div>
                                                     <div className="lg:grow max-lg:w-full">
                                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                                             <li>8 GB DDR4 RAM</li>
                                                             <li>64 bit Windows 11 Operating System</li>
@@ -553,7 +553,7 @@ const WindowsProducts = () => {
                                                         </div>
                                                         <div className="lg:grow max-lg:w-full">
                                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
                                                                 <li>64 bit Windows 11 Operating System</li>
@@ -583,7 +583,7 @@ const WindowsProducts = () => {
                                                         </div>
                                                         <div className="lg:grow max-lg:w-full">
                                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
                                                                 <li>64 bit Windows 11 Operating System</li>
@@ -624,7 +624,7 @@ const WindowsProducts = () => {
                                                         </div>
                                                         <div className="lg:grow max-lg:w-full">
                                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                                 <li>8 GB DDR4 RAM</li>
                                                                 <li>64 bit Windows 11 Operating System</li>
@@ -661,7 +661,7 @@ const WindowsProducts = () => {
                                         </div>
                                         <div className="lg:grow max-lg:w-full">
                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Intel Core i3 Processor (11th Gen)</li>
                                                 <li>8 GB DDR4 RAM</li>
                                                 <li>64 bit Windows 11 Operating System</li>
@@ -691,7 +691,7 @@ const WindowsProducts = () => {
                                         </div>
                                         <div className="lg:grow max-lg:w-full">
                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">HP All-in-One 27 Core i3 (8 GB DDR4/512 GB SSD/Windows 11 Home/27 Inch Screen/All-in-One 27-CB1345IN) with MS Office  (Starry white)</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Windows 11 Home</li>
                                                 <li>Intel Core i3</li>
                                                 <li>RAM 8 GB DDR4</li>
@@ -721,7 +721,7 @@ const WindowsProducts = () => {
                                         </div>
                                         <div className="lg:grow max-lg:w-full">
                                             <Link to='/product-detail' className="before:absolute before:inset-0 before:z-10 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">Loungefly Genuine Battery for HPi EliteBook Folio 9470M 9480M / BT04XL 4 Cell Laptop Battery</Link>
-                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                            <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                                 <li>Battery Type: Lithium-ion</li>
                                                 <li>Capacity: 4000 mAh</li>
                                                 <li>4 Cells</li>
