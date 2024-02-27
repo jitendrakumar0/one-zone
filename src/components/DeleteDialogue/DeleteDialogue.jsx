@@ -48,7 +48,7 @@ const DeleteDialogue = ({DeleteAccount,setDeleteAccount, name}) => {
                                 <Link to="/" className="text-white bg-red-500 border-2 border-red-500 border-b-black md:hover:border-b-black !rounded-full font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black md:hover:text-white md:hover:border-red-500 shadow-md shadow-black/40">
                                     Yes, Delete
                                 </Link>
-                                <button onClick={()=>{setDeleteAccount(false)}} type="button" className="border-2 grow border-b-black md:hover:border-b-black !rounded-full  font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40 ml-3">No, cancel</button>
+                                <button onClick={()=>{setDeleteAccount(false)}} type="button" className="border-2 grow border-b-black md:hover:border-b-black !rounded-full  font-bold text-xs uppercase md:px-6 px-4 md:py-2 py-1 text-center inline-flex items-center justify-center gap-2 duration-300 md:hover:bg-black text-black border-theme1 hover:border-b-theme1 shadow-md hover:text-theme1 shadow-black/40 ml-3 rtl:mr-3 rtl:ml-0">No, cancel</button>
                             </div>
                         </div>
                         </Dialog.Panel>

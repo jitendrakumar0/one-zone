@@ -220,7 +220,7 @@ const Header = ({seller}) => {
       </div>
       <nav className="bg-white stick w-full z-[100] top-0 start-0 border-b border-gray-200 shadow-lg">
         <div className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center md:items-start justify-between">
-          <Link to="/seller" className="flex items-center space-x-3 md:mt[5px] mt-0">
+          <Link to="/seller-login" className="flex items-center space-x-3 md:mt[5px] mt-0">
             <img src={Logo} className="lg:block hidden md:h-12 h-8" alt="Flowbite Logo" />
             <img src={LogoMobile} className="block lg:hidden md:h-12 h-8" alt="Flowbite Logo" />
           </Link>
@@ -252,7 +252,7 @@ const Header = ({seller}) => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold z-50">
+                  <Menu.Items className="absolute right-0 rtl:left-0 rtl:right-auto mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold z-50">
                     <div className="px-1 py-1 ">
                       <Menu.Item>
                         {({ active }) => (
@@ -505,7 +505,7 @@ const Header = ({seller}) => {
                               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                           </svg>
                           <h3 className="mb-5 text-lg font-normal text-gray-500">Are you sure you want to logout?</h3>
-                          <Link to="/" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                          <Link to="/seller-login" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
                               Yes, logout
                           </Link>
                           <button onClick={()=>{setLogout(false)}} type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">No, cancel</button>
@@ -557,7 +557,7 @@ const Header = ({seller}) => {
                               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                           </svg>
                           <h3 className="mb-5 text-lg font-normal text-gray-500">Are you sure you want to logout?</h3>
-                          <Link to="/" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                          <Link to="/seller-login" className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
                               Yes, logout
                           </Link>
                           <button onClick={()=>{setDeleteAccount(false)}} type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">No, cancel</button>
@@ -609,7 +609,7 @@ export const HeaderMenu = () => {
   return (
     <>
     <li className='list-none md:hidden'>
-      <NavLink to="/seller-signup" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
+      <NavLink to="/seller" className="relative after:hidden max-md:py-3 block max-md:px-5 max-md:[&.active]:rounded-lg max-md:[&.active]:bg-black max-md:[&.active]:text-theme1 md:text-gray-600 max-md:text-gray-700 hover:text-black max-md:hover:bg-black max-md:hover:text-theme1 py-2 px-3 text-black [&.active]:border-theme1 border-b border-gray-100
 max-md:border-b max-md:font-semibold max-md:border-gray-100 md:bg-transparent md:p-0 md:[&.active]:border-b-[3px] rounded-0">Become A Seller</NavLink>
     </li>
     <li className='list-none'>

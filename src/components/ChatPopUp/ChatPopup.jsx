@@ -19,7 +19,7 @@ const ChatPopup = ({dropDownOptions, fromUser}) => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className={`absolute ${fromUser ? 'left-4 rtl:right-4 rtl:left-auto lg:right-4 rtl:lg:left-4 rtl:lg:right-auto' : 'right-4 rtl:lg:right-4 rtl:left-4 rtl:right-auto'} -top-7 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold`}>
+                    <Menu.Items className={`absolute ${fromUser ? 'left-4 rtl:right-4 rtl:left-auto lg:right-4 rtl:lg:left-4 rtl:lg:right-auto' : 'left-4 rtl:lg:left-4 rtl:left-4 rtl:right-auto'} -top-7 mt-2 w-40 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold`}>
                         <div
                             id="dropdownNotification"
                             className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-md shadow"

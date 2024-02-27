@@ -22,7 +22,7 @@ const SellerDeleteAccount = () => {
                                 <AllSideMenu />
                             </div>
                             <div className="flex-1">
-                                <div className="item-body dashboard-wrapper w-full flex flex-col">
+                                <div className="item-body dashboard-wrapper w-full flex flex-col rtl:ms-5">
                                 <ul>
                                     <li className='mb-5 text-md'>
                                         “Deleting your account will delete your access and all your information on this site. If you have a recurring subscription, you must cancel that first to stop payments. Are you sure you want to continue?”

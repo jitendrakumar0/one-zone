@@ -22,7 +22,7 @@ const NotificationPopup = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="absolute right-0 mt-2 w-96 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold">
+                    <Menu.Items className="absolute right-0 rtl:right-auto rtl:left-0 mt-2 w-96 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none font-semibold">
                         <div
                             id="dropdownNotification"
                             className="z-20 w-full max-w-md bg-white divide-y divide-gray-100 rounded-lg shadow"

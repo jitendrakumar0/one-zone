@@ -28,7 +28,7 @@ const SellerUserProfile = () => {
                                 <AllSideMenu />
                             </div>
                             <div className="flex-1">
-                                <div className="item-body dashboard-wrapper w-full">
+                                <div className="item-body dashboard-wrapper w-full rtl:ms-5">
                                     <div className="flex flex-col space-x-8">
                                         <div className="w-full">
 
@@ -192,7 +192,7 @@ export const AllSideMenu = () => {
             <div className="item group">
                 <NavLink className="group/link" to="/seller-userprofile">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span className='max-md:hidden *:size-5'>
+                        <span className='max-md:hidden *:size-5 rtl:ml-2'>
                             <FaRegUserCircle />
                         </span>
                         <span className="font-semibold text-base">
@@ -204,7 +204,7 @@ export const AllSideMenu = () => {
             <div className="item group">
                 <NavLink className="group/link" to="/seller-chat">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span className='max-md:hidden *:size-5'>
+                        <span className='max-md:hidden *:size-5 rtl:ml-2'>
                             <IoChatboxOutline/>
                         </span>
                         <span className="font-semibold text-base">Chat</span>
@@ -214,7 +214,7 @@ export const AllSideMenu = () => {
             <div className="item group">
                 <NavLink className="group/link" to="/seller-notification">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span className='max-md:hidden *:size-5'>
+                        <span className='max-md:hidden *:size-5 rtl:ml-2'>
                             <LuBellDot />
                         </span>
                         <span className="font-semibold text-base">Notification</span>
@@ -224,7 +224,7 @@ export const AllSideMenu = () => {
             <div className="item group">
                 <NavLink className="group/link" to="/seller-reset-password">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span className='max-md:hidden *:size-5'>
+                        <span className='max-md:hidden *:size-5 rtl:ml-2'>
                             <LuUnlock/>
                         </span>
                         <span className="font-semibold text-base">
@@ -236,7 +236,7 @@ export const AllSideMenu = () => {
             <div className="item group">
                 <NavLink className="group/link" to="/seller-delete-account">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span className='max-md:hidden *:size-5'>
+                        <span className='max-md:hidden *:size-5 rtl:ml-2'>
                             <IoCloseCircleOutline />
                         </span>
                         <span className="font-semibold text-base">Delete Account</span>
@@ -246,7 +246,7 @@ export const AllSideMenu = () => {
             <div className="item group">
                 <div className="group/link" onClick={()=>setLogout(true)}>
                     <div className="flex md:space-x-3 items-center py-3 md:bg-red-600 md:px-3 px-5 group-[.active]/link:rounded-lg md:rounded-lg md:hover:bg-red-400 md:!text-white text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">
-                        <span className='max-md:hidden *:size-5'>
+                        <span className='max-md:hidden *:size-5 rtl:ml-2'>
                             <AiOutlineLogout/>
                         </span>
                         <span className="font-semibold text-base">Logout</span>

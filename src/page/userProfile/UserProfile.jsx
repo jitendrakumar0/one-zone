@@ -191,7 +191,7 @@ export const AllSideMenu = () => {
     const [logout, setLogout] = useState(false)
     return (
         <>
-        <div className="flex flex-col pr-3 md:gap-y-3">
+        <div className="flex flex-col pr-3 rtl:ml-5 md:gap-y-3">
             <div className="item group">
                 <NavLink className="group/link" to="/seller-profile">
                     <div className="flex md:space-x-3 items-center py-3 md:bg-gray-100 md:px-3 px-5 border-b border-gray-100 group-[.active]/link:rounded-lg md:rounded-lg md:text-gray-600 text-gray-700 hover:text-black group-[.active]/link:bg-black group-[.active]/link:text-theme1">

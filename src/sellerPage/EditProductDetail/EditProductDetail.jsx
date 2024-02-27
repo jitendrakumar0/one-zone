@@ -252,7 +252,7 @@ const used = [
                                     <Listbox value={usedProduct} onChange={setUsedProduct}>
                                         <div className="relative mt-1">
                                             <Listbox.Button className="relative inline-flex items-center text-white/70 gap-1 w-full cursor-default px-4 text-left sm:text-sm font-semibold rounded-lg bg-white py-5 shadow border-b-2 border-black">
-                                            <span className="block truncate text-black">{usedProduct.name}</span>
+                                            <span className="block truncate text-black rtl:mr-3">{usedProduct.name}</span>
                                             <span className="pointer-events-none absolute inset-y-0 right-[10px] flex items-center">
                                                 <ChevronDownIcon
                                                 className="h-5 w-5 text-gray-600"
@@ -379,7 +379,7 @@ const used = [
                                 {/* <span>
                                     <FaGlobeAmericas className="size-4 text-theme1" />
                                 </span> */}
-                                <span className="block truncate text-black">{country.name}</span>
+                                <span className="block truncate text-black rtl:mr-2">{country.name}</span>
                                 <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                                     <ChevronDownIcon
                                     className="h-5 w-5 text-gray-600"
@@ -416,7 +416,7 @@ const used = [
                                                 selected ? "font-medium  " : "font-normal"
                                             }`}
                                             >
-                                            <span className="font-semibold text-xs text-black group-hover:text-black group-[]/drop:bg-theme1 bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2">
+                                            <span className="font-semibold text-xs text-black group-hover:text-black group-[]/drop:bg-theme1 bg-black/10 group-hover:bg-theme1 rounded-sm inline-flex items-center justify-center size-6 mr-2 rtl:ml-2">
                                                 {person.sortName}
                                             </span>
                                             {person.name}
@@ -446,7 +446,7 @@ const used = [
                             {/* <span>
                                 <MdOutlineTranslate className="size-4 text-theme1" />
                             </span> */}
-                            <span className="block truncate text-black">{brand.name}</span>
+                            <span className="block truncate text-black rtl:mr-3">{brand.name}</span>
                             <span className="pointer-events-none absolute inset-y-0 right-[10px] flex items-center">
                                 <ChevronDownIcon
                                 className="h-5 w-5 text-gray-600"

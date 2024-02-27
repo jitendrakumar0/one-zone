@@ -42,7 +42,7 @@ const UserDetail = () => {
                                     </div>
                                     <div className="w-full">
                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                             <li>8 GB DDR4 RAM</li>
                                             <li>64 bit Windows 11 Operating System</li>
@@ -72,7 +72,7 @@ const UserDetail = () => {
                                     </div>
                                     <div className="w-full">
                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                             <li>8 GB DDR4 RAM</li>
                                             <li>64 bit Windows 11 Operating System</li>
@@ -102,7 +102,7 @@ const UserDetail = () => {
                                     </div>
                                     <div className="w-full">
                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                             <li>8 GB DDR4 RAM</li>
                                             <li>64 bit Windows 11 Operating System</li>
@@ -132,7 +132,7 @@ const UserDetail = () => {
                                     </div>
                                     <div className="w-full">
                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                             <li>8 GB DDR4 RAM</li>
                                             <li>64 bit Windows 11 Operating System</li>
@@ -162,7 +162,7 @@ const UserDetail = () => {
                                     </div>
                                     <div className="w-full">
                                         <Link to='/product-detail' className="before:absolute before:inset-0 before:z-0 w-full font-semibold md:text-base text-sm text-black overflow-hidden text-ellipsis [-webkit-line-clamp:3] [-webkit-box-orient:vertical] [display:-webkit-box]">ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5 ASUS Vivobook 15 Intel Core i3 11th Gen 1115G4 - (8 GB/512 GB SSD/Windows 11 Home) X515EA-EJ322WS | X5</Link>
-                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80">
+                                        <ul className="w-full list-disc ml-5 pt-4 md:text-sm text-xs text-black/80 rtl:ms-5">
                                             <li>Intel Core i3 Processor (11th Gen)</li>
                                             <li>8 GB DDR4 RAM</li>
                                             <li>64 bit Windows 11 Operating System</li>

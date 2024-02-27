@@ -129,7 +129,7 @@ const ProductDetail = () => {
                             <li className="inline"><IoStar className='size-5' /></li>
                             <li className="inline"><IoStar className='size-5' /></li>
                             <li className="inline"><IoStar className='size-5' /></li>
-                            <li className="inline text-black/80 ml-2 font-semibold">4.8 (45)</li>
+                            <li className="inline text-black/80 ml-2 rtl:mr-2 font-semibold">4.8 (45)</li>
                         </ul>
                     </div>
 
@@ -150,7 +150,7 @@ const ProductDetail = () => {
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Size:</h5>
                             <div className="space-x-1">
-                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">S</Link>
+                                <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black rtl:ml-1">S</Link>
                                 <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">M</Link>
                                 <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">L</Link>
                                 <Link className="size-9 inline-flex items-center justify-center tracking-wide align-middle text-base text-center rounded-md bg-black/10 hover:bg-theme1 text-black font-bold hover:text-black">XL</Link>
@@ -169,7 +169,7 @@ const ProductDetail = () => {
                         <div className="flex items-center">
                             <h5 className="text-lg font-semibold me-2">Colors:</h5>
                             <div className="space-x-2">
-                                <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-red-600 inline-flex align-middle" title="Red"></Link>
+                                <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-red-600 inline-flex align-middle rtl:ml-2" title="Red"></Link>
                                 <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-orange-600 inline-flex align-middle" title="Orange"></Link>
                                 <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-slate-900 inline-flex align-middle" title="Black"></Link>
                                 <Link className="size-6 rounded-full ring-2 ring-gray-200 bg-gray-300 inline-flex align-middle" title="Gray"></Link>
